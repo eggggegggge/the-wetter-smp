@@ -1,0 +1,15 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "smooth_stone",
+        "1": "anvil_top",
+        "2": "iron_block",
+        "3": "piston_top",
+        "4": "piston_side",
+        "missing": ""
+      },
+      "name": "default"
+    }
+  }
+}

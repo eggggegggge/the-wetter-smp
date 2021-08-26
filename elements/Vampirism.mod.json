@@ -1,0 +1,17 @@
+{
+  "_fv": 24,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Vampirism",
+    "icon": "vampirism.png",
+    "color": {
+      "value": 16777215,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": true,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": false
+  }
+}

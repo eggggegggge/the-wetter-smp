@@ -1,0 +1,25 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "airvent",
+        "1": "airventbottom"
+      },
+      "name": "default"
+    },
+    "hot": {
+      "map": {
+        "0": "hot_air_vent",
+        "1": "airventbottom"
+      },
+      "name": "hot"
+    },
+    "cold": {
+      "map": {
+        "0": "cold_air_vent",
+        "1": "airventbottom"
+      },
+      "name": "cold"
+    }
+  }
+}

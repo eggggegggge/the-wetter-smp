@@ -1,0 +1,30 @@
+{
+  "group": "aq_bowl",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "item": "the_wet_smp:aquamarine"
+    },
+    "3": {
+      "item": "the_wet_smp:aquamarine"
+    },
+    "4": {
+      "item": "minecraft:bowl"
+    },
+    "5": {
+      "item": "the_wet_smp:aquamarine"
+    },
+    "7": {
+      "item": "the_wet_smp:aquamarine"
+    }
+  },
+  "result": {
+    "item": "the_wet_smp:aquamarine_embedded_bowl",
+    "count": 1
+  }
+}

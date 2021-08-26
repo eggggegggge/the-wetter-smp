@@ -1,0 +1,25 @@
+{
+  "criteria": {
+    "grant_warped_wart_block_recipes": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:warped_wart_block",
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1,
+    "recipes": [
+      "the_wet_smp:warped_wart_blockto_warped_wart"
+    ]
+  },
+  "parent": "the_wet_smp:get_all_rings"
+}

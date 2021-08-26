@@ -1,0 +1,19 @@
+{
+  "group": "on_ms",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:brown_mushroom"
+    },
+    {
+      "item": "minecraft:red_mushroom"
+    },
+    {
+      "item": "the_wet_smp:onyx_embedded_bowl"
+    }
+  ],
+  "result": {
+    "item": "the_wet_smp:onyx_embedded_mushroom_stew",
+    "count": 1
+  }
+}

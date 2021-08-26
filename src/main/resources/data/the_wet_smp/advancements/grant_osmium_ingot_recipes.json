@@ -1,0 +1,29 @@
+{
+  "criteria": {
+    "grant_osmium_ingot_recipes": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "the_wet_smp:osmium_ingot",
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1,
+    "recipes": [
+      "the_wet_smp:aquamarine_ring_recipe",
+      "the_wet_smp:emerald_ring_recipe",
+      "the_wet_smp:lapis_ring_recipe",
+      "the_wet_smp:onyx_ring_recipe",
+      "the_wet_smp:ruby_ring_recipe"
+    ]
+  },
+  "parent": "the_wet_smp:get_all_rings"
+}

@@ -1,0 +1,29 @@
+{
+  "_fv": 24,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "lapis_rabbit_stew",
+    "customModelName": "Normal",
+    "name": "Lapis Embedded Rabbit Stew",
+    "rarity": "COMMON",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "FOOD"
+    },
+    "stackSize": 1,
+    "nutritionalValue": 10,
+    "saturation": 12.0,
+    "eatingSpeed": 32,
+    "resultItem": {
+      "value": "CUSTOM:LapisEmbeddedBowl"
+    },
+    "forDogs": true,
+    "isAlwaysEdible": false,
+    "animation": "eat",
+    "hasGlow": false,
+    "onEaten": {
+      "name": "LaEat"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "_fv": 24,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Motivation",
+    "icon": "motivation.png",
+    "color": {
+      "value": 16777215,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": true,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": false,
+    "onStarted": {
+      "name": "MotivationStartProcedure"
+    },
+    "onExpired": {
+      "name": "MotivationExpireProcedure"
+    }
+  }
+}

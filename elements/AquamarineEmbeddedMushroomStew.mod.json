@@ -1,0 +1,29 @@
+{
+  "_fv": 24,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "aquamarine_mushroom_stew",
+    "customModelName": "Normal",
+    "name": "Aquamarine Embedded Mushroom Stew",
+    "rarity": "COMMON",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "FOOD"
+    },
+    "stackSize": 1,
+    "nutritionalValue": 6,
+    "saturation": 7.2,
+    "eatingSpeed": 32,
+    "resultItem": {
+      "value": "CUSTOM:AquamarineEmbeddedBowl"
+    },
+    "forDogs": false,
+    "isAlwaysEdible": false,
+    "animation": "eat",
+    "hasGlow": false,
+    "onEaten": {
+      "name": "AqEat"
+    }
+  }
+}

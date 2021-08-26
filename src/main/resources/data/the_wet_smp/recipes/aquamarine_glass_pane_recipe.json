@@ -1,0 +1,32 @@
+{
+  "group": "aquamarine_glass_pane",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345"
+  ],
+  "key": {
+    "0": {
+      "item": "the_wet_smp:aquamarine_glass"
+    },
+    "1": {
+      "item": "the_wet_smp:aquamarine_glass"
+    },
+    "2": {
+      "item": "the_wet_smp:aquamarine_glass"
+    },
+    "3": {
+      "item": "the_wet_smp:aquamarine_glass"
+    },
+    "4": {
+      "item": "the_wet_smp:aquamarine_glass"
+    },
+    "5": {
+      "item": "the_wet_smp:aquamarine_glass"
+    }
+  },
+  "result": {
+    "item": "the_wet_smp:aquamarine_glass_pane",
+    "count": 16
+  }
+}

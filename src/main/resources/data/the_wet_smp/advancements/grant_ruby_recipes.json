@@ -1,0 +1,34 @@
+{
+  "criteria": {
+    "grant_ruby_recipes": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "the_wet_smp:ruby",
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1,
+    "recipes": [
+      "the_wet_smp:aquamarine_ring_recipe",
+      "the_wet_smp:emerald_ring_recipe",
+      "the_wet_smp:lapis_ring_recipe",
+      "the_wet_smp:onyx_ring_recipe",
+      "the_wet_smp:ruby_ring_recipe",
+      "the_wet_smp:ruby_embedded_bowl_recipe",
+      "the_wet_smp:ruby_embedded_beetroot_soup_recipe",
+      "the_wet_smp:ruby_embedded_mushroom_stew_recipe",
+      "the_wet_smp:ruby_embedded_rabbit_stew_recipe",
+      "the_wet_smp:ruby_embedded_rabbit_stew_recipe_1"
+    ]
+  },
+  "parent": "the_wet_smp:get_all_rings"
+}

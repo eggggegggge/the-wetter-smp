@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "the_wet_smp:block/compressing_compressor_4"
+    },
+    "facing=east": {
+      "model": "the_wet_smp:block/compressing_compressor_4",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "the_wet_smp:block/compressing_compressor_4",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "the_wet_smp:block/compressing_compressor_4",
+      "y": 270
+    }
+  }
+}

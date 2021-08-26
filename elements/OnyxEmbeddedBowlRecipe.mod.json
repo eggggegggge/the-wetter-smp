@@ -1,0 +1,46 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "on_bo",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Onyx"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Onyx"
+      },
+      {
+        "value": "Items.BOWL"
+      },
+      {
+        "value": "CUSTOM:Onyx"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Onyx"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:OnyxEmbeddedBowl"
+    },
+    "name": "onyx_embedded_bowl_recipe",
+    "namespace": "mod"
+  }
+}

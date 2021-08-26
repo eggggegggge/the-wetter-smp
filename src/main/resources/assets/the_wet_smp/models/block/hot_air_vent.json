@@ -1,0 +1,9 @@
+{
+  "parent": "the_wet_smp:custom/airvent",
+  "textures": {
+    "all": "the_wet_smp:blocks/airvent",
+    "particle": "the_wet_smp:blocks/airvent",
+    "0": "the_wet_smp:blocks/hot_air_vent",
+    "1": "the_wet_smp:blocks/airventbottom"
+  }
+}

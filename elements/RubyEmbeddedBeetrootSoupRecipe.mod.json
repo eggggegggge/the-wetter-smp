@@ -1,0 +1,46 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "ru_br",
+    "recipeShapeless": true,
+    "recipeSlots": [
+      {
+        "value": "Items.BEETROOT"
+      },
+      {
+        "value": "Items.BEETROOT"
+      },
+      {
+        "value": "Items.BEETROOT"
+      },
+      {
+        "value": "Items.BEETROOT"
+      },
+      {
+        "value": "Items.BEETROOT"
+      },
+      {
+        "value": "Items.BEETROOT"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:RubyEmbeddedBowl"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:RubyEmbeddedBeetrootSoup"
+    },
+    "name": "ruby_embedded_beetroot_soup_recipe",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "group": "compressor",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:iron_block"
+    },
+    "1": {
+      "item": "minecraft:piston"
+    },
+    "2": {
+      "item": "minecraft:iron_block"
+    },
+    "3": {
+      "item": "minecraft:chain"
+    },
+    "5": {
+      "item": "minecraft:chain"
+    },
+    "6": {
+      "item": "minecraft:smooth_stone"
+    },
+    "7": {
+      "item": "minecraft:redstone_torch"
+    },
+    "8": {
+      "item": "minecraft:smooth_stone"
+    }
+  },
+  "result": {
+    "item": "the_wet_smp:compressor",
+    "count": 1
+  }
+}

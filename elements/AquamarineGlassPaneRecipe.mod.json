@@ -1,0 +1,46 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 16,
+    "group": "aquamarine_glass_pane",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:AquamarineGlass"
+      },
+      {
+        "value": "CUSTOM:AquamarineGlass"
+      },
+      {
+        "value": "CUSTOM:AquamarineGlass"
+      },
+      {
+        "value": "CUSTOM:AquamarineGlass"
+      },
+      {
+        "value": "CUSTOM:AquamarineGlass"
+      },
+      {
+        "value": "CUSTOM:AquamarineGlass"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:AquamarineGlassPane"
+    },
+    "name": "aquamarine_glass_pane_recipe",
+    "namespace": "mod"
+  }
+}

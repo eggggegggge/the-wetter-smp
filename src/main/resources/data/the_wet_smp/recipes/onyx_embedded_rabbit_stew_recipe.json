@@ -1,0 +1,25 @@
+{
+  "group": "on_ra",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:cooked_rabbit"
+    },
+    {
+      "item": "minecraft:carrot"
+    },
+    {
+      "item": "minecraft:baked_potato"
+    },
+    {
+      "item": "minecraft:red_mushroom"
+    },
+    {
+      "item": "the_wet_smp:onyx_embedded_bowl"
+    }
+  ],
+  "result": {
+    "item": "the_wet_smp:onyx_embedded_rabbit_stew",
+    "count": 1
+  }
+}

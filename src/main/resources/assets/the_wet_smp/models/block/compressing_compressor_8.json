@@ -1,0 +1,14 @@
+{
+  "parent": "the_wet_smp:custom/compressor8",
+  "textures": {
+    "all": "the_wet_smp:blocks/iron_block",
+    "particle": "the_wet_smp:blocks/iron_block",
+    "0": "the_wet_smp:blocks/smooth_stone",
+    "1": "the_wet_smp:blocks/anvil_top",
+    "2": "the_wet_smp:blocks/iron_block",
+    "3": "the_wet_smp:blocks/piston_top",
+    "4": "the_wet_smp:blocks/piston_side",
+    "5": "the_wet_smp:blocks/piston_inner",
+    "missing": "the_wet_smp:blocks/"
+  }
+}

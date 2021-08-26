@@ -1,0 +1,46 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "aq_bowl",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Aquamarine"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Aquamarine"
+      },
+      {
+        "value": "Items.BOWL"
+      },
+      {
+        "value": "CUSTOM:Aquamarine"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Aquamarine"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:AquamarineEmbeddedBowl"
+    },
+    "name": "aquamarine_embedded_bowl_recipe",
+    "namespace": "mod"
+  }
+}

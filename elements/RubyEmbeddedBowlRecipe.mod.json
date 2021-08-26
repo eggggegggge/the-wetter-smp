@@ -1,0 +1,46 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "ru_bo",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Ruby"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Ruby"
+      },
+      {
+        "value": "Items.BOWL"
+      },
+      {
+        "value": "CUSTOM:Ruby"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Ruby"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:RubyEmbeddedBowl"
+    },
+    "name": "ruby_embedded_bowl_recipe",
+    "namespace": "mod"
+  }
+}

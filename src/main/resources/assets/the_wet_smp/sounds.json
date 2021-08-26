@@ -1,0 +1,32 @@
+{
+  "buffer.latency": {
+    "category": "block",
+    "subtitle": "subtitles.buffer.latency",
+    "sounds": [
+      {
+        "name": "the_wet_smp:ogg",
+        "stream": false
+      }
+    ]
+  },
+  "buffer.new_latency": {
+    "category": "block",
+    "subtitle": "subtitles.buffer.new_latency",
+    "sounds": [
+      {
+        "name": "the_wet_smp:latency",
+        "stream": false
+      }
+    ]
+  },
+  "web": {
+    "category": "player",
+    "subtitle": "subtitles.web",
+    "sounds": [
+      {
+        "name": "the_wet_smp:sfx_mob_spiderweb-002_soundwave",
+        "stream": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "the_wet_smp:blocks/uranium_thing",
+    "up": "the_wet_smp:blocks/uranium_thing",
+    "north": "the_wet_smp:blocks/uranium_thing",
+    "east": "the_wet_smp:blocks/uranium_thing",
+    "south": "the_wet_smp:blocks/uranium_thing",
+    "west": "the_wet_smp:blocks/uranium_thing",
+    "particle": "the_wet_smp:blocks/uranium_thing"
+  }
+}

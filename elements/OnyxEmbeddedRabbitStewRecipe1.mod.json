@@ -1,0 +1,46 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "on_ra",
+    "recipeShapeless": true,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": "Items.COOKED_RABBIT"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Items.CARROT"
+      },
+      {
+        "value": "Items.BAKED_POTATO"
+      },
+      {
+        "value": "Blocks.BROWN_MUSHROOM"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:OnyxEmbeddedBowl"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:OnyxEmbeddedRabbitStew"
+    },
+    "name": "onyx_embedded_rabbit_stew_recipe_1",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "clock",
+        "1": "sea_lantern",
+        "2": "aquamarine",
+        "3": "glass",
+        "missing": ""
+      },
+      "name": "default"
+    }
+  }
+}

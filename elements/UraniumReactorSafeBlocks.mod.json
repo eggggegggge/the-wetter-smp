@@ -1,0 +1,20 @@
+{
+  "_fv": 15,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:DepressionGlass"
+      },
+      {
+        "value": "Blocks.IRON_BLOCK"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "uranium_reactor_safe_blocks",
+    "namespace": "forge"
+  }
+}

@@ -1,0 +1,25 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="Academic Free License v3.0"
+
+[[mods]]
+modId="the_wet_smp"
+version="1.3.4"
+displayName="The Wet SMP"
+credits="IT WAS ME"
+displayURL="https://www.youtube.com/"
+authors="oreli bitch"
+description='''
+FUCK
+'''
+
+[[dependencies.the_wet_smp]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5]"
+    ordering="NONE"
+    side="BOTH"
+
+
+
+
