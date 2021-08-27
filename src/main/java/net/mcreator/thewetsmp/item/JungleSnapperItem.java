@@ -13,11 +13,11 @@ import net.mcreator.thewetsmp.itemgroup.FishingItemGroup;
 import net.mcreator.thewetsmp.TheWetSmpModElements;
 
 @TheWetSmpModElements.ModElement.Tag
-public class GlowKoiItem extends TheWetSmpModElements.ModElement {
-	@ObjectHolder("the_wet_smp:glow_koi")
+public class JungleSnapperItem extends TheWetSmpModElements.ModElement {
+	@ObjectHolder("the_wet_smp:jungle_snapper")
 	public static final Item block = null;
-	public GlowKoiItem(TheWetSmpModElements instance) {
-		super(instance, 328);
+	public JungleSnapperItem(TheWetSmpModElements instance) {
+		super(instance, 332);
 	}
 
 	@Override
@@ -27,8 +27,8 @@ public class GlowKoiItem extends TheWetSmpModElements.ModElement {
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
 			super(new Item.Properties().group(FishingItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
-					.food((new Food.Builder()).hunger(4).saturation(0.3f).build()));
-			setRegistryName("glow_koi");
+					.food((new Food.Builder()).hunger(1).saturation(0.1f).meat().build()));
+			setRegistryName("jungle_snapper");
 		}
 
 		@Override

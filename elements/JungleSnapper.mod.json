@@ -3,22 +3,22 @@
   "_type": "food",
   "definition": {
     "renderType": 0,
-    "texture": "glow_koi",
+    "texture": "jungle_snapper",
     "customModelName": "Normal",
-    "name": "Glow Koi",
+    "name": "Jungle Snapper",
     "rarity": "COMMON",
     "specialInfo": [],
     "creativeTab": {
       "value": "CUSTOM:Fishing"
     },
     "stackSize": 64,
-    "nutritionalValue": 4,
-    "saturation": 0.3,
+    "nutritionalValue": 1,
+    "saturation": 0.1,
     "eatingSpeed": 32,
     "resultItem": {
       "value": ""
     },
-    "forDogs": false,
+    "forDogs": true,
     "isAlwaysEdible": false,
     "animation": "eat",
     "hasGlow": false
