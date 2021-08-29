@@ -50,7 +50,8 @@ public class TheWetSmpModElements {
 				new net.minecraft.util.SoundEvent(new ResourceLocation("the_wet_smp", "buffer.latency")));
 		sounds.put(new ResourceLocation("the_wet_smp", "buffer.new_latency"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("the_wet_smp", "buffer.new_latency")));
-		sounds.put(new ResourceLocation("the_wet_smp", "web"), new net.minecraft.util.SoundEvent(new ResourceLocation("the_wet_smp", "web")));
+		sounds.put(new ResourceLocation("the_wet_smp", "crabcannon"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("the_wet_smp", "crabcannon")));
 		try {
 			ModFileScanData modFileInfo = ModList.get().getModFileById("the_wet_smp").getFile().getScanResult();
 			Set<ModFileScanData.AnnotationData> annotations = modFileInfo.getAnnotations();

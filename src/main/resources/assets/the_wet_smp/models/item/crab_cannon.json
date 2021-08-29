@@ -1,0 +1,8 @@
+{
+  "parent": "the_wet_smp:custom/crab_cannon",
+  "textures": {
+    "0": "the_wet_smp:blocks/crab_cannon",
+    "missing": "the_wet_smp:blocks/",
+    "particle": "the_wet_smp:items/crab"
+  }
+}

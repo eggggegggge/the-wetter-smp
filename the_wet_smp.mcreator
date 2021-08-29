@@ -274,36 +274,6 @@
       "path": "~/Legacy Content"
     },
     {
-      "name": "BismuthDust",
-      "type": "item",
-      "sortid": 15,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "bismuth_dust",
-      "path": "~/Legacy Content"
-    },
-    {
-      "name": "OsmiumDust",
-      "type": "item",
-      "sortid": 17,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "osmium_dust",
-      "path": "~/Legacy Content"
-    },
-    {
-      "name": "BismuthIngot",
-      "type": "item",
-      "sortid": 20,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "bismuth_ingot",
-      "path": "~/Legacy Content"
-    },
-    {
       "name": "OsmiumIngot",
       "type": "item",
       "sortid": 22,
@@ -351,26 +321,6 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "warped_wart_blockto_warped_wart",
-      "path": "~/Legacy Content"
-    },
-    {
-      "name": "GoldDust",
-      "type": "item",
-      "sortid": 26,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "gold_dust",
-      "path": "~/Legacy Content"
-    },
-    {
-      "name": "IronDust",
-      "type": "item",
-      "sortid": 27,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "iron_dust",
       "path": "~/Legacy Content"
     },
     {
@@ -871,130 +821,6 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "ruby_embedded_suspicious_stew",
-      "path": "~/Legacy Content"
-    },
-    {
-      "name": "Compress",
-      "type": "procedure",
-      "sortid": 121,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "compress",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Legacy Content"
-    },
-    {
-      "name": "Compressor",
-      "type": "block",
-      "sortid": 121,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "compressor",
-      "path": "~/Legacy Content"
-    },
-    {
-      "name": "CompressingCompressor1",
-      "type": "block",
-      "sortid": 122,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "compressing_compressor_1",
-      "path": "~/Legacy Content"
-    },
-    {
-      "name": "CompressingCompressor2",
-      "type": "block",
-      "sortid": 123,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "compressing_compressor_2",
-      "path": "~/Legacy Content"
-    },
-    {
-      "name": "CompressingCompressor3",
-      "type": "block",
-      "sortid": 124,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "compressing_compressor_3",
-      "path": "~/Legacy Content"
-    },
-    {
-      "name": "CompressingCompressor4",
-      "type": "block",
-      "sortid": 125,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "compressing_compressor_4",
-      "path": "~/Legacy Content"
-    },
-    {
-      "name": "CompressingCompressor5",
-      "type": "block",
-      "sortid": 126,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "compressing_compressor_5",
-      "path": "~/Legacy Content"
-    },
-    {
-      "name": "CompressingCompressor6",
-      "type": "block",
-      "sortid": 127,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "compressing_compressor_6",
-      "path": "~/Legacy Content"
-    },
-    {
-      "name": "CompressingCompressor7",
-      "type": "block",
-      "sortid": 128,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "compressing_compressor_7",
-      "path": "~/Legacy Content"
-    },
-    {
-      "name": "CompressingCompressor8",
-      "type": "block",
-      "sortid": 129,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "compressing_compressor_8",
       "path": "~/Legacy Content"
     },
     {
@@ -2078,16 +1904,6 @@
       "path": "~/Legacy Content"
     },
     {
-      "name": "CompressorRecipe",
-      "type": "recipe",
-      "sortid": 206,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "compressor_recipe",
-      "path": "~/Legacy Content"
-    },
-    {
       "name": "AquamarineGlassPane",
       "type": "block",
       "sortid": 243,
@@ -2975,6 +2791,108 @@
       "ids": {},
       "registry_name": "green_jellyfish",
       "path": "~/Items"
+    },
+    {
+      "name": "Nautilus",
+      "type": "item",
+      "sortid": 337,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nautilus",
+      "path": "~/Items"
+    },
+    {
+      "name": "EffervescentWatcher",
+      "type": "food",
+      "sortid": 338,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "effervescent_watcher",
+      "path": "~/Foodstuffs"
+    },
+    {
+      "name": "CrabCannon",
+      "type": "rangeditem",
+      "sortid": 339,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crab_cannon",
+      "path": "~/Tools"
+    },
+    {
+      "name": "Crab",
+      "type": "item",
+      "sortid": 340,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crab",
+      "path": "~/Items"
+    },
+    {
+      "name": "SeaUrchin",
+      "type": "item",
+      "sortid": 341,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sea_urchin",
+      "path": "~/Items"
+    },
+    {
+      "name": "RawOsmium",
+      "type": "item",
+      "sortid": 342,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "raw_osmium",
+      "path": "~/Items"
+    },
+    {
+      "name": "DeepslateOsmiumOre",
+      "type": "block",
+      "sortid": 345,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "deepslate_osmium_ore",
+      "path": "~/Blocks"
+    },
+    {
+      "name": "OsmiumOre",
+      "type": "loottable",
+      "sortid": 346,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "osmium_ore",
+      "path": "~/Loot Tables"
+    },
+    {
+      "name": "CrabCannonRangedItemUsed",
+      "type": "procedure",
+      "sortid": 348,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crab_cannon_ranged_item_used",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [
@@ -3009,12 +2927,12 @@
       "subtitle": "Buffer creates new latency"
     },
     {
-      "name": "web",
+      "name": "crabcannon",
       "files": [
-        "sfx_mob_spiderweb-002_soundwave"
+        "crabcannon2"
       ],
       "category": "player",
-      "subtitle": "Mob is webbed"
+      "subtitle": "Crab cannon fires"
     }
   ],
   "language_map": {
@@ -3035,7 +2953,7 @@
       "advancements.grant_gold_ingot_recipes.descr": "a",
       "item.the_wet_smp.ruby_embedded_mushroom_stew": "Ruby Embedded Mushroom Stew",
       "advancements.grant_gold_block_recipes.descr": "a",
-      "item.the_wet_smp.gold_dust": "Gold Dust",
+      "item.the_wet_smp.raw_osmium": "Raw Osmium",
       "item.the_wet_smp.chainmail_piston_chestplate": "Chainmail Piston Boots Body",
       "advancements.grant_smooth_stone_recipes.title": "Grant Warped Wart Recipe",
       "item.the_wet_smp.aquamarine_embedded_rabbit_stew": "Aquamarine Embedded Rabbit Stew",
@@ -3043,6 +2961,7 @@
       "item.the_wet_smp.green_jellyfish": "Green Jellyfish",
       "advancements.grant_golden_boots_recipes.descr": "a",
       "advancements.grant_aquamarine_recipes.title": "Grant Rings Recipe",
+      "item.the_wet_smp.sea_urchin": "Sea Urchin",
       "item.the_wet_smp.lapis_embedded_beetroot_soup": "Lapis Embedded Beetroot Soup",
       "item.the_wet_smp.glow_koi": "Glow Koi",
       "advancements.grant_chain_boots_recipes.descr": "a",
@@ -3061,6 +2980,7 @@
       "item.the_wet_smp.ruby_ring": "Ruby Ring",
       "block.the_wet_smp.cold_air_vent": "Air Vent",
       "item.the_wet_smp.golden_piston_chestplate": "Chainmail Piston Boots Body",
+      "item.the_wet_smp.effervescent_watcher": "Effervescent Watcher",
       "advancements.grant_iron_bars_recipes.descr": "a",
       "advancements.grant_osmium_ingot_recipes.title": "Grant Rings Recipe",
       "item.the_wet_smp.aquamarine_embedded_suspicious_stew": "Aquamarine Embedded Suspicious Stew",
@@ -3068,7 +2988,6 @@
       "item.the_wet_smp.onyx_ring": "Onyx Ring",
       "advancements.grant_iron_bars_recipes.title": "Grant Rings Recipe",
       "item.the_wet_smp.emerald_embedded_beetroot_soup": "Emerald Embedded Beetroot Soup",
-      "item.the_wet_smp.iron_dust": "Iron Dust",
       "advancements.grant_redstone_recipes.descr": "a",
       "item.the_wet_smp.ruby_embedded_beetroot_soup": "Ruby Embedded Beetroot Soup",
       "advancements.grant_warped_wart_block_recipes.title": "Grant Warped Wart Recipe",
@@ -3078,6 +2997,7 @@
       "item.the_wet_smp.aquamarine_embedded_beetroot_soup": "Aquamarine Embedded Beetroot Soup",
       "advancements.grant_chain_recipes.title": "Grant Warped Wart Recipe",
       "item.the_wet_smp.leather_piston_leggings": "Leather Piston Boots Leggings",
+      "item.the_wet_smp.crab": "Crab",
       "item.the_wet_smp.aquamarine_embedded_mushroom_stew": "Aquamarine Embedded Mushroom Stew",
       "item.the_wet_smp.netherite_piston_helmet": "Iron Piston Boots Helmet",
       "item.the_wet_smp.iron_piston_helmet": "Iron Piston Boots Helmet",
@@ -3091,21 +3011,11 @@
       "item.the_wet_smp.emerald_embedded_suspicious_stew": "Emerald Embedded Suspicious Stew",
       "item.the_wet_smp.osmium_ingot": "Osmium Ingot",
       "item.the_wet_smp.emerald_embedded_mushroom_stew": "Emerald Embedded Mushroom Stew",
-      "block.the_wet_smp.compressor": "Compressor",
       "item.the_wet_smp.emerald_embedded_rabbit_stew": "Emerald Embedded Rabbit Stew",
-      "item.the_wet_smp.bismuth_dust": "Bismuth Dust",
       "item.the_wet_smp.ruby": "Ruby",
       "item.the_wet_smp.buffer_block_removal_spawn_egg": "Buffer Block Removal Spawn Egg",
-      "block.the_wet_smp.compressing_compressor_7": "Compressor",
-      "block.the_wet_smp.compressing_compressor_8": "Compressor",
-      "block.the_wet_smp.compressing_compressor_5": "Compressor",
-      "block.the_wet_smp.compressing_compressor_6": "Compressor",
-      "block.the_wet_smp.compressing_compressor_3": "Compressor",
-      "block.the_wet_smp.compressing_compressor_4": "Compressor",
       "advancements.grant_netherite_boots_recipes.descr": "a",
       "item.the_wet_smp.iron_piston_leggings": "Iron Piston Boots Leggings",
-      "block.the_wet_smp.compressing_compressor_1": "Compressor",
-      "block.the_wet_smp.compressing_compressor_2": "Compressor",
       "subtitles.buffer.latency": "Buffer reverts to a previous latency",
       "subtitles.veil11": "Eerie noise",
       "item.the_wet_smp.jungle_snapper": "Jungle Snapper",
@@ -3114,7 +3024,9 @@
       "item.the_wet_smp.brush": "Brush",
       "item.the_wet_smp.blue_jellyfish": "Blue Jellyfish",
       "item.the_wet_smp.chainmail_piston_helmet": "Chainmail Piston Boots Helmet",
+      "block.the_wet_smp.deepslate_osmium_ore": "Deepslate Osmium Ore",
       "item.the_wet_smp.ruby_embedded_bowl": "Ruby Embedded Bowl",
+      "item.the_wet_smp.nautilus": "Nautilus",
       "advancements.grant_redstone_torch_recipes.descr": "a",
       "effect.sturdy": "Sturdy",
       "item.the_wet_smp.ruby_embedded_suspicious_stew": "Ruby Embedded Suspicious Stew",
@@ -3122,7 +3034,6 @@
       "advancements.grant_gold_ingot_recipes.title": "Grant Rings Recipe",
       "item.the_wet_smp.swordfish": "Swordfish",
       "item.the_wet_smp.netherite_piston_chestplate": "Iron Piston Boots Body",
-      "item.the_wet_smp.bismuth_ingot": "Bismuth Ingot",
       "subtitles.web": "Mob is webbed",
       "advancements.grant_ruby_recipes.title": "Grant Rings Recipe",
       "item.the_wet_smp.aquamarine": "Aquamarine",
@@ -3143,6 +3054,7 @@
       "advancements.get_all_rings.descr": "Get all five Lost Gem Rings",
       "advancements.grant_diamond_boots_recipes.descr": "a",
       "item.the_wet_smp.goldfish": "Goldfish",
+      "item.the_wet_smp.crab_cannon": "Crab Cannon",
       "item.the_wet_smp.aquamarine_ring": "Aquamarine Ring",
       "item.the_wet_smp.netherite_piston_boots": "Netherite Piston Boots",
       "item.the_wet_smp.netherite_piston_leggings": "Iron Piston Boots Leggings",
@@ -3161,6 +3073,7 @@
       "advancements.grant_golden_boots_recipes.title": "Grant Chain Piston Boots Recipe",
       "advancements.grant_aquamarine_glass_recipe.descr": "a",
       "item.the_wet_smp.emerald_ring": "Emerald Ring",
+      "subtitles.crabcannon": "Crab cannon fires",
       "item.the_wet_smp.leather_piston_chestplate": "Leather Piston Boots Body",
       "advancements.grant_warped_wart_recipes.descr": "a",
       "item.the_wet_smp.leather_piston_helmet": "Leather Piston Boots Helmet",
@@ -3185,7 +3098,6 @@
       "subtitles.veil4": "Eerie noise",
       "subtitles.veil3": "Eerie noise",
       "advancements.grant_lapis_recipes.title": "Grant Rings Recipe",
-      "item.the_wet_smp.osmium_dust": "Osmium Dust",
       "advancements.get_all_rings.title": "How to Scratch It",
       "subtitles.buffer.new_latency": "Buffer creates new latency"
     }
@@ -3249,6 +3161,10 @@
       },
       {
         "name": "Creative Tabs",
+        "children": []
+      },
+      {
+        "name": "Mobs",
         "children": []
       }
     ]

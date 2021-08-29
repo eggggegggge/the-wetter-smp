@@ -19,12 +19,12 @@
       }
     ]
   },
-  "web": {
+  "crabcannon": {
     "category": "player",
-    "subtitle": "subtitles.web",
+    "subtitle": "subtitles.crabcannon",
     "sounds": [
       {
-        "name": "the_wet_smp:sfx_mob_spiderweb-002_soundwave",
+        "name": "the_wet_smp:crabcannon2",
         "stream": false
       }
     ]

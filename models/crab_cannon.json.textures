@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "crab_cannon",
+        "missing": ""
+      },
+      "name": "default"
+    }
+  }
+}
