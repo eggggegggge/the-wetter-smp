@@ -2955,16 +2955,6 @@
       "path": "~/Foodstuffs"
     },
     {
-      "name": "RawOsmiumBlock",
-      "type": "block",
-      "sortid": 355,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "raw_osmium_block",
-      "path": "~/Blocks"
-    },
-    {
       "name": "RawOsmiumBlockRecipe",
       "type": "recipe",
       "sortid": 356,
@@ -3053,6 +3043,53 @@
       "ids": {},
       "registry_name": "molten_charr",
       "path": "~/Items"
+    },
+    {
+      "name": "RubyGrapplingHook",
+      "type": "rangeditem",
+      "sortid": 365,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ruby_grappling_hook",
+      "path": "~/Tools"
+    },
+    {
+      "name": "AquamarineGrapplingHook",
+      "type": "rangeditem",
+      "sortid": 366,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "aquamarine_grappling_hook",
+      "path": "~/Tools"
+    },
+    {
+      "name": "OnyxGrapplingHook",
+      "type": "rangeditem",
+      "sortid": 367,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "onyx_grappling_hook",
+      "path": "~/Tools"
+    },
+    {
+      "name": "GrapplingHookHitsBlock",
+      "type": "procedure",
+      "sortid": 368,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grappling_hook_hits_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -3097,8 +3134,8 @@
   ],
   "language_map": {
     "en_us": {
-      "item.the_wet_smp.emerald_embedded_bowl": "Emerald Embedded Bowl",
       "item.the_wet_smp.lapis_embedded_bowl": "Lapis Embedded Bowl",
+      "item.the_wet_smp.emerald_embedded_bowl": "Emerald Embedded Bowl",
       "item.the_wet_smp.onyx_embedded_rabbit_stew": "Onyx Embedded Rabbit Stew",
       "effect.snack_bulwark": "Snack Bulwark",
       "itemGroup.tabfishing": "Fishing Additions",
@@ -3122,7 +3159,9 @@
       "item.the_wet_smp.aquamarine_embedded_rabbit_stew": "Aquamarine Embedded Rabbit Stew",
       "item.the_wet_smp.fishling": "Fishling",
       "item.the_wet_smp.green_jellyfish": "Green Jellyfish",
+      "item.the_wet_smp.aquamarine_grappling_hook": "Aquamarine Grappling Hook",
       "advancements.grant_golden_boots_recipes.descr": "a",
+      "item.the_wet_smp.onyx_grappling_hook": "Onyx Grappling Hook",
       "advancements.grant_aquamarine_recipes.title": "Grant Rings Recipe",
       "item.the_wet_smp.sea_urchin": "Sea Urchin",
       "item.the_wet_smp.lapis_embedded_beetroot_soup": "Lapis Embedded Beetroot Soup",
@@ -3136,12 +3175,12 @@
       "item.the_wet_smp.diamond_piston_chestplate": "Chainmail Piston Boots Body",
       "item.the_wet_smp.lapis_embedded_rabbit_stew": "Lapis Embedded Rabbit Stew",
       "advancements.grant_piston_recipes.title": "Grant Piston Boots Recipe",
-      "block.the_wet_smp.raw_osmium_block": "Raw Osmium Block",
       "item.the_wet_smp.onyx_embedded_suspicious_stew": "Onyx Embedded Suspicious Stew",
       "item.the_wet_smp.golden_piston_helmet": "Chainmail Piston Boots Helmet",
       "item.the_wet_smp.diamond_piston_boots": "Diamond Piston Boots",
       "effect.vampirism": "Vampirism",
       "item.the_wet_smp.shroomy_koi": "Shroomy Koi",
+      "item.the_wet_smp.ruby_grappling_hook": "Ruby Grappling Hook",
       "item.the_wet_smp.iron_piston_boots": "Iron Piston Boots",
       "item.the_wet_smp.ruby_ring": "Ruby Ring",
       "block.the_wet_smp.cold_air_vent": "Air Vent",
