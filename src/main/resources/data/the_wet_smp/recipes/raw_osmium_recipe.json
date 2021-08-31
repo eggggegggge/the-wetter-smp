@@ -1,0 +1,13 @@
+{
+  "group": "the_wet_smp",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "the_wet_smp:raw_osmium_block"
+    }
+  ],
+  "result": {
+    "item": "the_wet_smp:raw_osmium",
+    "count": 9
+  }
+}

@@ -2953,6 +2953,106 @@
       "ids": {},
       "registry_name": "bass",
       "path": "~/Foodstuffs"
+    },
+    {
+      "name": "RawOsmiumBlock",
+      "type": "block",
+      "sortid": 355,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "raw_osmium_block",
+      "path": "~/Blocks"
+    },
+    {
+      "name": "RawOsmiumBlockRecipe",
+      "type": "recipe",
+      "sortid": 356,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "raw_osmium_block_recipe",
+      "path": "~/Recipes"
+    },
+    {
+      "name": "RawOsmiumRecipe",
+      "type": "recipe",
+      "sortid": 357,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "raw_osmium_recipe",
+      "path": "~/Recipes"
+    },
+    {
+      "name": "OsmiumIngotRecipe",
+      "type": "recipe",
+      "sortid": 358,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "osmium_ingot_recipe",
+      "path": "~/Recipes"
+    },
+    {
+      "name": "BlastingOsmiumIngotRecipe",
+      "type": "recipe",
+      "sortid": 359,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blasting_osmium_ingot_recipe",
+      "path": "~/Recipes"
+    },
+    {
+      "name": "ShroomyKoi",
+      "type": "food",
+      "sortid": 360,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "shroomy_koi",
+      "path": "~/Foodstuffs"
+    },
+    {
+      "name": "Soulscale",
+      "type": "food",
+      "sortid": 361,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "soulscale",
+      "path": "~/Foodstuffs"
+    },
+    {
+      "name": "GoldenSkiffia",
+      "type": "food",
+      "sortid": 362,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "golden_skiffia",
+      "path": "~/Foodstuffs"
+    },
+    {
+      "name": "NightKoi",
+      "type": "food",
+      "sortid": 363,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "night_koi",
+      "path": "~/Foodstuffs"
+    },
+    {
+      "name": "MoltenCharr",
+      "type": "item",
+      "sortid": 364,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "molten_charr",
+      "path": "~/Items"
     }
   ],
   "variable_elements": [
@@ -3006,6 +3106,7 @@
       "entity.the_wet_smp.buffer_block_removal": "Buffer Block Removal",
       "item.the_wet_smp.yellow_jellyfish": "Yellow Jellyfish",
       "item.the_wet_smp.diamond_piston_helmet": "Chainmail Piston Boots Helmet",
+      "item.the_wet_smp.soulscale": "Soulscale",
       "item.the_wet_smp.onyx_embedded_bowl": "Onyx Embedded Bowl",
       "advancements.grant_netherite_boots_recipes.title": "Grant Chain Piston Boots Recipe",
       "advancements.grant_onyx_recipes.title": "Grant Rings Recipe",
@@ -3027,6 +3128,7 @@
       "item.the_wet_smp.lapis_embedded_beetroot_soup": "Lapis Embedded Beetroot Soup",
       "item.the_wet_smp.glow_koi": "Glow Koi",
       "advancements.grant_chain_boots_recipes.descr": "a",
+      "item.the_wet_smp.molten_charr": "Molten Charr",
       "advancements.grant_chain_recipes.descr": "a",
       "item.the_wet_smp.koi": "Koi",
       "item.the_wet_smp.leather_piston_boots": "Leather Piston Boots",
@@ -3034,10 +3136,12 @@
       "item.the_wet_smp.diamond_piston_chestplate": "Chainmail Piston Boots Body",
       "item.the_wet_smp.lapis_embedded_rabbit_stew": "Lapis Embedded Rabbit Stew",
       "advancements.grant_piston_recipes.title": "Grant Piston Boots Recipe",
+      "block.the_wet_smp.raw_osmium_block": "Raw Osmium Block",
       "item.the_wet_smp.onyx_embedded_suspicious_stew": "Onyx Embedded Suspicious Stew",
       "item.the_wet_smp.golden_piston_helmet": "Chainmail Piston Boots Helmet",
       "item.the_wet_smp.diamond_piston_boots": "Diamond Piston Boots",
       "effect.vampirism": "Vampirism",
+      "item.the_wet_smp.shroomy_koi": "Shroomy Koi",
       "item.the_wet_smp.iron_piston_boots": "Iron Piston Boots",
       "item.the_wet_smp.ruby_ring": "Ruby Ring",
       "block.the_wet_smp.cold_air_vent": "Air Vent",
@@ -3140,11 +3244,13 @@
       "advancements.grant_aquamarine_glass_recipe.descr": "a",
       "item.the_wet_smp.emerald_ring": "Emerald Ring",
       "subtitles.crabcannon": "Crab cannon fires",
+      "item.the_wet_smp.golden_skiffia": "Golden Skiffia",
       "item.the_wet_smp.leather_piston_chestplate": "Leather Piston Boots Body",
       "advancements.grant_warped_wart_recipes.descr": "a",
       "item.the_wet_smp.leather_piston_helmet": "Leather Piston Boots Helmet",
       "advancements.grant_redstone_torch_recipes.title": "Grant Warped Wart Recipe",
       "advancements.grant_iron_boots_recipes.descr": "a",
+      "item.the_wet_smp.night_koi": "Night Koi",
       "item.the_wet_smp.warped_wart": "Warped Wart",
       "advancements.grant_redstone_recipes.title": "Grant Piston Boots Recipe",
       "advancements.grant_gold_block_recipes.title": "Grant Rings Recipe",
@@ -3203,10 +3309,6 @@
       },
       {
         "name": "Blocks",
-        "children": []
-      },
-      {
-        "name": "Tags",
         "children": []
       },
       {
