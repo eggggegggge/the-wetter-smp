@@ -3,9 +3,9 @@
   "_type": "food",
   "definition": {
     "renderType": 0,
-    "texture": "effervescent_watcher",
+    "texture": "shulkfish",
     "customModelName": "Normal",
-    "name": "Effervescent Watcher",
+    "name": "Shulkfish",
     "rarity": "COMMON",
     "specialInfo": [],
     "creativeTab": {
@@ -13,12 +13,12 @@
     },
     "stackSize": 64,
     "nutritionalValue": 0,
-    "saturation": 0.3,
+    "saturation": 0.0,
     "eatingSpeed": 32,
     "resultItem": {
       "value": ""
     },
-    "forDogs": true,
+    "forDogs": false,
     "isAlwaysEdible": false,
     "animation": "eat",
     "hasGlow": false

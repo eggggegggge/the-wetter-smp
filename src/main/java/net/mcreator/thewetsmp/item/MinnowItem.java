@@ -13,11 +13,11 @@ import net.mcreator.thewetsmp.itemgroup.FishingItemGroup;
 import net.mcreator.thewetsmp.TheWetSmpModElements;
 
 @TheWetSmpModElements.ModElement.Tag
-public class EffervescentWatcherItem extends TheWetSmpModElements.ModElement {
-	@ObjectHolder("the_wet_smp:effervescent_watcher")
+public class MinnowItem extends TheWetSmpModElements.ModElement {
+	@ObjectHolder("the_wet_smp:minnow")
 	public static final Item block = null;
-	public EffervescentWatcherItem(TheWetSmpModElements instance) {
-		super(instance, 338);
+	public MinnowItem(TheWetSmpModElements instance) {
+		super(instance, 373);
 	}
 
 	@Override
@@ -27,8 +27,8 @@ public class EffervescentWatcherItem extends TheWetSmpModElements.ModElement {
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
 			super(new Item.Properties().group(FishingItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
-					.food((new Food.Builder()).hunger(0).saturation(0.3f).meat().build()));
-			setRegistryName("effervescent_watcher");
+					.food((new Food.Builder()).hunger(1).saturation(0.1f).meat().build()));
+			setRegistryName("minnow");
 		}
 
 		@Override

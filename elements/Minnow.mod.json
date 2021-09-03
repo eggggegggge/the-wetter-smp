@@ -3,17 +3,17 @@
   "_type": "food",
   "definition": {
     "renderType": 0,
-    "texture": "effervescent_watcher",
+    "texture": "minnow",
     "customModelName": "Normal",
-    "name": "Effervescent Watcher",
+    "name": "Minnow",
     "rarity": "COMMON",
     "specialInfo": [],
     "creativeTab": {
       "value": "CUSTOM:Fishing"
     },
     "stackSize": 64,
-    "nutritionalValue": 0,
-    "saturation": 0.3,
+    "nutritionalValue": 1,
+    "saturation": 0.1,
     "eatingSpeed": 32,
     "resultItem": {
       "value": ""

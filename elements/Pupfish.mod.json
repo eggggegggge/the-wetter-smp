@@ -3,17 +3,17 @@
   "_type": "food",
   "definition": {
     "renderType": 0,
-    "texture": "effervescent_watcher",
+    "texture": "pupfish",
     "customModelName": "Normal",
-    "name": "Effervescent Watcher",
+    "name": "Pupfish",
     "rarity": "COMMON",
     "specialInfo": [],
     "creativeTab": {
       "value": "CUSTOM:Fishing"
     },
     "stackSize": 64,
-    "nutritionalValue": 0,
-    "saturation": 0.3,
+    "nutritionalValue": 2,
+    "saturation": 1.0,
     "eatingSpeed": 32,
     "resultItem": {
       "value": ""

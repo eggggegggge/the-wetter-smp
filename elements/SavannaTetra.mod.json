@@ -3,17 +3,17 @@
   "_type": "food",
   "definition": {
     "renderType": 0,
-    "texture": "effervescent_watcher",
+    "texture": "savanna_tetra",
     "customModelName": "Normal",
-    "name": "Effervescent Watcher",
+    "name": "Savanna Tetra",
     "rarity": "COMMON",
     "specialInfo": [],
     "creativeTab": {
       "value": "CUSTOM:Fishing"
     },
     "stackSize": 64,
-    "nutritionalValue": 0,
-    "saturation": 0.3,
+    "nutritionalValue": 4,
+    "saturation": 0.2,
     "eatingSpeed": 32,
     "resultItem": {
       "value": ""

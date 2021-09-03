@@ -3,23 +3,23 @@
   "_type": "food",
   "definition": {
     "renderType": 0,
-    "texture": "effervescent_watcher",
+    "texture": "humuhumunukunukuapuaa",
     "customModelName": "Normal",
-    "name": "Effervescent Watcher",
+    "name": "Humuhumunukunuku?pua'a",
     "rarity": "COMMON",
     "specialInfo": [],
     "creativeTab": {
       "value": "CUSTOM:Fishing"
     },
     "stackSize": 64,
-    "nutritionalValue": 0,
-    "saturation": 0.3,
+    "nutritionalValue": 2,
+    "saturation": 0.7,
     "eatingSpeed": 32,
     "resultItem": {
       "value": ""
     },
     "forDogs": true,
-    "isAlwaysEdible": false,
+    "isAlwaysEdible": true,
     "animation": "eat",
     "hasGlow": false
   }
