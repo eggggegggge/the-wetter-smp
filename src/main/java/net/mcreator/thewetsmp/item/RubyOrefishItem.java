@@ -9,13 +9,13 @@ import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.thewetsmp.itemgroup.FishingItemGroup;
-import net.mcreator.thewetsmp.TheWetSmpModElements;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
-@TheWetSmpModElements.ModElement.Tag
-public class RubyOrefishItem extends TheWetSmpModElements.ModElement {
-	@ObjectHolder("the_wet_smp:ruby_orefish")
+@TheWetSmpRehydratedModElements.ModElement.Tag
+public class RubyOrefishItem extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:ruby_orefish")
 	public static final Item block = null;
-	public RubyOrefishItem(TheWetSmpModElements instance) {
+	public RubyOrefishItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 383);
 	}
 

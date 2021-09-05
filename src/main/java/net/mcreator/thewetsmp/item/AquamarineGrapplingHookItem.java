@@ -32,20 +32,20 @@ import net.minecraft.entity.Entity;
 
 import net.mcreator.thewetsmp.procedures.CrabCannonRangedItemUsedProcedure;
 import net.mcreator.thewetsmp.entity.renderer.AquamarineGrapplingHookRenderer;
-import net.mcreator.thewetsmp.TheWetSmpModElements;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
 import java.util.Random;
 import java.util.Map;
 import java.util.HashMap;
 
-@TheWetSmpModElements.ModElement.Tag
-public class AquamarineGrapplingHookItem extends TheWetSmpModElements.ModElement {
-	@ObjectHolder("the_wet_smp:aquamarine_grappling_hook")
+@TheWetSmpRehydratedModElements.ModElement.Tag
+public class AquamarineGrapplingHookItem extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:aquamarine_grappling_hook")
 	public static final Item block = null;
 	public static final EntityType arrow = (EntityType.Builder.<ArrowCustomEntity>create(ArrowCustomEntity::new, EntityClassification.MISC)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
 			.size(0.5f, 0.5f)).build("entitybulletaquamarine_grappling_hook").setRegistryName("entitybulletaquamarine_grappling_hook");
-	public AquamarineGrapplingHookItem(TheWetSmpModElements instance) {
+	public AquamarineGrapplingHookItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 366);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new AquamarineGrapplingHookRenderer.ModelRegisterHandler());
 	}

@@ -33,14 +33,14 @@ import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.thewetsmp.entity.renderer.BufferBlockRemovalRenderer;
-import net.mcreator.thewetsmp.TheWetSmpModElements;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
-@TheWetSmpModElements.ModElement.Tag
-public class BufferBlockRemovalEntity extends TheWetSmpModElements.ModElement {
+@TheWetSmpRehydratedModElements.ModElement.Tag
+public class BufferBlockRemovalEntity extends TheWetSmpRehydratedModElements.ModElement {
 	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(0).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire()
 			.size(0f, 0f)).build("buffer_block_removal").setRegistryName("buffer_block_removal");
-	public BufferBlockRemovalEntity(TheWetSmpModElements instance) {
+	public BufferBlockRemovalEntity(TheWetSmpRehydratedModElements instance) {
 		super(instance, 203);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BufferBlockRemovalRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());

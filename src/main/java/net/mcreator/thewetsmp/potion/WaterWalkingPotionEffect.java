@@ -20,7 +20,7 @@ import java.util.HashMap;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class WaterWalkingPotionEffect {
-	@ObjectHolder("the_wet_smp:water_walking")
+	@ObjectHolder("the_wet_smp_rehydrated:water_walking")
 	public static final Effect potion = null;
 	@SubscribeEvent
 	public static void registerEffect(RegistryEvent.Register<Effect> event) {
@@ -31,7 +31,7 @@ public class WaterWalkingPotionEffect {
 		public EffectCustom() {
 			super(EffectType.BENEFICIAL, 16777215);
 			setRegistryName("water_walking");
-			potionIcon = new ResourceLocation("the_wet_smp:textures/water_walking.png");
+			potionIcon = new ResourceLocation("the_wet_smp_rehydrated:textures/water_walking.png");
 		}
 
 		@Override

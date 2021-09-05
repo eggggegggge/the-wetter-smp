@@ -1,0 +1,7 @@
+{
+  "parent": "block/template_glass_pane_side_alt",
+  "textures": {
+    "edge": "the_wet_smp_rehydrated:blocks/aquamarineglasstop",
+    "pane": "the_wet_smp_rehydrated:blocks/aquamarine_glass"
+  }
+}

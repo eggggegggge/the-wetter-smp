@@ -9,13 +9,13 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
-import net.mcreator.thewetsmp.TheWetSmpModElements;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
-@TheWetSmpModElements.ModElement.Tag
-public class StrangeGelItem extends TheWetSmpModElements.ModElement {
-	@ObjectHolder("the_wet_smp:strange_gel")
+@TheWetSmpRehydratedModElements.ModElement.Tag
+public class StrangeGelItem extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:strange_gel")
 	public static final Item block = null;
-	public StrangeGelItem(TheWetSmpModElements instance) {
+	public StrangeGelItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 132);
 	}
 

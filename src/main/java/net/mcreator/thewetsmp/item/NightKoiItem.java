@@ -10,13 +10,13 @@ import net.minecraft.item.Item;
 import net.minecraft.item.Food;
 
 import net.mcreator.thewetsmp.itemgroup.FishingItemGroup;
-import net.mcreator.thewetsmp.TheWetSmpModElements;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
-@TheWetSmpModElements.ModElement.Tag
-public class NightKoiItem extends TheWetSmpModElements.ModElement {
-	@ObjectHolder("the_wet_smp:night_koi")
+@TheWetSmpRehydratedModElements.ModElement.Tag
+public class NightKoiItem extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:night_koi")
 	public static final Item block = null;
-	public NightKoiItem(TheWetSmpModElements instance) {
+	public NightKoiItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 363);
 	}
 

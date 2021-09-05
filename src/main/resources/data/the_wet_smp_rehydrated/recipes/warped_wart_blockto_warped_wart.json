@@ -1,0 +1,13 @@
+{
+  "group": "wartwarped",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:warped_wart_block"
+    }
+  ],
+  "result": {
+    "item": "the_wet_smp_rehydrated:warped_wart",
+    "count": 9
+  }
+}

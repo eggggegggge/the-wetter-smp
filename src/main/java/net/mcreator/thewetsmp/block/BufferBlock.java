@@ -72,7 +72,7 @@ import net.minecraft.block.Block;
 import net.mcreator.thewetsmp.procedures.BufferParticleSpawningConditionProcedure;
 import net.mcreator.thewetsmp.procedures.BufferOnBlockRightClickedProcedure;
 import net.mcreator.thewetsmp.procedures.BufferBlockIsPlacedByProcedure;
-import net.mcreator.thewetsmp.TheWetSmpModElements;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
 import javax.annotation.Nullable;
 
@@ -83,13 +83,13 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-@TheWetSmpModElements.ModElement.Tag
-public class BufferBlock extends TheWetSmpModElements.ModElement {
-	@ObjectHolder("the_wet_smp:buffer")
+@TheWetSmpRehydratedModElements.ModElement.Tag
+public class BufferBlock extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:buffer")
 	public static final Block block = null;
-	@ObjectHolder("the_wet_smp:buffer")
+	@ObjectHolder("the_wet_smp_rehydrated:buffer")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
-	public BufferBlock(TheWetSmpModElements instance) {
+	public BufferBlock(TheWetSmpRehydratedModElements instance) {
 		super(instance, 150);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}

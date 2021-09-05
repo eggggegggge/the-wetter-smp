@@ -14,16 +14,16 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.LivingEntity;
 
 import net.mcreator.thewetsmp.procedures.RuEatProcedure;
-import net.mcreator.thewetsmp.TheWetSmpModElements;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
 import java.util.Map;
 import java.util.HashMap;
 
-@TheWetSmpModElements.ModElement.Tag
-public class RubyEmbeddedSuspiciousStewItem extends TheWetSmpModElements.ModElement {
-	@ObjectHolder("the_wet_smp:ruby_embedded_suspicious_stew")
+@TheWetSmpRehydratedModElements.ModElement.Tag
+public class RubyEmbeddedSuspiciousStewItem extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:ruby_embedded_suspicious_stew")
 	public static final Item block = null;
-	public RubyEmbeddedSuspiciousStewItem(TheWetSmpModElements instance) {
+	public RubyEmbeddedSuspiciousStewItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 120);
 	}
 

@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "the_wet_smp_rehydrated:ruby_ring"
+    },
+    "title": {
+      "translate": "advancements.get_all_rings.title"
+    },
+    "description": {
+      "translate": "advancements.get_all_rings.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_all_rings": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 20
+  },
+  "parent": "minecraft:story/iron_tools"
+}

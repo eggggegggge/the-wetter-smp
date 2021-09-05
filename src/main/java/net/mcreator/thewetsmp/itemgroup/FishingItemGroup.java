@@ -8,11 +8,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 
 import net.mcreator.thewetsmp.item.KoiItem;
-import net.mcreator.thewetsmp.TheWetSmpModElements;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
-@TheWetSmpModElements.ModElement.Tag
-public class FishingItemGroup extends TheWetSmpModElements.ModElement {
-	public FishingItemGroup(TheWetSmpModElements instance) {
+@TheWetSmpRehydratedModElements.ModElement.Tag
+public class FishingItemGroup extends TheWetSmpRehydratedModElements.ModElement {
+	public FishingItemGroup(TheWetSmpRehydratedModElements instance) {
 		super(instance, 334);
 	}
 

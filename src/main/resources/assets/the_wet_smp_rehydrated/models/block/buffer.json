@@ -1,0 +1,12 @@
+{
+  "parent": "the_wet_smp_rehydrated:custom/buffer",
+  "textures": {
+    "all": "the_wet_smp_rehydrated:blocks/glass",
+    "particle": "the_wet_smp_rehydrated:blocks/glass",
+    "0": "the_wet_smp_rehydrated:blocks/clock",
+    "1": "the_wet_smp_rehydrated:blocks/sea_lantern",
+    "2": "the_wet_smp_rehydrated:blocks/aquamarine",
+    "3": "the_wet_smp_rehydrated:blocks/glass",
+    "missing": "the_wet_smp_rehydrated:blocks/"
+  }
+}

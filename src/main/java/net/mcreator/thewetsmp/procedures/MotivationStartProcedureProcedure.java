@@ -2,7 +2,7 @@ package net.mcreator.thewetsmp.procedures;
 
 import net.minecraft.entity.Entity;
 
-import net.mcreator.thewetsmp.TheWetSmpMod;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 
 import java.util.Map;
 
@@ -10,7 +10,7 @@ public class MotivationStartProcedureProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency entity for procedure MotivationStartProcedure!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure MotivationStartProcedure!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

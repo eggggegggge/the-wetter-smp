@@ -1,0 +1,8 @@
+{
+  "parent": "the_wet_smp_rehydrated:custom/crab_cannon",
+  "textures": {
+    "0": "the_wet_smp_rehydrated:blocks/crab_cannon",
+    "missing": "the_wet_smp_rehydrated:blocks/",
+    "particle": "the_wet_smp_rehydrated:items/crab"
+  }
+}

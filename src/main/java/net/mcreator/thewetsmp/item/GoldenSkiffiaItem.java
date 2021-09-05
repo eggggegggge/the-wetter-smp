@@ -10,13 +10,13 @@ import net.minecraft.item.Item;
 import net.minecraft.item.Food;
 
 import net.mcreator.thewetsmp.itemgroup.FishingItemGroup;
-import net.mcreator.thewetsmp.TheWetSmpModElements;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
-@TheWetSmpModElements.ModElement.Tag
-public class GoldenSkiffiaItem extends TheWetSmpModElements.ModElement {
-	@ObjectHolder("the_wet_smp:golden_skiffia")
+@TheWetSmpRehydratedModElements.ModElement.Tag
+public class GoldenSkiffiaItem extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:golden_skiffia")
 	public static final Item block = null;
-	public GoldenSkiffiaItem(TheWetSmpModElements instance) {
+	public GoldenSkiffiaItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 362);
 	}
 

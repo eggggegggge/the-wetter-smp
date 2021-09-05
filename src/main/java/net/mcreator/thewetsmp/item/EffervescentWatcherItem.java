@@ -10,13 +10,13 @@ import net.minecraft.item.Item;
 import net.minecraft.item.Food;
 
 import net.mcreator.thewetsmp.itemgroup.FishingItemGroup;
-import net.mcreator.thewetsmp.TheWetSmpModElements;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
-@TheWetSmpModElements.ModElement.Tag
-public class EffervescentWatcherItem extends TheWetSmpModElements.ModElement {
-	@ObjectHolder("the_wet_smp:effervescent_watcher")
+@TheWetSmpRehydratedModElements.ModElement.Tag
+public class EffervescentWatcherItem extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:effervescent_watcher")
 	public static final Item block = null;
-	public EffervescentWatcherItem(TheWetSmpModElements instance) {
+	public EffervescentWatcherItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 338);
 	}
 

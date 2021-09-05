@@ -13,7 +13,7 @@ import net.minecraft.potion.Effect;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class SnackBulwarkPotionEffect {
-	@ObjectHolder("the_wet_smp:snack_bulwark")
+	@ObjectHolder("the_wet_smp_rehydrated:snack_bulwark")
 	public static final Effect potion = null;
 	@SubscribeEvent
 	public static void registerEffect(RegistryEvent.Register<Effect> event) {
@@ -24,7 +24,7 @@ public class SnackBulwarkPotionEffect {
 		public EffectCustom() {
 			super(EffectType.BENEFICIAL, 16777215);
 			setRegistryName("snack_bulwark");
-			potionIcon = new ResourceLocation("the_wet_smp:textures/snack_bulwark.png");
+			potionIcon = new ResourceLocation("the_wet_smp_rehydrated:textures/snack_bulwark.png");
 		}
 
 		@Override

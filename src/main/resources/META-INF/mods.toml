@@ -3,7 +3,7 @@ loaderVersion="[36,)"
 license="Academic Free License v3.0"
 
 [[mods]]
-modId="the_wet_smp"
+modId="the_wet_smp_rehydrated"
 version="Judgement Day"
 displayName="The Wet SMP Rehydrated"
 credits="IT WAS ME"
@@ -13,7 +13,7 @@ description='''
 FUCK
 '''
 
-[[dependencies.the_wet_smp]]
+[[dependencies.the_wet_smp_rehydrated]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.16.5]"

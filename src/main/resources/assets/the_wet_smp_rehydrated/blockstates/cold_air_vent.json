@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "the_wet_smp_rehydrated:block/cold_air_vent"
+    },
+    "facing=east": {
+      "model": "the_wet_smp_rehydrated:block/cold_air_vent",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "the_wet_smp_rehydrated:block/cold_air_vent",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "the_wet_smp_rehydrated:block/cold_air_vent",
+      "y": 270
+    }
+  }
+}

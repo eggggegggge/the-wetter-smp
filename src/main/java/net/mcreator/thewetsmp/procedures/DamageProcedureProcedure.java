@@ -6,13 +6,15 @@ import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 
 import net.minecraft.world.World;
+import net.minecraft.util.DamageSource;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.thewetsmp.potion.SnackBulwarkPotionEffect;
-import net.mcreator.thewetsmp.TheWetSmpMod;
+import net.mcreator.thewetsmp.potion.LacunaPotionEffect;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -47,16 +49,17 @@ public class DamageProcedureProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency entity for procedure DamageProcedure!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure DamageProcedure!");
 			return;
 		}
 		if (dependencies.get("amount") == null) {
 			if (!dependencies.containsKey("amount"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency amount for procedure DamageProcedure!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency amount for procedure DamageProcedure!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		double amount = dependencies.get("amount") instanceof Integer ? (int) dependencies.get("amount") : (double) dependencies.get("amount");
+		double test = 0;
 		if ((new Object() {
 			boolean check(Entity _entity) {
 				if (_entity instanceof LivingEntity) {
@@ -86,6 +89,29 @@ public class DamageProcedureProcedure {
 								_evt.setCanceled(true);
 						}
 					}
+				}
+			}
+		} else if ((new Object() {
+			boolean check(Entity _entity) {
+				if (_entity instanceof LivingEntity) {
+					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+					for (EffectInstance effect : effects) {
+						if (effect.getPotion() == LacunaPotionEffect.potion)
+							return true;
+					}
+				}
+				return false;
+			}
+		}.check(entity))) {
+			if (entity instanceof LivingEntity) {
+				((LivingEntity) entity).attackEntityFrom(new DamageSource("lacuna").setDamageBypassesArmor(), (float) ((amount) + ((amount) / 2)));
+			}
+			if (dependencies.get("event") != null) {
+				Object _obj = dependencies.get("event");
+				if (_obj instanceof Event) {
+					Event _evt = (Event) _obj;
+					if (_evt.isCancelable())
+						_evt.setCanceled(true);
 				}
 			}
 		}

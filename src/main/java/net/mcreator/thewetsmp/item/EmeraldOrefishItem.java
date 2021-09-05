@@ -9,13 +9,13 @@ import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.thewetsmp.itemgroup.FishingItemGroup;
-import net.mcreator.thewetsmp.TheWetSmpModElements;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
-@TheWetSmpModElements.ModElement.Tag
-public class EmeraldOrefishItem extends TheWetSmpModElements.ModElement {
-	@ObjectHolder("the_wet_smp:emerald_orefish")
+@TheWetSmpRehydratedModElements.ModElement.Tag
+public class EmeraldOrefishItem extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:emerald_orefish")
 	public static final Item block = null;
-	public EmeraldOrefishItem(TheWetSmpModElements instance) {
+	public EmeraldOrefishItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 388);
 	}
 

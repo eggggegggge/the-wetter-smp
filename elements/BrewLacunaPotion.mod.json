@@ -1,0 +1,23 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Brewing",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "lacunapot",
+    "recipeShapeless": false,
+    "brewingInputStack": {
+      "value": "POTION:AWKWARD"
+    },
+    "brewingIngredientStack": {
+      "value": "CUSTOM:EffervescentWatcher"
+    },
+    "brewingReturnStack": {
+      "value": "POTION:CUSTOM:LacunaPotion"
+    },
+    "name": "brew_lacuna_potion",
+    "namespace": "mod"
+  }
+}

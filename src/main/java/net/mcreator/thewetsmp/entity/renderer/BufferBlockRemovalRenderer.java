@@ -24,7 +24,7 @@ public class BufferBlockRemovalRenderer {
 				BipedRenderer customRender = new BipedRenderer(renderManager, new BipedModel(0), 0f) {
 					@Override
 					public ResourceLocation getEntityTexture(Entity entity) {
-						return new ResourceLocation("the_wet_smp:textures/buffer_texture_map.png");
+						return new ResourceLocation("the_wet_smp_rehydrated:textures/buffer_texture_map.png");
 					}
 				};
 				customRender.addLayer(new BipedArmorLayer(customRender, new BipedModel(0.5f), new BipedModel(1)));

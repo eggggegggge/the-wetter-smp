@@ -15,7 +15,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.thewetsmp.block.AquamarineGlassBlock;
-import net.mcreator.thewetsmp.TheWetSmpMod;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -24,27 +24,27 @@ public class BufferOnBlockRightClickedProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency entity for procedure BufferOnBlockRightClicked!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure BufferOnBlockRightClicked!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency x for procedure BufferOnBlockRightClicked!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency x for procedure BufferOnBlockRightClicked!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency y for procedure BufferOnBlockRightClicked!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency y for procedure BufferOnBlockRightClicked!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency z for procedure BufferOnBlockRightClicked!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency z for procedure BufferOnBlockRightClicked!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency world for procedure BufferOnBlockRightClicked!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure BufferOnBlockRightClicked!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -110,12 +110,12 @@ public class BufferOnBlockRightClickedProcedure {
 							if (world instanceof World && !world.isRemote()) {
 								((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
 										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-												.getValue(new ResourceLocation("the_wet_smp:buffer.new_latency")),
+												.getValue(new ResourceLocation("the_wet_smp_rehydrated:buffer.new_latency")),
 										SoundCategory.NEUTRAL, (float) 0.1, (float) 1);
 							} else {
 								((World) world).playSound(x, y, z,
 										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-												.getValue(new ResourceLocation("the_wet_smp:buffer.new_latency")),
+												.getValue(new ResourceLocation("the_wet_smp_rehydrated:buffer.new_latency")),
 										SoundCategory.NEUTRAL, (float) 0.1, (float) 1, false);
 							}
 							{
@@ -317,12 +317,12 @@ public class BufferOnBlockRightClickedProcedure {
 							if (world instanceof World && !world.isRemote()) {
 								((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
 										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-												.getValue(new ResourceLocation("the_wet_smp:buffer.latency")),
+												.getValue(new ResourceLocation("the_wet_smp_rehydrated:buffer.latency")),
 										SoundCategory.NEUTRAL, (float) 0.1, (float) 1);
 							} else {
 								((World) world).playSound(x, y, z,
 										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-												.getValue(new ResourceLocation("the_wet_smp:buffer.latency")),
+												.getValue(new ResourceLocation("the_wet_smp_rehydrated:buffer.latency")),
 										SoundCategory.NEUTRAL, (float) 0.1, (float) 1, false);
 							}
 							{

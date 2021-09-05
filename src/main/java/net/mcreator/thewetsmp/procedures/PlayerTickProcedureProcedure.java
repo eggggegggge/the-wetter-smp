@@ -15,7 +15,7 @@ import net.minecraft.block.BlockState;
 
 import net.mcreator.thewetsmp.block.HotAirVentBlock;
 import net.mcreator.thewetsmp.block.ColdAirVentBlock;
-import net.mcreator.thewetsmp.TheWetSmpMod;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -45,27 +45,27 @@ public class PlayerTickProcedureProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency entity for procedure PlayerTickProcedure!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure PlayerTickProcedure!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency x for procedure PlayerTickProcedure!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency x for procedure PlayerTickProcedure!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency y for procedure PlayerTickProcedure!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency y for procedure PlayerTickProcedure!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency z for procedure PlayerTickProcedure!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency z for procedure PlayerTickProcedure!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency world for procedure PlayerTickProcedure!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure PlayerTickProcedure!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

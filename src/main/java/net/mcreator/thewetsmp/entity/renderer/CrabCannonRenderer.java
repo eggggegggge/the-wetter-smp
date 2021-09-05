@@ -35,7 +35,7 @@ public class CrabCannonRenderer {
 
 	@OnlyIn(Dist.CLIENT)
 	public static class CustomRender extends EntityRenderer<CrabCannonItem.ArrowCustomEntity> {
-		private static final ResourceLocation texture = new ResourceLocation("the_wet_smp:textures/crab_projectile.png");
+		private static final ResourceLocation texture = new ResourceLocation("the_wet_smp_rehydrated:textures/crab_projectile.png");
 		public CustomRender(EntityRendererManager renderManager) {
 			super(renderManager);
 		}

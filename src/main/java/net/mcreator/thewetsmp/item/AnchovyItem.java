@@ -10,13 +10,13 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.item.Food;
 
-import net.mcreator.thewetsmp.TheWetSmpModElements;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
-@TheWetSmpModElements.ModElement.Tag
-public class AnchovyItem extends TheWetSmpModElements.ModElement {
-	@ObjectHolder("the_wet_smp:anchovy")
+@TheWetSmpRehydratedModElements.ModElement.Tag
+public class AnchovyItem extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:anchovy")
 	public static final Item block = null;
-	public AnchovyItem(TheWetSmpModElements instance) {
+	public AnchovyItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 374);
 	}
 

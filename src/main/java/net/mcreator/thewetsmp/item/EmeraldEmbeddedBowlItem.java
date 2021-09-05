@@ -9,13 +9,13 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
-import net.mcreator.thewetsmp.TheWetSmpModElements;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
-@TheWetSmpModElements.ModElement.Tag
-public class EmeraldEmbeddedBowlItem extends TheWetSmpModElements.ModElement {
-	@ObjectHolder("the_wet_smp:emerald_embedded_bowl")
+@TheWetSmpRehydratedModElements.ModElement.Tag
+public class EmeraldEmbeddedBowlItem extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:emerald_embedded_bowl")
 	public static final Item block = null;
-	public EmeraldEmbeddedBowlItem(TheWetSmpModElements instance) {
+	public EmeraldEmbeddedBowlItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 74);
 	}
 

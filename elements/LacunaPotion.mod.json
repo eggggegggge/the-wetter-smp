@@ -1,0 +1,21 @@
+{
+  "_fv": 24,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Potion of Lacuna",
+    "splashName": "Splash Potion of Lacuna",
+    "lingeringName": "Lingering Potion of Lacuna",
+    "arrowName": "Arrow of Lacuna",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:Lacuna"
+        },
+        "duration": 3600,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}

@@ -12,7 +12,7 @@ import net.mcreator.thewetsmp.particle.HotAirParticle;
 import net.mcreator.thewetsmp.block.HotAirVentBlock;
 import net.mcreator.thewetsmp.block.ColdAirVentBlock;
 import net.mcreator.thewetsmp.block.AirVentBlock;
-import net.mcreator.thewetsmp.TheWetSmpMod;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 
 import java.util.Map;
 
@@ -20,22 +20,22 @@ public class AirVentUpdateProcedureProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency x for procedure AirVentUpdateProcedure!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency x for procedure AirVentUpdateProcedure!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency y for procedure AirVentUpdateProcedure!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency y for procedure AirVentUpdateProcedure!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency z for procedure AirVentUpdateProcedure!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency z for procedure AirVentUpdateProcedure!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency world for procedure AirVentUpdateProcedure!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure AirVentUpdateProcedure!");
 			return;
 		}
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");

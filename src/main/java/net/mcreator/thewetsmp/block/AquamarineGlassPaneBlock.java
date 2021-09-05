@@ -21,16 +21,16 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.mcreator.thewetsmp.TheWetSmpModElements;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@TheWetSmpModElements.ModElement.Tag
-public class AquamarineGlassPaneBlock extends TheWetSmpModElements.ModElement {
-	@ObjectHolder("the_wet_smp:aquamarine_glass_pane")
+@TheWetSmpRehydratedModElements.ModElement.Tag
+public class AquamarineGlassPaneBlock extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:aquamarine_glass_pane")
 	public static final Block block = null;
-	public AquamarineGlassPaneBlock(TheWetSmpModElements instance) {
+	public AquamarineGlassPaneBlock(TheWetSmpRehydratedModElements instance) {
 		super(instance, 243);
 	}
 

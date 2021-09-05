@@ -21,7 +21,7 @@ import net.mcreator.thewetsmp.item.IronPistonBootsItem;
 import net.mcreator.thewetsmp.item.GoldenPistonBootsItem;
 import net.mcreator.thewetsmp.item.DiamondPistonBootsItem;
 import net.mcreator.thewetsmp.item.ChainmailPistonBootsItem;
-import net.mcreator.thewetsmp.TheWetSmpMod;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -49,27 +49,27 @@ public class PistonNoiseProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency entity for procedure PistonNoise!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure PistonNoise!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency x for procedure PistonNoise!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency x for procedure PistonNoise!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency y for procedure PistonNoise!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency y for procedure PistonNoise!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency z for procedure PistonNoise!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency z for procedure PistonNoise!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency world for procedure PistonNoise!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure PistonNoise!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

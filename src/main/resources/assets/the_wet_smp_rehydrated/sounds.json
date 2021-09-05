@@ -1,0 +1,32 @@
+{
+  "buffer.latency": {
+    "category": "block",
+    "subtitle": "subtitles.buffer.latency",
+    "sounds": [
+      {
+        "name": "the_wet_smp_rehydrated:ogg",
+        "stream": false
+      }
+    ]
+  },
+  "buffer.new_latency": {
+    "category": "block",
+    "subtitle": "subtitles.buffer.new_latency",
+    "sounds": [
+      {
+        "name": "the_wet_smp_rehydrated:latency",
+        "stream": false
+      }
+    ]
+  },
+  "crabcannon": {
+    "category": "player",
+    "subtitle": "subtitles.crabcannon",
+    "sounds": [
+      {
+        "name": "the_wet_smp_rehydrated:crabcannon2",
+        "stream": false
+      }
+    ]
+  }
+}

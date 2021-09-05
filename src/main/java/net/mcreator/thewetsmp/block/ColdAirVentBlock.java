@@ -39,7 +39,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.mcreator.thewetsmp.procedures.AirVentUpdateProcedureProcedure;
-import net.mcreator.thewetsmp.TheWetSmpModElements;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
 import java.util.Random;
 import java.util.Map;
@@ -47,11 +47,11 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-@TheWetSmpModElements.ModElement.Tag
-public class ColdAirVentBlock extends TheWetSmpModElements.ModElement {
-	@ObjectHolder("the_wet_smp:cold_air_vent")
+@TheWetSmpRehydratedModElements.ModElement.Tag
+public class ColdAirVentBlock extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:cold_air_vent")
 	public static final Block block = null;
-	public ColdAirVentBlock(TheWetSmpModElements instance) {
+	public ColdAirVentBlock(TheWetSmpRehydratedModElements instance) {
 		super(instance, 312);
 	}
 

@@ -20,7 +20,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.mcreator.thewetsmp.entity.BufferBlockRemovalEntity;
-import net.mcreator.thewetsmp.TheWetSmpMod;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 
 import java.util.function.Function;
 import java.util.Map;
@@ -30,27 +30,27 @@ public class BufferBlockIsPlacedByProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency entity for procedure BufferBlockIsPlacedBy!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure BufferBlockIsPlacedBy!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency x for procedure BufferBlockIsPlacedBy!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency x for procedure BufferBlockIsPlacedBy!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency y for procedure BufferBlockIsPlacedBy!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency y for procedure BufferBlockIsPlacedBy!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency z for procedure BufferBlockIsPlacedBy!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency z for procedure BufferBlockIsPlacedBy!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency world for procedure BufferBlockIsPlacedBy!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure BufferBlockIsPlacedBy!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

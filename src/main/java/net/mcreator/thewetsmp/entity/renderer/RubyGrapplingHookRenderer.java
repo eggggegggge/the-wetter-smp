@@ -35,7 +35,7 @@ public class RubyGrapplingHookRenderer {
 
 	@OnlyIn(Dist.CLIENT)
 	public static class CustomRender extends EntityRenderer<RubyGrapplingHookItem.ArrowCustomEntity> {
-		private static final ResourceLocation texture = new ResourceLocation("the_wet_smp:textures/rubyhook.png");
+		private static final ResourceLocation texture = new ResourceLocation("the_wet_smp_rehydrated:textures/rubyhook.png");
 		public CustomRender(EntityRendererManager renderManager) {
 			super(renderManager);
 		}

@@ -1,0 +1,25 @@
+{
+  "criteria": {
+    "grant_iron_ingot_recipes": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:iron_ingot",
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1,
+    "recipes": [
+      "the_wet_smp_rehydrated:air_vent_recipe"
+    ]
+  },
+  "parent": "the_wet_smp_rehydrated:get_all_rings"
+}

@@ -1,0 +1,42 @@
+{
+  "group": "warpedwart",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "the_wet_smp_rehydrated:warped_wart"
+    },
+    "1": {
+      "item": "the_wet_smp_rehydrated:warped_wart"
+    },
+    "2": {
+      "item": "the_wet_smp_rehydrated:warped_wart"
+    },
+    "3": {
+      "item": "the_wet_smp_rehydrated:warped_wart"
+    },
+    "4": {
+      "item": "the_wet_smp_rehydrated:warped_wart"
+    },
+    "5": {
+      "item": "the_wet_smp_rehydrated:warped_wart"
+    },
+    "6": {
+      "item": "the_wet_smp_rehydrated:warped_wart"
+    },
+    "7": {
+      "item": "the_wet_smp_rehydrated:warped_wart"
+    },
+    "8": {
+      "item": "the_wet_smp_rehydrated:warped_wart"
+    }
+  },
+  "result": {
+    "item": "minecraft:warped_wart_block",
+    "count": 1
+  }
+}

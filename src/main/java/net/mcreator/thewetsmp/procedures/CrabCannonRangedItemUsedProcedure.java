@@ -5,7 +5,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.thewetsmp.item.CrabCannonItem;
-import net.mcreator.thewetsmp.TheWetSmpMod;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 
 import java.util.Map;
 
@@ -13,12 +13,12 @@ public class CrabCannonRangedItemUsedProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency entity for procedure CrabCannonRangedItemUsed!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure CrabCannonRangedItemUsed!");
 			return;
 		}
 		if (dependencies.get("itemstack") == null) {
 			if (!dependencies.containsKey("itemstack"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency itemstack for procedure CrabCannonRangedItemUsed!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency itemstack for procedure CrabCannonRangedItemUsed!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

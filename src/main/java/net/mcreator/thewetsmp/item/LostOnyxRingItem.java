@@ -12,16 +12,16 @@ import net.minecraft.entity.Entity;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.thewetsmp.procedures.RingEffectProcedure;
-import net.mcreator.thewetsmp.TheWetSmpModElements;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
 import java.util.Map;
 import java.util.HashMap;
 
-@TheWetSmpModElements.ModElement.Tag
-public class LostOnyxRingItem extends TheWetSmpModElements.ModElement {
-	@ObjectHolder("the_wet_smp:onyx_ring")
+@TheWetSmpRehydratedModElements.ModElement.Tag
+public class LostOnyxRingItem extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:onyx_ring")
 	public static final Item block = null;
-	public LostOnyxRingItem(TheWetSmpModElements instance) {
+	public LostOnyxRingItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 8);
 	}
 

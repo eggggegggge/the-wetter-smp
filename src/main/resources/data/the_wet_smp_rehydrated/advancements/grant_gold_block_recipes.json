@@ -1,0 +1,29 @@
+{
+  "criteria": {
+    "grant_gold_block_recipes": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:gold_block",
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1,
+    "recipes": [
+      "the_wet_smp_rehydrated:aquamarine_ring_recipe",
+      "the_wet_smp_rehydrated:emerald_ring_recipe",
+      "the_wet_smp_rehydrated:lapis_ring_recipe",
+      "the_wet_smp_rehydrated:onyx_ring_recipe",
+      "the_wet_smp_rehydrated:ruby_ring_recipe"
+    ]
+  },
+  "parent": "the_wet_smp_rehydrated:get_all_rings"
+}

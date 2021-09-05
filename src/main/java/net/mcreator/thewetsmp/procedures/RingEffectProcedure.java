@@ -15,7 +15,7 @@ import net.mcreator.thewetsmp.item.LostOnyxRingItem;
 import net.mcreator.thewetsmp.item.LostLapisRingItem;
 import net.mcreator.thewetsmp.item.LostEmeraldRingItem;
 import net.mcreator.thewetsmp.item.LostAquamarineRingItem;
-import net.mcreator.thewetsmp.TheWetSmpMod;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 
 import java.util.Map;
 
@@ -23,7 +23,7 @@ public class RingEffectProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency entity for procedure RingEffect!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure RingEffect!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

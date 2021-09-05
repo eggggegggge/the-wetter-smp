@@ -9,13 +9,13 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
-import net.mcreator.thewetsmp.TheWetSmpModElements;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
-@TheWetSmpModElements.ModElement.Tag
-public class LapisEmbeddedBowlItem extends TheWetSmpModElements.ModElement {
-	@ObjectHolder("the_wet_smp:lapis_embedded_bowl")
+@TheWetSmpRehydratedModElements.ModElement.Tag
+public class LapisEmbeddedBowlItem extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:lapis_embedded_bowl")
 	public static final Item block = null;
-	public LapisEmbeddedBowlItem(TheWetSmpModElements instance) {
+	public LapisEmbeddedBowlItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 83);
 	}
 

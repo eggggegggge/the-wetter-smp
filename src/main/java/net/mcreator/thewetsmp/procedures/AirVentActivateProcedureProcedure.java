@@ -15,7 +15,7 @@ import net.minecraft.block.BlockState;
 
 import net.mcreator.thewetsmp.block.HotAirVentBlock;
 import net.mcreator.thewetsmp.block.ColdAirVentBlock;
-import net.mcreator.thewetsmp.TheWetSmpMod;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 
 import java.util.Map;
 
@@ -23,22 +23,22 @@ public class AirVentActivateProcedureProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency x for procedure AirVentActivateProcedure!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency x for procedure AirVentActivateProcedure!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency y for procedure AirVentActivateProcedure!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency y for procedure AirVentActivateProcedure!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency z for procedure AirVentActivateProcedure!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency z for procedure AirVentActivateProcedure!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency world for procedure AirVentActivateProcedure!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure AirVentActivateProcedure!");
 			return;
 		}
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");

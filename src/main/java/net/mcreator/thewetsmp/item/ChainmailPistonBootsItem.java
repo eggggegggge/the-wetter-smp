@@ -19,22 +19,22 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.thewetsmp.procedures.PistonBootsJumpProcedure;
-import net.mcreator.thewetsmp.TheWetSmpModElements;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
 import java.util.Map;
 import java.util.HashMap;
 
-@TheWetSmpModElements.ModElement.Tag
-public class ChainmailPistonBootsItem extends TheWetSmpModElements.ModElement {
-	@ObjectHolder("the_wet_smp:chainmail_piston_helmet")
+@TheWetSmpRehydratedModElements.ModElement.Tag
+public class ChainmailPistonBootsItem extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:chainmail_piston_helmet")
 	public static final Item helmet = null;
-	@ObjectHolder("the_wet_smp:chainmail_piston_chestplate")
+	@ObjectHolder("the_wet_smp_rehydrated:chainmail_piston_chestplate")
 	public static final Item body = null;
-	@ObjectHolder("the_wet_smp:chainmail_piston_leggings")
+	@ObjectHolder("the_wet_smp_rehydrated:chainmail_piston_leggings")
 	public static final Item legs = null;
-	@ObjectHolder("the_wet_smp:chainmail_piston_boots")
+	@ObjectHolder("the_wet_smp_rehydrated:chainmail_piston_boots")
 	public static final Item boots = null;
-	public ChainmailPistonBootsItem(TheWetSmpModElements instance) {
+	public ChainmailPistonBootsItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 30);
 	}
 
@@ -85,8 +85,8 @@ public class ChainmailPistonBootsItem extends TheWetSmpModElements.ModElement {
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.TRANSPORTATION)) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-				return "the_wet_smp:textures/models/armor/chainmail_piston_boots_armour__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1")
-						+ ".png";
+				return "the_wet_smp_rehydrated:textures/models/armor/chainmail_piston_boots_armour__layer_"
+						+ (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 			}
 
 			@Override

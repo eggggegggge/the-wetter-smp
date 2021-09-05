@@ -22,7 +22,7 @@ import java.util.HashMap;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class SturdyPotionEffect {
-	@ObjectHolder("the_wet_smp:sturdy")
+	@ObjectHolder("the_wet_smp_rehydrated:sturdy")
 	public static final Effect potion = null;
 	@SubscribeEvent
 	public static void registerEffect(RegistryEvent.Register<Effect> event) {
@@ -33,7 +33,7 @@ public class SturdyPotionEffect {
 		public EffectCustom() {
 			super(EffectType.BENEFICIAL, 16777215);
 			setRegistryName("sturdy");
-			potionIcon = new ResourceLocation("the_wet_smp:textures/sturdy.png");
+			potionIcon = new ResourceLocation("the_wet_smp_rehydrated:textures/sturdy.png");
 		}
 
 		@Override

@@ -8,7 +8,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.item.ItemStack;
 
-import net.mcreator.thewetsmp.TheWetSmpMod;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 
 import java.util.Map;
 
@@ -16,22 +16,22 @@ public class Y2StoreInfoProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency x for procedure Y2StoreInfo!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency x for procedure Y2StoreInfo!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency y for procedure Y2StoreInfo!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency y for procedure Y2StoreInfo!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency z for procedure Y2StoreInfo!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency z for procedure Y2StoreInfo!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency world for procedure Y2StoreInfo!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure Y2StoreInfo!");
 			return;
 		}
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");

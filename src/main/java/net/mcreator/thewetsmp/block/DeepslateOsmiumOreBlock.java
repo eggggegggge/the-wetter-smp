@@ -34,15 +34,15 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.mcreator.thewetsmp.TheWetSmpModElements;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
 import java.util.Random;
 
-@TheWetSmpModElements.ModElement.Tag
-public class DeepslateOsmiumOreBlock extends TheWetSmpModElements.ModElement {
-	@ObjectHolder("the_wet_smp:deepslate_osmium_ore")
+@TheWetSmpRehydratedModElements.ModElement.Tag
+public class DeepslateOsmiumOreBlock extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:deepslate_osmium_ore")
 	public static final Block block = null;
-	public DeepslateOsmiumOreBlock(TheWetSmpModElements instance) {
+	public DeepslateOsmiumOreBlock(TheWetSmpRehydratedModElements instance) {
 		super(instance, 345);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
@@ -87,7 +87,7 @@ public class DeepslateOsmiumOreBlock extends TheWetSmpModElements.ModElement {
 	private static class FeatureRegisterHandler {
 		@SubscribeEvent
 		public void registerFeature(RegistryEvent.Register<Feature<?>> event) {
-			CUSTOM_MATCH = Registry.register(Registry.RULE_TEST, new ResourceLocation("the_wet_smp:deepslate_osmium_ore_match"),
+			CUSTOM_MATCH = Registry.register(Registry.RULE_TEST, new ResourceLocation("the_wet_smp_rehydrated:deepslate_osmium_ore_match"),
 					() -> CustomRuleTest.codec);
 			feature = new OreFeature(OreFeatureConfig.CODEC) {
 				@Override
@@ -104,7 +104,8 @@ public class DeepslateOsmiumOreBlock extends TheWetSmpModElements.ModElement {
 			configuredFeature = feature.withConfiguration(new OreFeatureConfig(CustomRuleTest.INSTANCE, block.getDefaultState(), 8)).range(10)
 					.square().func_242731_b(13);
 			event.getRegistry().register(feature.setRegistryName("deepslate_osmium_ore"));
-			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("the_wet_smp:deepslate_osmium_ore"), configuredFeature);
+			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("the_wet_smp_rehydrated:deepslate_osmium_ore"),
+					configuredFeature);
 		}
 	}
 	@SubscribeEvent

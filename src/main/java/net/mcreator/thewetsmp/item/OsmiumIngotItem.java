@@ -9,13 +9,13 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
-import net.mcreator.thewetsmp.TheWetSmpModElements;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
-@TheWetSmpModElements.ModElement.Tag
-public class OsmiumIngotItem extends TheWetSmpModElements.ModElement {
-	@ObjectHolder("the_wet_smp:osmium_ingot")
+@TheWetSmpRehydratedModElements.ModElement.Tag
+public class OsmiumIngotItem extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:osmium_ingot")
 	public static final Item block = null;
-	public OsmiumIngotItem(TheWetSmpModElements instance) {
+	public OsmiumIngotItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 22);
 	}
 

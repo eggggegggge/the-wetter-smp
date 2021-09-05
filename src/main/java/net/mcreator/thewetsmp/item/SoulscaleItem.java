@@ -10,13 +10,13 @@ import net.minecraft.item.Item;
 import net.minecraft.item.Food;
 
 import net.mcreator.thewetsmp.itemgroup.FishingItemGroup;
-import net.mcreator.thewetsmp.TheWetSmpModElements;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
-@TheWetSmpModElements.ModElement.Tag
-public class SoulscaleItem extends TheWetSmpModElements.ModElement {
-	@ObjectHolder("the_wet_smp:soulscale")
+@TheWetSmpRehydratedModElements.ModElement.Tag
+public class SoulscaleItem extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:soulscale")
 	public static final Item block = null;
-	public SoulscaleItem(TheWetSmpModElements instance) {
+	public SoulscaleItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 361);
 	}
 

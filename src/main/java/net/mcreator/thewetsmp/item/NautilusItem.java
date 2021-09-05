@@ -9,13 +9,13 @@ import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.thewetsmp.itemgroup.FishingItemGroup;
-import net.mcreator.thewetsmp.TheWetSmpModElements;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
-@TheWetSmpModElements.ModElement.Tag
-public class NautilusItem extends TheWetSmpModElements.ModElement {
-	@ObjectHolder("the_wet_smp:nautilus")
+@TheWetSmpRehydratedModElements.ModElement.Tag
+public class NautilusItem extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:nautilus")
 	public static final Item block = null;
-	public NautilusItem(TheWetSmpModElements instance) {
+	public NautilusItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 337);
 	}
 

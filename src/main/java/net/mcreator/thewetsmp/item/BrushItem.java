@@ -16,16 +16,16 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 
-import net.mcreator.thewetsmp.TheWetSmpModElements;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
 import com.google.common.collect.Multimap;
 import com.google.common.collect.ImmutableMultimap;
 
-@TheWetSmpModElements.ModElement.Tag
-public class BrushItem extends TheWetSmpModElements.ModElement {
-	@ObjectHolder("the_wet_smp:brush")
+@TheWetSmpRehydratedModElements.ModElement.Tag
+public class BrushItem extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:brush")
 	public static final Item block = null;
-	public BrushItem(TheWetSmpModElements instance) {
+	public BrushItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 307);
 	}
 

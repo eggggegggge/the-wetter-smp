@@ -9,13 +9,13 @@ import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.thewetsmp.itemgroup.FishingItemGroup;
-import net.mcreator.thewetsmp.TheWetSmpModElements;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
-@TheWetSmpModElements.ModElement.Tag
-public class ScallopItem extends TheWetSmpModElements.ModElement {
-	@ObjectHolder("the_wet_smp:scallop")
+@TheWetSmpRehydratedModElements.ModElement.Tag
+public class ScallopItem extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:scallop")
 	public static final Item block = null;
-	public ScallopItem(TheWetSmpModElements instance) {
+	public ScallopItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 370);
 	}
 

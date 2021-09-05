@@ -9,13 +9,13 @@ import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.thewetsmp.itemgroup.FishingItemGroup;
-import net.mcreator.thewetsmp.TheWetSmpModElements;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
-@TheWetSmpModElements.ModElement.Tag
-public class GreenJellyfishItem extends TheWetSmpModElements.ModElement {
-	@ObjectHolder("the_wet_smp:green_jellyfish")
+@TheWetSmpRehydratedModElements.ModElement.Tag
+public class GreenJellyfishItem extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:green_jellyfish")
 	public static final Item block = null;
-	public GreenJellyfishItem(TheWetSmpModElements instance) {
+	public GreenJellyfishItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 336);
 	}
 

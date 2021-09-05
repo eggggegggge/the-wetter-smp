@@ -14,16 +14,16 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.LivingEntity;
 
 import net.mcreator.thewetsmp.procedures.LaEatProcedure;
-import net.mcreator.thewetsmp.TheWetSmpModElements;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
 import java.util.Map;
 import java.util.HashMap;
 
-@TheWetSmpModElements.ModElement.Tag
-public class LapisEmbeddedMushroomStewItem extends TheWetSmpModElements.ModElement {
-	@ObjectHolder("the_wet_smp:lapis_embedded_mushroom_stew")
+@TheWetSmpRehydratedModElements.ModElement.Tag
+public class LapisEmbeddedMushroomStewItem extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:lapis_embedded_mushroom_stew")
 	public static final Item block = null;
-	public LapisEmbeddedMushroomStewItem(TheWetSmpModElements instance) {
+	public LapisEmbeddedMushroomStewItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 85);
 	}
 

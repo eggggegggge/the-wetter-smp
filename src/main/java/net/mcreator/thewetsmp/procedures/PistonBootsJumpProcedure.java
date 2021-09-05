@@ -13,7 +13,7 @@ import net.mcreator.thewetsmp.item.IronPistonBootsItem;
 import net.mcreator.thewetsmp.item.GoldenPistonBootsItem;
 import net.mcreator.thewetsmp.item.DiamondPistonBootsItem;
 import net.mcreator.thewetsmp.item.ChainmailPistonBootsItem;
-import net.mcreator.thewetsmp.TheWetSmpMod;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 
 import java.util.Map;
 
@@ -21,7 +21,7 @@ public class PistonBootsJumpProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency entity for procedure PistonBootsJump!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure PistonBootsJump!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

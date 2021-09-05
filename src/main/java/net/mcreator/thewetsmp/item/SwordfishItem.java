@@ -9,13 +9,13 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.item.IItemTier;
 
-import net.mcreator.thewetsmp.TheWetSmpModElements;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
-@TheWetSmpModElements.ModElement.Tag
-public class SwordfishItem extends TheWetSmpModElements.ModElement {
-	@ObjectHolder("the_wet_smp:swordfish")
+@TheWetSmpRehydratedModElements.ModElement.Tag
+public class SwordfishItem extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:swordfish")
 	public static final Item block = null;
-	public SwordfishItem(TheWetSmpModElements instance) {
+	public SwordfishItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 331);
 	}
 

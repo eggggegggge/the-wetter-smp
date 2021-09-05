@@ -20,22 +20,22 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.thewetsmp.procedures.PistonBootsJumpProcedure;
-import net.mcreator.thewetsmp.TheWetSmpModElements;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
 import java.util.Map;
 import java.util.HashMap;
 
-@TheWetSmpModElements.ModElement.Tag
-public class GoldenPistonBootsItem extends TheWetSmpModElements.ModElement {
-	@ObjectHolder("the_wet_smp:golden_piston_helmet")
+@TheWetSmpRehydratedModElements.ModElement.Tag
+public class GoldenPistonBootsItem extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:golden_piston_helmet")
 	public static final Item helmet = null;
-	@ObjectHolder("the_wet_smp:golden_piston_chestplate")
+	@ObjectHolder("the_wet_smp_rehydrated:golden_piston_chestplate")
 	public static final Item body = null;
-	@ObjectHolder("the_wet_smp:golden_piston_leggings")
+	@ObjectHolder("the_wet_smp_rehydrated:golden_piston_leggings")
 	public static final Item legs = null;
-	@ObjectHolder("the_wet_smp:golden_piston_boots")
+	@ObjectHolder("the_wet_smp_rehydrated:golden_piston_boots")
 	public static final Item boots = null;
-	public GoldenPistonBootsItem(TheWetSmpModElements instance) {
+	public GoldenPistonBootsItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 31);
 	}
 
@@ -86,7 +86,8 @@ public class GoldenPistonBootsItem extends TheWetSmpModElements.ModElement {
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.TRANSPORTATION)) {
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-				return "the_wet_smp:textures/models/armor/gold_piston_boots_armour__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
+				return "the_wet_smp_rehydrated:textures/models/armor/gold_piston_boots_armour__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1")
+						+ ".png";
 			}
 
 			@Override

@@ -19,7 +19,7 @@ import net.mcreator.thewetsmp.item.LostOnyxRingItem;
 import net.mcreator.thewetsmp.item.LostLapisRingItem;
 import net.mcreator.thewetsmp.item.LostEmeraldRingItem;
 import net.mcreator.thewetsmp.item.LostAquamarineRingItem;
-import net.mcreator.thewetsmp.TheWetSmpMod;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 
 import java.util.Map;
 import java.util.Iterator;
@@ -50,7 +50,7 @@ public class GiveThanosAdvancementProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency entity for procedure GiveThanosAdvancement!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure GiveThanosAdvancement!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -69,7 +69,7 @@ public class GiveThanosAdvancementProcedure {
 						: false))) {
 			if (entity instanceof ServerPlayerEntity) {
 				Advancement _adv = ((MinecraftServer) ((ServerPlayerEntity) entity).server).getAdvancementManager()
-						.getAdvancement(new ResourceLocation("the_wet_smp:get_all_rings"));
+						.getAdvancement(new ResourceLocation("the_wet_smp_rehydrated:get_all_rings"));
 				AdvancementProgress _ap = ((ServerPlayerEntity) entity).getAdvancements().getProgress(_adv);
 				if (!_ap.isDone()) {
 					Iterator _iterator = _ap.getRemaningCriteria().iterator();

@@ -33,20 +33,20 @@ import net.minecraft.entity.Entity;
 import net.mcreator.thewetsmp.procedures.GrapplingHookHitsBlockProcedure;
 import net.mcreator.thewetsmp.procedures.CrabCannonRangedItemUsedProcedure;
 import net.mcreator.thewetsmp.entity.renderer.RubyGrapplingHookRenderer;
-import net.mcreator.thewetsmp.TheWetSmpModElements;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
 import java.util.Random;
 import java.util.Map;
 import java.util.HashMap;
 
-@TheWetSmpModElements.ModElement.Tag
-public class RubyGrapplingHookItem extends TheWetSmpModElements.ModElement {
-	@ObjectHolder("the_wet_smp:ruby_grappling_hook")
+@TheWetSmpRehydratedModElements.ModElement.Tag
+public class RubyGrapplingHookItem extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:ruby_grappling_hook")
 	public static final Item block = null;
 	public static final EntityType arrow = (EntityType.Builder.<ArrowCustomEntity>create(ArrowCustomEntity::new, EntityClassification.MISC)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
 			.size(0.5f, 0.5f)).build("entitybulletruby_grappling_hook").setRegistryName("entitybulletruby_grappling_hook");
-	public RubyGrapplingHookItem(TheWetSmpModElements instance) {
+	public RubyGrapplingHookItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 365);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new RubyGrapplingHookRenderer.ModelRegisterHandler());
 	}
@@ -153,7 +153,6 @@ public class RubyGrapplingHookItem extends TheWetSmpModElements.ModElement {
 				{
 					Map<String, Object> $_dependencies = new HashMap<>();
 					$_dependencies.put("entity", entity);
-					$_dependencies.put("imediatesourceentity", imediatesourceentity);
 					GrapplingHookHitsBlockProcedure.executeProcedure($_dependencies);
 				}
 				this.remove();

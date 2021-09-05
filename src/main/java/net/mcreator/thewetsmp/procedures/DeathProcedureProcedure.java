@@ -10,7 +10,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.thewetsmp.potion.VampirismPotionEffect;
-import net.mcreator.thewetsmp.TheWetSmpMod;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -43,12 +43,12 @@ public class DeathProcedureProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency entity for procedure DeathProcedure!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure DeathProcedure!");
 			return;
 		}
 		if (dependencies.get("sourceentity") == null) {
 			if (!dependencies.containsKey("sourceentity"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency sourceentity for procedure DeathProcedure!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency sourceentity for procedure DeathProcedure!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

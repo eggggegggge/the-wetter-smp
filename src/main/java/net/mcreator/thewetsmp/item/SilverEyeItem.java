@@ -10,13 +10,13 @@ import net.minecraft.item.Item;
 import net.minecraft.item.Food;
 
 import net.mcreator.thewetsmp.itemgroup.FishingItemGroup;
-import net.mcreator.thewetsmp.TheWetSmpModElements;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
-@TheWetSmpModElements.ModElement.Tag
-public class SilverEyeItem extends TheWetSmpModElements.ModElement {
-	@ObjectHolder("the_wet_smp:silver_eye")
+@TheWetSmpRehydratedModElements.ModElement.Tag
+public class SilverEyeItem extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:silver_eye")
 	public static final Item block = null;
-	public SilverEyeItem(TheWetSmpModElements instance) {
+	public SilverEyeItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 379);
 	}
 

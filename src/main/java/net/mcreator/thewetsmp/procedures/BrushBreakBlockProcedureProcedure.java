@@ -21,7 +21,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.thewetsmp.item.BrushItem;
-import net.mcreator.thewetsmp.TheWetSmpMod;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -51,32 +51,32 @@ public class BrushBreakBlockProcedureProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("blockstate") == null) {
 			if (!dependencies.containsKey("blockstate"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency blockstate for procedure BrushBreakBlockProcedure!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency blockstate for procedure BrushBreakBlockProcedure!");
 			return;
 		}
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency entity for procedure BrushBreakBlockProcedure!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure BrushBreakBlockProcedure!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency x for procedure BrushBreakBlockProcedure!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency x for procedure BrushBreakBlockProcedure!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency y for procedure BrushBreakBlockProcedure!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency y for procedure BrushBreakBlockProcedure!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency z for procedure BrushBreakBlockProcedure!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency z for procedure BrushBreakBlockProcedure!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				TheWetSmpMod.LOGGER.warn("Failed to load dependency world for procedure BrushBreakBlockProcedure!");
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure BrushBreakBlockProcedure!");
 			return;
 		}
 		BlockState blockstate = (BlockState) dependencies.get("blockstate");

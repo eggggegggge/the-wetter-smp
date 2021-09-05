@@ -1,0 +1,3745 @@
+{
+  "id_map": {},
+  "mod_elements": [
+    {
+      "name": "RingEffect",
+      "type": "procedure",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ring_effect",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "LostAquamarineRing",
+      "type": "item",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "aquamarine_ring",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "LostEmeraldRing",
+      "type": "item",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "emerald_ring",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "LostLapisRing",
+      "type": "item",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "lapis_ring",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "LostOnyxRing",
+      "type": "item",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "onyx_ring",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "LostRubyRing",
+      "type": "item",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ruby_ring",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "Aquamarine",
+      "type": "item",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "aquamarine",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "Ruby",
+      "type": "item",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ruby",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "Onyx",
+      "type": "item",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "onyx",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "ChainmailPistonBoots",
+      "type": "armor",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "chainmail_piston",
+      "metadata": {
+        "eh": false,
+        "el": false,
+        "eb": true,
+        "ec": false
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "DiamondPistonBoots",
+      "type": "armor",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "diamond_piston",
+      "metadata": {
+        "eh": false,
+        "el": false,
+        "eb": true,
+        "ec": false
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "GoldenPistonBoots",
+      "type": "armor",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "golden_piston",
+      "metadata": {
+        "eh": false,
+        "el": false,
+        "eb": true,
+        "ec": false
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "IronPistonBoots",
+      "type": "armor",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "iron_piston",
+      "metadata": {
+        "eh": false,
+        "el": false,
+        "eb": true,
+        "ec": false
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "NetheritePistonBoots",
+      "type": "armor",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "netherite_piston",
+      "metadata": {
+        "eh": false,
+        "el": false,
+        "eb": true,
+        "ec": false
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "PistonBootsJump",
+      "type": "procedure",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "piston_boots_jump",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "LeatherPistonBoots",
+      "type": "armor",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "leather_piston",
+      "metadata": {
+        "eh": false,
+        "el": false,
+        "eb": true,
+        "ec": false
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "ChainmailPistonBootsRecipe",
+      "type": "recipe",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "chainmail_piston_boots_recipe",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "DiamondPistonBootsRecipe",
+      "type": "recipe",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "diamond_piston_boots_recipe",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "GoldenPistonBootsRecipe",
+      "type": "recipe",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "golden_piston_boots_recipe",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "IronPistonBootsRecipe",
+      "type": "recipe",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "iron_piston_boots_recipe",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "NetheritePistonBootsRecipe",
+      "type": "recipe",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "netherite_piston_boots_recipe",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "LeatherPistonBootsRecipe",
+      "type": "recipe",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "leather_piston_boots_recipe",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "OsmiumIngot",
+      "type": "item",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "osmium_ingot",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "WarpedWart",
+      "type": "item",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "warped_wart",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "WartToWartBlock",
+      "type": "recipe",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "wart_to_wart_block",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "WarpedWartToWarpedWartBlock",
+      "type": "recipe",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "warped_wart_to_warped_wart_block",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "WarpedWartBlocktoWarpedWart",
+      "type": "recipe",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "warped_wart_blockto_warped_wart",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "AquamarineEmbeddedBowl",
+      "type": "item",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "aquamarine_embedded_bowl",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "AquamarineEmbeddedBeetrootSoup",
+      "type": "food",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "aquamarine_embedded_beetroot_soup",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "AquamarineEmbeddedMushroomStew",
+      "type": "food",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "aquamarine_embedded_mushroom_stew",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "AquamarineEmbeddedRabbitStew",
+      "type": "food",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "aquamarine_embedded_rabbit_stew",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "AquamarineEmbeddedBowlRecipe",
+      "type": "recipe",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "aquamarine_embedded_bowl_recipe",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "AquamarineEmbeddedBeetrootSoupRecipe",
+      "type": "recipe",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "aquamarine_embedded_beetroot_soup_recipe",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "AquamarineEmbeddedMushroomStewRecipe",
+      "type": "recipe",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "aquamarine_embedded_mushroom_stew_recipe",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "AquamarineEmbeddedRabbitStewRecipe",
+      "type": "recipe",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "aquamarine_embedded_rabbit_stew_recipe",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "AquamarineEmbeddedRabbitStewRecipe1",
+      "type": "recipe",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "aquamarine_embedded_rabbit_stew_recipe_1",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "EmeraldEmbeddedBowl",
+      "type": "item",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "emerald_embedded_bowl",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "EmeraldEmbeddedBeetrootSoup",
+      "type": "food",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "emerald_embedded_beetroot_soup",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "EmeraldEmbeddedMushroomStew",
+      "type": "food",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "emerald_embedded_mushroom_stew",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "EmeraldEmbeddedRabbitStew",
+      "type": "food",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "emerald_embedded_rabbit_stew",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "EmeraldEmbeddedBowlRecipe",
+      "type": "recipe",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "emerald_embedded_bowl_recipe",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "EmeraldEmbeddedBeetrootSoupRecipe",
+      "type": "recipe",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "emerald_embedded_beetroot_soup_recipe",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "EmeraldEmbeddedMushroomStewRecipe",
+      "type": "recipe",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "emerald_embedded_mushroom_stew_recipe",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "EmeraldEmbeddedRabbitStewRecipe",
+      "type": "recipe",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "emerald_embedded_rabbit_stew_recipe",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "EmeraldEmbeddedRabbitStewRecipe1",
+      "type": "recipe",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "emerald_embedded_rabbit_stew_recipe_1",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "LapisEmbeddedBowl",
+      "type": "item",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "lapis_embedded_bowl",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "LapisEmbeddedBeetrootSoup",
+      "type": "food",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "lapis_embedded_beetroot_soup",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "LapisEmbeddedMushroomStew",
+      "type": "food",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "lapis_embedded_mushroom_stew",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "LapisEmbeddedRabbitStew",
+      "type": "food",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "lapis_embedded_rabbit_stew",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "LapisEmbeddedBowlRecipe",
+      "type": "recipe",
+      "sortid": 87,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "lapis_embedded_bowl_recipe",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "LapisEmbeddedBeetrootSoupRecipe",
+      "type": "recipe",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "lapis_embedded_beetroot_soup_recipe",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "LapisEmbeddedMushroomStewRecipe",
+      "type": "recipe",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "lapis_embedded_mushroom_stew_recipe",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "LapisEmbeddedRabbitStewRecipe",
+      "type": "recipe",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "lapis_embedded_rabbit_stew_recipe",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "LapisEmbeddedRabbitStewRecipe1",
+      "type": "recipe",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "lapis_embedded_rabbit_stew_recipe_1",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "OnyxEmbeddedBowl",
+      "type": "item",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "onyx_embedded_bowl",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "OnyxEmbeddedBeetrootSoup",
+      "type": "food",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "onyx_embedded_beetroot_soup",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "OnyxEmbeddedMushroomStew",
+      "type": "food",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "onyx_embedded_mushroom_stew",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "OnyxEmbeddedRabbitStew",
+      "type": "food",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "onyx_embedded_rabbit_stew",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "OnyxEmbeddedBowlRecipe",
+      "type": "recipe",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "onyx_embedded_bowl_recipe",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "OnyxEmbeddedBeetrootSoupRecipe",
+      "type": "recipe",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "onyx_embedded_beetroot_soup_recipe",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "OnyxEmbeddedMushroomStewRecipe",
+      "type": "recipe",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "onyx_embedded_mushroom_stew_recipe",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "OnyxEmbeddedRabbitStewRecipe",
+      "type": "recipe",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "onyx_embedded_rabbit_stew_recipe",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "OnyxEmbeddedRabbitStewRecipe1",
+      "type": "recipe",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "onyx_embedded_rabbit_stew_recipe_1",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "RubyEmbeddedBowl",
+      "type": "item",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ruby_embedded_bowl",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "RubyEmbeddedBeetrootSoup",
+      "type": "food",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ruby_embedded_beetroot_soup",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "RubyEmbeddedMushroomStew",
+      "type": "food",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ruby_embedded_mushroom_stew",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "RubyEmbeddedRabbitStew",
+      "type": "food",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ruby_embedded_rabbit_stew",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "RubyEmbeddedBowlRecipe",
+      "type": "recipe",
+      "sortid": 105,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ruby_embedded_bowl_recipe",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "RubyEmbeddedBeetrootSoupRecipe",
+      "type": "recipe",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ruby_embedded_beetroot_soup_recipe",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "RubyEmbeddedMushroomStewRecipe",
+      "type": "recipe",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ruby_embedded_mushroom_stew_recipe",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "RubyEmbeddedRabbitStewRecipe",
+      "type": "recipe",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ruby_embedded_rabbit_stew_recipe",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "RubyEmbeddedRabbitStewRecipe1",
+      "type": "recipe",
+      "sortid": 109,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ruby_embedded_rabbit_stew_recipe_1",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "AquamarineEmbeddedSuspiciousStew",
+      "type": "food",
+      "sortid": 116,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "aquamarine_embedded_suspicious_stew",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "EmeraldEmbeddedSuspiciousStew",
+      "type": "food",
+      "sortid": 117,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "emerald_embedded_suspicious_stew",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "LapisEmbeddedSuspiciousStew",
+      "type": "food",
+      "sortid": 118,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "lapis_embedded_suspicious_stew",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "OnyxEmbeddedSuspiciousStew",
+      "type": "food",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "onyx_embedded_suspicious_stew",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "RubyEmbeddedSuspiciousStew",
+      "type": "food",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ruby_embedded_suspicious_stew",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "StrangeGel",
+      "type": "item",
+      "sortid": 132,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "strange_gel",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "AqEat",
+      "type": "procedure",
+      "sortid": 136,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "aq_eat",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "EmEat",
+      "type": "procedure",
+      "sortid": 137,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "em_eat",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "LaEat",
+      "type": "procedure",
+      "sortid": 138,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "la_eat",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "OnEat",
+      "type": "procedure",
+      "sortid": 139,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "on_eat",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "RuEat",
+      "type": "procedure",
+      "sortid": 140,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ru_eat",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "GetAllRings",
+      "type": "achievement",
+      "sortid": 143,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "get_all_rings",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "GiveThanosAdvancement",
+      "type": "procedure",
+      "sortid": 143,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "give_thanos_advancement",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "RubyMushroom",
+      "type": "procedure",
+      "sortid": 148,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ruby_mushroom",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "Mooshrooms",
+      "type": "tag",
+      "sortid": 149,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mooshrooms",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "Buffer",
+      "type": "block",
+      "sortid": 150,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "buffer",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "BufferOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 151,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "buffer_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "BufferParticleSpawningCondition",
+      "type": "procedure",
+      "sortid": 151,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "buffer_particle_spawning_condition",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "BufferBlockIsPlacedBy",
+      "type": "procedure",
+      "sortid": 152,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "buffer_block_is_placed_by",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "BufferBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 153,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "buffer_block_destroyed_by_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "BufferRecipe",
+      "type": "recipe",
+      "sortid": 154,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "buffer_recipe",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "PistonNoise",
+      "type": "procedure",
+      "sortid": 159,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "piston_noise",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "BufferParticle",
+      "type": "particle",
+      "sortid": 176,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "buffer_particle",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "Y4StoreInfo",
+      "type": "procedure",
+      "sortid": 177,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "y_4_store_info",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "BuildLatency",
+      "type": "procedure",
+      "sortid": 181,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "build_latency",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "BuildLatency2",
+      "type": "procedure",
+      "sortid": 182,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "build_latency_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "Y3StoreInfo",
+      "type": "procedure",
+      "sortid": 183,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "y_3_store_info",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "Y2StoreInfo",
+      "type": "procedure",
+      "sortid": 184,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "y_2_store_info",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "Y1StoreInfo",
+      "type": "procedure",
+      "sortid": 185,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "y_1_store_info",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "BuildLatency3",
+      "type": "procedure",
+      "sortid": 186,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "build_latency_3",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "BuildLatency4",
+      "type": "procedure",
+      "sortid": 188,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "build_latency_4",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "AquamarineGlass",
+      "type": "block",
+      "sortid": 189,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "aquamarine_glass",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "Y0StoreInfo",
+      "type": "procedure",
+      "sortid": 190,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "y_0_store_info",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "BuildLatency5",
+      "type": "procedure",
+      "sortid": 191,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "build_latency_5",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "YN1StoreInfo",
+      "type": "procedure",
+      "sortid": 192,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "yn_1_store_info",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "BuildLatency6",
+      "type": "procedure",
+      "sortid": 193,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "build_latency_6",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "YN2StoreInfo",
+      "type": "procedure",
+      "sortid": 194,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "yn_2_store_info",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "BuildLatency7",
+      "type": "procedure",
+      "sortid": 195,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "build_latency_7",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "AquamarineGlassIsPlaced",
+      "type": "procedure",
+      "sortid": 197,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "aquamarine_glass_is_placed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "YN3StoreInfo",
+      "type": "procedure",
+      "sortid": 198,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "yn_3_store_info",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "BuildLatency8",
+      "type": "procedure",
+      "sortid": 199,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "build_latency_8",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "YN4StoreInfo",
+      "type": "procedure",
+      "sortid": 201,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "yn_4_store_info",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "BuildLatency9",
+      "type": "procedure",
+      "sortid": 202,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "build_latency_9",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "BufferBlockRemoval",
+      "type": "livingentity",
+      "sortid": 203,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "buffer_block_removal",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "ZN3StoreInfo",
+      "type": "procedure",
+      "sortid": 204,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "zn_3_store_info",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "BuildLatency10",
+      "type": "procedure",
+      "sortid": 204,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "build_latency_10",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "AquamarineGlassRecipe",
+      "type": "recipe",
+      "sortid": 205,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "aquamarine_glass_recipe",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "AquamarineGlassPane",
+      "type": "block",
+      "sortid": 243,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "aquamarine_glass_pane",
+      "path": "~/Legacy Content"
+    },
+    {
+      "name": "WaterWalking",
+      "type": "potioneffect",
+      "sortid": 244,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "water_walking",
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "WaterWalkingProcedure",
+      "type": "procedure",
+      "sortid": 245,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "water_walking_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "SnackBulwark",
+      "type": "potioneffect",
+      "sortid": 246,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "snack_bulwark",
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "DamageProcedure",
+      "type": "procedure",
+      "sortid": 247,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "damage_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Sturdy",
+      "type": "potioneffect",
+      "sortid": 251,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sturdy",
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "SturdyStartProcedure",
+      "type": "procedure",
+      "sortid": 252,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sturdy_start_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "SturdyExpireProcedure",
+      "type": "procedure",
+      "sortid": 253,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sturdy_expire_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Motivation",
+      "type": "potioneffect",
+      "sortid": 254,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "motivation",
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "MotivationStartProcedure",
+      "type": "procedure",
+      "sortid": 255,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "motivation_start_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "MotivationExpireProcedure",
+      "type": "procedure",
+      "sortid": 256,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "motivation_expire_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Vampirism",
+      "type": "potioneffect",
+      "sortid": 257,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "vampirism",
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "DeathProcedure",
+      "type": "procedure",
+      "sortid": 258,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "death_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "AquamarineRingRecipe",
+      "type": "recipe",
+      "sortid": 259,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "aquamarine_ring_recipe",
+      "path": "~/Recipes"
+    },
+    {
+      "name": "EmeraldRingRecipe",
+      "type": "recipe",
+      "sortid": 260,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "emerald_ring_recipe",
+      "path": "~/Recipes"
+    },
+    {
+      "name": "LapisRingRecipe",
+      "type": "recipe",
+      "sortid": 261,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "lapis_ring_recipe",
+      "path": "~/Recipes"
+    },
+    {
+      "name": "OnyxRingRecipe",
+      "type": "recipe",
+      "sortid": 262,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "onyx_ring_recipe",
+      "path": "~/Recipes"
+    },
+    {
+      "name": "RubyRingRecipe",
+      "type": "recipe",
+      "sortid": 263,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ruby_ring_recipe",
+      "path": "~/Recipes"
+    },
+    {
+      "name": "GrantOsmiumIngotRecipes",
+      "type": "achievement",
+      "sortid": 282,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grant_osmium_ingot_recipes",
+      "path": "~/Recipes/GrantRecipes"
+    },
+    {
+      "name": "GrantAquamarineRecipes",
+      "type": "achievement",
+      "sortid": 283,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grant_aquamarine_recipes",
+      "path": "~/Recipes/GrantRecipes"
+    },
+    {
+      "name": "GrantRubyRecipes",
+      "type": "achievement",
+      "sortid": 284,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grant_ruby_recipes",
+      "path": "~/Recipes/GrantRecipes"
+    },
+    {
+      "name": "GrantOnyxRecipes",
+      "type": "achievement",
+      "sortid": 285,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grant_onyx_recipes",
+      "path": "~/Recipes/GrantRecipes"
+    },
+    {
+      "name": "GrantGoldIngotRecipes",
+      "type": "achievement",
+      "sortid": 286,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grant_gold_ingot_recipes",
+      "path": "~/Recipes/GrantRecipes"
+    },
+    {
+      "name": "GrantEmeraldRecipes",
+      "type": "achievement",
+      "sortid": 287,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grant_emerald_recipes",
+      "path": "~/Recipes/GrantRecipes"
+    },
+    {
+      "name": "GrantLapisRecipes",
+      "type": "achievement",
+      "sortid": 288,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grant_lapis_recipes",
+      "path": "~/Recipes/GrantRecipes"
+    },
+    {
+      "name": "GrantPistonRecipes",
+      "type": "achievement",
+      "sortid": 289,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grant_piston_recipes",
+      "path": "~/Recipes/GrantRecipes"
+    },
+    {
+      "name": "GrantRedstoneRecipes",
+      "type": "achievement",
+      "sortid": 290,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grant_redstone_recipes",
+      "path": "~/Recipes/GrantRecipes"
+    },
+    {
+      "name": "GrantChainBootsRecipes",
+      "type": "achievement",
+      "sortid": 291,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grant_chain_boots_recipes",
+      "path": "~/Recipes/GrantRecipes"
+    },
+    {
+      "name": "GrantIronBootsRecipes",
+      "type": "achievement",
+      "sortid": 292,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grant_iron_boots_recipes",
+      "path": "~/Recipes/GrantRecipes"
+    },
+    {
+      "name": "GrantDiamondBootsRecipes",
+      "type": "achievement",
+      "sortid": 293,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grant_diamond_boots_recipes",
+      "path": "~/Recipes/GrantRecipes"
+    },
+    {
+      "name": "GrantGoldenBootsRecipes",
+      "type": "achievement",
+      "sortid": 294,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grant_golden_boots_recipes",
+      "path": "~/Recipes/GrantRecipes"
+    },
+    {
+      "name": "GrantNetheriteBootsRecipes",
+      "type": "achievement",
+      "sortid": 295,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grant_netherite_boots_recipes",
+      "path": "~/Recipes/GrantRecipes"
+    },
+    {
+      "name": "GrantLeatherBootsRecipes",
+      "type": "achievement",
+      "sortid": 296,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grant_leather_boots_recipes",
+      "path": "~/Recipes/GrantRecipes"
+    },
+    {
+      "name": "GrantWarpedWartRecipes",
+      "type": "achievement",
+      "sortid": 297,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grant_warped_wart_recipes",
+      "path": "~/Recipes/GrantRecipes"
+    },
+    {
+      "name": "GrantWarpedWartBlockRecipes",
+      "type": "achievement",
+      "sortid": 298,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grant_warped_wart_block_recipes",
+      "path": "~/Recipes/GrantRecipes"
+    },
+    {
+      "name": "GrantNetherWartBlockRecipes",
+      "type": "achievement",
+      "sortid": 299,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grant_nether_wart_block_recipes",
+      "path": "~/Recipes/GrantRecipes"
+    },
+    {
+      "name": "AquamarineGlassPaneRecipe",
+      "type": "recipe",
+      "sortid": 300,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "aquamarine_glass_pane_recipe",
+      "path": "~/Recipes"
+    },
+    {
+      "name": "GrantAquamarineGlassRecipe",
+      "type": "achievement",
+      "sortid": 301,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grant_aquamarine_glass_recipe",
+      "path": "~/Recipes/GrantRecipes"
+    },
+    {
+      "name": "GrantGoldBlockRecipes",
+      "type": "achievement",
+      "sortid": 306,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grant_gold_block_recipes",
+      "path": "~/Recipes/GrantRecipes"
+    },
+    {
+      "name": "BrushBreakBlockProcedure",
+      "type": "procedure",
+      "sortid": 307,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "brush_break_block_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Brush",
+      "type": "tool",
+      "sortid": 307,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "brush",
+      "path": "~/Tools"
+    },
+    {
+      "name": "AirVent",
+      "type": "block",
+      "sortid": 310,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "air_vent",
+      "path": "~/Blocks"
+    },
+    {
+      "name": "HotAirVent",
+      "type": "block",
+      "sortid": 311,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hot_air_vent",
+      "path": "~/Blocks"
+    },
+    {
+      "name": "ColdAirVent",
+      "type": "block",
+      "sortid": 312,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cold_air_vent",
+      "path": "~/Blocks"
+    },
+    {
+      "name": "AirVentActivateProcedure",
+      "type": "procedure",
+      "sortid": 313,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "air_vent_activate_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "AirVentUpdateProcedure",
+      "type": "procedure",
+      "sortid": 314,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "air_vent_update_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "PlayerTickProcedure",
+      "type": "procedure",
+      "sortid": 315,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "player_tick_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "HotAir",
+      "type": "particle",
+      "sortid": 316,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hot_air",
+      "path": "~/Particles"
+    },
+    {
+      "name": "AirVentRecipe",
+      "type": "recipe",
+      "sortid": 317,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "air_vent_recipe",
+      "path": "~/Recipes"
+    },
+    {
+      "name": "GrantIronIngotRecipes",
+      "type": "achievement",
+      "sortid": 318,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grant_iron_ingot_recipes",
+      "path": "~/Recipes/GrantRecipes"
+    },
+    {
+      "name": "GrantIronBarsRecipes",
+      "type": "achievement",
+      "sortid": 319,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grant_iron_bars_recipes",
+      "path": "~/Recipes/GrantRecipes"
+    },
+    {
+      "name": "FishingProcedure",
+      "type": "procedure",
+      "sortid": 320,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "fishing_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "FlowerBiomesFishing",
+      "type": "procedure",
+      "sortid": 325,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "flower_biomes_fishing",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Procedures/Fishing"
+    },
+    {
+      "name": "BrushBreakGravel",
+      "type": "loottable",
+      "sortid": 326,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "brush_break_gravel",
+      "path": "~/Loot Tables"
+    },
+    {
+      "name": "Koi",
+      "type": "food",
+      "sortid": 327,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "koi",
+      "path": "~/Foodstuffs"
+    },
+    {
+      "name": "GlowKoi",
+      "type": "food",
+      "sortid": 328,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "glow_koi",
+      "path": "~/Foodstuffs"
+    },
+    {
+      "name": "Goldfish",
+      "type": "food",
+      "sortid": 329,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "goldfish",
+      "path": "~/Foodstuffs"
+    },
+    {
+      "name": "Crate",
+      "type": "block",
+      "sortid": 330,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crate",
+      "path": "~/Blocks"
+    },
+    {
+      "name": "Swordfish",
+      "type": "tool",
+      "sortid": 331,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "swordfish",
+      "path": "~/Tools"
+    },
+    {
+      "name": "JungleSnapper",
+      "type": "food",
+      "sortid": 332,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "jungle_snapper",
+      "path": "~/Foodstuffs"
+    },
+    {
+      "name": "Fishling",
+      "type": "food",
+      "sortid": 333,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "fishling",
+      "path": "~/Foodstuffs"
+    },
+    {
+      "name": "Fishing",
+      "type": "tab",
+      "sortid": 334,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "fishing",
+      "path": "~/Creative Tabs"
+    },
+    {
+      "name": "BlueJellyfish",
+      "type": "item",
+      "sortid": 334,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blue_jellyfish",
+      "path": "~/Items"
+    },
+    {
+      "name": "RedJellyfish",
+      "type": "item",
+      "sortid": 335,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "red_jellyfish",
+      "path": "~/Items"
+    },
+    {
+      "name": "GreenJellyfish",
+      "type": "item",
+      "sortid": 336,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "green_jellyfish",
+      "path": "~/Items"
+    },
+    {
+      "name": "Nautilus",
+      "type": "item",
+      "sortid": 337,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nautilus",
+      "path": "~/Items"
+    },
+    {
+      "name": "EffervescentWatcher",
+      "type": "food",
+      "sortid": 338,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "effervescent_watcher",
+      "path": "~/Foodstuffs"
+    },
+    {
+      "name": "CrabCannon",
+      "type": "rangeditem",
+      "sortid": 339,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crab_cannon",
+      "path": "~/Tools"
+    },
+    {
+      "name": "Crab",
+      "type": "item",
+      "sortid": 340,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crab",
+      "path": "~/Items"
+    },
+    {
+      "name": "SeaUrchin",
+      "type": "item",
+      "sortid": 341,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sea_urchin",
+      "path": "~/Items"
+    },
+    {
+      "name": "RawOsmium",
+      "type": "item",
+      "sortid": 342,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "raw_osmium",
+      "path": "~/Items"
+    },
+    {
+      "name": "DeepslateOsmiumOre",
+      "type": "block",
+      "sortid": 345,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "deepslate_osmium_ore",
+      "path": "~/Blocks"
+    },
+    {
+      "name": "OsmiumOre",
+      "type": "loottable",
+      "sortid": 346,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "osmium_ore",
+      "path": "~/Loot Tables"
+    },
+    {
+      "name": "CrabCannonRangedItemUsed",
+      "type": "procedure",
+      "sortid": 348,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crab_cannon_ranged_item_used",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "PinkJellyfish",
+      "type": "item",
+      "sortid": 349,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pink_jellyfish",
+      "path": "~/Items"
+    },
+    {
+      "name": "YellowJellyfish",
+      "type": "item",
+      "sortid": 350,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "yellow_jellyfish",
+      "path": "~/Items"
+    },
+    {
+      "name": "Copperfish",
+      "type": "item",
+      "sortid": 351,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copperfish",
+      "path": "~/Items"
+    },
+    {
+      "name": "Chorusfish",
+      "type": "food",
+      "sortid": 352,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "chorusfish",
+      "path": "~/Foodstuffs"
+    },
+    {
+      "name": "Glassfish",
+      "type": "item",
+      "sortid": 353,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "glassfish",
+      "path": "~/Items"
+    },
+    {
+      "name": "Bass",
+      "type": "food",
+      "sortid": 354,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bass",
+      "path": "~/Foodstuffs"
+    },
+    {
+      "name": "OsmiumIngotRecipe",
+      "type": "recipe",
+      "sortid": 358,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "osmium_ingot_recipe",
+      "path": "~/Recipes"
+    },
+    {
+      "name": "BlastingOsmiumIngotRecipe",
+      "type": "recipe",
+      "sortid": 359,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blasting_osmium_ingot_recipe",
+      "path": "~/Recipes"
+    },
+    {
+      "name": "ShroomyKoi",
+      "type": "food",
+      "sortid": 360,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "shroomy_koi",
+      "path": "~/Foodstuffs"
+    },
+    {
+      "name": "Soulscale",
+      "type": "food",
+      "sortid": 361,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "soulscale",
+      "path": "~/Foodstuffs"
+    },
+    {
+      "name": "GoldenSkiffia",
+      "type": "food",
+      "sortid": 362,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "golden_skiffia",
+      "path": "~/Foodstuffs"
+    },
+    {
+      "name": "NightKoi",
+      "type": "food",
+      "sortid": 363,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "night_koi",
+      "path": "~/Foodstuffs"
+    },
+    {
+      "name": "MoltenCharr",
+      "type": "item",
+      "sortid": 364,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "molten_charr",
+      "path": "~/Items"
+    },
+    {
+      "name": "RubyGrapplingHook",
+      "type": "rangeditem",
+      "sortid": 365,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ruby_grappling_hook",
+      "path": "~/Tools"
+    },
+    {
+      "name": "AquamarineGrapplingHook",
+      "type": "rangeditem",
+      "sortid": 366,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "aquamarine_grappling_hook",
+      "path": "~/Tools"
+    },
+    {
+      "name": "OnyxGrapplingHook",
+      "type": "rangeditem",
+      "sortid": 367,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "onyx_grappling_hook",
+      "path": "~/Tools"
+    },
+    {
+      "name": "GrapplingHookHitsBlock",
+      "type": "procedure",
+      "sortid": 368,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grappling_hook_hits_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GoldBass",
+      "type": "food",
+      "sortid": 369,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gold_bass",
+      "path": "~/Foodstuffs"
+    },
+    {
+      "name": "Scallop",
+      "type": "item",
+      "sortid": 370,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "scallop",
+      "path": "~/Items"
+    },
+    {
+      "name": "Shulkfish",
+      "type": "food",
+      "sortid": 371,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "shulkfish",
+      "path": "~/Foodstuffs"
+    },
+    {
+      "name": "HumuhumunukunukuapuaA",
+      "type": "food",
+      "sortid": 372,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "humuhumunukunukuapua_a",
+      "path": "~/Foodstuffs"
+    },
+    {
+      "name": "Minnow",
+      "type": "food",
+      "sortid": 373,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "minnow",
+      "path": "~/Foodstuffs"
+    },
+    {
+      "name": "Anchovy",
+      "type": "food",
+      "sortid": 374,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "anchovy",
+      "path": "~/Foodstuffs"
+    },
+    {
+      "name": "Seahorse",
+      "type": "item",
+      "sortid": 375,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "seahorse",
+      "path": "~/Items"
+    },
+    {
+      "name": "Pupfish",
+      "type": "food",
+      "sortid": 376,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pupfish",
+      "path": "~/Foodstuffs"
+    },
+    {
+      "name": "SavannaTetra",
+      "type": "food",
+      "sortid": 377,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "savanna_tetra",
+      "path": "~/Foodstuffs"
+    },
+    {
+      "name": "Netherragfish",
+      "type": "item",
+      "sortid": 378,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "netherragfish",
+      "path": "~/Items"
+    },
+    {
+      "name": "SilverEye",
+      "type": "food",
+      "sortid": 379,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "silver_eye",
+      "path": "~/Foodstuffs"
+    },
+    {
+      "name": "Voidswimmer",
+      "type": "item",
+      "sortid": 380,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "voidswimmer",
+      "path": "~/Items"
+    },
+    {
+      "name": "SkeletalEel",
+      "type": "item",
+      "sortid": 381,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "skeletal_eel",
+      "path": "~/Items"
+    },
+    {
+      "name": "LapisOrefish",
+      "type": "item",
+      "sortid": 382,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "lapis_orefish",
+      "path": "~/Items"
+    },
+    {
+      "name": "RubyOrefish",
+      "type": "item",
+      "sortid": 383,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ruby_orefish",
+      "path": "~/Items"
+    },
+    {
+      "name": "DiamondOrefish",
+      "type": "item",
+      "sortid": 384,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "diamond_orefish",
+      "path": "~/Items"
+    },
+    {
+      "name": "GoldOrefish",
+      "type": "item",
+      "sortid": 385,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gold_orefish",
+      "path": "~/Items"
+    },
+    {
+      "name": "OnyxOrefish",
+      "type": "item",
+      "sortid": 386,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "onyx_orefish",
+      "path": "~/Items"
+    },
+    {
+      "name": "OsmiumOrefish",
+      "type": "item",
+      "sortid": 387,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "osmium_orefish",
+      "path": "~/Items"
+    },
+    {
+      "name": "EmeraldOrefish",
+      "type": "item",
+      "sortid": 388,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "emerald_orefish",
+      "path": "~/Items"
+    },
+    {
+      "name": "WatchfulReedfish",
+      "type": "item",
+      "sortid": 389,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "watchful_reedfish",
+      "path": "~/Items"
+    },
+    {
+      "name": "Flowerfish",
+      "type": "item",
+      "sortid": 390,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "flowerfish",
+      "path": "~/Items"
+    },
+    {
+      "name": "Lacuna",
+      "type": "potioneffect",
+      "sortid": 391,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "lacuna",
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "LacunaPotion",
+      "type": "potion",
+      "sortid": 392,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "lacuna_potion",
+      "path": "~/Potions"
+    },
+    {
+      "name": "BrewLacunaPotion",
+      "type": "recipe",
+      "sortid": 393,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "brew_lacuna_potion",
+      "path": "~/Recipes"
+    },
+    {
+      "name": "GrantEffervescentWatcherRecipes",
+      "type": "achievement",
+      "sortid": 394,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grant_effervescent_watcher_recipes",
+      "path": "~/Recipes/GrantRecipes"
+    },
+    {
+      "name": "Resistance",
+      "type": "potion",
+      "sortid": 395,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "resistance",
+      "path": "~/Potions"
+    },
+    {
+      "name": "ResistanceII",
+      "type": "potion",
+      "sortid": 396,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "resistance_ii",
+      "path": "~/Potions"
+    },
+    {
+      "name": "BrewResistancePotion",
+      "type": "recipe",
+      "sortid": 397,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "brew_resistance_potion",
+      "path": "~/Recipes"
+    },
+    {
+      "name": "BrewResistanceII",
+      "type": "recipe",
+      "sortid": 398,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "brew_resistance_ii",
+      "path": "~/Recipes"
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "radiationPoisoned",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "radiation",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    }
+  ],
+  "sound_elements": [
+    {
+      "name": "buffer.latency",
+      "files": [
+        "ogg"
+      ],
+      "category": "block",
+      "subtitle": "Buffer reverts to a previous latency"
+    },
+    {
+      "name": "buffer.new_latency",
+      "files": [
+        "latency"
+      ],
+      "category": "block",
+      "subtitle": "Buffer creates new latency"
+    },
+    {
+      "name": "crabcannon",
+      "files": [
+        "crabcannon2"
+      ],
+      "category": "player",
+      "subtitle": "Crab cannon fires"
+    }
+  ],
+  "language_map": {
+    "en_us": {
+      "item.the_wet_smp_rehydrated.skeletal_eel": "Skeletal Eel",
+      "item.the_wet_smp.lapis_embedded_bowl": "Lapis Embedded Bowl",
+      "effect.snack_bulwark": "Snack Bulwark",
+      "item.the_wet_smp.onyx_embedded_rabbit_stew": "Onyx Embedded Rabbit Stew",
+      "item.the_wet_smp_rehydrated.leather_piston_helmet": "Leather Piston Boots Helmet",
+      "advancements.grant_ruby_recipes.descr": "a",
+      "item.the_wet_smp_rehydrated.molten_charr": "Molten Charr",
+      "item.the_wet_smp_rehydrated.golden_piston_boots": "Golden Piston Boots",
+      "entity.the_wet_smp.buffer_block_removal": "Buffer Block Removal",
+      "item.the_wet_smp.yellow_jellyfish": "Yellow Jellyfish",
+      "item.the_wet_smp.diamond_piston_helmet": "Chainmail Piston Boots Helmet",
+      "block.the_wet_smp_rehydrated.crate": "Crate",
+      "advancements.grant_netherite_boots_recipes.title": "Grant Chain Piston Boots Recipe",
+      "item.the_wet_smp_rehydrated.lapis_embedded_suspicious_stew": "Lapis Embedded Suspicious Stew",
+      "advancements.grant_onyx_recipes.title": "Grant Rings Recipe",
+      "item.the_wet_smp_rehydrated.scallop": "Scallop",
+      "item.the_wet_smp_rehydrated.leather_piston_boots": "Leather Piston Boots",
+      "item.the_wet_smp_rehydrated.diamond_piston_chestplate": "Chainmail Piston Boots Body",
+      "item.minecraft.splash_potion.effect.resistance_ii": "Splash Potion of Resistance",
+      "item.the_wet_smp.chainmail_piston_chestplate": "Chainmail Piston Boots Body",
+      "entity.the_wet_smp_rehydrated.buffer_block_removal": "Buffer Block Removal",
+      "item.the_wet_smp_rehydrated.golden_skiffia": "Golden Skiffia",
+      "item.the_wet_smp_rehydrated.osmium_ingot": "Osmium Ingot",
+      "item.the_wet_smp.diamond_orefish": "Diamond Orefish",
+      "item.the_wet_smp.fishling": "Fishling",
+      "item.the_wet_smp_rehydrated.iron_piston_helmet": "Iron Piston Boots Helmet",
+      "item.the_wet_smp.green_jellyfish": "Green Jellyfish",
+      "item.the_wet_smp.aquamarine_grappling_hook": "Aquamarine Grappling Hook",
+      "item.the_wet_smp_rehydrated.yellow_jellyfish": "Yellow Jellyfish",
+      "item.the_wet_smp.onyx_grappling_hook": "Onyx Grappling Hook",
+      "item.the_wet_smp_rehydrated.seahorse": "Seahorse",
+      "item.the_wet_smp_rehydrated.lapis_embedded_mushroom_stew": "Lapis Embedded Mushroom Stew",
+      "advancements.grant_aquamarine_recipes.title": "Grant Rings Recipe",
+      "item.the_wet_smp.sea_urchin": "Sea Urchin",
+      "item.the_wet_smp_rehydrated.raw_osmium": "Raw Osmium",
+      "item.the_wet_smp.lapis_embedded_beetroot_soup": "Lapis Embedded Beetroot Soup",
+      "item.the_wet_smp_rehydrated.golden_piston_helmet": "Chainmail Piston Boots Helmet",
+      "item.the_wet_smp.koi": "Koi",
+      "item.the_wet_smp.leather_piston_boots": "Leather Piston Boots",
+      "block.the_wet_smp_rehydrated.buffer": "Buffer",
+      "item.the_wet_smp.lapis_embedded_rabbit_stew": "Lapis Embedded Rabbit Stew",
+      "item.the_wet_smp.voidswimmer": "Voidswimmer",
+      "item.the_wet_smp_rehydrated.gold_orefish": "Gold Orefish",
+      "advancements.grant_piston_recipes.title": "Grant Piston Boots Recipe",
+      "item.the_wet_smp_rehydrated.aquamarine_ring": "Aquamarine Ring",
+      "item.the_wet_smp_rehydrated.leather_piston_chestplate": "Leather Piston Boots Body",
+      "block.the_wet_smp_rehydrated.deepslate_osmium_ore": "Deepslate Osmium Ore",
+      "item.the_wet_smp.golden_piston_helmet": "Chainmail Piston Boots Helmet",
+      "effect.vampirism": "Vampirism",
+      "item.the_wet_smp.diamond_piston_boots": "Diamond Piston Boots",
+      "item.the_wet_smp.ruby_orefish": "Ruby Orefish",
+      "item.the_wet_smp.iron_piston_boots": "Iron Piston Boots",
+      "item.the_wet_smp.ruby_ring": "Ruby Ring",
+      "block.the_wet_smp.cold_air_vent": "Air Vent",
+      "item.the_wet_smp_rehydrated.lapis_embedded_rabbit_stew": "Lapis Embedded Rabbit Stew",
+      "item.the_wet_smp_rehydrated.chorusfish": "Chorusfish",
+      "item.the_wet_smp_rehydrated.netherite_piston_boots": "Netherite Piston Boots",
+      "item.the_wet_smp_rehydrated.chainmail_piston_leggings": "Chainmail Piston Boots Leggings",
+      "advancements.grant_osmium_ingot_recipes.title": "Grant Rings Recipe",
+      "item.the_wet_smp_rehydrated.blue_jellyfish": "Blue Jellyfish",
+      "item.the_wet_smp.aquamarine_embedded_suspicious_stew": "Aquamarine Embedded Suspicious Stew",
+      "item.the_wet_smp_rehydrated.chainmail_piston_boots": "Chainmail Piston Boots",
+      "item.the_wet_smp.onyx_ring": "Onyx Ring",
+      "item.the_wet_smp.emerald_embedded_beetroot_soup": "Emerald Embedded Beetroot Soup",
+      "item.the_wet_smp.ruby_embedded_beetroot_soup": "Ruby Embedded Beetroot Soup",
+      "item.the_wet_smp_rehydrated.brush": "Brush",
+      "item.the_wet_smp.ruby_embedded_rabbit_stew": "Ruby Embedded Rabbit Stew",
+      "item.the_wet_smp_rehydrated.pupfish": "Pupfish",
+      "item.the_wet_smp_rehydrated.golden_piston_leggings": "Chainmail Piston Boots Leggings",
+      "item.the_wet_smp_rehydrated.ruby_embedded_mushroom_stew": "Ruby Embedded Mushroom Stew",
+      "item.the_wet_smp.aquamarine_embedded_beetroot_soup": "Aquamarine Embedded Beetroot Soup",
+      "block.the_wet_smp_rehydrated.air_vent": "Air Vent",
+      "item.the_wet_smp.crab": "Crab",
+      "item.the_wet_smp.iron_piston_helmet": "Iron Piston Boots Helmet",
+      "item.the_wet_smp.strange_gel": "Strange Gel",
+      "advancements.grant_diamond_boots_recipes.title": "Grant Chain Piston Boots Recipe",
+      "item.the_wet_smp_rehydrated.glow_koi": "Glow Koi",
+      "advancements.grant_emerald_recipes.descr": "a",
+      "item.the_wet_smp_rehydrated.red_jellyfish": "Red Jellyfish",
+      "item.the_wet_smp.emerald_embedded_suspicious_stew": "Emerald Embedded Suspicious Stew",
+      "item.the_wet_smp_rehydrated.ruby": "Ruby",
+      "item.minecraft.lingering_potion.effect.lacuna_potion": "Lingering Potion of Lacuna",
+      "item.the_wet_smp_rehydrated.savanna_tetra": "Savanna Tetra",
+      "item.the_wet_smp.emerald_embedded_rabbit_stew": "Emerald Embedded Rabbit Stew",
+      "item.the_wet_smp.pink_jellyfish": "Pink Jellyfish",
+      "item.the_wet_smp.buffer_block_removal_spawn_egg": "Buffer Block Removal Spawn Egg",
+      "item.the_wet_smp_rehydrated.minnow": "Minnow",
+      "item.the_wet_smp.bass": "Bass",
+      "item.the_wet_smp_rehydrated.netherite_piston_helmet": "Iron Piston Boots Helmet",
+      "block.the_wet_smp_rehydrated.cold_air_vent": "Air Vent",
+      "subtitles.buffer.latency": "Buffer reverts to a previous latency",
+      "item.the_wet_smp.jungle_snapper": "Jungle Snapper",
+      "advancements.grant_aquamarine_recipes.descr": "a",
+      "item.the_wet_smp.brush": "Brush",
+      "item.the_wet_smp.chainmail_piston_helmet": "Chainmail Piston Boots Helmet",
+      "item.the_wet_smp_rehydrated.aquamarine": "Aquamarine",
+      "item.the_wet_smp.nautilus": "Nautilus",
+      "item.the_wet_smp.minnow": "Minnow",
+      "item.the_wet_smp_rehydrated.lapis_ring": "Lapis Ring",
+      "item.the_wet_smp_rehydrated.lapis_orefish": "Lapis Orefish",
+      "item.the_wet_smp.ruby_embedded_suspicious_stew": "Ruby Embedded Suspicious Stew",
+      "advancements.grant_iron_boots_recipes.title": "Grant Chain Piston Boots Recipe",
+      "item.the_wet_smp_rehydrated.netherite_piston_chestplate": "Iron Piston Boots Body",
+      "advancements.grant_gold_ingot_recipes.title": "Grant Rings Recipe",
+      "item.the_wet_smp_rehydrated.strange_gel": "Strange Gel",
+      "advancements.grant_ruby_recipes.title": "Grant Rings Recipe",
+      "item.the_wet_smp_rehydrated.netherite_piston_leggings": "Iron Piston Boots Leggings",
+      "item.the_wet_smp_rehydrated.watchful_reedfish": "Watchful Reedfish",
+      "item.the_wet_smp.aquamarine": "Aquamarine",
+      "item.the_wet_smp_rehydrated.onyx_embedded_beetroot_soup": "Onyx Embedded Beetroot Soup",
+      "item.the_wet_smp_rehydrated.onyx_orefish": "Onyx Orefish",
+      "item.the_wet_smp_rehydrated.ruby_ring": "Ruby Ring",
+      "item.the_wet_smp_rehydrated.leather_piston_leggings": "Leather Piston Boots Leggings",
+      "advancements.grant_osmium_ingot_recipes.descr": "a",
+      "advancements.grant_emerald_recipes.title": "Grant Rings Recipe",
+      "item.the_wet_smp_rehydrated.diamond_piston_helmet": "Chainmail Piston Boots Helmet",
+      "item.the_wet_smp_rehydrated.ruby_grappling_hook": "Ruby Grappling Hook",
+      "item.minecraft.potion.effect.resistance_ii": "Potion of Resistance",
+      "advancements.grant_iron_ingot_recipes.descr": "a",
+      "effect.water_walking": "Water Walking",
+      "effect.motivation": "Motivation",
+      "item.the_wet_smp_rehydrated.ruby_embedded_bowl": "Ruby Embedded Bowl",
+      "item.minecraft.tipped_arrow.effect.resistance_ii": "Arrow of Resistance",
+      "advancements.get_all_rings.descr": "Obtain all five Gem Rings",
+      "advancements.grant_diamond_boots_recipes.descr": "a",
+      "item.the_wet_smp.anchovy": "Anchovy",
+      "item.the_wet_smp_rehydrated.iron_piston_leggings": "Iron Piston Boots Leggings",
+      "item.the_wet_smp.crab_cannon": "Crab Cannon",
+      "item.the_wet_smp_rehydrated.flowerfish": "Flowerfish",
+      "item.the_wet_smp.aquamarine_ring": "Aquamarine Ring",
+      "item.the_wet_smp_rehydrated.emerald_embedded_rabbit_stew": "Emerald Embedded Rabbit Stew",
+      "item.minecraft.lingering_potion.effect.resistance": "Lingering Potion of Resistance",
+      "advancements.grant_lapis_recipes.descr": "a",
+      "item.the_wet_smp.lapis_ring": "Lapis Ring",
+      "advancements.grant_leather_boots_recipes.descr": "a",
+      "item.the_wet_smp_rehydrated.diamond_piston_boots": "Diamond Piston Boots",
+      "advancements.grant_warped_wart_recipes.title": "Grant Warped Wart Recipe",
+      "advancements.grant_effervescent_watcher_recipes.descr": "a",
+      "item.the_wet_smp.diamond_piston_leggings": "Chainmail Piston Boots Leggings",
+      "block.the_wet_smp_rehydrated.aquamarine_glass": "Aquamarine Glass",
+      "advancements.grant_golden_boots_recipes.title": "Grant Chain Piston Boots Recipe",
+      "item.the_wet_smp.onyx_embedded_mushroom_stew": "Onyx Embedded Mushroom Stew",
+      "advancements.grant_aquamarine_glass_recipe.descr": "a",
+      "item.the_wet_smp.emerald_ring": "Emerald Ring",
+      "item.the_wet_smp_rehydrated.sea_urchin": "Sea Urchin",
+      "item.the_wet_smp_rehydrated.diamond_orefish": "Diamond Orefish",
+      "subtitles.crabcannon": "Crab cannon fires",
+      "item.the_wet_smp_rehydrated.onyx": "Onyx",
+      "item.the_wet_smp.leather_piston_chestplate": "Leather Piston Boots Body",
+      "item.the_wet_smp.leather_piston_helmet": "Leather Piston Boots Helmet",
+      "item.the_wet_smp_rehydrated.humuhumunukunukuapua_a": "Humuhumunukunuku?pua\u0027a",
+      "item.the_wet_smp.warped_wart": "Warped Wart",
+      "advancements.grant_gold_block_recipes.title": "Grant Rings Recipe",
+      "item.the_wet_smp.seahorse": "Seahorse",
+      "item.the_wet_smp_rehydrated.golden_piston_chestplate": "Chainmail Piston Boots Body",
+      "item.the_wet_smp.iron_piston_chestplate": "Iron Piston Boots Body",
+      "subtitles.veil6": "Eerie noise",
+      "advancements.grant_piston_recipes.descr": "a",
+      "subtitles.veil5": "Eerie noise",
+      "subtitles.veil8": "Eerie noise",
+      "subtitles.veil7": "Eerie noise",
+      "item.the_wet_smp_rehydrated.emerald_embedded_beetroot_soup": "Emerald Embedded Beetroot Soup",
+      "death.attack.lacuna": "%1$s faded away",
+      "subtitles.veil9": "Eerie noise",
+      "item.the_wet_smp_rehydrated.netherragfish": "Netherragfish",
+      "item.minecraft.potion.effect.resistance": "Potion of Resistance",
+      "item.the_wet_smp_rehydrated.onyx_ring": "Onyx Ring",
+      "subtitles.veil2": "Eerie noise",
+      "subtitles.veil1": "Eerie noise",
+      "item.minecraft.lingering_potion.effect.resistance_ii": "Lingering Potion of Resistance",
+      "subtitles.veil4": "Eerie noise",
+      "subtitles.veil3": "Eerie noise",
+      "item.the_wet_smp_rehydrated.onyx_embedded_bowl": "Onyx Embedded Bowl",
+      "item.the_wet_smp_rehydrated.chainmail_piston_helmet": "Chainmail Piston Boots Helmet",
+      "item.the_wet_smp_rehydrated.aquamarine_embedded_bowl": "Aquamarine Embedded Bowl",
+      "item.the_wet_smp_rehydrated.aquamarine_grappling_hook": "Aquamarine Grappling Hook",
+      "item.the_wet_smp.emerald_embedded_bowl": "Emerald Embedded Bowl",
+      "itemGroup.tabfishing": "Fishing Additions",
+      "item.the_wet_smp.gold_orefish": "Gold Orefish",
+      "item.the_wet_smp_rehydrated.night_koi": "Night Koi",
+      "item.the_wet_smp_rehydrated.diamond_piston_leggings": "Chainmail Piston Boots Leggings",
+      "item.the_wet_smp_rehydrated.ruby_embedded_beetroot_soup": "Ruby Embedded Beetroot Soup",
+      "item.the_wet_smp_rehydrated.ruby_orefish": "Ruby Orefish",
+      "item.minecraft.potion.effect.lacuna_potion": "Potion of Lacuna",
+      "item.the_wet_smp.soulscale": "Soulscale",
+      "item.the_wet_smp_rehydrated.ruby_embedded_suspicious_stew": "Ruby Embedded Suspicious Stew",
+      "item.the_wet_smp_rehydrated.iron_piston_boots": "Iron Piston Boots",
+      "item.the_wet_smp.onyx_embedded_bowl": "Onyx Embedded Bowl",
+      "item.the_wet_smp.chorusfish": "Chorusfish",
+      "item.the_wet_smp.scallop": "Scallop",
+      "item.the_wet_smp_rehydrated.onyx_grappling_hook": "Onyx Grappling Hook",
+      "block.the_wet_smp.crate": "Crate",
+      "item.the_wet_smp.golden_piston_boots": "Golden Piston Boots",
+      "item.the_wet_smp_rehydrated.koi": "Koi",
+      "advancements.grant_gold_ingot_recipes.descr": "a",
+      "item.the_wet_smp.raw_osmium": "Raw Osmium",
+      "advancements.grant_gold_block_recipes.descr": "a",
+      "item.the_wet_smp.ruby_embedded_mushroom_stew": "Ruby Embedded Mushroom Stew",
+      "item.the_wet_smp.watchful_reedfish": "Watchful Reedfish",
+      "item.the_wet_smp_rehydrated.lapis_embedded_beetroot_soup": "Lapis Embedded Beetroot Soup",
+      "item.the_wet_smp_rehydrated.emerald_embedded_suspicious_stew": "Emerald Embedded Suspicious Stew",
+      "item.the_wet_smp_rehydrated.onyx_embedded_mushroom_stew": "Onyx Embedded Mushroom Stew",
+      "item.the_wet_smp.aquamarine_embedded_rabbit_stew": "Aquamarine Embedded Rabbit Stew",
+      "item.the_wet_smp.netherragfish": "Netherragfish",
+      "item.the_wet_smp_rehydrated.emerald_ring": "Emerald Ring",
+      "item.the_wet_smp_rehydrated.glassfish": "Glassfish",
+      "item.the_wet_smp_rehydrated.shulkfish": "Shulkfish",
+      "advancements.grant_golden_boots_recipes.descr": "a",
+      "item.the_wet_smp_rehydrated.onyx_embedded_rabbit_stew": "Onyx Embedded Rabbit Stew",
+      "item.the_wet_smp_rehydrated.voidswimmer": "Voidswimmer",
+      "item.the_wet_smp.glow_koi": "Glow Koi",
+      "item.the_wet_smp_rehydrated.ruby_embedded_rabbit_stew": "Ruby Embedded Rabbit Stew",
+      "advancements.grant_chain_boots_recipes.descr": "a",
+      "item.the_wet_smp.molten_charr": "Molten Charr",
+      "item.the_wet_smp_rehydrated.swordfish": "Swordfish",
+      "item.the_wet_smp.skeletal_eel": "Skeletal Eel",
+      "item.the_wet_smp.diamond_piston_chestplate": "Chainmail Piston Boots Body",
+      "item.the_wet_smp_rehydrated.osmium_orefish": "Osmium Orefish",
+      "item.minecraft.tipped_arrow.effect.lacuna_potion": "Arrow of Lacuna",
+      "item.the_wet_smp.onyx_embedded_suspicious_stew": "Onyx Embedded Suspicious Stew",
+      "item.the_wet_smp.shroomy_koi": "Shroomy Koi",
+      "item.the_wet_smp.ruby_grappling_hook": "Ruby Grappling Hook",
+      "item.the_wet_smp.golden_piston_chestplate": "Chainmail Piston Boots Body",
+      "item.the_wet_smp.effervescent_watcher": "Effervescent Watcher",
+      "advancements.grant_iron_bars_recipes.descr": "a",
+      "item.the_wet_smp.gold_bass": "Gold Bass",
+      "item.the_wet_smp.humuhumunukunukuapua_a": "Humuhumunukunuku?pua\u0027a",
+      "item.the_wet_smp_rehydrated.jungle_snapper": "Jungle Snapper",
+      "item.the_wet_smp.savanna_tetra": "Savanna Tetra",
+      "item.the_wet_smp_rehydrated.aquamarine_embedded_suspicious_stew": "Aquamarine Embedded Suspicious Stew",
+      "advancements.grant_iron_bars_recipes.title": "Grant Rings Recipe",
+      "advancements.grant_redstone_recipes.descr": "a",
+      "advancements.grant_warped_wart_block_recipes.title": "Grant Warped Wart Recipe",
+      "block.the_wet_smp.hot_air_vent": "Air Vent",
+      "item.the_wet_smp_rehydrated.nautilus": "Nautilus",
+      "enchantment.the_wet_smp.prospector": "Prospector",
+      "item.the_wet_smp_rehydrated.iron_piston_chestplate": "Iron Piston Boots Body",
+      "item.the_wet_smp.leather_piston_leggings": "Leather Piston Boots Leggings",
+      "item.the_wet_smp.aquamarine_embedded_mushroom_stew": "Aquamarine Embedded Mushroom Stew",
+      "item.the_wet_smp.netherite_piston_helmet": "Iron Piston Boots Helmet",
+      "advancements.grant_effervescent_watcher_recipes.title": "Grant Rings Recipe",
+      "advancements.grant_chain_boots_recipes.title": "Grant Chain Piston Boots Recipe",
+      "item.the_wet_smp_rehydrated.aquamarine_embedded_rabbit_stew": "Aquamarine Embedded Rabbit Stew",
+      "item.the_wet_smp.pupfish": "Pupfish",
+      "item.the_wet_smp_rehydrated.aquamarine_embedded_mushroom_stew": "Aquamarine Embedded Mushroom Stew",
+      "item.the_wet_smp_rehydrated.emerald_orefish": "Emerald Orefish",
+      "advancements.grant_nether_wart_block_recipes.descr": "a",
+      "item.the_wet_smp_rehydrated.lapis_embedded_bowl": "Lapis Embedded Bowl",
+      "item.the_wet_smp_rehydrated.fishling": "Fishling",
+      "item.the_wet_smp.aquamarine_embedded_bowl": "Aquamarine Embedded Bowl",
+      "item.the_wet_smp_rehydrated.soulscale": "Soulscale",
+      "item.the_wet_smp_rehydrated.crab": "Crab",
+      "block.the_wet_smp_rehydrated.hot_air_vent": "Air Vent",
+      "item.the_wet_smp_rehydrated.anchovy": "Anchovy",
+      "item.the_wet_smp.osmium_ingot": "Osmium Ingot",
+      "item.the_wet_smp.emerald_embedded_mushroom_stew": "Emerald Embedded Mushroom Stew",
+      "item.the_wet_smp_rehydrated.onyx_embedded_suspicious_stew": "Onyx Embedded Suspicious Stew",
+      "item.the_wet_smp.ruby": "Ruby",
+      "item.the_wet_smp_rehydrated.aquamarine_embedded_beetroot_soup": "Aquamarine Embedded Beetroot Soup",
+      "item.the_wet_smp_rehydrated.bass": "Bass",
+      "item.the_wet_smp.shulkfish": "Shulkfish",
+      "item.the_wet_smp.osmium_orefish": "Osmium Orefish",
+      "advancements.grant_netherite_boots_recipes.descr": "a",
+      "item.the_wet_smp.iron_piston_leggings": "Iron Piston Boots Leggings",
+      "item.minecraft.splash_potion.effect.resistance": "Splash Potion of Resistance",
+      "subtitles.veil11": "Eerie noise",
+      "advancements.grant_onyx_recipes.descr": "a",
+      "item.the_wet_smp.blue_jellyfish": "Blue Jellyfish",
+      "item.the_wet_smp.glassfish": "Glassfish",
+      "item.minecraft.tipped_arrow.effect.resistance": "Arrow of Resistance",
+      "block.the_wet_smp.deepslate_osmium_ore": "Deepslate Osmium Ore",
+      "item.the_wet_smp.ruby_embedded_bowl": "Ruby Embedded Bowl",
+      "effect.sturdy": "Sturdy",
+      "item.the_wet_smp_rehydrated.gold_bass": "Gold Bass",
+      "item.the_wet_smp_rehydrated.emerald_embedded_mushroom_stew": "Emerald Embedded Mushroom Stew",
+      "item.the_wet_smp.swordfish": "Swordfish",
+      "item.the_wet_smp.netherite_piston_chestplate": "Iron Piston Boots Body",
+      "subtitles.web": "Mob is webbed",
+      "item.the_wet_smp_rehydrated.emerald_embedded_bowl": "Emerald Embedded Bowl",
+      "item.the_wet_smp.red_jellyfish": "Red Jellyfish",
+      "advancements.grant_nether_wart_block_recipes.title": "Grant Warped Wart Recipe",
+      "item.the_wet_smp.lapis_embedded_suspicious_stew": "Lapis Embedded Suspicious Stew",
+      "item.the_wet_smp.copperfish": "Copperfish",
+      "advancements.grant_aquamarine_glass_recipe.title": "Grant Warped Wart Recipe",
+      "item.the_wet_smp.chainmail_piston_leggings": "Chainmail Piston Boots Leggings",
+      "item.the_wet_smp.chainmail_piston_boots": "Chainmail Piston Boots",
+      "item.the_wet_smp.onyx_embedded_beetroot_soup": "Onyx Embedded Beetroot Soup",
+      "advancements.grant_leather_boots_recipes.title": "Grant Chain Piston Boots Recipe",
+      "item.the_wet_smp.goldfish": "Goldfish",
+      "item.the_wet_smp_rehydrated.shroomy_koi": "Shroomy Koi",
+      "item.the_wet_smp_rehydrated.warped_wart": "Warped Wart",
+      "item.the_wet_smp_rehydrated.green_jellyfish": "Green Jellyfish",
+      "item.the_wet_smp.netherite_piston_boots": "Netherite Piston Boots",
+      "item.the_wet_smp_rehydrated.crab_cannon": "Crab Cannon",
+      "item.the_wet_smp.netherite_piston_leggings": "Iron Piston Boots Leggings",
+      "item.the_wet_smp.lapis_embedded_mushroom_stew": "Lapis Embedded Mushroom Stew",
+      "advancements.grant_iron_ingot_recipes.title": "Grant Rings Recipe",
+      "item.the_wet_smp_rehydrated.silver_eye": "Silvereye",
+      "item.the_wet_smp.golden_piston_leggings": "Chainmail Piston Boots Leggings",
+      "advancements.grant_warped_wart_block_recipes.descr": "a",
+      "item.the_wet_smp.onyx": "Onyx",
+      "subtitles.ambient.veil": "Eerie noise",
+      "item.the_wet_smp.emerald_orefish": "Emerald Orefish",
+      "effect.lacuna": "Lacuna",
+      "item.minecraft.splash_potion.effect.lacuna_potion": "Splash Potion of Lacuna",
+      "item.the_wet_smp.golden_skiffia": "Golden Skiffia",
+      "item.the_wet_smp_rehydrated.chainmail_piston_chestplate": "Chainmail Piston Boots Body",
+      "item.the_wet_smp_rehydrated.pink_jellyfish": "Pink Jellyfish",
+      "advancements.grant_warped_wart_recipes.descr": "a",
+      "advancements.grant_iron_boots_recipes.descr": "a",
+      "item.the_wet_smp.night_koi": "Night Koi",
+      "item.the_wet_smp_rehydrated.buffer_block_removal_spawn_egg": "Buffer Block Removal Spawn Egg",
+      "advancements.grant_redstone_recipes.title": "Grant Piston Boots Recipe",
+      "item.the_wet_smp.silver_eye": "Silvereye",
+      "block.the_wet_smp_rehydrated.aquamarine_glass_pane": "Aquamarine Glass Pane",
+      "item.the_wet_smp_rehydrated.copperfish": "Copperfish",
+      "block.the_wet_smp.buffer": "Buffer",
+      "item.the_wet_smp.lapis_orefish": "Lapis Orefish",
+      "block.the_wet_smp.air_vent": "Air Vent",
+      "block.the_wet_smp.aquamarine_glass": "Aquamarine Glass",
+      "block.the_wet_smp.aquamarine_glass_pane": "Aquamarine Glass Pane",
+      "item.the_wet_smp_rehydrated.effervescent_watcher": "Effervescent Watcher",
+      "item.the_wet_smp_rehydrated.goldfish": "Goldfish",
+      "advancements.grant_lapis_recipes.title": "Grant Rings Recipe",
+      "advancements.get_all_rings.title": "How to Scratch It",
+      "item.the_wet_smp.onyx_orefish": "Onyx Orefish",
+      "subtitles.buffer.new_latency": "Buffer creates new latency"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Legacy Content",
+        "children": []
+      },
+      {
+        "name": "Potion Effects",
+        "children": []
+      },
+      {
+        "name": "Procedures",
+        "children": [
+          {
+            "name": "Fishing",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Recipes",
+        "children": [
+          {
+            "name": "GrantRecipes",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Tools",
+        "children": []
+      },
+      {
+        "name": "Blocks",
+        "children": []
+      },
+      {
+        "name": "Particles",
+        "children": []
+      },
+      {
+        "name": "Loot Tables",
+        "children": []
+      },
+      {
+        "name": "Items",
+        "children": []
+      },
+      {
+        "name": "Foodstuffs",
+        "children": []
+      },
+      {
+        "name": "Creative Tabs",
+        "children": []
+      },
+      {
+        "name": "Potions",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "the_wet_smp_rehydrated",
+    "modName": "The Wet SMP Rehydrated",
+    "version": "Judgement Day",
+    "description": "FUCK",
+    "author": "oreli bitch",
+    "websiteURL": "https://www.youtube.com/",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.16.5",
+    "credits": "IT WAS ME",
+    "modElementsPackage": "net.mcreator.thewetsmp",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202100235315
+}

@@ -10,13 +10,13 @@ import net.minecraft.item.Item;
 import net.minecraft.item.Food;
 
 import net.mcreator.thewetsmp.itemgroup.FishingItemGroup;
-import net.mcreator.thewetsmp.TheWetSmpModElements;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
-@TheWetSmpModElements.ModElement.Tag
-public class SavannaTetraItem extends TheWetSmpModElements.ModElement {
-	@ObjectHolder("the_wet_smp:savanna_tetra")
+@TheWetSmpRehydratedModElements.ModElement.Tag
+public class SavannaTetraItem extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:savanna_tetra")
 	public static final Item block = null;
-	public SavannaTetraItem(TheWetSmpModElements instance) {
+	public SavannaTetraItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 377);
 	}
 

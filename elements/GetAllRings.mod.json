@@ -3,7 +3,7 @@
   "_type": "achievement",
   "definition": {
     "achievementName": "How to Scratch It",
-    "achievementDescription": "Get all five Lost Gem Rings",
+    "achievementDescription": "Obtain all five Gem Rings",
     "achievementIcon": {
       "value": "CUSTOM:LostRubyRing"
     },

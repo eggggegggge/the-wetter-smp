@@ -51,7 +51,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.mcreator.thewetsmp.procedures.AquamarineGlassIsPlacedProcedure;
-import net.mcreator.thewetsmp.TheWetSmpModElements;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
 import javax.annotation.Nullable;
 
@@ -61,13 +61,13 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-@TheWetSmpModElements.ModElement.Tag
-public class AquamarineGlassBlock extends TheWetSmpModElements.ModElement {
-	@ObjectHolder("the_wet_smp:aquamarine_glass")
+@TheWetSmpRehydratedModElements.ModElement.Tag
+public class AquamarineGlassBlock extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:aquamarine_glass")
 	public static final Block block = null;
-	@ObjectHolder("the_wet_smp:aquamarine_glass")
+	@ObjectHolder("the_wet_smp_rehydrated:aquamarine_glass")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
-	public AquamarineGlassBlock(TheWetSmpModElements instance) {
+	public AquamarineGlassBlock(TheWetSmpRehydratedModElements instance) {
 		super(instance, 189);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}

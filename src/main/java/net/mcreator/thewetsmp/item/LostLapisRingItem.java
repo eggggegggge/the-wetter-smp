@@ -12,16 +12,16 @@ import net.minecraft.entity.Entity;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.thewetsmp.procedures.RingEffectProcedure;
-import net.mcreator.thewetsmp.TheWetSmpModElements;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
 import java.util.Map;
 import java.util.HashMap;
 
-@TheWetSmpModElements.ModElement.Tag
-public class LostLapisRingItem extends TheWetSmpModElements.ModElement {
-	@ObjectHolder("the_wet_smp:lapis_ring")
+@TheWetSmpRehydratedModElements.ModElement.Tag
+public class LostLapisRingItem extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:lapis_ring")
 	public static final Item block = null;
-	public LostLapisRingItem(TheWetSmpModElements instance) {
+	public LostLapisRingItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 9);
 	}
 

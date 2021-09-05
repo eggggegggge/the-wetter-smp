@@ -15,13 +15,13 @@ import net.minecraft.block.FallingBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.mcreator.thewetsmp.TheWetSmpModElements;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
-@TheWetSmpModElements.ModElement.Tag
-public class CrateBlock extends TheWetSmpModElements.ModElement {
-	@ObjectHolder("the_wet_smp:crate")
+@TheWetSmpRehydratedModElements.ModElement.Tag
+public class CrateBlock extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:crate")
 	public static final Block block = null;
-	public CrateBlock(TheWetSmpModElements instance) {
+	public CrateBlock(TheWetSmpRehydratedModElements instance) {
 		super(instance, 330);
 	}
 

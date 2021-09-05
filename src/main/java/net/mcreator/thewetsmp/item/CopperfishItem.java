@@ -9,13 +9,13 @@ import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.thewetsmp.itemgroup.FishingItemGroup;
-import net.mcreator.thewetsmp.TheWetSmpModElements;
+import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
-@TheWetSmpModElements.ModElement.Tag
-public class CopperfishItem extends TheWetSmpModElements.ModElement {
-	@ObjectHolder("the_wet_smp:copperfish")
+@TheWetSmpRehydratedModElements.ModElement.Tag
+public class CopperfishItem extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:copperfish")
 	public static final Item block = null;
-	public CopperfishItem(TheWetSmpModElements instance) {
+	public CopperfishItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 351);
 	}
 
