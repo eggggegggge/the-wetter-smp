@@ -1,0 +1,16 @@
+{
+  "group": "brown_bed_from_white_bed",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:white_bed"
+    },
+    {
+      "item": "the_wet_smp_rehydrated:sepia_dye"
+    }
+  ],
+  "result": {
+    "item": "minecraft:brown_bed",
+    "count": 1
+  }
+}

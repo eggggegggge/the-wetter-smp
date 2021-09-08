@@ -1,0 +1,16 @@
+{
+  "group": "sepiawool",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:white_wool"
+    },
+    {
+      "item": "the_wet_smp_rehydrated:sepia_dye"
+    }
+  ],
+  "result": {
+    "item": "the_wet_smp_rehydrated:sepia_wool",
+    "count": 1
+  }
+}

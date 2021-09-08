@@ -1,0 +1,37 @@
+{
+  "group": "sepiaconcretepowder",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "the_wet_smp_rehydrated:sepia_dye"
+    },
+    {
+      "item": "minecraft:sand"
+    },
+    {
+      "item": "minecraft:sand"
+    },
+    {
+      "item": "minecraft:sand"
+    },
+    {
+      "item": "minecraft:sand"
+    },
+    {
+      "item": "minecraft:gravel"
+    },
+    {
+      "item": "minecraft:gravel"
+    },
+    {
+      "item": "minecraft:gravel"
+    },
+    {
+      "item": "minecraft:gravel"
+    }
+  ],
+  "result": {
+    "item": "the_wet_smp_rehydrated:sepia_concrete_powder",
+    "count": 8
+  }
+}

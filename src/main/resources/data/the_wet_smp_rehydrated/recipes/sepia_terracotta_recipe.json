@@ -1,0 +1,42 @@
+{
+  "group": "sepiaterracotta",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:terracotta"
+    },
+    "1": {
+      "item": "minecraft:terracotta"
+    },
+    "2": {
+      "item": "minecraft:terracotta"
+    },
+    "3": {
+      "item": "minecraft:terracotta"
+    },
+    "4": {
+      "item": "the_wet_smp_rehydrated:sepia_dye"
+    },
+    "5": {
+      "item": "minecraft:terracotta"
+    },
+    "6": {
+      "item": "minecraft:terracotta"
+    },
+    "7": {
+      "item": "minecraft:terracotta"
+    },
+    "8": {
+      "item": "minecraft:terracotta"
+    }
+  },
+  "result": {
+    "item": "the_wet_smp_rehydrated:sepia_terracotta",
+    "count": 8
+  }
+}

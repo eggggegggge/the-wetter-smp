@@ -1,0 +1,7 @@
+{
+  "parent": "block/template_glass_pane_side",
+  "textures": {
+    "edge": "the_wet_smp_rehydrated:blocks/sepia_glass_top",
+    "pane": "the_wet_smp_rehydrated:blocks/sepia_glass"
+  }
+}

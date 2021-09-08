@@ -1,0 +1,42 @@
+{
+  "group": "sepiacarpet",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:white_carpet"
+    },
+    "1": {
+      "item": "minecraft:white_carpet"
+    },
+    "2": {
+      "item": "minecraft:white_carpet"
+    },
+    "3": {
+      "item": "minecraft:white_carpet"
+    },
+    "4": {
+      "item": "the_wet_smp_rehydrated:sepia_dye"
+    },
+    "5": {
+      "item": "minecraft:white_carpet"
+    },
+    "6": {
+      "item": "minecraft:white_carpet"
+    },
+    "7": {
+      "item": "minecraft:white_carpet"
+    },
+    "8": {
+      "item": "minecraft:white_carpet"
+    }
+  },
+  "result": {
+    "item": "the_wet_smp_rehydrated:sepia_carpet",
+    "count": 8
+  }
+}

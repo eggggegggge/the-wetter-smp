@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "the_wet_smp_rehydrated:blocks/sepia_wool",
+    "particle": "the_wet_smp_rehydrated:blocks/sepia_wool"
+  }
+}

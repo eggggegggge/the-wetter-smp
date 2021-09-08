@@ -1,0 +1,13 @@
+{
+  "group": "sepiadye",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "the_wet_smp_rehydrated:cuttlefish"
+    }
+  ],
+  "result": {
+    "item": "the_wet_smp_rehydrated:sepia_dye",
+    "count": 2
+  }
+}

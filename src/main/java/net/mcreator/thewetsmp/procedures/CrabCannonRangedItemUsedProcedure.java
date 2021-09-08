@@ -28,7 +28,7 @@ public class CrabCannonRangedItemUsedProcedure {
 				((PlayerEntity) entity).getCooldownTracker().setCooldown((itemstack).getItem(), (int) 30);
 		} else {
 			if (entity instanceof PlayerEntity)
-				((PlayerEntity) entity).getCooldownTracker().setCooldown((itemstack).getItem(), (int) 15);
+				((PlayerEntity) entity).getCooldownTracker().setCooldown((itemstack).getItem(), (int) 50);
 		}
 	}
 }

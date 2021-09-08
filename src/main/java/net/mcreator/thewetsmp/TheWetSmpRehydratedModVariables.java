@@ -67,22 +67,19 @@ public class TheWetSmpRehydratedModVariables {
 		@Override
 		public INBT writeNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side) {
 			CompoundNBT nbt = new CompoundNBT();
-			nbt.putBoolean("radiationPoisoned", instance.radiationPoisoned);
-			nbt.putDouble("radiation", instance.radiation);
+			nbt.putBoolean("lacunaDamage", instance.lacunaDamage);
 			return nbt;
 		}
 
 		@Override
 		public void readNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side, INBT inbt) {
 			CompoundNBT nbt = (CompoundNBT) inbt;
-			instance.radiationPoisoned = nbt.getBoolean("radiationPoisoned");
-			instance.radiation = nbt.getDouble("radiation");
+			instance.lacunaDamage = nbt.getBoolean("lacunaDamage");
 		}
 	}
 
 	public static class PlayerVariables {
-		public boolean radiationPoisoned = false;
-		public double radiation = 0;
+		public boolean lacunaDamage = false;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				TheWetSmpRehydratedMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity),
@@ -116,8 +113,7 @@ public class TheWetSmpRehydratedModVariables {
 				.orElse(new PlayerVariables()));
 		PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 		if (!event.isWasDeath()) {
-			clone.radiationPoisoned = original.radiationPoisoned;
-			clone.radiation = original.radiation;
+			clone.lacunaDamage = original.lacunaDamage;
 		}
 	}
 	public static class PlayerVariablesSyncMessage {
@@ -141,8 +137,7 @@ public class TheWetSmpRehydratedModVariables {
 				if (!context.getDirection().getReceptionSide().isServer()) {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new PlayerVariables()));
-					variables.radiationPoisoned = message.data.radiationPoisoned;
-					variables.radiation = message.data.radiation;
+					variables.lacunaDamage = message.data.lacunaDamage;
 				}
 			});
 			context.setPacketHandled(true);

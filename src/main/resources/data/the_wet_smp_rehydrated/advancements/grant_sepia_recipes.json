@@ -1,0 +1,31 @@
+{
+  "criteria": {
+    "grant_sepia_recipes": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "the_wet_smp_rehydrated:sepia_dye",
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1,
+    "recipes": [
+      "the_wet_smp_rehydrated:sepia_wool_recipe",
+      "the_wet_smp_rehydrated:sepia_terracotta_recipe",
+      "the_wet_smp_rehydrated:sepia_concrete_powder_recipe",
+      "the_wet_smp_rehydrated:sepia_glass_recipe",
+      "the_wet_smp_rehydrated:sepia_glass_pane_recipe",
+      "the_wet_smp_rehydrated:sepia_carpet_recipe",
+      "minecraft:sepia_bed_recipe_1"
+    ]
+  },
+  "parent": "the_wet_smp_rehydrated:get_all_rings"
+}

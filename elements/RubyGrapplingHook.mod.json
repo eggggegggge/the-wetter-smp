@@ -35,9 +35,6 @@
       "value": ""
     },
     "bulletModel": "Modelcustom_model",
-    "customBulletModelTexture": "rubyhook.png",
-    "onBulletHitsBlock": {
-      "name": "GrapplingHookHitsBlock"
-    }
+    "customBulletModelTexture": "rubyhook.png"
   }
 }

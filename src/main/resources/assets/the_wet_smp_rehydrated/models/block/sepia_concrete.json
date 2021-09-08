@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "the_wet_smp_rehydrated:blocks/sepia_concrete",
+    "up": "the_wet_smp_rehydrated:blocks/sepia_concrete",
+    "north": "the_wet_smp_rehydrated:blocks/sepia_concrete",
+    "east": "the_wet_smp_rehydrated:blocks/sepia_concrete",
+    "south": "the_wet_smp_rehydrated:blocks/sepia_concrete",
+    "west": "the_wet_smp_rehydrated:blocks/sepia_concrete",
+    "particle": "the_wet_smp_rehydrated:blocks/sepia_concrete"
+  }
+}

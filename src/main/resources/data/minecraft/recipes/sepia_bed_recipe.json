@@ -1,0 +1,32 @@
+{
+  "group": "brown_bed",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345"
+  ],
+  "key": {
+    "0": {
+      "item": "the_wet_smp_rehydrated:sepia_wool"
+    },
+    "1": {
+      "item": "the_wet_smp_rehydrated:sepia_wool"
+    },
+    "2": {
+      "item": "the_wet_smp_rehydrated:sepia_wool"
+    },
+    "3": {
+      "tag": "minecraft:planks"
+    },
+    "4": {
+      "tag": "minecraft:planks"
+    },
+    "5": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "result": {
+    "item": "minecraft:brown_bed",
+    "count": 1
+  }
+}

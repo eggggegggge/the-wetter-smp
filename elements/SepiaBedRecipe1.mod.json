@@ -1,0 +1,46 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "brown_bed_from_white_bed",
+    "recipeShapeless": true,
+    "recipeSlots": [
+      {
+        "value": "Blocks.BED"
+      },
+      {
+        "value": "CUSTOM:SepiaDye"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "Blocks.BROWN_BED"
+    },
+    "name": "sepia_bed_recipe_1",
+    "namespace": "minecraft"
+  }
+}

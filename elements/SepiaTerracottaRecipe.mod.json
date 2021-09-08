@@ -1,0 +1,46 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 8,
+    "group": "sepiaterracotta",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "Blocks.HARDENED_CLAY"
+      },
+      {
+        "value": "Blocks.HARDENED_CLAY"
+      },
+      {
+        "value": "Blocks.HARDENED_CLAY"
+      },
+      {
+        "value": "Blocks.HARDENED_CLAY"
+      },
+      {
+        "value": "CUSTOM:SepiaDye"
+      },
+      {
+        "value": "Blocks.HARDENED_CLAY"
+      },
+      {
+        "value": "Blocks.HARDENED_CLAY"
+      },
+      {
+        "value": "Blocks.HARDENED_CLAY"
+      },
+      {
+        "value": "Blocks.HARDENED_CLAY"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:SepiaTerracotta"
+    },
+    "name": "sepia_terracotta_recipe",
+    "namespace": "mod"
+  }
+}
