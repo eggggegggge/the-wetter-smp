@@ -3560,7 +3560,28 @@
       "ids": {},
       "registry_name": "fishing_procedure",
       "metadata": {
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Procedures/Fishing"
     },
@@ -3580,6 +3601,14 @@
           },
           {
             "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "z",
             "type": "number"
           },
           {
@@ -3631,6 +3660,40 @@
         ]
       },
       "path": "~/Procedures/Fishing"
+    },
+    {
+      "name": "Grapple",
+      "type": "procedure",
+      "sortid": 432,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grapple",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [
@@ -3671,8 +3734,8 @@
     "en_us": {
       "item.the_wet_smp_rehydrated.skeletal_eel": "Skeletal Eel",
       "item.the_wet_smp.lapis_embedded_bowl": "Lapis Embedded Bowl",
-      "item.the_wet_smp.onyx_embedded_rabbit_stew": "Onyx Embedded Rabbit Stew",
       "effect.snack_bulwark": "Snack Bulwark",
+      "item.the_wet_smp.onyx_embedded_rabbit_stew": "Onyx Embedded Rabbit Stew",
       "item.the_wet_smp_rehydrated.leather_piston_helmet": "Leather Piston Boots Helmet",
       "item.the_wet_smp_rehydrated.molten_charr": "Molten Charr",
       "advancements.grant_ruby_recipes.descr": "a",

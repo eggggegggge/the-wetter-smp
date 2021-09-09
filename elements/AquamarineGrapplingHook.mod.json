@@ -35,6 +35,9 @@
       "value": ""
     },
     "bulletModel": "Modelcustom_model",
-    "customBulletModelTexture": "aquamarinehook.png"
+    "customBulletModelTexture": "aquamarinehook.png",
+    "onBulletFlyingTick": {
+      "name": "Grapple"
+    }
   }
 }

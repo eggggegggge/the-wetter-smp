@@ -1,14 +1,16 @@
 package net.mcreator.thewetsmp.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.entity.player.ItemFishedEvent;
+import net.minecraftforge.fml.server.ServerLifecycleHooks;
 
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.ChatType;
+import net.minecraft.util.Util;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.potion.Effects;
 import net.minecraft.potion.EffectInstance;
-import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.item.ExperienceOrbEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
@@ -16,31 +18,11 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 
 import java.util.Random;
 import java.util.Map;
-import java.util.HashMap;
 import java.util.Collection;
 
 import com.google.common.collect.ImmutableMap;
 
 public class ColdOceanFishProcedure {
-	@Mod.EventBusSubscriber
-	private static class GlobalTrigger {
-		@SubscribeEvent
-		public static void onPlayerFishItem(ItemFishedEvent event) {
-			PlayerEntity entity = event.getPlayer();
-			double i = entity.getPosX();
-			double j = entity.getPosY();
-			double k = entity.getPosZ();
-			World world = entity.world;
-			Map<String, Object> dependencies = new HashMap<>();
-			dependencies.put("x", i);
-			dependencies.put("y", j);
-			dependencies.put("z", k);
-			dependencies.put("world", world);
-			dependencies.put("entity", entity);
-			dependencies.put("event", event);
-			executeProcedure(dependencies);
-		}
-	}
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -52,6 +34,16 @@ public class ColdOceanFishProcedure {
 				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency y for procedure ColdOceanFish!");
 			return;
 		}
+		if (dependencies.get("x") == null) {
+			if (!dependencies.containsKey("x"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency x for procedure ColdOceanFish!");
+			return;
+		}
+		if (dependencies.get("z") == null) {
+			if (!dependencies.containsKey("z"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency z for procedure ColdOceanFish!");
+			return;
+		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
 				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure ColdOceanFish!");
@@ -59,6 +51,8 @@ public class ColdOceanFishProcedure {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
+		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
+		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		boolean rain = false;
 		double sel = 0;
@@ -84,7 +78,7 @@ public class ColdOceanFishProcedure {
 				return false;
 			}
 		}.check(entity))) {
-			luck = (double) (new Object() {
+			luck = (double) ((new Object() {
 				int check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -95,7 +89,7 @@ public class ColdOceanFishProcedure {
 					}
 					return 0;
 				}
-			}.check(entity));
+			}.check(entity)) + 1);
 		} else {
 			luck = (double) 0;
 		}
@@ -111,7 +105,7 @@ public class ColdOceanFishProcedure {
 				return false;
 			}
 		}.check(entity))) {
-			unluck = (double) (new Object() {
+			unluck = (double) ((new Object() {
 				int check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -122,19 +116,129 @@ public class ColdOceanFishProcedure {
 					}
 					return 0;
 				}
-			}.check(entity));
+			}.check(entity)) + 1);
 		} else {
 			unluck = (double) 0;
 		}
-		totalluck = (double) ((0 + luck) - unluck);
+		totalluck = (double) (1 + (luck - unluck));
 		rodpower = (double) FishingRodCheckProcedure.executeProcedure(ImmutableMap.of("entity", entity));
 		baitpower = (double) BaitCheckProcedure.executeProcedure(ImmutableMap.of("entity", entity, "world", world));/* loot factors */
 		time = (double) (world.getWorldInfo().getDayTime());
 		altitude = (double) (Math.floor(y));/* how many fish */
-		fish = (double) 50;
+		fish = (double) 37;
 		if (((time > 13000) && (time < 23000))) {
-			fish = (double) 60;
+			fish = (double) 45;
 		}
-		sel = (double) ((new Random()).nextInt((int) fish + 1));
+		fish = (double) (fish * (0.5 * totalluck));
+		sel = (double) ((new Random()).nextInt((int) fish + 1));/* fish */
+		if ((sel < 10)) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"give @s minecraft:cod 1");
+				}
+			}
+			if (world instanceof World && !world.isRemote()) {
+				((World) world).addEntity(new ExperienceOrbEntity(((World) world), x, (y - 0.5), z, (int) 2));
+			}
+			if (!world.isRemote()) {
+				MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+				if (mcserv != null)
+					mcserv.getPlayerList().func_232641_a_(new StringTextComponent("cod"), ChatType.SYSTEM, Util.DUMMY_UUID);
+			}
+		} else if (((sel >= 11) && (sel <= 18))) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"give @s minecraft:salmon 1");
+				}
+			}
+			if (world instanceof World && !world.isRemote()) {
+				((World) world).addEntity(new ExperienceOrbEntity(((World) world), x, (y - 0.5), z, (int) 2));
+			}
+			if (!world.isRemote()) {
+				MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+				if (mcserv != null)
+					mcserv.getPlayerList().func_232641_a_(new StringTextComponent("salmon"), ChatType.SYSTEM, Util.DUMMY_UUID);
+			}
+		} else if (((sel >= 19) && (sel <= 23))) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"give @s the_wet_smp_rehydrated:scallop 1");
+				}
+			}
+			if (world instanceof World && !world.isRemote()) {
+				((World) world).addEntity(new ExperienceOrbEntity(((World) world), x, (y - 0.5), z, (int) 4));
+			}
+			if (!world.isRemote()) {
+				MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+				if (mcserv != null)
+					mcserv.getPlayerList().func_232641_a_(new StringTextComponent("scallop"), ChatType.SYSTEM, Util.DUMMY_UUID);
+			}
+		} else if (((sel >= 24) && (sel <= 30))) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"give @s the_wet_smp_rehydrated:sea_urchin 1");
+				}
+			}
+			if (world instanceof World && !world.isRemote()) {
+				((World) world).addEntity(new ExperienceOrbEntity(((World) world), x, (y - 0.5), z, (int) 3));
+			}
+			if (!world.isRemote()) {
+				MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+				if (mcserv != null)
+					mcserv.getPlayerList().func_232641_a_(new StringTextComponent("sea urchin"), ChatType.SYSTEM, Util.DUMMY_UUID);
+			}
+		} else if (((sel >= 31) && (sel <= 37))) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"give @s the_wet_smp_rehydrated:crab 1");
+				}
+			}
+			if (world instanceof World && !world.isRemote()) {
+				((World) world).addEntity(new ExperienceOrbEntity(((World) world), x, (y - 0.5), z, (int) 5));
+			}
+			if (!world.isRemote()) {
+				MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+				if (mcserv != null)
+					mcserv.getPlayerList().func_232641_a_(new StringTextComponent("crab"), ChatType.SYSTEM, Util.DUMMY_UUID);
+			}
+		} else if (((sel >= 38) && (sel <= 45))) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"give @s the_wet_smp_rehydrated:blue_jellyfish 1");
+				}
+			}
+			if (world instanceof World && !world.isRemote()) {
+				((World) world).addEntity(new ExperienceOrbEntity(((World) world), x, (y - 0.5), z, (int) 8));
+			}
+			if (!world.isRemote()) {
+				MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+				if (mcserv != null)
+					mcserv.getPlayerList().func_232641_a_(new StringTextComponent("blue jellyfish"), ChatType.SYSTEM, Util.DUMMY_UUID);
+			}
+		}
+		if (!world.isRemote()) {
+			MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+			if (mcserv != null)
+				mcserv.getPlayerList().func_232641_a_(new StringTextComponent((new java.text.DecimalFormat("##.##").format(sel))), ChatType.SYSTEM,
+						Util.DUMMY_UUID);
+		}
+		if (!world.isRemote()) {
+			MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+			if (mcserv != null)
+				mcserv.getPlayerList().func_232641_a_(new StringTextComponent((new java.text.DecimalFormat("##.##").format(fish))), ChatType.SYSTEM,
+						Util.DUMMY_UUID);
+		}
 	}
 }

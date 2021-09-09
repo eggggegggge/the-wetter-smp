@@ -35,6 +35,9 @@
       "value": ""
     },
     "bulletModel": "Modelcustom_model",
-    "customBulletModelTexture": "rubyhook.png"
+    "customBulletModelTexture": "rubyhook.png",
+    "onBulletFlyingTick": {
+      "name": "Grapple"
+    }
   }
 }

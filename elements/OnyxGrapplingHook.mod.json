@@ -35,6 +35,9 @@
       "value": ""
     },
     "bulletModel": "Modelcustom_model",
-    "customBulletModelTexture": "onyxhook.png"
+    "customBulletModelTexture": "onyxhook.png",
+    "onBulletFlyingTick": {
+      "name": "Grapple"
+    }
   }
 }

@@ -30,6 +30,7 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 
+import net.mcreator.thewetsmp.procedures.GrappleProcedure;
 import net.mcreator.thewetsmp.procedures.CrabCannonRangedItemUsedProcedure;
 import net.mcreator.thewetsmp.entity.renderer.AquamarineGrapplingHookRenderer;
 import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
@@ -148,6 +149,15 @@ public class AquamarineGrapplingHookItem extends TheWetSmpRehydratedModElements.
 			World world = this.world;
 			Entity entity = this.func_234616_v_();
 			Entity imediatesourceentity = this;
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				GrappleProcedure.executeProcedure($_dependencies);
+			}
 			if (this.inGround) {
 				this.remove();
 			}
