@@ -6,6 +6,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.world.IWorldReader;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
@@ -48,6 +50,11 @@ public class SepiaStainedGlassPaneBlock extends TheWetSmpRehydratedModElements.M
 			super(Block.Properties.create(Material.GLASS).sound(SoundType.GLASS).hardnessAndResistance(0.3f, 0.3f).setLightLevel(s -> 0).notSolid()
 					.setOpaque((bs, br, bp) -> false));
 			setRegistryName("sepia_stained_glass_pane");
+		}
+
+		@Override
+		public float[] getBeaconColorMultiplier(BlockState state, IWorldReader world, BlockPos pos, BlockPos beaconPos) {
+			return new float[]{0.352941176471f, 0.274509803922f, 0.211764705882f};
 		}
 
 		@Override

@@ -6,6 +6,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.world.IWorldReader;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IBlockDisplayReader;
 import net.minecraft.util.math.BlockPos;
@@ -57,6 +58,11 @@ public class SepiaStainedGlassBlock extends TheWetSmpRehydratedModElements.ModEl
 		@Override
 		public boolean shouldDisplayFluidOverlay(BlockState state, IBlockDisplayReader world, BlockPos pos, FluidState fluidstate) {
 			return true;
+		}
+
+		@Override
+		public float[] getBeaconColorMultiplier(BlockState state, IWorldReader world, BlockPos pos, BlockPos beaconPos) {
+			return new float[]{0.352941176471f, 0.274509803922f, 0.211764705882f};
 		}
 
 		@OnlyIn(Dist.CLIENT)
