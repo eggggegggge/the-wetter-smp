@@ -84,18 +84,7 @@ public class ColdOceanFishProcedure {
 				return false;
 			}
 		}.check(entity))) {
-			luck = (double) ((new Object() {
-				int check(Entity _entity) {
-					if (_entity instanceof LivingEntity) {
-						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-						for (EffectInstance effect : effects) {
-							if (effect.getPotion() == Effects.LUCK)
-								return effect.getAmplifier();
-						}
-					}
-					return 0;
-				}
-			}.check(entity)) + 1);
+			luck = (double) 1;
 		} else {
 			luck = (double) 0;
 		}
@@ -111,18 +100,7 @@ public class ColdOceanFishProcedure {
 				return false;
 			}
 		}.check(entity))) {
-			unluck = (double) ((new Object() {
-				int check(Entity _entity) {
-					if (_entity instanceof LivingEntity) {
-						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-						for (EffectInstance effect : effects) {
-							if (effect.getPotion() == Effects.UNLUCK)
-								return effect.getAmplifier();
-						}
-					}
-					return 0;
-				}
-			}.check(entity)) + 2);
+			unluck = (double) 2;
 		} else {
 			unluck = (double) 0;
 		}
@@ -151,6 +129,64 @@ public class ColdOceanFishProcedure {
 			seaurchin = (double) (seaurchin - 4);
 			crab = (double) (crab + 2);
 			jellyfish = (double) (jellyfish - 3);
+		}
+		if ((totalluck > (-1))) {
+			if (((cod * rodpower) < 2)) {
+				cod = (double) 2;
+			} else {
+				cod = (double) (cod * rodpower);
+			}
+			if (((salmon * rodpower) < 3)) {
+				salmon = (double) 3;
+			} else {
+				salmon = (double) (salmon * rodpower);
+			}
+			if (((scallop / rodpower) > 30)) {
+				scallop = (double) 30;
+			} else {
+				scallop = (double) (scallop / rodpower);
+			}
+			if (((seaurchin / rodpower) > 37)) {
+				seaurchin = (double) 37;
+			} else {
+				seaurchin = (double) (seaurchin / rodpower);
+			}
+			if (((crab * rodpower) < 40)) {
+				crab = (double) 40;
+			} else {
+				crab = (double) (crab * rodpower);
+			}
+		} else {
+			if (((cod / rodpower) > 16)) {
+				cod = (double) 16;
+			} else {
+				cod = (double) (cod / rodpower);
+			}
+			if (((salmon / rodpower) > 22)) {
+				salmon = (double) 22;
+			} else {
+				salmon = (double) (salmon / rodpower);
+			}
+			if (((scallop * rodpower) < 22)) {
+				scallop = (double) 22;
+			} else {
+				scallop = (double) (scallop * rodpower);
+			}
+			if (((seaurchin * rodpower) < 26)) {
+				seaurchin = (double) 26;
+			} else {
+				seaurchin = (double) (seaurchin * rodpower);
+			}
+			if (((crab / rodpower) > 47)) {
+				crab = (double) 47;
+			} else {
+				crab = (double) (crab / rodpower);
+			}
+			if (((jellyfish * rodpower) > 49)) {
+				jellyfish = (double) 49;
+			} else {
+				jellyfish = (double) (jellyfish * rodpower);
+			}
 		} /* fish */
 		fish = (double) crab;
 		if (((time > 13000) && (time < 23000))) {
