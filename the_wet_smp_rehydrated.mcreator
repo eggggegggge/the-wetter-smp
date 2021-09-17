@@ -1940,10 +1940,6 @@
           {
             "name": "amount",
             "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -3620,25 +3616,6 @@
       "path": "~/Procedures/Fishing"
     },
     {
-      "name": "FishingRodCheck",
-      "type": "procedure",
-      "sortid": 430,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "fishing_rod_check",
-      "metadata": {
-        "return_type": "number",
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Fishing"
-    },
-    {
       "name": "BaitCheck",
       "type": "procedure",
       "sortid": 431,
@@ -3694,6 +3671,81 @@
         ]
       },
       "path": "~/Procedures"
+    },
+    {
+      "name": "LuckCheck",
+      "type": "procedure",
+      "sortid": 433,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "luck_check",
+      "metadata": {
+        "return_type": "number",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Fishing"
+    },
+    {
+      "name": "RemoveBait",
+      "type": "procedure",
+      "sortid": 434,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "remove_bait",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Fishing"
+    },
+    {
+      "name": "DetermineBiome",
+      "type": "procedure",
+      "sortid": 435,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "determine_biome",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Fishing"
     }
   ],
   "variable_elements": [
@@ -3728,6 +3780,17 @@
       ],
       "category": "player",
       "subtitle": "Crab cannon fires"
+    },
+    {
+      "name": "linebreak",
+      "files": [
+        "linebreak1",
+        "linebreak2",
+        "linebreak3",
+        "linebreak4"
+      ],
+      "category": "ambient",
+      "subtitle": "Fishing line breaks"
     }
   ],
   "language_map": {
@@ -3829,6 +3892,7 @@
       "advancements.grant_sepia_recipes.descr": "a",
       "item.the_wet_smp_rehydrated.netherite_piston_helmet": "Iron Piston Boots Helmet",
       "block.the_wet_smp_rehydrated.cold_air_vent": "Air Vent",
+      "subtitles.linebreak": "Fishing line breaks",
       "subtitles.buffer.latency": "Buffer reverts to a previous latency",
       "item.the_wet_smp.jungle_snapper": "Jungle Snapper",
       "advancements.grant_aquamarine_recipes.descr": "a",
@@ -3905,7 +3969,7 @@
       "subtitles.veil8": "Eerie noise",
       "subtitles.veil7": "Eerie noise",
       "item.the_wet_smp_rehydrated.emerald_embedded_beetroot_soup": "Emerald Embedded Beetroot Soup",
-      "death.attack.lacuna": "%1$s faded away",
+      "death.attack.lacuna": "",
       "subtitles.veil9": "Eerie noise",
       "item.the_wet_smp_rehydrated.netherragfish": "Netherragfish",
       "block.the_wet_smp_rehydrated.sepia_wool": "Sepia Wool",

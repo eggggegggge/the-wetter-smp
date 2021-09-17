@@ -28,5 +28,27 @@
         "stream": false
       }
     ]
+  },
+  "linebreak": {
+    "category": "ambient",
+    "subtitle": "subtitles.linebreak",
+    "sounds": [
+      {
+        "name": "the_wet_smp_rehydrated:linebreak1",
+        "stream": false
+      },
+      {
+        "name": "the_wet_smp_rehydrated:linebreak2",
+        "stream": false
+      },
+      {
+        "name": "the_wet_smp_rehydrated:linebreak3",
+        "stream": false
+      },
+      {
+        "name": "the_wet_smp_rehydrated:linebreak4",
+        "stream": false
+      }
+    ]
   }
 }

@@ -52,6 +52,8 @@ public class TheWetSmpRehydratedModElements {
 				new net.minecraft.util.SoundEvent(new ResourceLocation("the_wet_smp_rehydrated", "buffer.new_latency")));
 		sounds.put(new ResourceLocation("the_wet_smp_rehydrated", "crabcannon"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("the_wet_smp_rehydrated", "crabcannon")));
+		sounds.put(new ResourceLocation("the_wet_smp_rehydrated", "linebreak"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("the_wet_smp_rehydrated", "linebreak")));
 		try {
 			ModFileScanData modFileInfo = ModList.get().getModFileById("the_wet_smp_rehydrated").getFile().getScanResult();
 			Set<ModFileScanData.AnnotationData> annotations = modFileInfo.getAnnotations();

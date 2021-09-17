@@ -4,11 +4,8 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
 import net.minecraft.util.DamageSource;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
@@ -17,7 +14,6 @@ import net.minecraft.entity.Entity;
 
 import net.mcreator.thewetsmp.potion.SnackBulwarkPotionEffect;
 import net.mcreator.thewetsmp.potion.LacunaPotionEffect;
-import net.mcreator.thewetsmp.TheWetSmpRehydratedModVariables;
 import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 
 import java.util.Map;
@@ -61,14 +57,8 @@ public class DamageProcedureProcedure {
 				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency amount for procedure DamageProcedure!");
 			return;
 		}
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure DamageProcedure!");
-			return;
-		}
 		Entity entity = (Entity) dependencies.get("entity");
 		double amount = dependencies.get("amount") instanceof Integer ? (int) dependencies.get("amount") : (double) dependencies.get("amount");
-		IWorld world = (IWorld) dependencies.get("world");
 		double test = 0;
 		if ((new Object() {
 			boolean check(Entity _entity) {
@@ -113,57 +103,8 @@ public class DamageProcedureProcedure {
 				return false;
 			}
 		}.check(entity))) {
-			if ((((entity.getCapability(TheWetSmpRehydratedModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new TheWetSmpRehydratedModVariables.PlayerVariables())).lacunaDamage) == (false))) {
-				{
-					boolean _setval = (boolean) (true);
-					entity.getCapability(TheWetSmpRehydratedModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.lacunaDamage = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				if (dependencies.get("event") != null) {
-					Object _obj = dependencies.get("event");
-					if (_obj instanceof Event) {
-						Event _evt = (Event) _obj;
-						if (_evt.isCancelable())
-							_evt.setCanceled(true);
-					}
-				}
-				new Object() {
-					private int ticks = 0;
-					private float waitTicks;
-					private IWorld world;
-					public void start(IWorld world, int waitTicks) {
-						this.waitTicks = waitTicks;
-						MinecraftForge.EVENT_BUS.register(this);
-						this.world = world;
-					}
-
-					@SubscribeEvent
-					public void tick(TickEvent.ServerTickEvent event) {
-						if (event.phase == TickEvent.Phase.END) {
-							this.ticks += 1;
-							if (this.ticks >= this.waitTicks)
-								run();
-						}
-					}
-
-					private void run() {
-						if (entity instanceof LivingEntity) {
-							((LivingEntity) entity).attackEntityFrom(new DamageSource("lacuna").setDamageBypassesArmor(),
-									(float) ((amount) + ((amount) / 2)));
-						}
-						MinecraftForge.EVENT_BUS.unregister(this);
-					}
-				}.start(world, (int) 11);
-				{
-					boolean _setval = (boolean) (false);
-					entity.getCapability(TheWetSmpRehydratedModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.lacunaDamage = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
+			if (entity instanceof LivingEntity) {
+				((LivingEntity) entity).attackEntityFrom(new DamageSource("lacuna").setDamageBypassesArmor(), (float) (((amount) / 2) + (amount)));
 			}
 		}
 	}

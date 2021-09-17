@@ -8,17 +8,14 @@ import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ChatType;
 import net.minecraft.util.Util;
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.potion.Effects;
-import net.minecraft.potion.EffectInstance;
 import net.minecraft.entity.item.ExperienceOrbEntity;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 
 import java.util.Random;
 import java.util.Map;
-import java.util.Collection;
+import java.util.HashMap;
 
 import com.google.common.collect.ImmutableMap;
 
@@ -54,13 +51,7 @@ public class ColdOceanFishProcedure {
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		boolean rain = false;
 		double sel = 0;
-		double luck = 0;
-		double unluck = 0;
-		double totalluck = 0;
-		double rodpower = 0;
-		double baitpower = 0;
 		double time = 0;
 		double altitude = 0;
 		double fish = 0;
@@ -70,65 +61,9 @@ public class ColdOceanFishProcedure {
 		double seaurchin = 0;
 		double crab = 0;
 		double jellyfish = 0;
+		double luck = 0;
 		/* fishing factors */
-		rain = (boolean) world.getWorldInfo().isRaining();
-		if ((new Object() {
-			boolean check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == Effects.LUCK)
-							return true;
-					}
-				}
-				return false;
-			}
-		}.check(entity))) {
-			luck = (double) ((new Object() {
-				int check(Entity _entity) {
-					if (_entity instanceof LivingEntity) {
-						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-						for (EffectInstance effect : effects) {
-							if (effect.getPotion() == Effects.LUCK)
-								return effect.getAmplifier();
-						}
-					}
-					return 0;
-				}
-			}.check(entity)) + 1);
-		} else {
-			luck = (double) 0;
-		}
-		if ((new Object() {
-			boolean check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == Effects.UNLUCK)
-							return true;
-					}
-				}
-				return false;
-			}
-		}.check(entity))) {
-			unluck = (double) ((new Object() {
-				int check(Entity _entity) {
-					if (_entity instanceof LivingEntity) {
-						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-						for (EffectInstance effect : effects) {
-							if (effect.getPotion() == Effects.UNLUCK)
-								return effect.getAmplifier();
-						}
-					}
-					return 0;
-				}
-			}.check(entity)) + 2);
-		} else {
-			unluck = (double) 0;
-		}
-		totalluck = (double) (1 + (luck - unluck));
-		rodpower = (double) FishingRodCheckProcedure.executeProcedure(ImmutableMap.of("entity", entity));
-		baitpower = (double) BaitCheckProcedure.executeProcedure(ImmutableMap.of("entity", entity, "world", world));/* loot factors */
+		luck = (double) LuckCheckProcedure.executeProcedure(ImmutableMap.of("entity", entity));/* loot factors */
 		time = (double) (world.getWorldInfo().getDayTime());
 		altitude = (double) (Math.floor(y));/* define base values */
 		cod = (double) 10;
@@ -137,14 +72,14 @@ public class ColdOceanFishProcedure {
 		seaurchin = (double) 30;
 		crab = (double) 37;
 		jellyfish = (double) 45;/* apply modifiers */
-		if ((totalluck > 1)) {
+		if ((luck > 1)) {
 			cod = (double) (cod - 3);
 			salmon = (double) (salmon - 2);
 			scallop = (double) (scallop + 5);
 			seaurchin = (double) (seaurchin + 4);
 			crab = (double) (crab + 0);
 			jellyfish = (double) (jellyfish + 2);
-		} else if ((totalluck < 0)) {
+		} else if ((luck < 0)) {
 			cod = (double) (cod + 3);
 			salmon = (double) (salmon + 2);
 			scallop = (double) (scallop - 2);
@@ -254,6 +189,12 @@ public class ColdOceanFishProcedure {
 					mcserv.getPlayerList().func_232641_a_(new StringTextComponent("blue jellyfish"), ChatType.SYSTEM, Util.DUMMY_UUID);
 			}
 		}
+		{
+			Map<String, Object> $_dependencies = new HashMap<>();
+			$_dependencies.put("entity", entity);
+			$_dependencies.put("world", world);
+			RemoveBaitProcedure.executeProcedure($_dependencies);
+		}
 		if (!world.isRemote()) {
 			MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 			if (mcserv != null)
@@ -286,18 +227,6 @@ public class ColdOceanFishProcedure {
 			if (mcserv != null)
 				mcserv.getPlayerList().func_232641_a_(new StringTextComponent((new java.text.DecimalFormat("##.##").format(luck))), ChatType.SYSTEM,
 						Util.DUMMY_UUID);
-		}
-		if (!world.isRemote()) {
-			MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
-			if (mcserv != null)
-				mcserv.getPlayerList().func_232641_a_(new StringTextComponent((new java.text.DecimalFormat("##.##").format(unluck))), ChatType.SYSTEM,
-						Util.DUMMY_UUID);
-		}
-		if (!world.isRemote()) {
-			MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
-			if (mcserv != null)
-				mcserv.getPlayerList().func_232641_a_(new StringTextComponent((new java.text.DecimalFormat("##.##").format(totalluck))),
-						ChatType.SYSTEM, Util.DUMMY_UUID);
 		}
 		if (!world.isRemote()) {
 			MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
