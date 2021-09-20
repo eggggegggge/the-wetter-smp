@@ -30,7 +30,7 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 
-import net.mcreator.thewetsmp.procedures.GrappleProcedure;
+import net.mcreator.thewetsmp.procedures.RubyGrappleProcedure;
 import net.mcreator.thewetsmp.procedures.CrabCannonRangedItemUsedProcedure;
 import net.mcreator.thewetsmp.entity.renderer.RubyGrapplingHookRenderer;
 import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
@@ -156,7 +156,7 @@ public class RubyGrapplingHookItem extends TheWetSmpRehydratedModElements.ModEle
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				GrappleProcedure.executeProcedure($_dependencies);
+				RubyGrappleProcedure.executeProcedure($_dependencies);
 			}
 			if (this.inGround) {
 				this.remove();

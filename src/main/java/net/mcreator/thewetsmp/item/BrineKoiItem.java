@@ -13,11 +13,11 @@ import net.mcreator.thewetsmp.itemgroup.FishingItemGroup;
 import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
 @TheWetSmpRehydratedModElements.ModElement.Tag
-public class AnchovyItem extends TheWetSmpRehydratedModElements.ModElement {
-	@ObjectHolder("the_wet_smp_rehydrated:anchovy")
+public class BrineKoiItem extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:brine_koi")
 	public static final Item block = null;
-	public AnchovyItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 374);
+	public BrineKoiItem(TheWetSmpRehydratedModElements instance) {
+		super(instance, 436);
 	}
 
 	@Override
@@ -27,8 +27,8 @@ public class AnchovyItem extends TheWetSmpRehydratedModElements.ModElement {
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
 			super(new Item.Properties().group(FishingItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
-					.food((new Food.Builder()).hunger(1).saturation(0.3f).meat().build()));
-			setRegistryName("anchovy");
+					.food((new Food.Builder()).hunger(4).saturation(0.3f).meat().build()));
+			setRegistryName("brine_koi");
 		}
 
 		@Override

@@ -3,16 +3,16 @@
   "_type": "food",
   "definition": {
     "renderType": 0,
-    "texture": "anchovy",
+    "texture": "brine_koi",
     "customModelName": "Normal",
-    "name": "Anchovy",
+    "name": "Brine Koi",
     "rarity": "COMMON",
     "specialInfo": [],
     "creativeTab": {
       "value": "CUSTOM:Fishing"
     },
     "stackSize": 64,
-    "nutritionalValue": 1,
+    "nutritionalValue": 4,
     "saturation": 0.3,
     "eatingSpeed": 32,
     "resultItem": {

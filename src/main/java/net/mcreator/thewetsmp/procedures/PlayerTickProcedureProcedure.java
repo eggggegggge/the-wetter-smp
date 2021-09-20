@@ -80,16 +80,16 @@ public class PlayerTickProcedureProcedure {
 		double EW = 0;
 		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).isElytraFlying() : false)) {
 			if (((entity.getHorizontalFacing()) == Direction.SOUTH)) {
-				NS = (double) 1;
+				NS = (double) 0;
 				EW = (double) 0;
 			} else if (((entity.getHorizontalFacing()) == Direction.NORTH)) {
-				NS = (double) 1;
+				NS = (double) 0;
 				EW = (double) 0;
 			} else if (((entity.getHorizontalFacing()) == Direction.EAST)) {
-				EW = (double) (-1);
+				EW = (double) 0;
 				NS = (double) 0;
 			} else if (((entity.getHorizontalFacing()) == Direction.WEST)) {
-				EW = (double) (-1);
+				EW = (double) 0;
 				NS = (double) 0;
 			}
 			checkVar = (double) (-1);
