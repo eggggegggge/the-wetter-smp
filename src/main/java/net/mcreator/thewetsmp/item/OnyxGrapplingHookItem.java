@@ -30,7 +30,8 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 
-import net.mcreator.thewetsmp.procedures.RubyGrappleProcedure;
+import net.mcreator.thewetsmp.procedures.OnyxGrapple2Procedure;
+import net.mcreator.thewetsmp.procedures.OnyxGrapple1Procedure;
 import net.mcreator.thewetsmp.procedures.CrabCannonRangedItemUsedProcedure;
 import net.mcreator.thewetsmp.entity.renderer.OnyxGrapplingHookRenderer;
 import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
@@ -151,14 +152,19 @@ public class OnyxGrapplingHookItem extends TheWetSmpRehydratedModElements.ModEle
 			Entity imediatesourceentity = this;
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
+				$_dependencies.put("imediatesourceentity", imediatesourceentity);
 				$_dependencies.put("world", world);
-				RubyGrappleProcedure.executeProcedure($_dependencies);
+				OnyxGrapple1Procedure.executeProcedure($_dependencies);
 			}
 			if (this.inGround) {
+				{
+					Map<String, Object> $_dependencies = new HashMap<>();
+					$_dependencies.put("entity", entity);
+					$_dependencies.put("x", x);
+					$_dependencies.put("y", y);
+					$_dependencies.put("z", z);
+					OnyxGrapple2Procedure.executeProcedure($_dependencies);
+				}
 				this.remove();
 			}
 		}

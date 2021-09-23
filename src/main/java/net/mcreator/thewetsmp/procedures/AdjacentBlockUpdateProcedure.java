@@ -16,6 +16,7 @@ import net.minecraft.block.BlockState;
 import net.mcreator.thewetsmp.block.SepiaConcretePowderBlock;
 import net.mcreator.thewetsmp.block.SepiaConcreteBlock;
 import net.mcreator.thewetsmp.block.SepiaCarpetBlock;
+import net.mcreator.thewetsmp.block.SeaUrchinBlock;
 import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 
 import java.util.Map;
@@ -52,7 +53,7 @@ public class AdjacentBlockUpdateProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((blockstate.getBlock() == SepiaCarpetBlock.block)) {
+		if (((blockstate.getBlock() == SepiaCarpetBlock.block) || (blockstate.getBlock() == SeaUrchinBlock.block))) {
 			if ((((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == Blocks.AIR)
 					|| (((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == Blocks.VOID_AIR)
 							|| ((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == Blocks.CAVE_AIR)))) {

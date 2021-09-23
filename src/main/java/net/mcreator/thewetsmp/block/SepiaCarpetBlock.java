@@ -7,6 +7,8 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.World;
+import net.minecraft.world.IWorldReader;
+import net.minecraft.world.IWorld;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.math.shapes.VoxelShapes;
@@ -24,9 +26,11 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
+import net.mcreator.thewetsmp.procedures.SepiaCarpetValidPlacementProcedure;
 import net.mcreator.thewetsmp.procedures.AdjacentBlockUpdateProcedure;
 import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
@@ -34,6 +38,8 @@ import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
+
+import com.google.common.collect.ImmutableMap;
 
 @TheWetSmpRehydratedModElements.ModElement.Tag
 public class SepiaCarpetBlock extends TheWetSmpRehydratedModElements.ModElement {
@@ -75,6 +81,26 @@ public class SepiaCarpetBlock extends TheWetSmpRehydratedModElements.ModElement 
 		public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
 			Vector3d offset = state.getOffset(world, pos);
 			return VoxelShapes.or(makeCuboidShape(0, 0, 0, 16, 1, 16)).withOffset(offset.x, offset.y, offset.z);
+		}
+
+		@Override
+		public boolean isValidPosition(BlockState blockstate, IWorldReader worldIn, BlockPos pos) {
+			if (worldIn instanceof IWorld) {
+				IWorld world = (IWorld) worldIn;
+				int x = pos.getX();
+				int y = pos.getY();
+				int z = pos.getZ();
+				return SepiaCarpetValidPlacementProcedure.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world));
+			}
+			return super.isValidPosition(blockstate, worldIn, pos);
+		}
+
+		@Override
+		public BlockState updatePostPlacement(BlockState state, Direction facing, BlockState facingState, IWorld world, BlockPos currentPos,
+				BlockPos facingPos) {
+			return !state.isValidPosition(world, currentPos)
+					? Blocks.AIR.getDefaultState()
+					: super.updatePostPlacement(state, facing, facingState, world, currentPos, facingPos);
 		}
 
 		@Override

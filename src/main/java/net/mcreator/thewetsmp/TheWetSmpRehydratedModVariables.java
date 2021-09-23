@@ -67,19 +67,19 @@ public class TheWetSmpRehydratedModVariables {
 		@Override
 		public INBT writeNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side) {
 			CompoundNBT nbt = new CompoundNBT();
-			nbt.putBoolean("lacunaDamage", instance.lacunaDamage);
+			nbt.putBoolean("onyxGrapplingHookLaunch", instance.onyxGrapplingHookLaunch);
 			return nbt;
 		}
 
 		@Override
 		public void readNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side, INBT inbt) {
 			CompoundNBT nbt = (CompoundNBT) inbt;
-			instance.lacunaDamage = nbt.getBoolean("lacunaDamage");
+			instance.onyxGrapplingHookLaunch = nbt.getBoolean("onyxGrapplingHookLaunch");
 		}
 	}
 
 	public static class PlayerVariables {
-		public boolean lacunaDamage = false;
+		public boolean onyxGrapplingHookLaunch = false;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				TheWetSmpRehydratedMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity),
@@ -113,7 +113,7 @@ public class TheWetSmpRehydratedModVariables {
 				.orElse(new PlayerVariables()));
 		PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 		if (!event.isWasDeath()) {
-			clone.lacunaDamage = original.lacunaDamage;
+			clone.onyxGrapplingHookLaunch = original.onyxGrapplingHookLaunch;
 		}
 	}
 	public static class PlayerVariablesSyncMessage {
@@ -137,7 +137,7 @@ public class TheWetSmpRehydratedModVariables {
 				if (!context.getDirection().getReceptionSide().isServer()) {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new PlayerVariables()));
-					variables.lacunaDamage = message.data.lacunaDamage;
+					variables.onyxGrapplingHookLaunch = message.data.onyxGrapplingHookLaunch;
 				}
 			});
 			context.setPacketHandled(true);

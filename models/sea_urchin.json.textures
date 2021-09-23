@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "sea_urchin_block"
+      },
+      "name": "default"
+    }
+  }
+}

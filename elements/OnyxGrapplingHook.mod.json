@@ -36,8 +36,11 @@
     },
     "bulletModel": "Modelcustom_model",
     "customBulletModelTexture": "onyxhook.png",
+    "onBulletHitsBlock": {
+      "name": "OnyxGrapple2"
+    },
     "onBulletFlyingTick": {
-      "name": "RubyGrapple"
+      "name": "OnyxGrapple1"
     }
   }
 }

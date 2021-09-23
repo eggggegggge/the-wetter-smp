@@ -50,5 +50,15 @@
         "stream": false
       }
     ]
+  },
+  "sea_urchin.step": {
+    "category": "block",
+    "subtitle": "subtitles.sea_urchin.step",
+    "sounds": [
+      {
+        "name": "the_wet_smp_rehydrated:sea_urchin_spine",
+        "stream": false
+      }
+    ]
   }
 }

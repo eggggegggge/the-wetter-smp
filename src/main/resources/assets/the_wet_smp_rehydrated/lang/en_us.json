@@ -1,8 +1,8 @@
 {
   "item.the_wet_smp_rehydrated.skeletal_eel": "Skeletal Eel",
   "item.the_wet_smp.lapis_embedded_bowl": "Lapis Embedded Bowl",
-  "effect.snack_bulwark": "Snack Bulwark",
   "item.the_wet_smp.onyx_embedded_rabbit_stew": "Onyx Embedded Rabbit Stew",
+  "effect.snack_bulwark": "Snack Bulwark",
   "item.the_wet_smp_rehydrated.leather_piston_helmet": "Leather Piston Boots Helmet",
   "item.the_wet_smp_rehydrated.molten_charr": "Molten Charr",
   "advancements.grant_ruby_recipes.descr": "a",
@@ -155,7 +155,6 @@
   "item.the_wet_smp.onyx_embedded_mushroom_stew": "Onyx Embedded Mushroom Stew",
   "advancements.grant_aquamarine_glass_recipe.descr": "a",
   "item.the_wet_smp.emerald_ring": "Emerald Ring",
-  "item.the_wet_smp_rehydrated.sea_urchin": "Sea Urchin",
   "item.the_wet_smp_rehydrated.diamond_orefish": "Diamond Orefish",
   "subtitles.crabcannon": "Crab cannon fires",
   "item.the_wet_smp_rehydrated.onyx": "Onyx",
@@ -175,6 +174,7 @@
   "subtitles.veil7": "Eerie noise",
   "item.the_wet_smp_rehydrated.emerald_embedded_beetroot_soup": "Emerald Embedded Beetroot Soup",
   "death.attack.lacuna": "",
+  "death.attack.urchin": "%1$s stepped on a stinger",
   "subtitles.veil9": "Eerie noise",
   "item.the_wet_smp_rehydrated.netherragfish": "Netherragfish",
   "block.the_wet_smp_rehydrated.sepia_wool": "Sepia Wool",
@@ -311,6 +311,7 @@
   "item.the_wet_smp.goldfish": "Goldfish",
   "item.the_wet_smp_rehydrated.shroomy_koi": "Shroomy Koi",
   "item.the_wet_smp_rehydrated.shiitake_orfe": "Shiitake Orfe",
+  "subtitles.sea_urchin.step": "Sea urchin stabs",
   "item.the_wet_smp_rehydrated.warped_wart": "Warped Wart",
   "item.the_wet_smp_rehydrated.green_jellyfish": "Green Jellyfish",
   "item.the_wet_smp.netherite_piston_boots": "Netherite Piston Boots",
@@ -349,5 +350,6 @@
   "advancements.grant_lapis_recipes.title": "Grant Rings Recipe",
   "advancements.get_all_rings.title": "How to Scratch It",
   "item.the_wet_smp.onyx_orefish": "Onyx Orefish",
+  "block.the_wet_smp_rehydrated.sea_urchin": "Sea Urchin",
   "subtitles.buffer.new_latency": "Buffer creates new latency"
 }
