@@ -6,18 +6,18 @@
     "xpReward": 0.0,
     "cookingTime": 200,
     "recipeRetstackSize": 1,
-    "group": "lacunapot",
+    "group": "",
     "recipeShapeless": false,
     "brewingInputStack": {
-      "value": "POTION:CUSTOM:Resistance"
+      "value": "POTION:AWKWARD"
     },
     "brewingIngredientStack": {
-      "value": "Items.GLOWSTONE_DUST"
+      "value": "CUSTOM:Chorusfish"
     },
     "brewingReturnStack": {
-      "value": "POTION:CUSTOM:ResistanceII"
+      "value": "POTION:CUSTOM:HaywirePotion"
     },
-    "name": "brew_resistance_ii",
+    "name": "haywire_potion_recipe",
     "namespace": "mod"
   }
 }

@@ -1,0 +1,26 @@
+{
+  "group": "osmiumtiles",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "the_wet_smp_rehydrated:osmium_block"
+    },
+    "1": {
+      "item": "the_wet_smp_rehydrated:osmium_block"
+    },
+    "2": {
+      "item": "the_wet_smp_rehydrated:osmium_block"
+    },
+    "3": {
+      "item": "the_wet_smp_rehydrated:osmium_block"
+    }
+  },
+  "result": {
+    "item": "the_wet_smp_rehydrated:osmium_tiles",
+    "count": 4
+  }
+}

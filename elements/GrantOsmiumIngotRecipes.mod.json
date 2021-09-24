@@ -18,7 +18,8 @@
       "EmeraldRingRecipe",
       "LapisRingRecipe",
       "OnyxRingRecipe",
-      "RubyRingRecipe"
+      "RubyRingRecipe",
+      "OsmiumBlockRecipe"
     ],
     "rewardFunction": "No function",
     "rewardXP": 1,

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "the_wet_smp_rehydrated:blocks/osmium_block",
+    "particle": "the_wet_smp_rehydrated:blocks/osmium_block"
+  }
+}

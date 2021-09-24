@@ -5,18 +5,19 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.common.brewing.IBrewingRecipe;
 import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 
+import net.minecraft.potion.Potions;
 import net.minecraft.potion.PotionUtils;
 import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 
-import net.mcreator.thewetsmp.potion.ResistancePotion;
-import net.mcreator.thewetsmp.potion.ResistanceIIPotion;
+import net.mcreator.thewetsmp.potion.HaywirePotionPotion;
+import net.mcreator.thewetsmp.item.ChorusfishItem;
 
 @TheWetSmpRehydratedModElements.ModElement.Tag
-public class BrewResistanceIIBrewingRecipe extends TheWetSmpRehydratedModElements.ModElement {
-	public BrewResistanceIIBrewingRecipe(TheWetSmpRehydratedModElements instance) {
-		super(instance, 398);
+public class HaywirePotionRecipeBrewingRecipe extends TheWetSmpRehydratedModElements.ModElement {
+	public HaywirePotionRecipeBrewingRecipe(TheWetSmpRehydratedModElements instance) {
+		super(instance, 458);
 	}
 
 	@Override
@@ -28,18 +29,18 @@ public class BrewResistanceIIBrewingRecipe extends TheWetSmpRehydratedModElement
 		public boolean isInput(ItemStack input) {
 			Item inputItem = input.getItem();
 			return (inputItem == Items.POTION || inputItem == Items.SPLASH_POTION || inputItem == Items.LINGERING_POTION)
-					&& PotionUtils.getPotionFromItem(input) == ResistancePotion.potionType;
+					&& PotionUtils.getPotionFromItem(input) == Potions.AWKWARD;
 		}
 
 		@Override
 		public boolean isIngredient(ItemStack ingredient) {
-			return ingredient.getItem() == Items.GLOWSTONE_DUST;
+			return ingredient.getItem() == ChorusfishItem.block;
 		}
 
 		@Override
 		public ItemStack getOutput(ItemStack input, ItemStack ingredient) {
 			if (isInput(input) && isIngredient(ingredient)) {
-				return PotionUtils.addPotionToItemStack(new ItemStack(input.getItem()), ResistanceIIPotion.potionType);
+				return PotionUtils.addPotionToItemStack(new ItemStack(input.getItem()), HaywirePotionPotion.potionType);
 			}
 			return ItemStack.EMPTY;
 		}

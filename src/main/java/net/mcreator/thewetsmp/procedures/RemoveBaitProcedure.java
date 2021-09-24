@@ -8,7 +8,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
+import net.mcreator.thewetsmp.item.YellowJellyfishItem;
+import net.mcreator.thewetsmp.item.RedJellyfishItem;
+import net.mcreator.thewetsmp.item.PinkJellyfishItem;
 import net.mcreator.thewetsmp.item.GreenJellyfishItem;
+import net.mcreator.thewetsmp.item.BlueJellyfishItem;
 import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 
 import java.util.concurrent.atomic.AtomicReference;
@@ -55,6 +59,26 @@ public class RemoveBaitProcedure {
 						if ((bait > 49)) {
 							bait = (double) 49;
 							removal = new ItemStack(GreenJellyfishItem.block);
+						}
+					} else if (((itemstackiterator).getItem() == BlueJellyfishItem.block)) {
+						if ((bait > 49)) {
+							bait = (double) 49;
+							removal = new ItemStack(BlueJellyfishItem.block);
+						}
+					} else if (((itemstackiterator).getItem() == RedJellyfishItem.block)) {
+						if ((bait > 49)) {
+							bait = (double) 49;
+							removal = new ItemStack(RedJellyfishItem.block);
+						}
+					} else if (((itemstackiterator).getItem() == YellowJellyfishItem.block)) {
+						if ((bait > 49)) {
+							bait = (double) 49;
+							removal = new ItemStack(YellowJellyfishItem.block);
+						}
+					} else if (((itemstackiterator).getItem() == PinkJellyfishItem.block)) {
+						if ((bait > 50)) {
+							bait = (double) 50;
+							removal = new ItemStack(PinkJellyfishItem.block);
 						}
 					}
 				}

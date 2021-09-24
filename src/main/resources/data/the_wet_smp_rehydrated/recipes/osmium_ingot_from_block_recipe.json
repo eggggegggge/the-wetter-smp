@@ -1,0 +1,13 @@
+{
+  "group": "osmiumingot",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "the_wet_smp_rehydrated:osmium_block"
+    }
+  ],
+  "result": {
+    "item": "the_wet_smp_rehydrated:osmium_ingot",
+    "count": 9
+  }
+}

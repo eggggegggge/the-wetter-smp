@@ -1,0 +1,9 @@
+{
+  "group": "osmiumtiles",
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "the_wet_smp_rehydrated:osmium_block"
+  },
+  "result": "the_wet_smp_rehydrated:osmium_tiles"
+}

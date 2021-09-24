@@ -1,0 +1,21 @@
+{
+  "_fv": 24,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Potion of Haywire",
+    "splashName": "Splash Potion of Haywire",
+    "lingeringName": "Lingering Potion of Haywire",
+    "arrowName": "Arrow of Haywire",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:Haywire"
+        },
+        "duration": 900,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}

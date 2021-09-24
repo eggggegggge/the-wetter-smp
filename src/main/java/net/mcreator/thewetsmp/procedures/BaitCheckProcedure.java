@@ -7,7 +7,11 @@ import net.minecraft.world.IWorld;
 import net.minecraft.item.ItemStack;
 import net.minecraft.entity.Entity;
 
+import net.mcreator.thewetsmp.item.YellowJellyfishItem;
+import net.mcreator.thewetsmp.item.RedJellyfishItem;
+import net.mcreator.thewetsmp.item.PinkJellyfishItem;
 import net.mcreator.thewetsmp.item.GreenJellyfishItem;
+import net.mcreator.thewetsmp.item.BlueJellyfishItem;
 import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 
 import java.util.concurrent.atomic.AtomicReference;
@@ -38,6 +42,26 @@ public class BaitCheckProcedure {
 					if (((itemstackiterator).getItem() == GreenJellyfishItem.block)) {
 						if ((bait > 49)) {
 							bait = (double) 49;
+						}
+						return bait;
+					} else if (((itemstackiterator).getItem() == BlueJellyfishItem.block)) {
+						if ((bait > 49)) {
+							bait = (double) 49;
+						}
+						return bait;
+					} else if (((itemstackiterator).getItem() == RedJellyfishItem.block)) {
+						if ((bait > 49)) {
+							bait = (double) 49;
+						}
+						return bait;
+					} else if (((itemstackiterator).getItem() == YellowJellyfishItem.block)) {
+						if ((bait > 49)) {
+							bait = (double) 49;
+						}
+						return bait;
+					} else if (((itemstackiterator).getItem() == PinkJellyfishItem.block)) {
+						if ((bait > 50)) {
+							bait = (double) 50;
 						}
 						return bait;
 					}

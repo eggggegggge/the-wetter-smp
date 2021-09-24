@@ -22,7 +22,8 @@
       "the_wet_smp_rehydrated:emerald_ring_recipe",
       "the_wet_smp_rehydrated:lapis_ring_recipe",
       "the_wet_smp_rehydrated:onyx_ring_recipe",
-      "the_wet_smp_rehydrated:ruby_ring_recipe"
+      "the_wet_smp_rehydrated:ruby_ring_recipe",
+      "the_wet_smp_rehydrated:osmium_block_recipe"
     ]
   },
   "parent": "the_wet_smp_rehydrated:get_all_rings"
