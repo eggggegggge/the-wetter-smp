@@ -15,7 +15,7 @@ public class HaywireProcedureProcedure {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if ((((new Random()).nextInt((int) 49 + 1)) == 0)) {
+		if ((((new Random()).nextInt((int) 48 + 1)) == 0)) {
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
