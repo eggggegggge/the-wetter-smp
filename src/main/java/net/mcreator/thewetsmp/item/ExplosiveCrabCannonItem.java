@@ -31,9 +31,9 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 
+import net.mcreator.thewetsmp.procedures.ExplosiveCrabCannonHitEntityProcedureProcedure;
 import net.mcreator.thewetsmp.procedures.CrabCannonRangedItemUsedProcedure;
-import net.mcreator.thewetsmp.procedures.CrabCannonHitEntityProcedureProcedure;
-import net.mcreator.thewetsmp.entity.renderer.CrabCannonRenderer;
+import net.mcreator.thewetsmp.entity.renderer.ExplosiveCrabCannonRenderer;
 import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
 import java.util.Random;
@@ -41,15 +41,15 @@ import java.util.Map;
 import java.util.HashMap;
 
 @TheWetSmpRehydratedModElements.ModElement.Tag
-public class CrabCannonItem extends TheWetSmpRehydratedModElements.ModElement {
-	@ObjectHolder("the_wet_smp_rehydrated:crab_cannon")
+public class ExplosiveCrabCannonItem extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:explosive_crab_cannon")
 	public static final Item block = null;
 	public static final EntityType arrow = (EntityType.Builder.<ArrowCustomEntity>create(ArrowCustomEntity::new, EntityClassification.MISC)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
-			.size(0.5f, 0.5f)).build("entitybulletcrab_cannon").setRegistryName("entitybulletcrab_cannon");
-	public CrabCannonItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 339);
-		FMLJavaModLoadingContext.get().getModEventBus().register(new CrabCannonRenderer.ModelRegisterHandler());
+			.size(0.5f, 0.5f)).build("entitybulletexplosive_crab_cannon").setRegistryName("entitybulletexplosive_crab_cannon");
+	public ExplosiveCrabCannonItem(TheWetSmpRehydratedModElements instance) {
+		super(instance, 464);
+		FMLJavaModLoadingContext.get().getModEventBus().register(new ExplosiveCrabCannonRenderer.ModelRegisterHandler());
 	}
 
 	@Override
@@ -60,7 +60,7 @@ public class CrabCannonItem extends TheWetSmpRehydratedModElements.ModElement {
 	public static class ItemRanged extends Item {
 		public ItemRanged() {
 			super(new Item.Properties().group(ItemGroup.COMBAT).maxStackSize(1));
-			setRegistryName("crab_cannon");
+			setRegistryName("explosive_crab_cannon");
 		}
 
 		@Override
@@ -174,9 +174,12 @@ public class CrabCannonItem extends TheWetSmpRehydratedModElements.ModElement {
 			Entity imediatesourceentity = this;
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
+				$_dependencies.put("imediatesourceentity", imediatesourceentity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				CrabCannonHitEntityProcedureProcedure.executeProcedure($_dependencies);
+				ExplosiveCrabCannonHitEntityProcedureProcedure.executeProcedure($_dependencies);
 			}
 		}
 
@@ -190,6 +193,15 @@ public class CrabCannonItem extends TheWetSmpRehydratedModElements.ModElement {
 			Entity entity = this.func_234616_v_();
 			Entity imediatesourceentity = this;
 			if (this.inGround) {
+				{
+					Map<String, Object> $_dependencies = new HashMap<>();
+					$_dependencies.put("imediatesourceentity", imediatesourceentity);
+					$_dependencies.put("x", x);
+					$_dependencies.put("y", y);
+					$_dependencies.put("z", z);
+					$_dependencies.put("world", world);
+					ExplosiveCrabCannonHitEntityProcedureProcedure.executeProcedure($_dependencies);
+				}
 				this.remove();
 			}
 		}

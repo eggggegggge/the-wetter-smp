@@ -1,0 +1,21 @@
+{
+  "_fv": 24,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Potion of Peace",
+    "splashName": "Splash Potion of Peace",
+    "lingeringName": "Lingering Potion of Peace",
+    "arrowName": "Arrow of Peace",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:Peace"
+        },
+        "duration": 600,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}

@@ -56,6 +56,10 @@
     "equipSound": {
       "value": "item.armor.equip_chain"
     },
-    "repairItems": []
+    "repairItems": [
+      {
+        "value": "Items.IRON_INGOT"
+      }
+    ]
   }
 }

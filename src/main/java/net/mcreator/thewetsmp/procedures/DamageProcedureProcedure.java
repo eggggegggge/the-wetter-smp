@@ -13,6 +13,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.thewetsmp.potion.SnackBulwarkPotionEffect;
+import net.mcreator.thewetsmp.potion.PeacePotionEffect;
 import net.mcreator.thewetsmp.potion.LacunaPotionEffect;
 import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 
@@ -103,8 +104,28 @@ public class DamageProcedureProcedure {
 				return false;
 			}
 		}.check(entity))) {
-			if (entity instanceof LivingEntity) {
-				((LivingEntity) entity).attackEntityFrom(new DamageSource("lacuna").setDamageBypassesArmor(), (float) (((amount) / 2) + (amount)));
+			entity.attackEntityFrom(DamageSource.GENERIC, (float) (((amount) / 2) + (amount)));
+		} else if ((new Object() {
+			boolean check(Entity _entity) {
+				if (_entity instanceof LivingEntity) {
+					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+					for (EffectInstance effect : effects) {
+						if (effect.getPotion() == PeacePotionEffect.potion)
+							return true;
+					}
+				}
+				return false;
+			}
+		}.check(entity))) {
+			if (((entity.getPosY()) >= (-64))) {
+				if (dependencies.get("event") != null) {
+					Object _obj = dependencies.get("event");
+					if (_obj instanceof Event) {
+						Event _evt = (Event) _obj;
+						if (_evt.isCancelable())
+							_evt.setCanceled(true);
+					}
+				}
 			}
 		}
 	}

@@ -31,7 +31,7 @@ public class SwordfishItem extends TheWetSmpRehydratedModElements.ModElement {
 			}
 
 			public float getAttackDamage() {
-				return 3f;
+				return 1f;
 			}
 
 			public int getHarvestLevel() {

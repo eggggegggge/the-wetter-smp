@@ -2,14 +2,14 @@
   "_fv": 24,
   "_type": "potion",
   "definition": {
-    "potionName": "Potion of Resistance",
-    "splashName": "Splash Potion of Resistance",
-    "lingeringName": "Lingering Potion of Resistance",
-    "arrowName": "Arrow of Resistance",
+    "potionName": "Potion of Combat",
+    "splashName": "Splash Potion of Combat",
+    "lingeringName": "Lingering Potion of Combat",
+    "arrowName": "Arrow of Combat",
     "effects": [
       {
         "effect": {
-          "value": "RESISTANCE"
+          "value": "CUSTOM:Combat"
         },
         "duration": 3600,
         "amplifier": 0,

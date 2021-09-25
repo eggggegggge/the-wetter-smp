@@ -4,8 +4,8 @@
   "definition": {
     "renderType": 1,
     "texture": "crab",
-    "customModelName": "crab_cannon:default",
-    "name": "Crab Cannon",
+    "customModelName": "crab_cannon:explosive",
+    "name": "Explosive Crab Cannon",
     "specialInfo": [],
     "creativeTab": {
       "value": "COMBAT"
@@ -36,8 +36,11 @@
     },
     "bulletModel": "Modelcrab",
     "customBulletModelTexture": "crab_projectile.png",
+    "onBulletHitsBlock": {
+      "name": "ExplosiveCrabCannonHitEntityProcedure"
+    },
     "onBulletHitsEntity": {
-      "name": "CrabCannonHitEntityProcedure"
+      "name": "ExplosiveCrabCannonHitEntityProcedure"
     }
   }
 }

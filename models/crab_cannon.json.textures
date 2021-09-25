@@ -6,6 +6,13 @@
         "missing": ""
       },
       "name": "default"
+    },
+    "explosive": {
+      "map": {
+        "0": "explosive_variant",
+        "missing": ""
+      },
+      "name": "explosive"
     }
   }
 }

@@ -34,7 +34,7 @@ public class AquamarineEmbeddedBeetrootSoupItem extends TheWetSmpRehydratedModEl
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
 			super(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(1).rarity(Rarity.COMMON)
-					.food((new Food.Builder()).hunger(4).saturation(7.2f).build()));
+					.food((new Food.Builder()).hunger(6).saturation(7.2f).build()));
 			setRegistryName("aquamarine_embedded_beetroot_soup");
 		}
 

@@ -7,12 +7,11 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.RegistryEvent;
 
 import net.minecraft.potion.Potion;
-import net.minecraft.potion.Effects;
 import net.minecraft.potion.EffectInstance;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class ResistancePotion {
-	@ObjectHolder("the_wet_smp_rehydrated:resistance")
+public class PeacePotionPotion {
+	@ObjectHolder("the_wet_smp_rehydrated:peace_potion")
 	public static final Potion potionType = null;
 	@SubscribeEvent
 	public static void registerPotion(RegistryEvent.Register<Potion> event) {
@@ -20,8 +19,8 @@ public class ResistancePotion {
 	}
 	public static class PotionCustom extends Potion {
 		public PotionCustom() {
-			super(new EffectInstance(Effects.RESISTANCE, 3600, 0, false, true));
-			setRegistryName("resistance");
+			super(new EffectInstance(PeacePotionEffect.potion, 600, 0, false, true));
+			setRegistryName("peace_potion");
 		}
 	}
 }

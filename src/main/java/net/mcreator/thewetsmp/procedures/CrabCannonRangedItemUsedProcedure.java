@@ -4,6 +4,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
+import net.mcreator.thewetsmp.item.ExplosiveCrabCannonItem;
 import net.mcreator.thewetsmp.item.CrabCannonItem;
 import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 
@@ -23,7 +24,7 @@ public class CrabCannonRangedItemUsedProcedure {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
-		if (((itemstack).getItem() == CrabCannonItem.block)) {
+		if ((((itemstack).getItem() == CrabCannonItem.block) || ((itemstack).getItem() == ExplosiveCrabCannonItem.block))) {
 			if (entity instanceof PlayerEntity)
 				((PlayerEntity) entity).getCooldownTracker().setCooldown((itemstack).getItem(), (int) 30);
 		} else {

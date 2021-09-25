@@ -6,18 +6,18 @@
     "xpReward": 0.0,
     "cookingTime": 200,
     "recipeRetstackSize": 1,
-    "group": "lacunapot",
+    "group": "",
     "recipeShapeless": false,
     "brewingInputStack": {
-      "value": "POTION:CUSTOM:LacunaPotion"
+      "value": "POTION:AWKWARD"
     },
     "brewingIngredientStack": {
-      "value": "Items.FERMENTED_SPIDER_EYE"
+      "value": "CUSTOM:Netherragfish"
     },
     "brewingReturnStack": {
-      "value": "POTION:CUSTOM:Resistance"
+      "value": "POTION:CUSTOM:CombatPotion"
     },
-    "name": "brew_resistance_potion",
+    "name": "combat_potion_recipe",
     "namespace": "mod"
   }
 }
