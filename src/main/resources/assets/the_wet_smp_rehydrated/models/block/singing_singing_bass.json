@@ -1,0 +1,9 @@
+{
+  "parent": "the_wet_smp_rehydrated:custom/singing_billy",
+  "textures": {
+    "all": "the_wet_smp_rehydrated:blocks/billy_bass_stand",
+    "particle": "the_wet_smp_rehydrated:blocks/billy_bass_stand",
+    "0": "the_wet_smp_rehydrated:blocks/largemouth-bass-on-planetminecraft-com",
+    "1": "the_wet_smp_rehydrated:blocks/billy_bass_stand"
+  }
+}

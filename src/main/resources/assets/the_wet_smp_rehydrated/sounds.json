@@ -60,5 +60,15 @@
         "stream": false
       }
     ]
+  },
+  "singing_bass.sing": {
+    "category": "block",
+    "subtitle": "subtitles.singing_bass.sing",
+    "sounds": [
+      {
+        "name": "the_wet_smp_rehydrated:singing_bass",
+        "stream": false
+      }
+    ]
   }
 }

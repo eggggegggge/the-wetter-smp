@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "largemouth-bass-on-planetminecraft-com",
+        "1": "billy_bass_stand"
+      },
+      "name": "default"
+    }
+  }
+}
