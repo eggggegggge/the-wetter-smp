@@ -24,7 +24,8 @@
       "the_wet_smp_rehydrated:sepia_glass_recipe",
       "the_wet_smp_rehydrated:sepia_glass_pane_recipe",
       "the_wet_smp_rehydrated:sepia_carpet_recipe",
-      "minecraft:sepia_bed_recipe_1"
+      "minecraft:sepia_bed_recipe_1",
+      "the_wet_smp_rehydrated:sepia_redstone_lamp_recipe"
     ]
   },
   "parent": "the_wet_smp_rehydrated:get_all_rings"

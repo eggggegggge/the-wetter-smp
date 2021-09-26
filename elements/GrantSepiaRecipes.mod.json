@@ -20,7 +20,8 @@
       "SepiaGlassRecipe",
       "SepiaGlassPaneRecipe",
       "SepiaCarpetRecipe",
-      "SepiaBedRecipe1"
+      "SepiaBedRecipe1",
+      "SepiaRedstoneLampRecipe"
     ],
     "rewardFunction": "No function",
     "rewardXP": 1,

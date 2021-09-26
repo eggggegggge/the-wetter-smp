@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "the_wet_smp_rehydrated:blocks/off_lamp_orange",
+    "particle": "the_wet_smp_rehydrated:blocks/off_lamp_orange"
+  }
+}

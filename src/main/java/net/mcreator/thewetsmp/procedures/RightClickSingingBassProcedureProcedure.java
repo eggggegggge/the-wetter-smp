@@ -13,6 +13,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.state.Property;
 import net.minecraft.block.BlockState;
 
+import net.mcreator.thewetsmp.block.SingingSingingSingingBassBlock;
 import net.mcreator.thewetsmp.block.SingingSingingBassBlock;
 import net.mcreator.thewetsmp.block.SingingBassBlock;
 import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
@@ -70,6 +71,84 @@ public class RightClickSingingBassProcedureProcedure {
 							.getValue(new ResourceLocation("the_wet_smp_rehydrated:singing_bass.sing")),
 					SoundCategory.RECORDS, (float) 0.5, (float) 1, false);
 		}
+		new Object() {
+			private int ticks = 0;
+			private float waitTicks;
+			private IWorld world;
+			public void start(IWorld world, int waitTicks) {
+				this.waitTicks = waitTicks;
+				MinecraftForge.EVENT_BUS.register(this);
+				this.world = world;
+			}
+
+			@SubscribeEvent
+			public void tick(TickEvent.ServerTickEvent event) {
+				if (event.phase == TickEvent.Phase.END) {
+					this.ticks += 1;
+					if (this.ticks >= this.waitTicks)
+						run();
+				}
+			}
+
+			private void run() {
+				if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == SingingSingingBassBlock.block)) {
+					{
+						BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+						BlockState _bs = SingingSingingSingingBassBlock.block.getDefaultState();
+						BlockState _bso = world.getBlockState(_bp);
+						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+							Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+							if (_property != null && _bs.get(_property) != null)
+								try {
+									_bs = _bs.with(_property, (Comparable) entry.getValue());
+								} catch (Exception e) {
+								}
+						}
+						world.setBlockState(_bp, _bs, 3);
+					}
+				}
+				MinecraftForge.EVENT_BUS.unregister(this);
+			}
+		}.start(world, (int) 135);
+		new Object() {
+			private int ticks = 0;
+			private float waitTicks;
+			private IWorld world;
+			public void start(IWorld world, int waitTicks) {
+				this.waitTicks = waitTicks;
+				MinecraftForge.EVENT_BUS.register(this);
+				this.world = world;
+			}
+
+			@SubscribeEvent
+			public void tick(TickEvent.ServerTickEvent event) {
+				if (event.phase == TickEvent.Phase.END) {
+					this.ticks += 1;
+					if (this.ticks >= this.waitTicks)
+						run();
+				}
+			}
+
+			private void run() {
+				if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == SingingSingingSingingBassBlock.block)) {
+					{
+						BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+						BlockState _bs = SingingSingingBassBlock.block.getDefaultState();
+						BlockState _bso = world.getBlockState(_bp);
+						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+							Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+							if (_property != null && _bs.get(_property) != null)
+								try {
+									_bs = _bs.with(_property, (Comparable) entry.getValue());
+								} catch (Exception e) {
+								}
+						}
+						world.setBlockState(_bp, _bs, 3);
+					}
+				}
+				MinecraftForge.EVENT_BUS.unregister(this);
+			}
+		}.start(world, (int) 185);
 		new Object() {
 			private int ticks = 0;
 			private float waitTicks;
