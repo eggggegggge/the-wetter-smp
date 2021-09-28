@@ -22,7 +22,7 @@ public class EndurancePotionEffect {
 	public static class EffectCustom extends Effect {
 		private final ResourceLocation potionIcon;
 		public EffectCustom() {
-			super(EffectType.BENEFICIAL, -8356);
+			super(EffectType.BENEFICIAL, -13312);
 			setRegistryName("endurance");
 			potionIcon = new ResourceLocation("the_wet_smp_rehydrated:textures/endurance.png");
 		}

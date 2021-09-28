@@ -11,13 +11,13 @@ import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 
-import net.mcreator.thewetsmp.potion.CombatPotionPotion;
+import net.mcreator.thewetsmp.potion.EndurancePotionPotion;
 import net.mcreator.thewetsmp.item.NetherragfishItem;
 
 @TheWetSmpRehydratedModElements.ModElement.Tag
-public class CombatPotionRecipeBrewingRecipe extends TheWetSmpRehydratedModElements.ModElement {
-	public CombatPotionRecipeBrewingRecipe(TheWetSmpRehydratedModElements instance) {
-		super(instance, 468);
+public class EndurancePotionRecipeBrewingRecipe extends TheWetSmpRehydratedModElements.ModElement {
+	public EndurancePotionRecipeBrewingRecipe(TheWetSmpRehydratedModElements instance) {
+		super(instance, 557);
 	}
 
 	@Override
@@ -40,7 +40,7 @@ public class CombatPotionRecipeBrewingRecipe extends TheWetSmpRehydratedModEleme
 		@Override
 		public ItemStack getOutput(ItemStack input, ItemStack ingredient) {
 			if (isInput(input) && isIngredient(ingredient)) {
-				return PotionUtils.addPotionToItemStack(new ItemStack(input.getItem()), CombatPotionPotion.potionType);
+				return PotionUtils.addPotionToItemStack(new ItemStack(input.getItem()), EndurancePotionPotion.potionType);
 			}
 			return ItemStack.EMPTY;
 		}

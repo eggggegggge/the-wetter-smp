@@ -142,7 +142,7 @@ public class FishingProcedureProcedure {
 					$_dependencies.put("x", x);
 					$_dependencies.put("y", y);
 					$_dependencies.put("z", z);
-					ColdOceanFishProcedure.executeProcedure($_dependencies);
+					DetermineBiomeProcedure.executeProcedure($_dependencies);
 				}
 				if (!world.isRemote()) {
 					MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();

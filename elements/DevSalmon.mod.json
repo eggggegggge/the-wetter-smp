@@ -3,12 +3,12 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "dryads_aequoria",
+    "texture": "the_fish",
     "customModelName": "Normal",
-    "name": "Dryad's Aequorea",
+    "name": "Dev. Salmon",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "CUSTOM:Fishing"
+      "value": "MATERIALS"
     },
     "stackSize": 64,
     "enchantability": 0,
@@ -24,7 +24,9 @@
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
-    "specialInfo": [],
+    "specialInfo": [
+      "Straight from the River Deveron"
+    ],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,

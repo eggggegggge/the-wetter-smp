@@ -13,7 +13,7 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
 @TheWetSmpRehydratedModElements.ModElement.Tag
 public class DryadsAequoriaItem extends TheWetSmpRehydratedModElements.ModElement {
-	@ObjectHolder("the_wet_smp_rehydrated:dryads_aequoria")
+	@ObjectHolder("the_wet_smp_rehydrated:dryads_aequorea")
 	public static final Item block = null;
 	public DryadsAequoriaItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 425);
@@ -26,7 +26,7 @@ public class DryadsAequoriaItem extends TheWetSmpRehydratedModElements.ModElemen
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(FishingItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
-			setRegistryName("dryads_aequoria");
+			setRegistryName("dryads_aequorea");
 		}
 
 		@Override

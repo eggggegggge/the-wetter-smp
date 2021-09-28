@@ -1,16 +1,17 @@
 modLoader="javafml"
 loaderVersion="[36,)"
-license="Academic Free License v3.0"
+license="Custom license"
 
 [[mods]]
 modId="the_wet_smp_rehydrated"
-version="Judgement Day"
+version="development version"
 displayName="The Wet SMP Rehydrated"
-credits="IT WAS ME"
+credits="the fun gang & andy"
 displayURL="https://www.youtube.com/"
-authors="oreli bitch"
+logoFile="logo.png"
+authors="the fun gang"
 description='''
-FUCK
+andy i compiled this for you please don't leak it
 '''
 
 [[dependencies.the_wet_smp_rehydrated]]

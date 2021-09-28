@@ -11,6 +11,7 @@ import net.mcreator.thewetsmp.item.YellowJellyfishItem;
 import net.mcreator.thewetsmp.item.RedJellyfishItem;
 import net.mcreator.thewetsmp.item.PinkJellyfishItem;
 import net.mcreator.thewetsmp.item.GreenJellyfishItem;
+import net.mcreator.thewetsmp.item.DevSalmonItem;
 import net.mcreator.thewetsmp.item.BlueJellyfishItem;
 import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 
@@ -64,10 +65,15 @@ public class BaitCheckProcedure {
 							bait = (double) 50;
 						}
 						return bait;
+					} else if (((itemstackiterator).getItem() == DevSalmonItem.block)) {
+						if ((bait > 0)) {
+							bait = (double) 0;
+						}
+						return bait;
 					}
 				}
 			}
 		}
-		return 24;
+		return 74;
 	}
 }

@@ -5,7 +5,7 @@
     "effectName": "Endurance",
     "icon": "endurance.png",
     "color": {
-      "value": -8356,
+      "value": -13312,
       "falpha": 0.0
     },
     "isInstant": false,

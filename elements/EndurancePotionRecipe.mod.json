@@ -15,9 +15,9 @@
       "value": "CUSTOM:Netherragfish"
     },
     "brewingReturnStack": {
-      "value": "POTION:CUSTOM:CombatPotion"
+      "value": "POTION:CUSTOM:EndurancePotion"
     },
-    "name": "combat_potion_recipe",
+    "name": "endurance_potion_recipe",
     "namespace": "mod"
   }
 }

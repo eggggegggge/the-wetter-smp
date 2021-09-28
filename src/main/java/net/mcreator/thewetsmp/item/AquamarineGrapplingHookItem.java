@@ -156,7 +156,6 @@ public class AquamarineGrapplingHookItem extends TheWetSmpRehydratedModElements.
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
 				AquamarineGrappleAirProcedure.executeProcedure($_dependencies);
 			}
 			if (this.inGround) {
