@@ -17,7 +17,7 @@ public class FishlingItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:fishling")
 	public static final Item block = null;
 	public FishlingItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 333);
+		super(instance, 103);
 	}
 
 	@Override

@@ -17,7 +17,7 @@ public class MinnowItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:minnow")
 	public static final Item block = null;
 	public MinnowItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 373);
+		super(instance, 101);
 	}
 
 	@Override

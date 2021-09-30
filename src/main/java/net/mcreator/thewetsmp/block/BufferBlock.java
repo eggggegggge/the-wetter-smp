@@ -90,7 +90,7 @@ public class BufferBlock extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:buffer")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public BufferBlock(TheWetSmpRehydratedModElements instance) {
-		super(instance, 150);
+		super(instance, 58);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 

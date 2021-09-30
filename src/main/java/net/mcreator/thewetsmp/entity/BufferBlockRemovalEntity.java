@@ -41,7 +41,7 @@ public class BufferBlockRemovalEntity extends TheWetSmpRehydratedModElements.Mod
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(0).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire()
 			.size(0f, 0f)).build("buffer_block_removal").setRegistryName("buffer_block_removal");
 	public BufferBlockRemovalEntity(TheWetSmpRehydratedModElements instance) {
-		super(instance, 203);
+		super(instance, 24);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BufferBlockRemovalRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 	}

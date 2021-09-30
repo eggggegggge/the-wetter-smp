@@ -68,7 +68,7 @@ public class AquamarineGlassBlock extends TheWetSmpRehydratedModElements.ModElem
 	@ObjectHolder("the_wet_smp_rehydrated:aquamarine_glass")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public AquamarineGlassBlock(TheWetSmpRehydratedModElements instance) {
-		super(instance, 189);
+		super(instance, 59);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 

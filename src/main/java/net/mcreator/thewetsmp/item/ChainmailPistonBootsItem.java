@@ -36,7 +36,7 @@ public class ChainmailPistonBootsItem extends TheWetSmpRehydratedModElements.Mod
 	@ObjectHolder("the_wet_smp_rehydrated:chainmail_piston_boots")
 	public static final Item boots = null;
 	public ChainmailPistonBootsItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 30);
+		super(instance, 28);
 	}
 
 	@Override

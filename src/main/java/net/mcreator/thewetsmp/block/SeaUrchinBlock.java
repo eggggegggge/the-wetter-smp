@@ -59,7 +59,7 @@ public class SeaUrchinBlock extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:sea_urchin")
 	public static final Block block = null;
 	public SeaUrchinBlock(TheWetSmpRehydratedModElements instance) {
-		super(instance, 441);
+		super(instance, 131);
 	}
 
 	@Override

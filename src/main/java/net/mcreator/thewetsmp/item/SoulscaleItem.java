@@ -17,7 +17,7 @@ public class SoulscaleItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:soulscale")
 	public static final Item block = null;
 	public SoulscaleItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 361);
+		super(instance, 116);
 	}
 
 	@Override

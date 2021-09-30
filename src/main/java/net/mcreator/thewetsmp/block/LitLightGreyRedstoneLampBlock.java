@@ -31,7 +31,7 @@ public class LitLightGreyRedstoneLampBlock extends TheWetSmpRehydratedModElement
 	@ObjectHolder("the_wet_smp_rehydrated:lit_light_grey_redstone_lamp")
 	public static final Block block = null;
 	public LitLightGreyRedstoneLampBlock(TheWetSmpRehydratedModElements instance) {
-		super(instance, 512);
+		super(instance, 360);
 	}
 
 	@Override

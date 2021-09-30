@@ -16,7 +16,7 @@ public class EmeraldEmbeddedBowlItem extends TheWetSmpRehydratedModElements.ModE
 	@ObjectHolder("the_wet_smp_rehydrated:emerald_embedded_bowl")
 	public static final Item block = null;
 	public EmeraldEmbeddedBowlItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 74);
+		super(instance, 11);
 	}
 
 	@Override

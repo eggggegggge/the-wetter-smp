@@ -17,7 +17,7 @@ public class SilverEyeItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:silver_eye")
 	public static final Item block = null;
 	public SilverEyeItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 379);
+		super(instance, 138);
 	}
 
 	@Override

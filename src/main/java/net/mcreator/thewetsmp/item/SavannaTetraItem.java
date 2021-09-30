@@ -17,7 +17,7 @@ public class SavannaTetraItem extends TheWetSmpRehydratedModElements.ModElement 
 	@ObjectHolder("the_wet_smp_rehydrated:savanna_tetra")
 	public static final Item block = null;
 	public SavannaTetraItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 377);
+		super(instance, 99);
 	}
 
 	@Override

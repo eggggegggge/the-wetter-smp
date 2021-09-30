@@ -43,7 +43,7 @@ public class DeepslateOsmiumOreBlock extends TheWetSmpRehydratedModElements.ModE
 	@ObjectHolder("the_wet_smp_rehydrated:deepslate_osmium_ore")
 	public static final Block block = null;
 	public DeepslateOsmiumOreBlock(TheWetSmpRehydratedModElements instance) {
-		super(instance, 345);
+		super(instance, 61);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}

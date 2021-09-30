@@ -1,0 +1,6 @@
+{
+  "parent": "block/pressure_plate_down",
+  "textures": {
+    "texture": "the_wet_smp_rehydrated:blocks/maroon_pearl_pressure_plate"
+  }
+}

@@ -16,7 +16,7 @@ public class CuttlefishItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:cuttlefish")
 	public static final Item block = null;
 	public CuttlefishItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 399);
+		super(instance, 140);
 	}
 
 	@Override

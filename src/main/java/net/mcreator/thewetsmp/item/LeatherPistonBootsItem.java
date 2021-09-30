@@ -36,7 +36,7 @@ public class LeatherPistonBootsItem extends TheWetSmpRehydratedModElements.ModEl
 	@ObjectHolder("the_wet_smp_rehydrated:leather_piston_boots")
 	public static final Item boots = null;
 	public LeatherPistonBootsItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 29);
+		super(instance, 27);
 	}
 
 	@Override

@@ -1,0 +1,6 @@
+{
+  "parent": "block/button_inventory",
+  "textures": {
+    "texture": "the_wet_smp_rehydrated:blocks/blue_pearl_button"
+  }
+}

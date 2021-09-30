@@ -24,7 +24,7 @@ public class RubyEmbeddedBeetrootSoupItem extends TheWetSmpRehydratedModElements
 	@ObjectHolder("the_wet_smp_rehydrated:ruby_embedded_beetroot_soup")
 	public static final Item block = null;
 	public RubyEmbeddedBeetrootSoupItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 102);
+		super(instance, 54);
 	}
 
 	@Override

@@ -22,7 +22,7 @@ public class CrateBlock extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:crate")
 	public static final Block block = null;
 	public CrateBlock(TheWetSmpRehydratedModElements instance) {
-		super(instance, 330);
+		super(instance, 25);
 	}
 
 	@Override

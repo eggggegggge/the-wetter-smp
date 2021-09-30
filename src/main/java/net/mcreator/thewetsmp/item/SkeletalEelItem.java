@@ -16,7 +16,7 @@ public class SkeletalEelItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:skeletal_eel")
 	public static final Item block = null;
 	public SkeletalEelItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 381);
+		super(instance, 129);
 	}
 
 	@Override

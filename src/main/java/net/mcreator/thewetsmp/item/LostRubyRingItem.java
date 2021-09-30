@@ -22,7 +22,7 @@ public class LostRubyRingItem extends TheWetSmpRehydratedModElements.ModElement 
 	@ObjectHolder("the_wet_smp_rehydrated:ruby_ring")
 	public static final Item block = null;
 	public LostRubyRingItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 6);
+		super(instance, 1);
 	}
 
 	@Override

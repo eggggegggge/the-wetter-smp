@@ -17,7 +17,7 @@ import net.mcreator.thewetsmp.item.EffervescentWatcherItem;
 @TheWetSmpRehydratedModElements.ModElement.Tag
 public class BrewLacunaPotionBrewingRecipe extends TheWetSmpRehydratedModElements.ModElement {
 	public BrewLacunaPotionBrewingRecipe(TheWetSmpRehydratedModElements instance) {
-		super(instance, 393);
+		super(instance, 289);
 	}
 
 	@Override

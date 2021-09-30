@@ -16,7 +16,7 @@ public class LapisOrefishItem extends TheWetSmpRehydratedModElements.ModElement 
 	@ObjectHolder("the_wet_smp_rehydrated:lapis_orefish")
 	public static final Item block = null;
 	public LapisOrefishItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 382);
+		super(instance, 120);
 	}
 
 	@Override

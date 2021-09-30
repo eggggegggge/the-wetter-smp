@@ -27,7 +27,7 @@ public class OsmiumTilesBlock extends TheWetSmpRehydratedModElements.ModElement 
 	@ObjectHolder("the_wet_smp_rehydrated:osmium_tiles")
 	public static final Block block = null;
 	public OsmiumTilesBlock(TheWetSmpRehydratedModElements instance) {
-		super(instance, 447);
+		super(instance, 157);
 	}
 
 	@Override

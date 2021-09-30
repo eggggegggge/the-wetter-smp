@@ -22,7 +22,7 @@ public class LostAquamarineRingItem extends TheWetSmpRehydratedModElements.ModEl
 	@ObjectHolder("the_wet_smp_rehydrated:aquamarine_ring")
 	public static final Item block = null;
 	public LostAquamarineRingItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 10);
+		super(instance, 5);
 	}
 
 	@Override

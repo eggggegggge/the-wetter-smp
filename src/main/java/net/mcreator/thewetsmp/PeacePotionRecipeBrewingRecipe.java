@@ -17,7 +17,7 @@ import net.mcreator.thewetsmp.item.GoldenSkiffiaItem;
 @TheWetSmpRehydratedModElements.ModElement.Tag
 public class PeacePotionRecipeBrewingRecipe extends TheWetSmpRehydratedModElements.ModElement {
 	public PeacePotionRecipeBrewingRecipe(TheWetSmpRehydratedModElements instance) {
-		super(instance, 462);
+		super(instance, 335);
 	}
 
 	@Override

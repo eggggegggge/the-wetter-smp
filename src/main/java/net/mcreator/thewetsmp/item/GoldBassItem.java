@@ -17,7 +17,7 @@ public class GoldBassItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:gold_bass")
 	public static final Item block = null;
 	public GoldBassItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 369);
+		super(instance, 135);
 	}
 
 	@Override

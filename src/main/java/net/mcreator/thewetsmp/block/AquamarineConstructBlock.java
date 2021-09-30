@@ -37,7 +37,7 @@ public class AquamarineConstructBlock extends TheWetSmpRehydratedModElements.Mod
 	@ObjectHolder("the_wet_smp_rehydrated:aquamarine_construct")
 	public static final Block block = null;
 	public AquamarineConstructBlock(TheWetSmpRehydratedModElements instance) {
-		super(instance, 438);
+		super(instance, 313);
 	}
 
 	@Override

@@ -133,7 +133,7 @@ public class FishingProcedureProcedure {
 					mcserv.getPlayerList().func_232641_a_(new StringTextComponent("you're fuckin line broked"), ChatType.SYSTEM, Util.DUMMY_UUID);
 			}
 		} else {
-			wutda = (double) ((new Random()).nextInt((int) treasure + 1));
+			wutda = (double) ((new Random()).nextInt((int) 1 + 1));
 			if (((wutda >= 0) && (wutda <= fish))) {
 				{
 					Map<String, Object> $_dependencies = new HashMap<>();

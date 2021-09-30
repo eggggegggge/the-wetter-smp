@@ -24,7 +24,7 @@ public class AquamarineEmbeddedBeetrootSoupItem extends TheWetSmpRehydratedModEl
 	@ObjectHolder("the_wet_smp_rehydrated:aquamarine_embedded_beetroot_soup")
 	public static final Item block = null;
 	public AquamarineEmbeddedBeetrootSoupItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 40);
+		super(instance, 38);
 	}
 
 	@Override

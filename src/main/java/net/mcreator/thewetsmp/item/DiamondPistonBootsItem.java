@@ -36,7 +36,7 @@ public class DiamondPistonBootsItem extends TheWetSmpRehydratedModElements.ModEl
 	@ObjectHolder("the_wet_smp_rehydrated:diamond_piston_boots")
 	public static final Item boots = null;
 	public DiamondPistonBootsItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 33);
+		super(instance, 31);
 	}
 
 	@Override

@@ -16,7 +16,7 @@ public class SepiaDyeItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:sepia_dye")
 	public static final Item block = null;
 	public SepiaDyeItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 400);
+		super(instance, 26);
 	}
 
 	@Override

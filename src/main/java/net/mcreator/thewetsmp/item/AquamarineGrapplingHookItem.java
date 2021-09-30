@@ -47,7 +47,7 @@ public class AquamarineGrapplingHookItem extends TheWetSmpRehydratedModElements.
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
 			.size(0.5f, 0.5f)).build("entitybulletaquamarine_grappling_hook").setRegistryName("entitybulletaquamarine_grappling_hook");
 	public AquamarineGrapplingHookItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 366);
+		super(instance, 34);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new AquamarineGrapplingHookRenderer.ModelRegisterHandler());
 	}
 

@@ -16,7 +16,7 @@ public class FungiGobiItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:fungi_gobi")
 	public static final Item block = null;
 	public FungiGobiItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 426);
+		super(instance, 118);
 	}
 
 	@Override

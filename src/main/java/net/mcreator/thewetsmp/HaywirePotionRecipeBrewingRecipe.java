@@ -17,7 +17,7 @@ import net.mcreator.thewetsmp.item.ChorusfishItem;
 @TheWetSmpRehydratedModElements.ModElement.Tag
 public class HaywirePotionRecipeBrewingRecipe extends TheWetSmpRehydratedModElements.ModElement {
 	public HaywirePotionRecipeBrewingRecipe(TheWetSmpRehydratedModElements instance) {
-		super(instance, 458);
+		super(instance, 331);
 	}
 
 	@Override

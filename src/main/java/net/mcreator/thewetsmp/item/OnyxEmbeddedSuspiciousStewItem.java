@@ -24,7 +24,7 @@ public class OnyxEmbeddedSuspiciousStewItem extends TheWetSmpRehydratedModElemen
 	@ObjectHolder("the_wet_smp_rehydrated:onyx_embedded_suspicious_stew")
 	public static final Item block = null;
 	public OnyxEmbeddedSuspiciousStewItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 119);
+		super(instance, 53);
 	}
 
 	@Override

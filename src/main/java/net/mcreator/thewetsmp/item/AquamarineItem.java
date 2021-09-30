@@ -16,7 +16,7 @@ public class AquamarineItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:aquamarine")
 	public static final Item block = null;
 	public AquamarineItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 12);
+		super(instance, 7);
 	}
 
 	@Override

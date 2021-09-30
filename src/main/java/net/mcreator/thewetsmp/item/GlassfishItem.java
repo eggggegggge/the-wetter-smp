@@ -16,7 +16,7 @@ public class GlassfishItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:glassfish")
 	public static final Item block = null;
 	public GlassfishItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 353);
+		super(instance, 144);
 	}
 
 	@Override

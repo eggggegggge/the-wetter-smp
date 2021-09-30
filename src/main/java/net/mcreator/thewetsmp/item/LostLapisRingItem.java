@@ -22,7 +22,7 @@ public class LostLapisRingItem extends TheWetSmpRehydratedModElements.ModElement
 	@ObjectHolder("the_wet_smp_rehydrated:lapis_ring")
 	public static final Item block = null;
 	public LostLapisRingItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 9);
+		super(instance, 4);
 	}
 
 	@Override

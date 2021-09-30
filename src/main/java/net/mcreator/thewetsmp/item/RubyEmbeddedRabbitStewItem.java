@@ -24,7 +24,7 @@ public class RubyEmbeddedRabbitStewItem extends TheWetSmpRehydratedModElements.M
 	@ObjectHolder("the_wet_smp_rehydrated:ruby_embedded_rabbit_stew")
 	public static final Item block = null;
 	public RubyEmbeddedRabbitStewItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 104);
+		super(instance, 56);
 	}
 
 	@Override

@@ -16,7 +16,7 @@ public class RawOsmiumItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:raw_osmium")
 	public static final Item block = null;
 	public RawOsmiumItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 342);
+		super(instance, 15);
 	}
 
 	@Override

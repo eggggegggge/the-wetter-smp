@@ -24,7 +24,7 @@ public class OnyxEmbeddedRabbitStewItem extends TheWetSmpRehydratedModElements.M
 	@ObjectHolder("the_wet_smp_rehydrated:onyx_embedded_rabbit_stew")
 	public static final Item block = null;
 	public OnyxEmbeddedRabbitStewItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 95);
+		super(instance, 52);
 	}
 
 	@Override

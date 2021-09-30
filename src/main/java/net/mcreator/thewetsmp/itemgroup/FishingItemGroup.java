@@ -13,7 +13,7 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 @TheWetSmpRehydratedModElements.ModElement.Tag
 public class FishingItemGroup extends TheWetSmpRehydratedModElements.ModElement {
 	public FishingItemGroup(TheWetSmpRehydratedModElements instance) {
-		super(instance, 334);
+		super(instance, 282);
 	}
 
 	@Override

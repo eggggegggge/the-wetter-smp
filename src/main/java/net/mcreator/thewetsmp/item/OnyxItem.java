@@ -16,7 +16,7 @@ public class OnyxItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:onyx")
 	public static final Item block = null;
 	public OnyxItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 14);
+		super(instance, 9);
 	}
 
 	@Override

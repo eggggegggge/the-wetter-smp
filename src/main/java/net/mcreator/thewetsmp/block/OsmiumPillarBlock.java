@@ -33,7 +33,7 @@ public class OsmiumPillarBlock extends TheWetSmpRehydratedModElements.ModElement
 	@ObjectHolder("the_wet_smp_rehydrated:osmium_pillar")
 	public static final Block block = null;
 	public OsmiumPillarBlock(TheWetSmpRehydratedModElements instance) {
-		super(instance, 446);
+		super(instance, 156);
 	}
 
 	@Override

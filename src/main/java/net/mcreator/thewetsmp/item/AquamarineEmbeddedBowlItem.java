@@ -16,7 +16,7 @@ public class AquamarineEmbeddedBowlItem extends TheWetSmpRehydratedModElements.M
 	@ObjectHolder("the_wet_smp_rehydrated:aquamarine_embedded_bowl")
 	public static final Item block = null;
 	public AquamarineEmbeddedBowlItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 28);
+		super(instance, 10);
 	}
 
 	@Override

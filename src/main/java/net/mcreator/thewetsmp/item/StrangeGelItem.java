@@ -16,7 +16,7 @@ public class StrangeGelItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:strange_gel")
 	public static final Item block = null;
 	public StrangeGelItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 132);
+		super(instance, 37);
 	}
 
 	@Override

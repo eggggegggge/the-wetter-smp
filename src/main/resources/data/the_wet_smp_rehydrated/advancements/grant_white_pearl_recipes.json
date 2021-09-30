@@ -1,0 +1,26 @@
+{
+  "criteria": {
+    "grant_white_pearl_recipes": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "the_wet_smp_rehydrated:white_pearl",
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1,
+    "recipes": [
+      "the_wet_smp_rehydrated:white_pearl_button_recipe",
+      "the_wet_smp_rehydrated:white_pearl_pressure_plate_recipe"
+    ]
+  },
+  "parent": "the_wet_smp_rehydrated:get_all_rings"
+}

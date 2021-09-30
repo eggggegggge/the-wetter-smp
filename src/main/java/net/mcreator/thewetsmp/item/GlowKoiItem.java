@@ -17,7 +17,7 @@ public class GlowKoiItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:glow_koi")
 	public static final Item block = null;
 	public GlowKoiItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 328);
+		super(instance, 93);
 	}
 
 	@Override

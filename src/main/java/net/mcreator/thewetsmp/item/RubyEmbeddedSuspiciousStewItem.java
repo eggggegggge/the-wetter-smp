@@ -24,7 +24,7 @@ public class RubyEmbeddedSuspiciousStewItem extends TheWetSmpRehydratedModElemen
 	@ObjectHolder("the_wet_smp_rehydrated:ruby_embedded_suspicious_stew")
 	public static final Item block = null;
 	public RubyEmbeddedSuspiciousStewItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 120);
+		super(instance, 57);
 	}
 
 	@Override

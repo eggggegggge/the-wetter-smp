@@ -16,7 +16,7 @@ public class VoidswimmerItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:voidswimmer")
 	public static final Item block = null;
 	public VoidswimmerItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 380);
+		super(instance, 128);
 	}
 
 	@Override

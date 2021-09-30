@@ -17,7 +17,7 @@ public class NightKoiItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:night_koi")
 	public static final Item block = null;
 	public NightKoiItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 363);
+		super(instance, 94);
 	}
 
 	@Override

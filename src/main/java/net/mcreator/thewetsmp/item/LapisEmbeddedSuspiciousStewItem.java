@@ -24,7 +24,7 @@ public class LapisEmbeddedSuspiciousStewItem extends TheWetSmpRehydratedModEleme
 	@ObjectHolder("the_wet_smp_rehydrated:lapis_embedded_suspicious_stew")
 	public static final Item block = null;
 	public LapisEmbeddedSuspiciousStewItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 118);
+		super(instance, 49);
 	}
 
 	@Override

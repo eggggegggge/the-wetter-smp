@@ -17,7 +17,7 @@ public class ChorusfishItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:chorusfish")
 	public static final Item block = null;
 	public ChorusfishItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 352);
+		super(instance, 106);
 	}
 
 	@Override

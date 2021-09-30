@@ -16,7 +16,7 @@ public class OsmiumIngotItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:osmium_ingot")
 	public static final Item block = null;
 	public OsmiumIngotItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 22);
+		super(instance, 23);
 	}
 
 	@Override

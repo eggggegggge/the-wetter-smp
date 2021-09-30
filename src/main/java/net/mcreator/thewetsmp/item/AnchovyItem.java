@@ -17,7 +17,7 @@ public class AnchovyItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:anchovy")
 	public static final Item block = null;
 	public AnchovyItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 374);
+		super(instance, 102);
 	}
 
 	@Override

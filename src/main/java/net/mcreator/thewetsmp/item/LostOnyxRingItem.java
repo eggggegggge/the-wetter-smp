@@ -22,7 +22,7 @@ public class LostOnyxRingItem extends TheWetSmpRehydratedModElements.ModElement 
 	@ObjectHolder("the_wet_smp_rehydrated:onyx_ring")
 	public static final Item block = null;
 	public LostOnyxRingItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 8);
+		super(instance, 3);
 	}
 
 	@Override

@@ -24,7 +24,7 @@ public class LapisEmbeddedBeetrootSoupItem extends TheWetSmpRehydratedModElement
 	@ObjectHolder("the_wet_smp_rehydrated:lapis_embedded_beetroot_soup")
 	public static final Item block = null;
 	public LapisEmbeddedBeetrootSoupItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 84);
+		super(instance, 46);
 	}
 
 	@Override

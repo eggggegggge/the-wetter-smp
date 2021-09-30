@@ -16,7 +16,7 @@ public class CrabItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:crab")
 	public static final Item block = null;
 	public CrabItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 340);
+		super(instance, 133);
 	}
 
 	@Override

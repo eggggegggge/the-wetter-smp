@@ -17,7 +17,7 @@ public class ShroomyKoiItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:shroomy_koi")
 	public static final Item block = null;
 	public ShroomyKoiItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 360);
+		super(instance, 95);
 	}
 
 	@Override

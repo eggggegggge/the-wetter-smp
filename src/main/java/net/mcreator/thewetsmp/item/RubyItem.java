@@ -16,7 +16,7 @@ public class RubyItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:ruby")
 	public static final Item block = null;
 	public RubyItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 13);
+		super(instance, 8);
 	}
 
 	@Override

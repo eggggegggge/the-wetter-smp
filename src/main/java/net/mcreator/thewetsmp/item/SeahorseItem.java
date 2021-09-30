@@ -16,7 +16,7 @@ public class SeahorseItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:seahorse")
 	public static final Item block = null;
 	public SeahorseItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 375);
+		super(instance, 137);
 	}
 
 	@Override

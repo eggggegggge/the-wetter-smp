@@ -16,7 +16,7 @@ public class NulltilusItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:nulltilus")
 	public static final Item block = null;
 	public NulltilusItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 423);
+		super(instance, 113);
 	}
 
 	@Override

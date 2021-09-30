@@ -16,7 +16,7 @@ public class DiamondOrefishItem extends TheWetSmpRehydratedModElements.ModElemen
 	@ObjectHolder("the_wet_smp_rehydrated:diamond_orefish")
 	public static final Item block = null;
 	public DiamondOrefishItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 384);
+		super(instance, 122);
 	}
 
 	@Override

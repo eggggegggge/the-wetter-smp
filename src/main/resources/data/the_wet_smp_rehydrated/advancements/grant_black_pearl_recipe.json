@@ -1,0 +1,26 @@
+{
+  "criteria": {
+    "grant_black_pearl_recipe": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "the_wet_smp_rehydrated:black_pearl",
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1,
+    "recipes": [
+      "the_wet_smp_rehydrated:black_pearl_button_recipe",
+      "the_wet_smp_rehydrated:black_pearl_pressure_plate_recipe"
+    ]
+  },
+  "parent": "the_wet_smp_rehydrated:get_all_rings"
+}

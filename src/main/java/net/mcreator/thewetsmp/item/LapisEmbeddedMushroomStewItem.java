@@ -24,7 +24,7 @@ public class LapisEmbeddedMushroomStewItem extends TheWetSmpRehydratedModElement
 	@ObjectHolder("the_wet_smp_rehydrated:lapis_embedded_mushroom_stew")
 	public static final Item block = null;
 	public LapisEmbeddedMushroomStewItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 85);
+		super(instance, 47);
 	}
 
 	@Override

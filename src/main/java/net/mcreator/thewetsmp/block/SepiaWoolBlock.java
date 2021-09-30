@@ -32,7 +32,7 @@ public class SepiaWoolBlock extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:sepia_wool")
 	public static final Block block = null;
 	public SepiaWoolBlock(TheWetSmpRehydratedModElements instance) {
-		super(instance, 403);
+		super(instance, 148);
 	}
 
 	@Override

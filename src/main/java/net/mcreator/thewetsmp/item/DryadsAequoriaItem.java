@@ -16,7 +16,7 @@ public class DryadsAequoriaItem extends TheWetSmpRehydratedModElements.ModElemen
 	@ObjectHolder("the_wet_smp_rehydrated:dryads_aequorea")
 	public static final Item block = null;
 	public DryadsAequoriaItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 425);
+		super(instance, 119);
 	}
 
 	@Override

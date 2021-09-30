@@ -26,7 +26,7 @@ public class BrushItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:brush")
 	public static final Item block = null;
 	public BrushItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 307);
+		super(instance, 6);
 	}
 
 	@Override

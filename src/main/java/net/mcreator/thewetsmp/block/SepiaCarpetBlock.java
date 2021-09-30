@@ -46,7 +46,7 @@ public class SepiaCarpetBlock extends TheWetSmpRehydratedModElements.ModElement 
 	@ObjectHolder("the_wet_smp_rehydrated:sepia_carpet")
 	public static final Block block = null;
 	public SepiaCarpetBlock(TheWetSmpRehydratedModElements instance) {
-		super(instance, 404);
+		super(instance, 149);
 	}
 
 	@Override

@@ -17,7 +17,7 @@ public class BassItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:bass")
 	public static final Item block = null;
 	public BassItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 354);
+		super(instance, 134);
 	}
 
 	@Override

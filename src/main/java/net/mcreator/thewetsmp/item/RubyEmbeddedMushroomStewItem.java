@@ -24,7 +24,7 @@ public class RubyEmbeddedMushroomStewItem extends TheWetSmpRehydratedModElements
 	@ObjectHolder("the_wet_smp_rehydrated:ruby_embedded_mushroom_stew")
 	public static final Item block = null;
 	public RubyEmbeddedMushroomStewItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 103);
+		super(instance, 55);
 	}
 
 	@Override

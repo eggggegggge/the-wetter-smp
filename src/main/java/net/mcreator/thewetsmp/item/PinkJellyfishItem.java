@@ -16,7 +16,7 @@ public class PinkJellyfishItem extends TheWetSmpRehydratedModElements.ModElement
 	@ObjectHolder("the_wet_smp_rehydrated:pink_jellyfish")
 	public static final Item block = null;
 	public PinkJellyfishItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 349);
+		super(instance, 111);
 	}
 
 	@Override

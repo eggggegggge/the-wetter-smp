@@ -17,7 +17,7 @@ public class HumuhumunukunukuapuaAItem extends TheWetSmpRehydratedModElements.Mo
 	@ObjectHolder("the_wet_smp_rehydrated:humuhumunukunukuapua_a")
 	public static final Item block = null;
 	public HumuhumunukunukuapuaAItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 372);
+		super(instance, 143);
 	}
 
 	@Override

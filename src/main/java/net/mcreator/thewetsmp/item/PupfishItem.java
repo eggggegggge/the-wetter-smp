@@ -17,7 +17,7 @@ public class PupfishItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:pupfish")
 	public static final Item block = null;
 	public PupfishItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 376);
+		super(instance, 98);
 	}
 
 	@Override

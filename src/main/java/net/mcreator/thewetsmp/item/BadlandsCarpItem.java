@@ -16,7 +16,7 @@ public class BadlandsCarpItem extends TheWetSmpRehydratedModElements.ModElement 
 	@ObjectHolder("the_wet_smp_rehydrated:badlands_carp")
 	public static final Item block = null;
 	public BadlandsCarpItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 427);
+		super(instance, 136);
 	}
 
 	@Override

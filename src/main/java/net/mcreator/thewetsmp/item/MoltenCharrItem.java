@@ -16,7 +16,7 @@ public class MoltenCharrItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:molten_charr")
 	public static final Item block = null;
 	public MoltenCharrItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 364);
+		super(instance, 115);
 	}
 
 	@Override

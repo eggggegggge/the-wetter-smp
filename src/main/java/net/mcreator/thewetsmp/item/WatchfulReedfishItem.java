@@ -16,7 +16,7 @@ public class WatchfulReedfishItem extends TheWetSmpRehydratedModElements.ModElem
 	@ObjectHolder("the_wet_smp_rehydrated:watchful_reedfish")
 	public static final Item block = null;
 	public WatchfulReedfishItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 389);
+		super(instance, 130);
 	}
 
 	@Override

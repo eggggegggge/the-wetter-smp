@@ -16,7 +16,7 @@ public class WarpedWartItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:warped_wart")
 	public static final Item block = null;
 	public WarpedWartItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 39);
+		super(instance, 36);
 	}
 
 	@Override

@@ -17,7 +17,7 @@ import net.mcreator.thewetsmp.item.GoldBassItem;
 @TheWetSmpRehydratedModElements.ModElement.Tag
 public class BrewLuckPotionBrewingRecipe extends TheWetSmpRehydratedModElements.ModElement {
 	public BrewLuckPotionBrewingRecipe(TheWetSmpRehydratedModElements instance) {
-		super(instance, 474);
+		super(instance, 341);
 	}
 
 	@Override

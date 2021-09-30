@@ -17,7 +17,7 @@ public class ShulkfishItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:shulkfish")
 	public static final Item block = null;
 	public ShulkfishItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 371);
+		super(instance, 105);
 	}
 
 	@Override

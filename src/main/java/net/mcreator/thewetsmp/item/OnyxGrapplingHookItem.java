@@ -48,7 +48,7 @@ public class OnyxGrapplingHookItem extends TheWetSmpRehydratedModElements.ModEle
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
 			.size(0.5f, 0.5f)).build("entitybulletonyx_grappling_hook").setRegistryName("entitybulletonyx_grappling_hook");
 	public OnyxGrapplingHookItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 367);
+		super(instance, 35);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new OnyxGrapplingHookRenderer.ModelRegisterHandler());
 	}
 

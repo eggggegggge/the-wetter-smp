@@ -17,7 +17,7 @@ public class EffervescentWatcherItem extends TheWetSmpRehydratedModElements.ModE
 	@ObjectHolder("the_wet_smp_rehydrated:effervescent_watcher")
 	public static final Item block = null;
 	public EffervescentWatcherItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 338);
+		super(instance, 104);
 	}
 
 	@Override

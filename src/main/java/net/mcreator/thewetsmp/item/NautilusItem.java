@@ -16,7 +16,7 @@ public class NautilusItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:nautilus")
 	public static final Item block = null;
 	public NautilusItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 337);
+		super(instance, 112);
 	}
 
 	@Override

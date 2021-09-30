@@ -16,7 +16,7 @@ public class GoldOrefishItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:gold_orefish")
 	public static final Item block = null;
 	public GoldOrefishItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 385);
+		super(instance, 123);
 	}
 
 	@Override

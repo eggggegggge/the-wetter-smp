@@ -16,7 +16,7 @@ public class HaloclineDiverfishItem extends TheWetSmpRehydratedModElements.ModEl
 	@ObjectHolder("the_wet_smp_rehydrated:halocline_diverfish")
 	public static final Item block = null;
 	public HaloclineDiverfishItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 428);
+		super(instance, 139);
 	}
 
 	@Override

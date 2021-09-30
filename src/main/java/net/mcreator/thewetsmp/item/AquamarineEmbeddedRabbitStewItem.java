@@ -24,7 +24,7 @@ public class AquamarineEmbeddedRabbitStewItem extends TheWetSmpRehydratedModElem
 	@ObjectHolder("the_wet_smp_rehydrated:aquamarine_embedded_rabbit_stew")
 	public static final Item block = null;
 	public AquamarineEmbeddedRabbitStewItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 68);
+		super(instance, 40);
 	}
 
 	@Override

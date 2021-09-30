@@ -16,7 +16,7 @@ public class RubyOrefishItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:ruby_orefish")
 	public static final Item block = null;
 	public RubyOrefishItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 383);
+		super(instance, 121);
 	}
 
 	@Override

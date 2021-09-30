@@ -52,7 +52,7 @@ public class ColdAirVentBlock extends TheWetSmpRehydratedModElements.ModElement 
 	@ObjectHolder("the_wet_smp_rehydrated:cold_air_vent")
 	public static final Block block = null;
 	public ColdAirVentBlock(TheWetSmpRehydratedModElements instance) {
-		super(instance, 312);
+		super(instance, 273);
 	}
 
 	@Override

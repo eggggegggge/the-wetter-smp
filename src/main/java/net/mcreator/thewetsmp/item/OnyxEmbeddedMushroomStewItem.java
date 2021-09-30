@@ -24,7 +24,7 @@ public class OnyxEmbeddedMushroomStewItem extends TheWetSmpRehydratedModElements
 	@ObjectHolder("the_wet_smp_rehydrated:onyx_embedded_mushroom_stew")
 	public static final Item block = null;
 	public OnyxEmbeddedMushroomStewItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 94);
+		super(instance, 51);
 	}
 
 	@Override

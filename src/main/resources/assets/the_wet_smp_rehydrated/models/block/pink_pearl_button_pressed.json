@@ -1,0 +1,6 @@
+{
+  "parent": "block/button_pressed",
+  "textures": {
+    "texture": "the_wet_smp_rehydrated:blocks/pink_pearl_button"
+  }
+}

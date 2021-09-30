@@ -16,7 +16,7 @@ public class RubyEmbeddedBowlItem extends TheWetSmpRehydratedModElements.ModElem
 	@ObjectHolder("the_wet_smp_rehydrated:ruby_embedded_bowl")
 	public static final Item block = null;
 	public RubyEmbeddedBowlItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 101);
+		super(instance, 14);
 	}
 
 	@Override

@@ -54,7 +54,7 @@ public class SingingSingingSingingBassBlock extends TheWetSmpRehydratedModElemen
 	@ObjectHolder("the_wet_smp_rehydrated:singing_singing_singing_bass")
 	public static final Block block = null;
 	public SingingSingingSingingBassBlock(TheWetSmpRehydratedModElements instance) {
-		super(instance, 518);
+		super(instance, 366);
 	}
 
 	@Override

@@ -47,7 +47,7 @@ public class RubyGrapplingHookItem extends TheWetSmpRehydratedModElements.ModEle
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
 			.size(0.5f, 0.5f)).build("entitybulletruby_grappling_hook").setRegistryName("entitybulletruby_grappling_hook");
 	public RubyGrapplingHookItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 365);
+		super(instance, 33);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new RubyGrapplingHookRenderer.ModelRegisterHandler());
 	}
 

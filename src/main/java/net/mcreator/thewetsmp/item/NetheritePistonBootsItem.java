@@ -36,7 +36,7 @@ public class NetheritePistonBootsItem extends TheWetSmpRehydratedModElements.Mod
 	@ObjectHolder("the_wet_smp_rehydrated:netherite_piston_boots")
 	public static final Item boots = null;
 	public NetheritePistonBootsItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 34);
+		super(instance, 32);
 	}
 
 	@Override

@@ -17,7 +17,7 @@ public class KoiItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:koi")
 	public static final Item block = null;
 	public KoiItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 327);
+		super(instance, 92);
 	}
 
 	@Override

@@ -17,7 +17,7 @@ public class ShiitakeOrfeItem extends TheWetSmpRehydratedModElements.ModElement 
 	@ObjectHolder("the_wet_smp_rehydrated:shiitake_orfe")
 	public static final Item block = null;
 	public ShiitakeOrfeItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 424);
+		super(instance, 117);
 	}
 
 	@Override

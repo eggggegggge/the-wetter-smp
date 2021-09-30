@@ -16,7 +16,7 @@ public class LapisEmbeddedBowlItem extends TheWetSmpRehydratedModElements.ModEle
 	@ObjectHolder("the_wet_smp_rehydrated:lapis_embedded_bowl")
 	public static final Item block = null;
 	public LapisEmbeddedBowlItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 83);
+		super(instance, 12);
 	}
 
 	@Override

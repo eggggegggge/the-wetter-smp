@@ -24,7 +24,7 @@ public class AquamarineEmbeddedSuspiciousStewItem extends TheWetSmpRehydratedMod
 	@ObjectHolder("the_wet_smp_rehydrated:aquamarine_embedded_suspicious_stew")
 	public static final Item block = null;
 	public AquamarineEmbeddedSuspiciousStewItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 116);
+		super(instance, 41);
 	}
 
 	@Override

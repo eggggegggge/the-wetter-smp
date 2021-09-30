@@ -31,7 +31,7 @@ public class SepiaStainedGlassPaneBlock extends TheWetSmpRehydratedModElements.M
 	@ObjectHolder("the_wet_smp_rehydrated:sepia_stained_glass_pane")
 	public static final Block block = null;
 	public SepiaStainedGlassPaneBlock(TheWetSmpRehydratedModElements instance) {
-		super(instance, 407);
+		super(instance, 152);
 	}
 
 	@Override

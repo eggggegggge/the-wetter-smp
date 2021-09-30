@@ -16,7 +16,7 @@ public class NetherragfishItem extends TheWetSmpRehydratedModElements.ModElement
 	@ObjectHolder("the_wet_smp_rehydrated:netherragfish")
 	public static final Item block = null;
 	public NetherragfishItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 378);
+		super(instance, 114);
 	}
 
 	@Override

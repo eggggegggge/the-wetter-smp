@@ -17,7 +17,7 @@ public class JungleSnapperItem extends TheWetSmpRehydratedModElements.ModElement
 	@ObjectHolder("the_wet_smp_rehydrated:jungle_snapper")
 	public static final Item block = null;
 	public JungleSnapperItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 332);
+		super(instance, 141);
 	}
 
 	@Override

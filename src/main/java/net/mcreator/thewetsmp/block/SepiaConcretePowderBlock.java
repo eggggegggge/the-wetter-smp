@@ -34,7 +34,7 @@ public class SepiaConcretePowderBlock extends TheWetSmpRehydratedModElements.Mod
 	@ObjectHolder("the_wet_smp_rehydrated:sepia_concrete_powder")
 	public static final Block block = null;
 	public SepiaConcretePowderBlock(TheWetSmpRehydratedModElements instance) {
-		super(instance, 408);
+		super(instance, 153);
 	}
 
 	@Override

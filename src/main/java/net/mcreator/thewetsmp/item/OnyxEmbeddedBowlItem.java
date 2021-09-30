@@ -16,7 +16,7 @@ public class OnyxEmbeddedBowlItem extends TheWetSmpRehydratedModElements.ModElem
 	@ObjectHolder("the_wet_smp_rehydrated:onyx_embedded_bowl")
 	public static final Item block = null;
 	public OnyxEmbeddedBowlItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 92);
+		super(instance, 13);
 	}
 
 	@Override

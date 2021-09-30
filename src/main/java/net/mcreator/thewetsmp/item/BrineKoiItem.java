@@ -17,7 +17,7 @@ public class BrineKoiItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:brine_koi")
 	public static final Item block = null;
 	public BrineKoiItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 436);
+		super(instance, 96);
 	}
 
 	@Override

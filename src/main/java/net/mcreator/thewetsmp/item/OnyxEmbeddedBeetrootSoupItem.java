@@ -24,7 +24,7 @@ public class OnyxEmbeddedBeetrootSoupItem extends TheWetSmpRehydratedModElements
 	@ObjectHolder("the_wet_smp_rehydrated:onyx_embedded_beetroot_soup")
 	public static final Item block = null;
 	public OnyxEmbeddedBeetrootSoupItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 93);
+		super(instance, 50);
 	}
 
 	@Override

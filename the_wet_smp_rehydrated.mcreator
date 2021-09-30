@@ -4,7 +4,7 @@
     {
       "name": "RingEffect",
       "type": "procedure",
-      "sortid": 42,
+      "sortid": 159,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -22,7 +22,7 @@
     {
       "name": "LostAquamarineRing",
       "type": "item",
-      "sortid": 10,
+      "sortid": 5,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -32,7 +32,7 @@
     {
       "name": "LostEmeraldRing",
       "type": "item",
-      "sortid": 7,
+      "sortid": 2,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -42,7 +42,7 @@
     {
       "name": "LostLapisRing",
       "type": "item",
-      "sortid": 9,
+      "sortid": 4,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -52,7 +52,7 @@
     {
       "name": "LostOnyxRing",
       "type": "item",
-      "sortid": 8,
+      "sortid": 3,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -62,7 +62,7 @@
     {
       "name": "LostRubyRing",
       "type": "item",
-      "sortid": 6,
+      "sortid": 1,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -72,7 +72,7 @@
     {
       "name": "Aquamarine",
       "type": "item",
-      "sortid": 12,
+      "sortid": 7,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -82,7 +82,7 @@
     {
       "name": "Ruby",
       "type": "item",
-      "sortid": 13,
+      "sortid": 8,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -92,7 +92,7 @@
     {
       "name": "Onyx",
       "type": "item",
-      "sortid": 14,
+      "sortid": 9,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -102,7 +102,7 @@
     {
       "name": "ChainmailPistonBoots",
       "type": "armor",
-      "sortid": 30,
+      "sortid": 28,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -118,7 +118,7 @@
     {
       "name": "DiamondPistonBoots",
       "type": "armor",
-      "sortid": 33,
+      "sortid": 31,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -134,7 +134,7 @@
     {
       "name": "GoldenPistonBoots",
       "type": "armor",
-      "sortid": 31,
+      "sortid": 29,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -150,7 +150,7 @@
     {
       "name": "IronPistonBoots",
       "type": "armor",
-      "sortid": 32,
+      "sortid": 30,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -166,7 +166,7 @@
     {
       "name": "NetheritePistonBoots",
       "type": "armor",
-      "sortid": 34,
+      "sortid": 32,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -182,7 +182,7 @@
     {
       "name": "PistonBootsJump",
       "type": "procedure",
-      "sortid": 48,
+      "sortid": 160,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -200,7 +200,7 @@
     {
       "name": "LeatherPistonBoots",
       "type": "armor",
-      "sortid": 29,
+      "sortid": 27,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -216,7 +216,7 @@
     {
       "name": "ChainmailPistonBootsRecipe",
       "type": "recipe",
-      "sortid": 49,
+      "sortid": 161,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -226,7 +226,7 @@
     {
       "name": "DiamondPistonBootsRecipe",
       "type": "recipe",
-      "sortid": 51,
+      "sortid": 162,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -236,7 +236,7 @@
     {
       "name": "GoldenPistonBootsRecipe",
       "type": "recipe",
-      "sortid": 53,
+      "sortid": 163,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -246,7 +246,7 @@
     {
       "name": "IronPistonBootsRecipe",
       "type": "recipe",
-      "sortid": 55,
+      "sortid": 164,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -256,7 +256,7 @@
     {
       "name": "NetheritePistonBootsRecipe",
       "type": "recipe",
-      "sortid": 57,
+      "sortid": 165,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -266,7 +266,7 @@
     {
       "name": "LeatherPistonBootsRecipe",
       "type": "recipe",
-      "sortid": 59,
+      "sortid": 166,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -276,7 +276,7 @@
     {
       "name": "OsmiumIngot",
       "type": "item",
-      "sortid": 22,
+      "sortid": 23,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -286,7 +286,7 @@
     {
       "name": "WarpedWart",
       "type": "item",
-      "sortid": 39,
+      "sortid": 36,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -296,7 +296,7 @@
     {
       "name": "WartToWartBlock",
       "type": "recipe",
-      "sortid": 64,
+      "sortid": 167,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -306,7 +306,7 @@
     {
       "name": "WarpedWartToWarpedWartBlock",
       "type": "recipe",
-      "sortid": 65,
+      "sortid": 168,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -316,7 +316,7 @@
     {
       "name": "WarpedWartBlocktoWarpedWart",
       "type": "recipe",
-      "sortid": 66,
+      "sortid": 169,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -326,7 +326,7 @@
     {
       "name": "AquamarineEmbeddedBowl",
       "type": "item",
-      "sortid": 28,
+      "sortid": 10,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -336,7 +336,7 @@
     {
       "name": "AquamarineEmbeddedBeetrootSoup",
       "type": "food",
-      "sortid": 40,
+      "sortid": 38,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -346,7 +346,7 @@
     {
       "name": "AquamarineEmbeddedMushroomStew",
       "type": "food",
-      "sortid": 41,
+      "sortid": 39,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -356,7 +356,7 @@
     {
       "name": "AquamarineEmbeddedRabbitStew",
       "type": "food",
-      "sortid": 68,
+      "sortid": 40,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -366,7 +366,7 @@
     {
       "name": "AquamarineEmbeddedBowlRecipe",
       "type": "recipe",
-      "sortid": 69,
+      "sortid": 170,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -376,7 +376,7 @@
     {
       "name": "AquamarineEmbeddedBeetrootSoupRecipe",
       "type": "recipe",
-      "sortid": 70,
+      "sortid": 171,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -386,7 +386,7 @@
     {
       "name": "AquamarineEmbeddedMushroomStewRecipe",
       "type": "recipe",
-      "sortid": 71,
+      "sortid": 172,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -396,7 +396,7 @@
     {
       "name": "AquamarineEmbeddedRabbitStewRecipe",
       "type": "recipe",
-      "sortid": 72,
+      "sortid": 173,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -406,7 +406,7 @@
     {
       "name": "AquamarineEmbeddedRabbitStewRecipe1",
       "type": "recipe",
-      "sortid": 73,
+      "sortid": 174,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -416,7 +416,7 @@
     {
       "name": "EmeraldEmbeddedBowl",
       "type": "item",
-      "sortid": 74,
+      "sortid": 11,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -426,7 +426,7 @@
     {
       "name": "EmeraldEmbeddedBeetrootSoup",
       "type": "food",
-      "sortid": 75,
+      "sortid": 42,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -436,7 +436,7 @@
     {
       "name": "EmeraldEmbeddedMushroomStew",
       "type": "food",
-      "sortid": 76,
+      "sortid": 43,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -446,7 +446,7 @@
     {
       "name": "EmeraldEmbeddedRabbitStew",
       "type": "food",
-      "sortid": 77,
+      "sortid": 44,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -456,7 +456,7 @@
     {
       "name": "EmeraldEmbeddedBowlRecipe",
       "type": "recipe",
-      "sortid": 78,
+      "sortid": 175,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -466,7 +466,7 @@
     {
       "name": "EmeraldEmbeddedBeetrootSoupRecipe",
       "type": "recipe",
-      "sortid": 79,
+      "sortid": 176,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -476,7 +476,7 @@
     {
       "name": "EmeraldEmbeddedMushroomStewRecipe",
       "type": "recipe",
-      "sortid": 80,
+      "sortid": 177,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -486,7 +486,7 @@
     {
       "name": "EmeraldEmbeddedRabbitStewRecipe",
       "type": "recipe",
-      "sortid": 81,
+      "sortid": 178,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -496,7 +496,7 @@
     {
       "name": "EmeraldEmbeddedRabbitStewRecipe1",
       "type": "recipe",
-      "sortid": 82,
+      "sortid": 179,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -506,7 +506,7 @@
     {
       "name": "LapisEmbeddedBowl",
       "type": "item",
-      "sortid": 83,
+      "sortid": 12,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -516,7 +516,7 @@
     {
       "name": "LapisEmbeddedBeetrootSoup",
       "type": "food",
-      "sortid": 84,
+      "sortid": 46,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -526,7 +526,7 @@
     {
       "name": "LapisEmbeddedMushroomStew",
       "type": "food",
-      "sortid": 85,
+      "sortid": 47,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -536,7 +536,7 @@
     {
       "name": "LapisEmbeddedRabbitStew",
       "type": "food",
-      "sortid": 86,
+      "sortid": 48,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -546,7 +546,7 @@
     {
       "name": "LapisEmbeddedBowlRecipe",
       "type": "recipe",
-      "sortid": 87,
+      "sortid": 180,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -556,7 +556,7 @@
     {
       "name": "LapisEmbeddedBeetrootSoupRecipe",
       "type": "recipe",
-      "sortid": 88,
+      "sortid": 181,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -566,7 +566,7 @@
     {
       "name": "LapisEmbeddedMushroomStewRecipe",
       "type": "recipe",
-      "sortid": 89,
+      "sortid": 182,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -576,7 +576,7 @@
     {
       "name": "LapisEmbeddedRabbitStewRecipe",
       "type": "recipe",
-      "sortid": 90,
+      "sortid": 183,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -586,7 +586,7 @@
     {
       "name": "LapisEmbeddedRabbitStewRecipe1",
       "type": "recipe",
-      "sortid": 91,
+      "sortid": 184,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -596,7 +596,7 @@
     {
       "name": "OnyxEmbeddedBowl",
       "type": "item",
-      "sortid": 92,
+      "sortid": 13,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -606,7 +606,7 @@
     {
       "name": "OnyxEmbeddedBeetrootSoup",
       "type": "food",
-      "sortid": 93,
+      "sortid": 50,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -616,7 +616,7 @@
     {
       "name": "OnyxEmbeddedMushroomStew",
       "type": "food",
-      "sortid": 94,
+      "sortid": 51,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -626,7 +626,7 @@
     {
       "name": "OnyxEmbeddedRabbitStew",
       "type": "food",
-      "sortid": 95,
+      "sortid": 52,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -636,7 +636,7 @@
     {
       "name": "OnyxEmbeddedBowlRecipe",
       "type": "recipe",
-      "sortid": 96,
+      "sortid": 185,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -646,7 +646,7 @@
     {
       "name": "OnyxEmbeddedBeetrootSoupRecipe",
       "type": "recipe",
-      "sortid": 97,
+      "sortid": 186,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -656,7 +656,7 @@
     {
       "name": "OnyxEmbeddedMushroomStewRecipe",
       "type": "recipe",
-      "sortid": 98,
+      "sortid": 187,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -666,7 +666,7 @@
     {
       "name": "OnyxEmbeddedRabbitStewRecipe",
       "type": "recipe",
-      "sortid": 99,
+      "sortid": 188,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -676,7 +676,7 @@
     {
       "name": "OnyxEmbeddedRabbitStewRecipe1",
       "type": "recipe",
-      "sortid": 100,
+      "sortid": 189,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -686,7 +686,7 @@
     {
       "name": "RubyEmbeddedBowl",
       "type": "item",
-      "sortid": 101,
+      "sortid": 14,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -696,7 +696,7 @@
     {
       "name": "RubyEmbeddedBeetrootSoup",
       "type": "food",
-      "sortid": 102,
+      "sortid": 54,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -706,7 +706,7 @@
     {
       "name": "RubyEmbeddedMushroomStew",
       "type": "food",
-      "sortid": 103,
+      "sortid": 55,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -716,7 +716,7 @@
     {
       "name": "RubyEmbeddedRabbitStew",
       "type": "food",
-      "sortid": 104,
+      "sortid": 56,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -726,7 +726,7 @@
     {
       "name": "RubyEmbeddedBowlRecipe",
       "type": "recipe",
-      "sortid": 105,
+      "sortid": 190,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -736,7 +736,7 @@
     {
       "name": "RubyEmbeddedBeetrootSoupRecipe",
       "type": "recipe",
-      "sortid": 106,
+      "sortid": 191,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -746,7 +746,7 @@
     {
       "name": "RubyEmbeddedMushroomStewRecipe",
       "type": "recipe",
-      "sortid": 107,
+      "sortid": 192,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -756,7 +756,7 @@
     {
       "name": "RubyEmbeddedRabbitStewRecipe",
       "type": "recipe",
-      "sortid": 108,
+      "sortid": 193,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -766,7 +766,7 @@
     {
       "name": "RubyEmbeddedRabbitStewRecipe1",
       "type": "recipe",
-      "sortid": 109,
+      "sortid": 194,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -776,7 +776,7 @@
     {
       "name": "AquamarineEmbeddedSuspiciousStew",
       "type": "food",
-      "sortid": 116,
+      "sortid": 41,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -786,7 +786,7 @@
     {
       "name": "EmeraldEmbeddedSuspiciousStew",
       "type": "food",
-      "sortid": 117,
+      "sortid": 45,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -796,7 +796,7 @@
     {
       "name": "LapisEmbeddedSuspiciousStew",
       "type": "food",
-      "sortid": 118,
+      "sortid": 49,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -806,7 +806,7 @@
     {
       "name": "OnyxEmbeddedSuspiciousStew",
       "type": "food",
-      "sortid": 119,
+      "sortid": 53,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -816,7 +816,7 @@
     {
       "name": "RubyEmbeddedSuspiciousStew",
       "type": "food",
-      "sortid": 120,
+      "sortid": 57,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -826,7 +826,7 @@
     {
       "name": "StrangeGel",
       "type": "item",
-      "sortid": 132,
+      "sortid": 37,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -836,7 +836,7 @@
     {
       "name": "AqEat",
       "type": "procedure",
-      "sortid": 136,
+      "sortid": 195,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -854,7 +854,7 @@
     {
       "name": "EmEat",
       "type": "procedure",
-      "sortid": 137,
+      "sortid": 196,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -872,7 +872,7 @@
     {
       "name": "LaEat",
       "type": "procedure",
-      "sortid": 138,
+      "sortid": 197,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -890,7 +890,7 @@
     {
       "name": "OnEat",
       "type": "procedure",
-      "sortid": 139,
+      "sortid": 198,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -908,7 +908,7 @@
     {
       "name": "RuEat",
       "type": "procedure",
-      "sortid": 140,
+      "sortid": 199,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -926,7 +926,7 @@
     {
       "name": "GetAllRings",
       "type": "achievement",
-      "sortid": 143,
+      "sortid": 200,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -936,7 +936,7 @@
     {
       "name": "GiveThanosAdvancement",
       "type": "procedure",
-      "sortid": 143,
+      "sortid": 201,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -954,7 +954,7 @@
     {
       "name": "RubyMushroom",
       "type": "procedure",
-      "sortid": 148,
+      "sortid": 202,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -992,7 +992,7 @@
     {
       "name": "Mooshrooms",
       "type": "tag",
-      "sortid": 149,
+      "sortid": 203,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1002,7 +1002,7 @@
     {
       "name": "Buffer",
       "type": "block",
-      "sortid": 150,
+      "sortid": 58,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1012,7 +1012,7 @@
     {
       "name": "BufferOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 151,
+      "sortid": 204,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1046,7 +1046,7 @@
     {
       "name": "BufferParticleSpawningCondition",
       "type": "procedure",
-      "sortid": 151,
+      "sortid": 205,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1076,7 +1076,7 @@
     {
       "name": "BufferBlockIsPlacedBy",
       "type": "procedure",
-      "sortid": 152,
+      "sortid": 206,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1110,7 +1110,7 @@
     {
       "name": "BufferBlockDestroyedByPlayer",
       "type": "procedure",
-      "sortid": 153,
+      "sortid": 207,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1144,7 +1144,7 @@
     {
       "name": "BufferRecipe",
       "type": "recipe",
-      "sortid": 154,
+      "sortid": 208,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1154,7 +1154,7 @@
     {
       "name": "PistonNoise",
       "type": "procedure",
-      "sortid": 159,
+      "sortid": 209,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1188,7 +1188,7 @@
     {
       "name": "BufferParticle",
       "type": "particle",
-      "sortid": 176,
+      "sortid": 210,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1198,7 +1198,7 @@
     {
       "name": "Y4StoreInfo",
       "type": "procedure",
-      "sortid": 177,
+      "sortid": 211,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1228,7 +1228,7 @@
     {
       "name": "BuildLatency",
       "type": "procedure",
-      "sortid": 181,
+      "sortid": 212,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1258,7 +1258,7 @@
     {
       "name": "BuildLatency2",
       "type": "procedure",
-      "sortid": 182,
+      "sortid": 213,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1288,7 +1288,7 @@
     {
       "name": "Y3StoreInfo",
       "type": "procedure",
-      "sortid": 183,
+      "sortid": 214,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1318,7 +1318,7 @@
     {
       "name": "Y2StoreInfo",
       "type": "procedure",
-      "sortid": 184,
+      "sortid": 215,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1348,7 +1348,7 @@
     {
       "name": "Y1StoreInfo",
       "type": "procedure",
-      "sortid": 185,
+      "sortid": 216,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1378,7 +1378,7 @@
     {
       "name": "BuildLatency3",
       "type": "procedure",
-      "sortid": 186,
+      "sortid": 217,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1408,7 +1408,7 @@
     {
       "name": "BuildLatency4",
       "type": "procedure",
-      "sortid": 188,
+      "sortid": 218,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1438,7 +1438,7 @@
     {
       "name": "AquamarineGlass",
       "type": "block",
-      "sortid": 189,
+      "sortid": 59,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1448,7 +1448,7 @@
     {
       "name": "Y0StoreInfo",
       "type": "procedure",
-      "sortid": 190,
+      "sortid": 219,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1478,7 +1478,7 @@
     {
       "name": "BuildLatency5",
       "type": "procedure",
-      "sortid": 191,
+      "sortid": 220,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1508,7 +1508,7 @@
     {
       "name": "YN1StoreInfo",
       "type": "procedure",
-      "sortid": 192,
+      "sortid": 221,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1538,7 +1538,7 @@
     {
       "name": "BuildLatency6",
       "type": "procedure",
-      "sortid": 193,
+      "sortid": 222,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1568,7 +1568,7 @@
     {
       "name": "YN2StoreInfo",
       "type": "procedure",
-      "sortid": 194,
+      "sortid": 223,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1598,7 +1598,7 @@
     {
       "name": "BuildLatency7",
       "type": "procedure",
-      "sortid": 195,
+      "sortid": 224,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1628,7 +1628,7 @@
     {
       "name": "AquamarineGlassIsPlaced",
       "type": "procedure",
-      "sortid": 197,
+      "sortid": 225,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1662,7 +1662,7 @@
     {
       "name": "YN3StoreInfo",
       "type": "procedure",
-      "sortid": 198,
+      "sortid": 226,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1692,7 +1692,7 @@
     {
       "name": "BuildLatency8",
       "type": "procedure",
-      "sortid": 199,
+      "sortid": 227,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1722,7 +1722,7 @@
     {
       "name": "YN4StoreInfo",
       "type": "procedure",
-      "sortid": 201,
+      "sortid": 228,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1752,7 +1752,7 @@
     {
       "name": "BuildLatency9",
       "type": "procedure",
-      "sortid": 202,
+      "sortid": 229,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1782,7 +1782,7 @@
     {
       "name": "BufferBlockRemoval",
       "type": "livingentity",
-      "sortid": 203,
+      "sortid": 24,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1792,7 +1792,7 @@
     {
       "name": "ZN3StoreInfo",
       "type": "procedure",
-      "sortid": 204,
+      "sortid": 230,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1822,7 +1822,7 @@
     {
       "name": "BuildLatency10",
       "type": "procedure",
-      "sortid": 204,
+      "sortid": 231,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1852,7 +1852,7 @@
     {
       "name": "AquamarineGlassRecipe",
       "type": "recipe",
-      "sortid": 205,
+      "sortid": 232,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1862,7 +1862,7 @@
     {
       "name": "AquamarineGlassPane",
       "type": "block",
-      "sortid": 243,
+      "sortid": 60,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1872,7 +1872,7 @@
     {
       "name": "WaterWalking",
       "type": "potioneffect",
-      "sortid": 244,
+      "sortid": 233,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1882,7 +1882,7 @@
     {
       "name": "WaterWalkingProcedure",
       "type": "procedure",
-      "sortid": 245,
+      "sortid": 234,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1916,7 +1916,7 @@
     {
       "name": "SnackBulwark",
       "type": "potioneffect",
-      "sortid": 246,
+      "sortid": 235,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1926,7 +1926,7 @@
     {
       "name": "DamageProcedure",
       "type": "procedure",
-      "sortid": 247,
+      "sortid": 236,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1948,7 +1948,7 @@
     {
       "name": "Sturdy",
       "type": "potioneffect",
-      "sortid": 251,
+      "sortid": 237,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1958,7 +1958,7 @@
     {
       "name": "SturdyStartProcedure",
       "type": "procedure",
-      "sortid": 252,
+      "sortid": 238,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1976,7 +1976,7 @@
     {
       "name": "SturdyExpireProcedure",
       "type": "procedure",
-      "sortid": 253,
+      "sortid": 239,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1994,7 +1994,7 @@
     {
       "name": "Motivation",
       "type": "potioneffect",
-      "sortid": 254,
+      "sortid": 240,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2004,7 +2004,7 @@
     {
       "name": "MotivationStartProcedure",
       "type": "procedure",
-      "sortid": 255,
+      "sortid": 241,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2022,7 +2022,7 @@
     {
       "name": "MotivationExpireProcedure",
       "type": "procedure",
-      "sortid": 256,
+      "sortid": 242,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2040,7 +2040,7 @@
     {
       "name": "Vampirism",
       "type": "potioneffect",
-      "sortid": 257,
+      "sortid": 243,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2050,7 +2050,7 @@
     {
       "name": "DeathProcedure",
       "type": "procedure",
-      "sortid": 258,
+      "sortid": 244,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2072,7 +2072,7 @@
     {
       "name": "AquamarineRingRecipe",
       "type": "recipe",
-      "sortid": 259,
+      "sortid": 245,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2082,7 +2082,7 @@
     {
       "name": "EmeraldRingRecipe",
       "type": "recipe",
-      "sortid": 260,
+      "sortid": 246,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2092,7 +2092,7 @@
     {
       "name": "LapisRingRecipe",
       "type": "recipe",
-      "sortid": 261,
+      "sortid": 247,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2102,7 +2102,7 @@
     {
       "name": "OnyxRingRecipe",
       "type": "recipe",
-      "sortid": 262,
+      "sortid": 248,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2112,7 +2112,7 @@
     {
       "name": "RubyRingRecipe",
       "type": "recipe",
-      "sortid": 263,
+      "sortid": 249,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2122,7 +2122,7 @@
     {
       "name": "GrantOsmiumIngotRecipes",
       "type": "achievement",
-      "sortid": 282,
+      "sortid": 250,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2132,7 +2132,7 @@
     {
       "name": "GrantAquamarineRecipes",
       "type": "achievement",
-      "sortid": 283,
+      "sortid": 251,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2142,7 +2142,7 @@
     {
       "name": "GrantRubyRecipes",
       "type": "achievement",
-      "sortid": 284,
+      "sortid": 252,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2152,7 +2152,7 @@
     {
       "name": "GrantOnyxRecipes",
       "type": "achievement",
-      "sortid": 285,
+      "sortid": 253,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2162,7 +2162,7 @@
     {
       "name": "GrantGoldIngotRecipes",
       "type": "achievement",
-      "sortid": 286,
+      "sortid": 254,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2172,7 +2172,7 @@
     {
       "name": "GrantEmeraldRecipes",
       "type": "achievement",
-      "sortid": 287,
+      "sortid": 255,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2182,7 +2182,7 @@
     {
       "name": "GrantLapisRecipes",
       "type": "achievement",
-      "sortid": 288,
+      "sortid": 256,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2192,7 +2192,7 @@
     {
       "name": "GrantPistonRecipes",
       "type": "achievement",
-      "sortid": 289,
+      "sortid": 257,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2202,7 +2202,7 @@
     {
       "name": "GrantRedstoneRecipes",
       "type": "achievement",
-      "sortid": 290,
+      "sortid": 258,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2212,7 +2212,7 @@
     {
       "name": "GrantChainBootsRecipes",
       "type": "achievement",
-      "sortid": 291,
+      "sortid": 259,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2222,7 +2222,7 @@
     {
       "name": "GrantIronBootsRecipes",
       "type": "achievement",
-      "sortid": 292,
+      "sortid": 260,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2232,7 +2232,7 @@
     {
       "name": "GrantDiamondBootsRecipes",
       "type": "achievement",
-      "sortid": 293,
+      "sortid": 261,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2242,7 +2242,7 @@
     {
       "name": "GrantGoldenBootsRecipes",
       "type": "achievement",
-      "sortid": 294,
+      "sortid": 262,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2252,7 +2252,7 @@
     {
       "name": "GrantNetheriteBootsRecipes",
       "type": "achievement",
-      "sortid": 295,
+      "sortid": 263,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2262,7 +2262,7 @@
     {
       "name": "GrantLeatherBootsRecipes",
       "type": "achievement",
-      "sortid": 296,
+      "sortid": 264,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2272,7 +2272,7 @@
     {
       "name": "GrantWarpedWartRecipes",
       "type": "achievement",
-      "sortid": 297,
+      "sortid": 265,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2282,7 +2282,7 @@
     {
       "name": "GrantWarpedWartBlockRecipes",
       "type": "achievement",
-      "sortid": 298,
+      "sortid": 266,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2292,7 +2292,7 @@
     {
       "name": "GrantNetherWartBlockRecipes",
       "type": "achievement",
-      "sortid": 299,
+      "sortid": 267,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2302,7 +2302,7 @@
     {
       "name": "AquamarineGlassPaneRecipe",
       "type": "recipe",
-      "sortid": 300,
+      "sortid": 268,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2312,7 +2312,7 @@
     {
       "name": "GrantAquamarineGlassRecipe",
       "type": "achievement",
-      "sortid": 301,
+      "sortid": 269,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2322,7 +2322,7 @@
     {
       "name": "GrantGoldBlockRecipes",
       "type": "achievement",
-      "sortid": 306,
+      "sortid": 270,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2332,7 +2332,7 @@
     {
       "name": "BrushBreakBlockProcedure",
       "type": "procedure",
-      "sortid": 307,
+      "sortid": 271,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2370,7 +2370,7 @@
     {
       "name": "Brush",
       "type": "tool",
-      "sortid": 307,
+      "sortid": 6,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2380,7 +2380,7 @@
     {
       "name": "AirVent",
       "type": "block",
-      "sortid": 310,
+      "sortid": 62,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2390,7 +2390,7 @@
     {
       "name": "HotAirVent",
       "type": "block",
-      "sortid": 311,
+      "sortid": 272,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2400,7 +2400,7 @@
     {
       "name": "ColdAirVent",
       "type": "block",
-      "sortid": 312,
+      "sortid": 273,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2410,7 +2410,7 @@
     {
       "name": "AirVentActivateProcedure",
       "type": "procedure",
-      "sortid": 313,
+      "sortid": 274,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2440,7 +2440,7 @@
     {
       "name": "AirVentUpdateProcedure",
       "type": "procedure",
-      "sortid": 314,
+      "sortid": 275,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2470,7 +2470,7 @@
     {
       "name": "PlayerTickProcedure",
       "type": "procedure",
-      "sortid": 315,
+      "sortid": 276,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2504,7 +2504,7 @@
     {
       "name": "HotAir",
       "type": "particle",
-      "sortid": 316,
+      "sortid": 277,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2514,7 +2514,7 @@
     {
       "name": "AirVentRecipe",
       "type": "recipe",
-      "sortid": 317,
+      "sortid": 278,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2524,7 +2524,7 @@
     {
       "name": "GrantIronIngotRecipes",
       "type": "achievement",
-      "sortid": 318,
+      "sortid": 279,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2534,7 +2534,7 @@
     {
       "name": "GrantIronBarsRecipes",
       "type": "achievement",
-      "sortid": 319,
+      "sortid": 280,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2544,7 +2544,7 @@
     {
       "name": "BrushBreakGravel",
       "type": "loottable",
-      "sortid": 326,
+      "sortid": 281,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2554,7 +2554,7 @@
     {
       "name": "Koi",
       "type": "food",
-      "sortid": 327,
+      "sortid": 92,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2564,7 +2564,7 @@
     {
       "name": "GlowKoi",
       "type": "food",
-      "sortid": 328,
+      "sortid": 93,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2574,7 +2574,7 @@
     {
       "name": "Goldfish",
       "type": "food",
-      "sortid": 329,
+      "sortid": 97,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2584,7 +2584,7 @@
     {
       "name": "Crate",
       "type": "block",
-      "sortid": 330,
+      "sortid": 25,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2594,7 +2594,7 @@
     {
       "name": "Swordfish",
       "type": "tool",
-      "sortid": 331,
+      "sortid": 145,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2604,7 +2604,7 @@
     {
       "name": "JungleSnapper",
       "type": "food",
-      "sortid": 332,
+      "sortid": 141,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2614,7 +2614,7 @@
     {
       "name": "Fishling",
       "type": "food",
-      "sortid": 333,
+      "sortid": 103,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2624,7 +2624,7 @@
     {
       "name": "Fishing",
       "type": "tab",
-      "sortid": 334,
+      "sortid": 282,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2634,7 +2634,7 @@
     {
       "name": "BlueJellyfish",
       "type": "item",
-      "sortid": 334,
+      "sortid": 108,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2644,7 +2644,7 @@
     {
       "name": "RedJellyfish",
       "type": "item",
-      "sortid": 335,
+      "sortid": 109,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2654,7 +2654,7 @@
     {
       "name": "GreenJellyfish",
       "type": "item",
-      "sortid": 336,
+      "sortid": 107,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2664,7 +2664,7 @@
     {
       "name": "Nautilus",
       "type": "item",
-      "sortid": 337,
+      "sortid": 112,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2674,7 +2674,7 @@
     {
       "name": "EffervescentWatcher",
       "type": "food",
-      "sortid": 338,
+      "sortid": 104,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2684,7 +2684,7 @@
     {
       "name": "CrabCannon",
       "type": "rangeditem",
-      "sortid": 339,
+      "sortid": 146,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2694,7 +2694,7 @@
     {
       "name": "Crab",
       "type": "item",
-      "sortid": 340,
+      "sortid": 133,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2704,7 +2704,7 @@
     {
       "name": "RawOsmium",
       "type": "item",
-      "sortid": 342,
+      "sortid": 15,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2714,7 +2714,7 @@
     {
       "name": "DeepslateOsmiumOre",
       "type": "block",
-      "sortid": 345,
+      "sortid": 61,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2724,7 +2724,7 @@
     {
       "name": "OsmiumOre",
       "type": "loottable",
-      "sortid": 346,
+      "sortid": 283,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2734,7 +2734,7 @@
     {
       "name": "CrabCannonRangedItemUsed",
       "type": "procedure",
-      "sortid": 348,
+      "sortid": 284,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2756,7 +2756,7 @@
     {
       "name": "PinkJellyfish",
       "type": "item",
-      "sortid": 349,
+      "sortid": 111,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2766,7 +2766,7 @@
     {
       "name": "YellowJellyfish",
       "type": "item",
-      "sortid": 350,
+      "sortid": 110,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2776,7 +2776,7 @@
     {
       "name": "Copperfish",
       "type": "item",
-      "sortid": 351,
+      "sortid": 127,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2786,7 +2786,7 @@
     {
       "name": "Chorusfish",
       "type": "food",
-      "sortid": 352,
+      "sortid": 106,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2796,7 +2796,7 @@
     {
       "name": "Glassfish",
       "type": "item",
-      "sortid": 353,
+      "sortid": 144,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2806,7 +2806,7 @@
     {
       "name": "Bass",
       "type": "food",
-      "sortid": 354,
+      "sortid": 134,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2816,7 +2816,7 @@
     {
       "name": "OsmiumIngotRecipe",
       "type": "recipe",
-      "sortid": 358,
+      "sortid": 285,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2826,7 +2826,7 @@
     {
       "name": "BlastingOsmiumIngotRecipe",
       "type": "recipe",
-      "sortid": 359,
+      "sortid": 286,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2836,7 +2836,7 @@
     {
       "name": "ShroomyKoi",
       "type": "food",
-      "sortid": 360,
+      "sortid": 95,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2846,7 +2846,7 @@
     {
       "name": "Soulscale",
       "type": "food",
-      "sortid": 361,
+      "sortid": 116,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2856,7 +2856,7 @@
     {
       "name": "GoldenSkiffia",
       "type": "food",
-      "sortid": 362,
+      "sortid": 100,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2866,7 +2866,7 @@
     {
       "name": "NightKoi",
       "type": "food",
-      "sortid": 363,
+      "sortid": 94,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2876,7 +2876,7 @@
     {
       "name": "MoltenCharr",
       "type": "item",
-      "sortid": 364,
+      "sortid": 115,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2886,7 +2886,7 @@
     {
       "name": "RubyGrapplingHook",
       "type": "rangeditem",
-      "sortid": 365,
+      "sortid": 33,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2896,7 +2896,7 @@
     {
       "name": "AquamarineGrapplingHook",
       "type": "rangeditem",
-      "sortid": 366,
+      "sortid": 34,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2906,7 +2906,7 @@
     {
       "name": "OnyxGrapplingHook",
       "type": "rangeditem",
-      "sortid": 367,
+      "sortid": 35,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2916,7 +2916,7 @@
     {
       "name": "GoldBass",
       "type": "food",
-      "sortid": 369,
+      "sortid": 135,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2926,7 +2926,7 @@
     {
       "name": "Scallop",
       "type": "item",
-      "sortid": 370,
+      "sortid": 132,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2936,7 +2936,7 @@
     {
       "name": "Shulkfish",
       "type": "food",
-      "sortid": 371,
+      "sortid": 105,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2946,7 +2946,7 @@
     {
       "name": "HumuhumunukunukuapuaA",
       "type": "food",
-      "sortid": 372,
+      "sortid": 143,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2956,7 +2956,7 @@
     {
       "name": "Minnow",
       "type": "food",
-      "sortid": 373,
+      "sortid": 101,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2966,7 +2966,7 @@
     {
       "name": "Anchovy",
       "type": "food",
-      "sortid": 374,
+      "sortid": 102,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2976,7 +2976,7 @@
     {
       "name": "Seahorse",
       "type": "item",
-      "sortid": 375,
+      "sortid": 137,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2986,7 +2986,7 @@
     {
       "name": "Pupfish",
       "type": "food",
-      "sortid": 376,
+      "sortid": 98,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -2996,7 +2996,7 @@
     {
       "name": "SavannaTetra",
       "type": "food",
-      "sortid": 377,
+      "sortid": 99,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3006,7 +3006,7 @@
     {
       "name": "Netherragfish",
       "type": "item",
-      "sortid": 378,
+      "sortid": 114,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3016,7 +3016,7 @@
     {
       "name": "SilverEye",
       "type": "food",
-      "sortid": 379,
+      "sortid": 138,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3026,7 +3026,7 @@
     {
       "name": "Voidswimmer",
       "type": "item",
-      "sortid": 380,
+      "sortid": 128,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3036,7 +3036,7 @@
     {
       "name": "SkeletalEel",
       "type": "item",
-      "sortid": 381,
+      "sortid": 129,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3046,7 +3046,7 @@
     {
       "name": "LapisOrefish",
       "type": "item",
-      "sortid": 382,
+      "sortid": 120,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3056,7 +3056,7 @@
     {
       "name": "RubyOrefish",
       "type": "item",
-      "sortid": 383,
+      "sortid": 121,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3066,7 +3066,7 @@
     {
       "name": "DiamondOrefish",
       "type": "item",
-      "sortid": 384,
+      "sortid": 122,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3076,7 +3076,7 @@
     {
       "name": "GoldOrefish",
       "type": "item",
-      "sortid": 385,
+      "sortid": 123,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3086,7 +3086,7 @@
     {
       "name": "OnyxOrefish",
       "type": "item",
-      "sortid": 386,
+      "sortid": 124,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3096,7 +3096,7 @@
     {
       "name": "OsmiumOrefish",
       "type": "item",
-      "sortid": 387,
+      "sortid": 125,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3106,7 +3106,7 @@
     {
       "name": "EmeraldOrefish",
       "type": "item",
-      "sortid": 388,
+      "sortid": 126,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3116,7 +3116,7 @@
     {
       "name": "WatchfulReedfish",
       "type": "item",
-      "sortid": 389,
+      "sortid": 130,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3126,7 +3126,7 @@
     {
       "name": "Flowerfish",
       "type": "item",
-      "sortid": 390,
+      "sortid": 142,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3136,7 +3136,7 @@
     {
       "name": "Lacuna",
       "type": "potioneffect",
-      "sortid": 391,
+      "sortid": 287,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3146,7 +3146,7 @@
     {
       "name": "LacunaPotion",
       "type": "potion",
-      "sortid": 392,
+      "sortid": 288,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3156,7 +3156,7 @@
     {
       "name": "BrewLacunaPotion",
       "type": "recipe",
-      "sortid": 393,
+      "sortid": 289,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3166,7 +3166,7 @@
     {
       "name": "GrantEffervescentWatcherRecipes",
       "type": "achievement",
-      "sortid": 394,
+      "sortid": 290,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3176,7 +3176,7 @@
     {
       "name": "Cuttlefish",
       "type": "item",
-      "sortid": 399,
+      "sortid": 140,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3186,7 +3186,7 @@
     {
       "name": "SepiaDye",
       "type": "item",
-      "sortid": 400,
+      "sortid": 26,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3196,7 +3196,7 @@
     {
       "name": "SepiaDyeRecipe",
       "type": "recipe",
-      "sortid": 401,
+      "sortid": 291,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3206,7 +3206,7 @@
     {
       "name": "GrantCuttlefishRecipes",
       "type": "achievement",
-      "sortid": 402,
+      "sortid": 292,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3216,7 +3216,7 @@
     {
       "name": "SepiaWool",
       "type": "block",
-      "sortid": 403,
+      "sortid": 148,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3226,7 +3226,7 @@
     {
       "name": "SepiaCarpet",
       "type": "block",
-      "sortid": 404,
+      "sortid": 149,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3236,7 +3236,7 @@
     {
       "name": "SepiaTerracotta",
       "type": "block",
-      "sortid": 405,
+      "sortid": 150,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3246,7 +3246,7 @@
     {
       "name": "SepiaStainedGlass",
       "type": "block",
-      "sortid": 406,
+      "sortid": 151,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3256,7 +3256,7 @@
     {
       "name": "SepiaStainedGlassPane",
       "type": "block",
-      "sortid": 407,
+      "sortid": 152,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3266,7 +3266,7 @@
     {
       "name": "SepiaConcretePowder",
       "type": "block",
-      "sortid": 408,
+      "sortid": 153,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3276,7 +3276,7 @@
     {
       "name": "SepiaConcrete",
       "type": "block",
-      "sortid": 409,
+      "sortid": 154,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3286,7 +3286,7 @@
     {
       "name": "AdjacentBlockUpdate",
       "type": "procedure",
-      "sortid": 410,
+      "sortid": 293,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3320,7 +3320,7 @@
     {
       "name": "SepiaWoolRecipe",
       "type": "recipe",
-      "sortid": 411,
+      "sortid": 294,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3330,7 +3330,7 @@
     {
       "name": "SepiaTerracottaRecipe",
       "type": "recipe",
-      "sortid": 412,
+      "sortid": 295,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3340,7 +3340,7 @@
     {
       "name": "SepiaConcretePowderRecipe",
       "type": "recipe",
-      "sortid": 413,
+      "sortid": 296,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3350,7 +3350,7 @@
     {
       "name": "SepiaGlassRecipe",
       "type": "recipe",
-      "sortid": 414,
+      "sortid": 297,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3360,7 +3360,7 @@
     {
       "name": "SepiaGlassPaneRecipe",
       "type": "recipe",
-      "sortid": 415,
+      "sortid": 298,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3370,7 +3370,7 @@
     {
       "name": "SepiaCarpetRecipe",
       "type": "recipe",
-      "sortid": 416,
+      "sortid": 299,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3380,7 +3380,7 @@
     {
       "name": "SepiaCarpetRecipe1",
       "type": "recipe",
-      "sortid": 417,
+      "sortid": 300,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3390,7 +3390,7 @@
     {
       "name": "SepiaPaintingRecipe",
       "type": "recipe",
-      "sortid": 418,
+      "sortid": 301,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3400,7 +3400,7 @@
     {
       "name": "SepiaBedRecipe",
       "type": "recipe",
-      "sortid": 419,
+      "sortid": 302,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3410,7 +3410,7 @@
     {
       "name": "SepiaBedRecipe1",
       "type": "recipe",
-      "sortid": 420,
+      "sortid": 303,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3420,7 +3420,7 @@
     {
       "name": "GrantSepiaRecipes",
       "type": "achievement",
-      "sortid": 421,
+      "sortid": 304,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3430,7 +3430,7 @@
     {
       "name": "GrantSepiaWoolRecipes",
       "type": "achievement",
-      "sortid": 422,
+      "sortid": 305,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3440,7 +3440,7 @@
     {
       "name": "Nulltilus",
       "type": "item",
-      "sortid": 423,
+      "sortid": 113,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3450,7 +3450,7 @@
     {
       "name": "ShiitakeOrfe",
       "type": "food",
-      "sortid": 424,
+      "sortid": 117,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3460,7 +3460,7 @@
     {
       "name": "DryadsAequoria",
       "type": "item",
-      "sortid": 425,
+      "sortid": 119,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3470,7 +3470,7 @@
     {
       "name": "FungiGobi",
       "type": "item",
-      "sortid": 426,
+      "sortid": 118,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3480,7 +3480,7 @@
     {
       "name": "BadlandsCarp",
       "type": "item",
-      "sortid": 427,
+      "sortid": 136,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3490,7 +3490,7 @@
     {
       "name": "HaloclineDiverfish",
       "type": "item",
-      "sortid": 428,
+      "sortid": 139,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3500,7 +3500,7 @@
     {
       "name": "FishingProcedure",
       "type": "procedure",
-      "sortid": 429,
+      "sortid": 306,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3534,7 +3534,7 @@
     {
       "name": "ColdOceanFish",
       "type": "procedure",
-      "sortid": 429,
+      "sortid": 307,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3568,7 +3568,7 @@
     {
       "name": "BaitCheck",
       "type": "procedure",
-      "sortid": 431,
+      "sortid": 308,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3591,7 +3591,7 @@
     {
       "name": "LuckCheck",
       "type": "procedure",
-      "sortid": 433,
+      "sortid": 309,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3610,7 +3610,7 @@
     {
       "name": "RemoveBait",
       "type": "procedure",
-      "sortid": 434,
+      "sortid": 310,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3632,7 +3632,7 @@
     {
       "name": "DetermineBiome",
       "type": "procedure",
-      "sortid": 435,
+      "sortid": 311,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3666,7 +3666,7 @@
     {
       "name": "BrineKoi",
       "type": "food",
-      "sortid": 436,
+      "sortid": 96,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3676,7 +3676,7 @@
     {
       "name": "RubyGrapple",
       "type": "procedure",
-      "sortid": 437,
+      "sortid": 312,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3710,7 +3710,7 @@
     {
       "name": "AquamarineConstruct",
       "type": "block",
-      "sortid": 438,
+      "sortid": 313,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3720,7 +3720,7 @@
     {
       "name": "AquamarineGrappleAir",
       "type": "procedure",
-      "sortid": 438,
+      "sortid": 314,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3754,7 +3754,7 @@
     {
       "name": "AquamarineConstructTick",
       "type": "procedure",
-      "sortid": 439,
+      "sortid": 315,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3784,7 +3784,7 @@
     {
       "name": "OnyxGrapple1",
       "type": "procedure",
-      "sortid": 440,
+      "sortid": 316,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3806,7 +3806,7 @@
     {
       "name": "OnyxGrapple2",
       "type": "procedure",
-      "sortid": 440,
+      "sortid": 317,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3836,7 +3836,7 @@
     {
       "name": "SeaUrchin",
       "type": "block",
-      "sortid": 441,
+      "sortid": 131,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3846,7 +3846,7 @@
     {
       "name": "ValidPlacementCondition",
       "type": "procedure",
-      "sortid": 442,
+      "sortid": 318,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3881,7 +3881,7 @@
     {
       "name": "SepiaCarpetValidPlacement",
       "type": "procedure",
-      "sortid": 443,
+      "sortid": 319,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3912,7 +3912,7 @@
     {
       "name": "StungBySeaUrchinProcedure",
       "type": "procedure",
-      "sortid": 444,
+      "sortid": 320,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3946,7 +3946,7 @@
     {
       "name": "OsmiumBlock",
       "type": "block",
-      "sortid": 445,
+      "sortid": 155,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3956,7 +3956,7 @@
     {
       "name": "OsmiumPillar",
       "type": "block",
-      "sortid": 446,
+      "sortid": 156,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3966,7 +3966,7 @@
     {
       "name": "OsmiumTiles",
       "type": "block",
-      "sortid": 447,
+      "sortid": 157,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3976,7 +3976,7 @@
     {
       "name": "OsmiumBlockRecipe",
       "type": "recipe",
-      "sortid": 448,
+      "sortid": 321,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3986,7 +3986,7 @@
     {
       "name": "OsmiumIngotFromBlockRecipe",
       "type": "recipe",
-      "sortid": 449,
+      "sortid": 322,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3996,7 +3996,7 @@
     {
       "name": "OsmiumPillarRecipe",
       "type": "recipe",
-      "sortid": 450,
+      "sortid": 323,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4006,7 +4006,7 @@
     {
       "name": "OsmiumTilesRecipe",
       "type": "recipe",
-      "sortid": 451,
+      "sortid": 324,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4016,7 +4016,7 @@
     {
       "name": "StonecuttingOsmiumPillarRecipe",
       "type": "recipe",
-      "sortid": 452,
+      "sortid": 325,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4026,7 +4026,7 @@
     {
       "name": "StonecuttingOsmiumTilesRecipe",
       "type": "recipe",
-      "sortid": 453,
+      "sortid": 326,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4036,7 +4036,7 @@
     {
       "name": "GrantOsmiumBlockRecipes",
       "type": "achievement",
-      "sortid": 454,
+      "sortid": 327,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4046,7 +4046,7 @@
     {
       "name": "Haywire",
       "type": "potioneffect",
-      "sortid": 455,
+      "sortid": 328,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4056,7 +4056,7 @@
     {
       "name": "HaywireProcedure",
       "type": "procedure",
-      "sortid": 456,
+      "sortid": 329,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4074,7 +4074,7 @@
     {
       "name": "HaywirePotion",
       "type": "potion",
-      "sortid": 457,
+      "sortid": 330,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4084,7 +4084,7 @@
     {
       "name": "HaywirePotionRecipe",
       "type": "recipe",
-      "sortid": 458,
+      "sortid": 331,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4094,7 +4094,7 @@
     {
       "name": "Peace",
       "type": "potioneffect",
-      "sortid": 459,
+      "sortid": 332,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4104,7 +4104,7 @@
     {
       "name": "HurtProcedure",
       "type": "procedure",
-      "sortid": 460,
+      "sortid": 333,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4122,7 +4122,7 @@
     {
       "name": "PeacePotion",
       "type": "potion",
-      "sortid": 461,
+      "sortid": 334,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4132,7 +4132,7 @@
     {
       "name": "PeacePotionRecipe",
       "type": "recipe",
-      "sortid": 462,
+      "sortid": 335,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4142,7 +4142,7 @@
     {
       "name": "CrabCannonHitEntityProcedure",
       "type": "procedure",
-      "sortid": 463,
+      "sortid": 336,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4164,7 +4164,7 @@
     {
       "name": "ExplosiveCrabCannon",
       "type": "rangeditem",
-      "sortid": 464,
+      "sortid": 147,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4174,7 +4174,7 @@
     {
       "name": "ExplosiveCrabCannonHitEntityProcedure",
       "type": "procedure",
-      "sortid": 465,
+      "sortid": 337,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4206,19 +4206,9 @@
       "path": "~/Procedures"
     },
     {
-      "name": "EndurancePotion",
-      "type": "potion",
-      "sortid": 471,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "endurance_potion",
-      "path": "~/Potions"
-    },
-    {
       "name": "Luck",
       "type": "potion",
-      "sortid": 472,
+      "sortid": 339,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4228,7 +4218,7 @@
     {
       "name": "BadLuck",
       "type": "potion",
-      "sortid": 473,
+      "sortid": 340,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4238,7 +4228,7 @@
     {
       "name": "BrewLuckPotion",
       "type": "recipe",
-      "sortid": 474,
+      "sortid": 341,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4248,7 +4238,7 @@
     {
       "name": "BrewBadLuckPotion",
       "type": "recipe",
-      "sortid": 475,
+      "sortid": 342,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4258,7 +4248,7 @@
     {
       "name": "SingingBass",
       "type": "block",
-      "sortid": 476,
+      "sortid": 158,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4268,7 +4258,7 @@
     {
       "name": "SingingSingingBass",
       "type": "block",
-      "sortid": 477,
+      "sortid": 343,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4278,7 +4268,7 @@
     {
       "name": "RightClickSingingBassProcedure",
       "type": "procedure",
-      "sortid": 479,
+      "sortid": 344,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4308,7 +4298,7 @@
     {
       "name": "SingingBassBrokenProcedure",
       "type": "procedure",
-      "sortid": 480,
+      "sortid": 345,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4338,7 +4328,7 @@
     {
       "name": "CityBeacon",
       "type": "painting",
-      "sortid": 481,
+      "sortid": 346,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4348,7 +4338,7 @@
     {
       "name": "Prehydrated",
       "type": "painting",
-      "sortid": 482,
+      "sortid": 347,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4358,7 +4348,7 @@
     {
       "name": "RedRedstoneLamp",
       "type": "block",
-      "sortid": 483,
+      "sortid": 63,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4368,7 +4358,7 @@
     {
       "name": "OrangeRedstoneLamp",
       "type": "block",
-      "sortid": 484,
+      "sortid": 64,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4378,7 +4368,7 @@
     {
       "name": "YellowRedstoneLamp",
       "type": "block",
-      "sortid": 485,
+      "sortid": 65,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4388,7 +4378,7 @@
     {
       "name": "LimeRedstoneLamp",
       "type": "block",
-      "sortid": 486,
+      "sortid": 66,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4398,7 +4388,7 @@
     {
       "name": "GreenRedstoneLamp",
       "type": "block",
-      "sortid": 487,
+      "sortid": 67,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4408,7 +4398,7 @@
     {
       "name": "LightBlueRedstoneLamp",
       "type": "block",
-      "sortid": 488,
+      "sortid": 68,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4418,7 +4408,7 @@
     {
       "name": "CyanRedstoneLamp",
       "type": "block",
-      "sortid": 489,
+      "sortid": 69,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4428,7 +4418,7 @@
     {
       "name": "BlueRedstoneLamp",
       "type": "block",
-      "sortid": 490,
+      "sortid": 70,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4438,7 +4428,7 @@
     {
       "name": "PurpleRedstoneLamp",
       "type": "block",
-      "sortid": 491,
+      "sortid": 71,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4448,7 +4438,7 @@
     {
       "name": "MagentaRedstoneLamp",
       "type": "block",
-      "sortid": 492,
+      "sortid": 72,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4458,7 +4448,7 @@
     {
       "name": "PinkRedstoneLamp",
       "type": "block",
-      "sortid": 493,
+      "sortid": 73,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4468,7 +4458,7 @@
     {
       "name": "WhiteRedstoneLamp",
       "type": "block",
-      "sortid": 494,
+      "sortid": 74,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4478,7 +4468,7 @@
     {
       "name": "LightGreyRedstoneLamp",
       "type": "block",
-      "sortid": 495,
+      "sortid": 75,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4488,7 +4478,7 @@
     {
       "name": "GreyRedstoneLamp",
       "type": "block",
-      "sortid": 496,
+      "sortid": 76,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4498,7 +4488,7 @@
     {
       "name": "BlackRedstoneLamp",
       "type": "block",
-      "sortid": 497,
+      "sortid": 77,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4508,7 +4498,7 @@
     {
       "name": "BrownRedstoneLamp",
       "type": "block",
-      "sortid": 498,
+      "sortid": 78,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4518,7 +4508,7 @@
     {
       "name": "SepiaRedstoneLamp",
       "type": "block",
-      "sortid": 499,
+      "sortid": 79,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4528,7 +4518,7 @@
     {
       "name": "LitRedRestoneLamp",
       "type": "block",
-      "sortid": 500,
+      "sortid": 348,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4538,7 +4528,7 @@
     {
       "name": "LitOrangeRedstoneLamp",
       "type": "block",
-      "sortid": 501,
+      "sortid": 349,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4548,7 +4538,7 @@
     {
       "name": "LitYellowRedstoneLamp",
       "type": "block",
-      "sortid": 502,
+      "sortid": 350,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4558,7 +4548,7 @@
     {
       "name": "LitLimeRedstoneLamp",
       "type": "block",
-      "sortid": 503,
+      "sortid": 351,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4568,7 +4558,7 @@
     {
       "name": "LitGreenRedstoneLamp",
       "type": "block",
-      "sortid": 504,
+      "sortid": 352,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4578,7 +4568,7 @@
     {
       "name": "LitLightBlueRedstoneLamp",
       "type": "block",
-      "sortid": 505,
+      "sortid": 353,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4588,7 +4578,7 @@
     {
       "name": "LitCyanRedstoneLamp",
       "type": "block",
-      "sortid": 506,
+      "sortid": 354,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4598,7 +4588,7 @@
     {
       "name": "LitBlueRedstoneLamp",
       "type": "block",
-      "sortid": 507,
+      "sortid": 355,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4608,7 +4598,7 @@
     {
       "name": "LitPurpleRedstoneLamp",
       "type": "block",
-      "sortid": 508,
+      "sortid": 356,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4618,7 +4608,7 @@
     {
       "name": "LitMagentaRedstoneLamp",
       "type": "block",
-      "sortid": 509,
+      "sortid": 357,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4628,7 +4618,7 @@
     {
       "name": "LitPinkRedstoneLamp",
       "type": "block",
-      "sortid": 510,
+      "sortid": 358,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4638,7 +4628,7 @@
     {
       "name": "LitWhiteRedstoneLamp",
       "type": "block",
-      "sortid": 511,
+      "sortid": 359,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4648,7 +4638,7 @@
     {
       "name": "LitLightGreyRedstoneLamp",
       "type": "block",
-      "sortid": 512,
+      "sortid": 360,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4658,7 +4648,7 @@
     {
       "name": "LitGreyRedstoneLamp",
       "type": "block",
-      "sortid": 513,
+      "sortid": 361,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4668,7 +4658,7 @@
     {
       "name": "LitBlackRedstoneLamp",
       "type": "block",
-      "sortid": 514,
+      "sortid": 362,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4678,7 +4668,7 @@
     {
       "name": "LitBrownRedstoneLamp",
       "type": "block",
-      "sortid": 515,
+      "sortid": 363,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4688,7 +4678,7 @@
     {
       "name": "LitSepiaRedstoneLamp",
       "type": "block",
-      "sortid": 516,
+      "sortid": 364,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4698,7 +4688,7 @@
     {
       "name": "CustomLampCheck",
       "type": "procedure",
-      "sortid": 517,
+      "sortid": 365,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4732,7 +4722,7 @@
     {
       "name": "SingingSingingSingingBass",
       "type": "block",
-      "sortid": 518,
+      "sortid": 366,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4742,7 +4732,7 @@
     {
       "name": "SingingBassRecipe",
       "type": "recipe",
-      "sortid": 519,
+      "sortid": 367,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4752,7 +4742,7 @@
     {
       "name": "GrantBassRecipes",
       "type": "achievement",
-      "sortid": 520,
+      "sortid": 368,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4762,7 +4752,7 @@
     {
       "name": "RedRedstoneLampRecipe",
       "type": "recipe",
-      "sortid": 521,
+      "sortid": 369,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4772,7 +4762,7 @@
     {
       "name": "OrangeRedstoneLampRecipe",
       "type": "recipe",
-      "sortid": 522,
+      "sortid": 370,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4782,7 +4772,7 @@
     {
       "name": "YellowRedstoneLampRecipe",
       "type": "recipe",
-      "sortid": 523,
+      "sortid": 371,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4792,7 +4782,7 @@
     {
       "name": "LimeRedstoneLampRecipe",
       "type": "recipe",
-      "sortid": 524,
+      "sortid": 372,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4802,7 +4792,7 @@
     {
       "name": "GreenRedstoneLampRecipe",
       "type": "recipe",
-      "sortid": 525,
+      "sortid": 373,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4812,7 +4802,7 @@
     {
       "name": "LightBlueRedstoneLampRecipe",
       "type": "recipe",
-      "sortid": 526,
+      "sortid": 374,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4822,7 +4812,7 @@
     {
       "name": "CyanRedstoneLampRecipe",
       "type": "recipe",
-      "sortid": 527,
+      "sortid": 375,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4832,7 +4822,7 @@
     {
       "name": "BlueRedstoneLampRecipe",
       "type": "recipe",
-      "sortid": 528,
+      "sortid": 376,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4842,7 +4832,7 @@
     {
       "name": "PurpleRedstoneLampRecipe",
       "type": "recipe",
-      "sortid": 529,
+      "sortid": 377,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4852,7 +4842,7 @@
     {
       "name": "MagentaRedstoneLampRecipe",
       "type": "recipe",
-      "sortid": 530,
+      "sortid": 378,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4862,7 +4852,7 @@
     {
       "name": "PinkRedstoneLampRecipe",
       "type": "recipe",
-      "sortid": 531,
+      "sortid": 379,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4872,7 +4862,7 @@
     {
       "name": "WhiteRedstoneLampRecipe",
       "type": "recipe",
-      "sortid": 532,
+      "sortid": 380,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4882,7 +4872,7 @@
     {
       "name": "LightGreyRedstoneLampRecipe",
       "type": "recipe",
-      "sortid": 533,
+      "sortid": 381,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4892,7 +4882,7 @@
     {
       "name": "GreyRedstoneLampRecipe",
       "type": "recipe",
-      "sortid": 534,
+      "sortid": 382,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4902,7 +4892,7 @@
     {
       "name": "BlackRedstoneLampRecipe",
       "type": "recipe",
-      "sortid": 535,
+      "sortid": 383,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4912,7 +4902,7 @@
     {
       "name": "BrownRedstoneLampRecipe",
       "type": "recipe",
-      "sortid": 536,
+      "sortid": 384,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4922,7 +4912,7 @@
     {
       "name": "SepiaRedstoneLampRecipe",
       "type": "recipe",
-      "sortid": 537,
+      "sortid": 385,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4932,7 +4922,7 @@
     {
       "name": "GrantRedstoneLampRecipes",
       "type": "achievement",
-      "sortid": 538,
+      "sortid": 386,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4942,7 +4932,7 @@
     {
       "name": "GrantRedDyeRecipes",
       "type": "achievement",
-      "sortid": 539,
+      "sortid": 387,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4952,7 +4942,7 @@
     {
       "name": "GrantOrangeDyeRecipes",
       "type": "achievement",
-      "sortid": 540,
+      "sortid": 388,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4962,7 +4952,7 @@
     {
       "name": "GrantYellowDyeRecipes",
       "type": "achievement",
-      "sortid": 541,
+      "sortid": 389,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4972,7 +4962,7 @@
     {
       "name": "GrantLimeDyeRecipes",
       "type": "achievement",
-      "sortid": 542,
+      "sortid": 390,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4982,7 +4972,7 @@
     {
       "name": "GrantGreenDyeRecipes",
       "type": "achievement",
-      "sortid": 543,
+      "sortid": 391,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -4992,7 +4982,7 @@
     {
       "name": "GrantLightBlueDyeRecipes",
       "type": "achievement",
-      "sortid": 544,
+      "sortid": 392,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5002,7 +4992,7 @@
     {
       "name": "GrantCyanDyeRecipes",
       "type": "achievement",
-      "sortid": 545,
+      "sortid": 393,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5012,7 +5002,7 @@
     {
       "name": "GrantBlueDyeRecipes",
       "type": "achievement",
-      "sortid": 546,
+      "sortid": 394,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5022,7 +5012,7 @@
     {
       "name": "GrantPurpleDyeRecipes",
       "type": "achievement",
-      "sortid": 547,
+      "sortid": 395,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5032,7 +5022,7 @@
     {
       "name": "GrantMagentaDyeRecipes",
       "type": "achievement",
-      "sortid": 548,
+      "sortid": 396,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5042,7 +5032,7 @@
     {
       "name": "GrantPinkDyeRecipes",
       "type": "achievement",
-      "sortid": 549,
+      "sortid": 397,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5052,7 +5042,7 @@
     {
       "name": "GrantWhiteDyeRecipes",
       "type": "achievement",
-      "sortid": 550,
+      "sortid": 398,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5062,7 +5052,7 @@
     {
       "name": "GrantLightGreyDyeRecipes",
       "type": "achievement",
-      "sortid": 551,
+      "sortid": 399,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5072,7 +5062,7 @@
     {
       "name": "GrantGreyDyeRecipes",
       "type": "achievement",
-      "sortid": 552,
+      "sortid": 400,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5082,7 +5072,7 @@
     {
       "name": "GrantBlackDyeRecipes",
       "type": "achievement",
-      "sortid": 553,
+      "sortid": 401,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5092,7 +5082,7 @@
     {
       "name": "GrantBrownDyeRecipes",
       "type": "achievement",
-      "sortid": 554,
+      "sortid": 402,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5100,29 +5090,9 @@
       "path": "~/Recipes/GrantRecipes"
     },
     {
-      "name": "Endurance",
-      "type": "potioneffect",
-      "sortid": 556,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "endurance",
-      "path": "~/Potion Effects"
-    },
-    {
-      "name": "EndurancePotionRecipe",
-      "type": "recipe",
-      "sortid": 557,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "endurance_potion_recipe",
-      "path": "~/Recipes"
-    },
-    {
       "name": "BadlandsFish",
       "type": "procedure",
-      "sortid": 558,
+      "sortid": 405,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5156,7 +5126,7 @@
     {
       "name": "BadlandsPlateauFish",
       "type": "procedure",
-      "sortid": 559,
+      "sortid": 406,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5190,7 +5160,7 @@
     {
       "name": "BambooJungleFish",
       "type": "procedure",
-      "sortid": 560,
+      "sortid": 407,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5224,7 +5194,7 @@
     {
       "name": "BambooJungleHillsFish",
       "type": "procedure",
-      "sortid": 561,
+      "sortid": 408,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5258,7 +5228,7 @@
     {
       "name": "BeachFish",
       "type": "procedure",
-      "sortid": 562,
+      "sortid": 409,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5292,7 +5262,7 @@
     {
       "name": "DarkForestFish",
       "type": "procedure",
-      "sortid": 563,
+      "sortid": 410,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5326,7 +5296,7 @@
     {
       "name": "DarkForestHillsFish",
       "type": "procedure",
-      "sortid": 564,
+      "sortid": 411,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5360,7 +5330,7 @@
     {
       "name": "DevSalmon",
       "type": "item",
-      "sortid": 565,
+      "sortid": 16,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5370,7 +5340,7 @@
     {
       "name": "DeepColdOceanFish",
       "type": "procedure",
-      "sortid": 566,
+      "sortid": 412,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5404,7 +5374,7 @@
     {
       "name": "DeepFrozenOceanFish",
       "type": "procedure",
-      "sortid": 567,
+      "sortid": 413,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5438,7 +5408,7 @@
     {
       "name": "DeepLukewarmOceanFish",
       "type": "procedure",
-      "sortid": 568,
+      "sortid": 414,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5472,7 +5442,7 @@
     {
       "name": "DeepOceanFish",
       "type": "procedure",
-      "sortid": 569,
+      "sortid": 415,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -5506,11 +5476,711 @@
     {
       "name": "DeepWarmOceanFish",
       "type": "procedure",
-      "sortid": 570,
+      "sortid": 416,
       "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "deep_warm_ocean_fish",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Fishing"
+    },
+    {
+      "name": "WhitePearl",
+      "type": "item",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "white_pearl",
+      "path": "~/Items"
+    },
+    {
+      "name": "PinkPearl",
+      "type": "item",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pink_pearl",
+      "path": "~/Items"
+    },
+    {
+      "name": "MaroonPearl",
+      "type": "item",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "maroon_pearl",
+      "path": "~/Items"
+    },
+    {
+      "name": "BluePearl",
+      "type": "item",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blue_pearl",
+      "path": "~/Items"
+    },
+    {
+      "name": "BlackPearl",
+      "type": "item",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "black_pearl",
+      "path": "~/Items"
+    },
+    {
+      "name": "GoldPearl",
+      "type": "item",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gold_pearl",
+      "path": "~/Items"
+    },
+    {
+      "name": "PinkPearlButton",
+      "type": "block",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pink_pearl_button",
+      "path": "~/Blocks"
+    },
+    {
+      "name": "MaroonPearlButton",
+      "type": "block",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "maroon_pearl_button",
+      "path": "~/Blocks"
+    },
+    {
+      "name": "BluePearlButton",
+      "type": "block",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blue_pearl_button",
+      "path": "~/Blocks"
+    },
+    {
+      "name": "BlackPearlButton",
+      "type": "block",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "black_pearl_button",
+      "path": "~/Blocks"
+    },
+    {
+      "name": "GoldPearlButton",
+      "type": "block",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gold_pearl_button",
+      "path": "~/Blocks"
+    },
+    {
+      "name": "WhitePearlButton",
+      "type": "block",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "white_pearl_button",
+      "path": "~/Blocks"
+    },
+    {
+      "name": "WhitePearlPressurePlate",
+      "type": "block",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "white_pearl_pressure_plate",
+      "path": "~/Blocks"
+    },
+    {
+      "name": "PinkPearlPressurePlate",
+      "type": "block",
+      "sortid": 87,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pink_pearl_pressure_plate",
+      "path": "~/Blocks"
+    },
+    {
+      "name": "MaroonPearlPressurePlate",
+      "type": "block",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "maroon_pearl_pressure_plate",
+      "path": "~/Blocks"
+    },
+    {
+      "name": "BluePearlPressurePlate",
+      "type": "block",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blue_pearl_pressure_plate",
+      "path": "~/Blocks"
+    },
+    {
+      "name": "BlackPearlPressurePlate",
+      "type": "block",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "black_pearl_pressure_plate",
+      "path": "~/Blocks"
+    },
+    {
+      "name": "GoldPearlPressurePlate",
+      "type": "block",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gold_pearl_pressure_plate",
+      "path": "~/Blocks"
+    },
+    {
+      "name": "WhitePearlButtonRecipe",
+      "type": "recipe",
+      "sortid": 417,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "white_pearl_button_recipe",
+      "path": "~/Recipes"
+    },
+    {
+      "name": "PinkPearlButtonRecipe",
+      "type": "recipe",
+      "sortid": 418,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pink_pearl_button_recipe",
+      "path": "~/Recipes"
+    },
+    {
+      "name": "MaroonPearlButtonRecipe",
+      "type": "recipe",
+      "sortid": 419,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "maroon_pearl_button_recipe",
+      "path": "~/Recipes"
+    },
+    {
+      "name": "BluePearlButtonRecipe",
+      "type": "recipe",
+      "sortid": 420,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blue_pearl_button_recipe",
+      "path": "~/Recipes"
+    },
+    {
+      "name": "BlackPearlButtonRecipe",
+      "type": "recipe",
+      "sortid": 421,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "black_pearl_button_recipe",
+      "path": "~/Recipes"
+    },
+    {
+      "name": "GoldPearlButtonRecipe",
+      "type": "recipe",
+      "sortid": 422,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gold_pearl_button_recipe",
+      "path": "~/Recipes"
+    },
+    {
+      "name": "WhitePearlPressurePlateRecipe",
+      "type": "recipe",
+      "sortid": 423,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "white_pearl_pressure_plate_recipe",
+      "path": "~/Recipes"
+    },
+    {
+      "name": "PinkPearlPressurePlateRecipe",
+      "type": "recipe",
+      "sortid": 424,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pink_pearl_pressure_plate_recipe",
+      "path": "~/Recipes"
+    },
+    {
+      "name": "MaroonPearlPressurePlateRecipe",
+      "type": "recipe",
+      "sortid": 425,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "maroon_pearl_pressure_plate_recipe",
+      "path": "~/Recipes"
+    },
+    {
+      "name": "BluePearlPressurePlateRecipe",
+      "type": "recipe",
+      "sortid": 426,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blue_pearl_pressure_plate_recipe",
+      "path": "~/Recipes"
+    },
+    {
+      "name": "BlackPearlPressurePlateRecipe",
+      "type": "recipe",
+      "sortid": 427,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "black_pearl_pressure_plate_recipe",
+      "path": "~/Recipes"
+    },
+    {
+      "name": "GoldPearlPressurePlateRecipe",
+      "type": "recipe",
+      "sortid": 428,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gold_pearl_pressure_plate_recipe",
+      "path": "~/Recipes"
+    },
+    {
+      "name": "GrantWhitePearlRecipes",
+      "type": "achievement",
+      "sortid": 429,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grant_white_pearl_recipes",
+      "path": "~/Recipes/GrantRecipes"
+    },
+    {
+      "name": "GrantPinkPearlRecipes",
+      "type": "achievement",
+      "sortid": 430,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grant_pink_pearl_recipes",
+      "path": "~/Recipes/GrantRecipes"
+    },
+    {
+      "name": "GrantMaroonPearlRecipes",
+      "type": "achievement",
+      "sortid": 431,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grant_maroon_pearl_recipes",
+      "path": "~/Recipes/GrantRecipes"
+    },
+    {
+      "name": "GrantBluePearlRecipes",
+      "type": "achievement",
+      "sortid": 432,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grant_blue_pearl_recipes",
+      "path": "~/Recipes/GrantRecipes"
+    },
+    {
+      "name": "GrantBlackPearlRecipe",
+      "type": "achievement",
+      "sortid": 433,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grant_black_pearl_recipe",
+      "path": "~/Recipes/GrantRecipes"
+    },
+    {
+      "name": "GrantGoldPearlRecipes",
+      "type": "achievement",
+      "sortid": 434,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grant_gold_pearl_recipes",
+      "path": "~/Recipes/GrantRecipes"
+    },
+    {
+      "name": "DesertFish",
+      "type": "procedure",
+      "sortid": 435,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "desert_fish",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Fishing"
+    },
+    {
+      "name": "DesertHillsFish",
+      "type": "procedure",
+      "sortid": 436,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "desert_hills_fish",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Fishing"
+    },
+    {
+      "name": "ScallopCollectionProcedure",
+      "type": "procedure",
+      "sortid": 437,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "scallop_collection_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "DesertLakesFish",
+      "type": "procedure",
+      "sortid": 438,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "desert_lakes_fish",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Fishing"
+    },
+    {
+      "name": "ErodedBadlandsFish",
+      "type": "procedure",
+      "sortid": 439,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "eroded_badlands_fish",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Fishing"
+    },
+    {
+      "name": "FlowerForestFish",
+      "type": "procedure",
+      "sortid": 440,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "flower_forest_fish",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Fishing"
+    },
+    {
+      "name": "BirchForestFish",
+      "type": "procedure",
+      "sortid": 441,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "birch_forest_fish",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Fishing"
+    },
+    {
+      "name": "BirchForestHillsFish",
+      "type": "procedure",
+      "sortid": 442,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "birch_forest_hills_fish",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Fishing"
+    },
+    {
+      "name": "ForestFish",
+      "type": "procedure",
+      "sortid": 443,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "forest_fish",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Fishing"
+    },
+    {
+      "name": "FrozenOceanFish",
+      "type": "procedure",
+      "sortid": 444,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "frozen_ocean_fish",
       "metadata": {
         "dependencies": [
           {
@@ -5601,16 +6271,19 @@
   ],
   "language_map": {
     "en_us": {
-      "item.the_wet_smp_rehydrated.skeletal_eel": "Skeletal Eel",
       "block.the_wet_smp_rehydrated.lit_cyan_redstone_lamp": "Lit Cyan Restone Lamp",
+      "item.the_wet_smp_rehydrated.skeletal_eel": "Skeletal Eel",
       "effect.snack_bulwark": "Snack Bulwark",
       "advancements.grant_ruby_recipes.descr": "a",
       "item.the_wet_smp_rehydrated.molten_charr": "Molten Charr",
       "item.the_wet_smp_rehydrated.explosive_crab_cannon": "Explosive Crab Cannon",
       "block.the_wet_smp_rehydrated.crate": "Crate",
-      "advancements.grant_netherite_boots_recipes.title": "Grant Chain Piston Boots Recipe",
+      "block.the_wet_smp_rehydrated.pink_pearl_button": "Pink Pearl Button",
       "block.the_wet_smp_rehydrated.purple_redstone_lamp": "Purple Redstone Lamp",
+      "advancements.grant_netherite_boots_recipes.title": "Grant Chain Piston Boots Recipe",
       "item.the_wet_smp_rehydrated.lapis_embedded_suspicious_stew": "Lapis Embedded Suspicious Stew",
+      "advancements.grant_maroon_pearl_recipes.title": "Grant Rings Recipe",
+      "advancements.grant_white_pearl_recipes.title": "Grant Rings Recipe",
       "advancements.grant_white_dye_recipes.title": "Grant Rings Recipe",
       "entity.the_wet_smp_rehydrated.buffer_block_removal": "Buffer Block Removal",
       "item.the_wet_smp_rehydrated.osmium_ingot": "Osmium Ingot",
@@ -5619,37 +6292,39 @@
       "item.the_wet_smp_rehydrated.seahorse": "Seahorse",
       "item.the_wet_smp_rehydrated.lapis_embedded_mushroom_stew": "Lapis Embedded Mushroom Stew",
       "item.the_wet_smp_rehydrated.raw_osmium": "Raw Osmium",
-      "item.the_wet_smp_rehydrated.golden_piston_helmet": "Chainmail Piston Boots Helmet",
       "item.the_wet_smp.lapis_embedded_beetroot_soup": "Lapis Embedded Beetroot Soup",
+      "item.the_wet_smp_rehydrated.golden_piston_helmet": "Chainmail Piston Boots Helmet",
       "block.the_wet_smp_rehydrated.lit_light_grey_redstone_lamp": "Lit Light Grey Restone Lamp",
-      "item.the_wet_smp.lapis_embedded_rabbit_stew": "Lapis Embedded Rabbit Stew",
+      "item.the_wet_smp_rehydrated.gold_pearl": "Gold Pearl",
       "advancements.grant_sepia_wool_recipes.descr": "a",
+      "item.the_wet_smp.lapis_embedded_rabbit_stew": "Lapis Embedded Rabbit Stew",
       "item.the_wet_smp.voidswimmer": "Voidswimmer",
       "item.minecraft.splash_potion.effect.haywire_potion": "Splash Potion of Haywire",
       "item.the_wet_smp_rehydrated.leather_piston_chestplate": "Leather Piston Boots Body",
       "block.the_wet_smp_rehydrated.deepslate_osmium_ore": "Deepslate Osmium Ore",
       "item.the_wet_smp.golden_piston_helmet": "Chainmail Piston Boots Helmet",
-      "item.the_wet_smp.diamond_piston_boots": "Diamond Piston Boots",
       "effect.vampirism": "Vampirism",
+      "item.the_wet_smp.diamond_piston_boots": "Diamond Piston Boots",
       "item.the_wet_smp.iron_piston_boots": "Iron Piston Boots",
       "item.the_wet_smp.ruby_ring": "Ruby Ring",
       "block.the_wet_smp_rehydrated.singing_singing_bass": "Singing Bass",
       "effect.haywire": "Haywire",
-      "item.the_wet_smp_rehydrated.blue_jellyfish": "Blue Jellyfish",
       "advancements.grant_osmium_ingot_recipes.title": "Grant Rings Recipe",
+      "item.the_wet_smp_rehydrated.blue_jellyfish": "Blue Jellyfish",
       "item.the_wet_smp.aquamarine_embedded_suspicious_stew": "Aquamarine Embedded Suspicious Stew",
       "block.the_wet_smp_rehydrated.light_blue_redstone_lamp": "Light Blue Redstone Lamp",
       "item.the_wet_smp.onyx_ring": "Onyx Ring",
       "item.the_wet_smp.emerald_embedded_beetroot_soup": "Emerald Embedded Beetroot Soup",
       "item.the_wet_smp.aquamarine_embedded_beetroot_soup": "Aquamarine Embedded Beetroot Soup",
       "item.the_wet_smp.crab": "Crab",
-      "item.the_wet_smp_rehydrated.glow_koi": "Glow Koi",
       "item.the_wet_smp.strange_gel": "Strange Gel",
+      "item.the_wet_smp_rehydrated.glow_koi": "Glow Koi",
       "advancements.grant_emerald_recipes.descr": "a",
       "advancements.grant_green_dye_recipes.title": "Grant Rings Recipe",
       "advancements.grant_light_blue_dye_recipes.descr": "a",
       "advancements.grant_yellow_dye_recipes.descr": "a",
       "item.the_wet_smp_rehydrated.red_jellyfish": "Red Jellyfish",
+      "item.the_wet_smp_rehydrated.white_pearl": "White Pearl",
       "item.minecraft.lingering_potion.effect.lacuna_potion": "Lingering Potion of Lacuna",
       "block.the_wet_smp_rehydrated.aquamarine_construct": "Aquamarine Construct",
       "item.the_wet_smp_rehydrated.savanna_tetra": "Savanna Tetra",
@@ -5659,13 +6334,13 @@
       "item.the_wet_smp_rehydrated.netherite_piston_helmet": "Iron Piston Boots Helmet",
       "subtitles.linebreak": "Fishing line breaks",
       "advancements.grant_orange_dye_recipes.descr": "a",
-      "item.minecraft.lingering_potion.effect.endurance_potion": "Lingering Potion of Endurance",
+      "item.the_wet_smp_rehydrated.black_pearl": "Black Pearl",
       "item.the_wet_smp.jungle_snapper": "Jungle Snapper",
       "advancements.grant_aquamarine_recipes.descr": "a",
       "block.the_wet_smp_rehydrated.lit_lime_redstone_lamp": "Lit Lime Restone Lamp",
       "item.the_wet_smp_rehydrated.halocline_diverfish": "Halocline Diverfish",
-      "item.the_wet_smp.minnow": "Minnow",
       "item.the_wet_smp_rehydrated.lapis_ring": "Lapis Ring",
+      "item.the_wet_smp.minnow": "Minnow",
       "advancements.grant_light_grey_dye_recipes.descr": "a",
       "advancements.grant_grey_dye_recipes.title": "Grant Rings Recipe",
       "item.the_wet_smp.ruby_embedded_suspicious_stew": "Ruby Embedded Suspicious Stew",
@@ -5684,6 +6359,7 @@
       "item.the_wet_smp.anchovy": "Anchovy",
       "advancements.grant_blue_dye_recipes.descr": "a",
       "item.the_wet_smp.crab_cannon": "Crab Cannon",
+      "advancements.grant_blue_pearl_recipes.descr": "a",
       "advancements.grant_lapis_recipes.descr": "a",
       "advancements.grant_red_dye_recipes.descr": "a",
       "item.the_wet_smp_rehydrated.diamond_piston_boots": "Diamond Piston Boots",
@@ -5693,12 +6369,12 @@
       "advancements.grant_aquamarine_glass_recipe.descr": "a",
       "item.the_wet_smp_rehydrated.diamond_orefish": "Diamond Orefish",
       "item.the_wet_smp.leather_piston_chestplate": "Leather Piston Boots Body",
-      "item.the_wet_smp_rehydrated.humuhumunukunukuapua_a": "Humuhumunukunuku?pua\u0027a",
+      "item.the_wet_smp_rehydrated.humuhumunukunukuapua_a": "Humuhumunukunukuapua\u0027a",
       "block.the_wet_smp_rehydrated.brown_redstone_lamp": "Brown Redstone Lamp",
       "item.the_wet_smp.warped_wart": "Warped Wart",
       "block.the_wet_smp_rehydrated.osmium_pillar": "Osmium Pillar",
-      "item.the_wet_smp_rehydrated.golden_piston_chestplate": "Chainmail Piston Boots Body",
       "item.the_wet_smp.seahorse": "Seahorse",
+      "item.the_wet_smp_rehydrated.golden_piston_chestplate": "Chainmail Piston Boots Body",
       "item.the_wet_smp.iron_piston_chestplate": "Iron Piston Boots Body",
       "subtitles.veil6": "Eerie noise",
       "advancements.grant_piston_recipes.descr": "a",
@@ -5706,20 +6382,19 @@
       "subtitles.veil8": "Eerie noise",
       "advancements.grant_bass_recipes.descr": "a",
       "subtitles.veil7": "Eerie noise",
-      "subtitles.veil9": "Eerie noise",
       "item.the_wet_smp_rehydrated.netherragfish": "Netherragfish",
+      "subtitles.veil9": "Eerie noise",
       "subtitles.singing_bass.sing": "Billy Bass sings",
       "subtitles.veil2": "Eerie noise",
       "subtitles.veil1": "Eerie noise",
       "subtitles.veil4": "Eerie noise",
       "subtitles.veil3": "Eerie noise",
-      "item.minecraft.splash_potion.effect.endurance_potion": "Splash Potion of Endurance",
       "block.the_wet_smp_rehydrated.yellow_redstone_lamp": "Yellow Redstone Lamp",
       "item.the_wet_smp_rehydrated.aquamarine_grappling_hook": "Aquamarine Grappling Hook",
       "itemGroup.tabfishing": "Fishing Additions",
       "item.the_wet_smp.gold_orefish": "Gold Orefish",
-      "item.the_wet_smp_rehydrated.diamond_piston_leggings": "Chainmail Piston Boots Leggings",
       "item.the_wet_smp_rehydrated.ruby_embedded_beetroot_soup": "Ruby Embedded Beetroot Soup",
+      "item.the_wet_smp_rehydrated.diamond_piston_leggings": "Chainmail Piston Boots Leggings",
       "item.the_wet_smp.onyx_embedded_bowl": "Onyx Embedded Bowl",
       "item.the_wet_smp.scallop": "Scallop",
       "block.the_wet_smp.crate": "Crate",
@@ -5738,16 +6413,19 @@
       "advancements.grant_brown_dye_recipes.title": "Grant Rings Recipe",
       "advancements.grant_black_dye_recipes.title": "Grant Rings Recipe",
       "block.the_wet_smp_rehydrated.lit_green_redstone_lamp": "Lit Green Restone Lamp",
+      "advancements.grant_blue_pearl_recipes.title": "Grant Rings Recipe",
       "item.the_wet_smp.glow_koi": "Glow Koi",
       "advancements.grant_chain_boots_recipes.descr": "a",
       "item.the_wet_smp_rehydrated.swordfish": "Swordfish",
+      "block.the_wet_smp_rehydrated.white_pearl_pressure_plate": "White Pearl Pressure Plate",
       "item.the_wet_smp_rehydrated.osmium_orefish": "Osmium Orefish",
       "item.minecraft.tipped_arrow.effect.lacuna_potion": "Arrow of Lacuna",
       "item.the_wet_smp.shroomy_koi": "Shroomy Koi",
       "item.the_wet_smp.ruby_grappling_hook": "Ruby Grappling Hook",
       "advancements.grant_cuttlefish_recipes.descr": "a",
-      "item.the_wet_smp.golden_piston_chestplate": "Chainmail Piston Boots Body",
+      "item.the_wet_smp_rehydrated.blue_pearl": "Blue Pearl",
       "block.the_wet_smp_rehydrated.lit_red_restone_lamp": "Lit Red Restone Lamp",
+      "item.the_wet_smp.golden_piston_chestplate": "Chainmail Piston Boots Body",
       "advancements.grant_iron_bars_recipes.descr": "a",
       "advancements.grant_pink_dye_recipes.descr": "a",
       "item.the_wet_smp.gold_bass": "Gold Bass",
@@ -5759,10 +6437,13 @@
       "advancements.grant_iron_bars_recipes.title": "Grant Rings Recipe",
       "advancements.grant_redstone_recipes.descr": "a",
       "block.the_wet_smp_rehydrated.singing_bass": "Singing Bass",
+      "advancements.grant_black_pearl_recipe.title": "Grant Rings Recipe",
       "advancements.grant_warped_wart_block_recipes.title": "Grant Warped Wart Recipe",
+      "block.the_wet_smp_rehydrated.pink_pearl_pressure_plate": "Pink Pearl Pressure Plate",
       "block.the_wet_smp.hot_air_vent": "Air Vent",
       "item.the_wet_smp_rehydrated.nautilus": "Nautilus",
       "item.the_wet_smp.aquamarine_embedded_mushroom_stew": "Aquamarine Embedded Mushroom Stew",
+      "advancements.grant_gold_pearl_recipes.title": "Grant Rings Recipe",
       "advancements.grant_effervescent_watcher_recipes.title": "Grant Rings Recipe",
       "item.the_wet_smp_rehydrated.aquamarine_embedded_rabbit_stew": "Aquamarine Embedded Rabbit Stew",
       "item.the_wet_smp_rehydrated.lapis_embedded_bowl": "Lapis Embedded Bowl",
@@ -5773,7 +6454,9 @@
       "block.the_wet_smp_rehydrated.hot_air_vent": "Air Vent",
       "item.the_wet_smp.emerald_embedded_mushroom_stew": "Emerald Embedded Mushroom Stew",
       "item.minecraft.potion.effect.peace_potion": "Potion of Peace",
+      "advancements.grant_pink_pearl_recipes.descr": "a",
       "item.the_wet_smp_rehydrated.aquamarine_embedded_beetroot_soup": "Aquamarine Embedded Beetroot Soup",
+      "block.the_wet_smp_rehydrated.maroon_pearl_pressure_plate": "Maroon Pearl Pressure Plate",
       "item.minecraft.lingering_potion.effect.bad_luck": "Lingering Potion of Bad Luck",
       "block.the_wet_smp_rehydrated.lit_brown_redstone_lamp": "Lit Brown Restone Lamp",
       "item.the_wet_smp.shulkfish": "Shulkfish",
@@ -5786,6 +6469,7 @@
       "item.the_wet_smp.ruby_embedded_bowl": "Ruby Embedded Bowl",
       "block.the_wet_smp_rehydrated.osmium_block": "Block of Osmium",
       "item.the_wet_smp_rehydrated.gold_bass": "Gold Bass",
+      "advancements.grant_white_pearl_recipes.descr": "a",
       "advancements.grant_white_dye_recipes.descr": "a",
       "item.the_wet_smp.swordfish": "Swordfish",
       "block.the_wet_smp_rehydrated.orange_redstone_lamp": "Orange Redstone Lamp",
@@ -5793,7 +6477,6 @@
       "advancements.grant_lime_dye_recipes.descr": "a",
       "advancements.grant_green_dye_recipes.descr": "a",
       "item.the_wet_smp.red_jellyfish": "Red Jellyfish",
-      "item.minecraft.potion.effect.endurance_potion": "Potion of Endurance",
       "block.the_wet_smp_rehydrated.sepia_carpet": "Sepia Carpet",
       "item.the_wet_smp.lapis_embedded_suspicious_stew": "Lapis Embedded Suspicious Stew",
       "item.the_wet_smp.copperfish": "Copperfish",
@@ -5801,18 +6484,18 @@
       "advancements.grant_aquamarine_glass_recipe.title": "Grant Warped Wart Recipe",
       "item.minecraft.tipped_arrow.effect.bad_luck": "Arrow of Bad Luck",
       "item.the_wet_smp.chainmail_piston_leggings": "Chainmail Piston Boots Leggings",
-      "effect.endurance": "Endurance",
       "item.the_wet_smp.onyx_embedded_beetroot_soup": "Onyx Embedded Beetroot Soup",
       "advancements.grant_leather_boots_recipes.title": "Grant Chain Piston Boots Recipe",
       "item.the_wet_smp_rehydrated.shroomy_koi": "Shroomy Koi",
       "item.the_wet_smp_rehydrated.shiitake_orfe": "Shiitake Orfe",
       "block.the_wet_smp_rehydrated.black_redstone_lamp": "Black Redstone Lamp",
+      "block.the_wet_smp_rehydrated.blue_pearl_button": "Blue Pearl Button",
       "item.the_wet_smp_rehydrated.green_jellyfish": "Green Jellyfish",
       "item.the_wet_smp.netherite_piston_boots": "Netherite Piston Boots",
       "item.the_wet_smp_rehydrated.crab_cannon": "Crab Cannon",
       "advancements.grant_cuttlefish_recipes.title": "Grant Rings Recipe",
       "advancements.grant_brown_dye_recipes.descr": "a",
-      "item.minecraft.tipped_arrow.effect.endurance_potion": "Arrow of Endurance",
+      "advancements.grant_black_pearl_recipe.descr": "a",
       "advancements.grant_iron_ingot_recipes.title": "Grant Rings Recipe",
       "item.the_wet_smp_rehydrated.silver_eye": "Silvereye",
       "item.the_wet_smp.golden_piston_leggings": "Chainmail Piston Boots Leggings",
@@ -5830,6 +6513,7 @@
       "item.the_wet_smp_rehydrated.copperfish": "Copperfish",
       "item.the_wet_smp.lapis_orefish": "Lapis Orefish",
       "block.the_wet_smp_rehydrated.light_grey_redstone_lamp": "Light Grey Redstone Lamp",
+      "block.the_wet_smp_rehydrated.white_pearl_button": "White Pearl Button",
       "item.minecraft.lingering_potion.effect.peace_potion": "Lingering Potion of Peace",
       "block.the_wet_smp_rehydrated.grey_redstone_lamp": "Grey Redstone Lamp",
       "block.the_wet_smp_rehydrated.lit_pink_redstone_lamp": "Lit Pink Restone Lamp",
@@ -5861,6 +6545,7 @@
       "advancements.grant_aquamarine_recipes.title": "Grant Rings Recipe",
       "block.the_wet_smp_rehydrated.sepia_terracotta": "Sepia Terracotta",
       "block.the_wet_smp_rehydrated.magenta_redstone_lamp": "Magenta Redstone Lamp",
+      "block.the_wet_smp_rehydrated.gold_pearl_pressure_plate": "Gold Pearl Pressure Plate",
       "item.the_wet_smp.koi": "Koi",
       "item.the_wet_smp.leather_piston_boots": "Leather Piston Boots",
       "block.the_wet_smp_rehydrated.buffer": "Buffer",
@@ -5910,11 +6595,13 @@
       "item.the_wet_smp_rehydrated.aquamarine": "Aquamarine",
       "item.the_wet_smp.nautilus": "Nautilus",
       "item.the_wet_smp_rehydrated.lapis_orefish": "Lapis Orefish",
+      "advancements.grant_maroon_pearl_recipes.descr": "a",
       "advancements.grant_gold_ingot_recipes.title": "Grant Rings Recipe",
       "item.the_wet_smp_rehydrated.strange_gel": "Strange Gel",
       "advancements.grant_ruby_recipes.title": "Grant Rings Recipe",
       "item.the_wet_smp_rehydrated.netherite_piston_leggings": "Iron Piston Boots Leggings",
       "item.the_wet_smp_rehydrated.watchful_reedfish": "Watchful Reedfish",
+      "item.the_wet_smp_rehydrated.pink_pearl": "Pink Pearl",
       "item.the_wet_smp_rehydrated.ruby_ring": "Ruby Ring",
       "block.the_wet_smp_rehydrated.lime_redstone_lamp": "Lime Redstone Lamp",
       "item.the_wet_smp_rehydrated.leather_piston_leggings": "Leather Piston Boots Leggings",
@@ -5924,6 +6611,7 @@
       "item.minecraft.tipped_arrow.effect.luck": "Arrow of Luck",
       "advancements.grant_iron_ingot_recipes.descr": "a",
       "effect.water_walking": "Water Walking",
+      "advancements.grant_gold_pearl_recipes.descr": "a",
       "advancements.get_all_rings.descr": "Obtain all five Gem Rings",
       "advancements.grant_sepia_recipes.title": "Grant Rings Recipe",
       "item.the_wet_smp_rehydrated.iron_piston_leggings": "Iron Piston Boots Leggings",
@@ -5931,6 +6619,7 @@
       "item.the_wet_smp.aquamarine_ring": "Aquamarine Ring",
       "item.the_wet_smp_rehydrated.emerald_embedded_rabbit_stew": "Emerald Embedded Rabbit Stew",
       "block.the_wet_smp_rehydrated.lit_black_redstone_lamp": "Lit Black Restone Lamp",
+      "block.the_wet_smp_rehydrated.gold_pearl_button": "Gold Pearl Button",
       "item.the_wet_smp.lapis_ring": "Lapis Ring",
       "advancements.grant_leather_boots_recipes.descr": "a",
       "advancements.grant_warped_wart_recipes.title": "Grant Warped Wart Recipe",
@@ -5970,9 +6659,11 @@
       "item.the_wet_smp.golden_piston_boots": "Golden Piston Boots",
       "item.the_wet_smp_rehydrated.koi": "Koi",
       "advancements.grant_gold_block_recipes.descr": "a",
+      "block.the_wet_smp_rehydrated.maroon_pearl_button": "Maroon Pearl Button",
       "item.the_wet_smp_rehydrated.onyx_embedded_mushroom_stew": "Onyx Embedded Mushroom Stew",
       "item.the_wet_smp.aquamarine_embedded_rabbit_stew": "Aquamarine Embedded Rabbit Stew",
       "item.minecraft.splash_potion.effect.peace_potion": "Splash Potion of Peace",
+      "advancements.grant_pink_pearl_recipes.title": "Grant Rings Recipe",
       "item.the_wet_smp_rehydrated.glassfish": "Glassfish",
       "advancements.grant_golden_boots_recipes.descr": "a",
       "item.the_wet_smp_rehydrated.voidswimmer": "Voidswimmer",
@@ -5981,10 +6672,13 @@
       "advancements.grant_purple_dye_recipes.title": "Grant Rings Recipe",
       "item.the_wet_smp.molten_charr": "Molten Charr",
       "item.the_wet_smp.skeletal_eel": "Skeletal Eel",
+      "block.the_wet_smp_rehydrated.black_pearl_button": "Black Pearl Button",
       "item.the_wet_smp.diamond_piston_chestplate": "Chainmail Piston Boots Body",
+      "item.the_wet_smp_rehydrated.maroon_pearl": "Maroon Pearl",
       "item.the_wet_smp.onyx_embedded_suspicious_stew": "Onyx Embedded Suspicious Stew",
       "item.the_wet_smp.effervescent_watcher": "Effervescent Watcher",
       "advancements.grant_pink_dye_recipes.title": "Grant Rings Recipe",
+      "block.the_wet_smp_rehydrated.black_pearl_pressure_plate": "Black Pearl Pressure Plate",
       "enchantment.the_wet_smp.prospector": "Prospector",
       "item.the_wet_smp_rehydrated.iron_piston_chestplate": "Iron Piston Boots Body",
       "advancements.grant_black_dye_recipes.descr": "a",
@@ -6033,6 +6727,7 @@
       "item.the_wet_smp.onyx": "Onyx",
       "item.the_wet_smp.emerald_orefish": "Emerald Orefish",
       "item.minecraft.splash_potion.effect.lacuna_potion": "Splash Potion of Lacuna",
+      "block.the_wet_smp_rehydrated.blue_pearl_pressure_plate": "Blue Pearl Pressure Plate",
       "item.the_wet_smp_rehydrated.pink_jellyfish": "Pink Jellyfish",
       "advancements.grant_iron_boots_recipes.descr": "a",
       "item.the_wet_smp.night_koi": "Night Koi",

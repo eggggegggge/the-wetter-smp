@@ -17,7 +17,7 @@ public class GoldenSkiffiaItem extends TheWetSmpRehydratedModElements.ModElement
 	@ObjectHolder("the_wet_smp_rehydrated:golden_skiffia")
 	public static final Item block = null;
 	public GoldenSkiffiaItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 362);
+		super(instance, 100);
 	}
 
 	@Override

@@ -1,0 +1,13 @@
+{
+  "group": "whitepearlbutton",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "the_wet_smp_rehydrated:black_pearl"
+    }
+  ],
+  "result": {
+    "item": "the_wet_smp_rehydrated:black_pearl_button",
+    "count": 1
+  }
+}

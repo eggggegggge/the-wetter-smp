@@ -48,7 +48,7 @@ public class ExplosiveCrabCannonItem extends TheWetSmpRehydratedModElements.ModE
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
 			.size(0.5f, 0.5f)).build("entitybulletexplosive_crab_cannon").setRegistryName("entitybulletexplosive_crab_cannon");
 	public ExplosiveCrabCannonItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 464);
+		super(instance, 147);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ExplosiveCrabCannonRenderer.ModelRegisterHandler());
 	}
 

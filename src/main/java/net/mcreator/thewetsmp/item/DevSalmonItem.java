@@ -22,7 +22,7 @@ public class DevSalmonItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:dev_salmon")
 	public static final Item block = null;
 	public DevSalmonItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 565);
+		super(instance, 16);
 	}
 
 	@Override

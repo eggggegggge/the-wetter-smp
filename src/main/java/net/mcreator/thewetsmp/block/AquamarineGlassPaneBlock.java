@@ -31,7 +31,7 @@ public class AquamarineGlassPaneBlock extends TheWetSmpRehydratedModElements.Mod
 	@ObjectHolder("the_wet_smp_rehydrated:aquamarine_glass_pane")
 	public static final Block block = null;
 	public AquamarineGlassPaneBlock(TheWetSmpRehydratedModElements instance) {
-		super(instance, 243);
+		super(instance, 60);
 	}
 
 	@Override

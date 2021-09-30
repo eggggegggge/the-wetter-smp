@@ -36,7 +36,7 @@ public class GoldenPistonBootsItem extends TheWetSmpRehydratedModElements.ModEle
 	@ObjectHolder("the_wet_smp_rehydrated:golden_piston_boots")
 	public static final Item boots = null;
 	public GoldenPistonBootsItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 31);
+		super(instance, 29);
 	}
 
 	@Override

@@ -26,7 +26,7 @@ public class SepiaConcreteBlock extends TheWetSmpRehydratedModElements.ModElemen
 	@ObjectHolder("the_wet_smp_rehydrated:sepia_concrete")
 	public static final Block block = null;
 	public SepiaConcreteBlock(TheWetSmpRehydratedModElements instance) {
-		super(instance, 409);
+		super(instance, 154);
 	}
 
 	@Override
