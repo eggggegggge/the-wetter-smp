@@ -149,7 +149,7 @@ public class FlowerForestFishProcedure {
 					}
 				}
 				if (world instanceof World && !world.isRemote()) {
-					((World) world).addEntity(new ExperienceOrbEntity(((World) world), x, (y - 0.5), z, (int) 8));
+					((World) world).addEntity(new ExperienceOrbEntity(((World) world), x, (y - 0.5), z, (int) 4));
 				}
 			} else if (((sel >= (glowkoi + 1)) && (sel <= jellyfish))) {
 				{

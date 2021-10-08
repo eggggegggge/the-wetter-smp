@@ -165,7 +165,7 @@ public class DesertLakesFishProcedure {
 				}
 			}
 			if (world instanceof World && !world.isRemote()) {
-				((World) world).addEntity(new ExperienceOrbEntity(((World) world), x, (y - 0.5), z, (int) 11));
+				((World) world).addEntity(new ExperienceOrbEntity(((World) world), x, (y - 0.5), z, (int) 8));
 			}
 		}
 	}

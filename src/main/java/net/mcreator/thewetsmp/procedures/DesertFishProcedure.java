@@ -123,7 +123,7 @@ public class DesertFishProcedure {
 				}
 			}
 			if (world instanceof World && !world.isRemote()) {
-				((World) world).addEntity(new ExperienceOrbEntity(((World) world), x, (y - 0.5), z, (int) 7));
+				((World) world).addEntity(new ExperienceOrbEntity(((World) world), x, (y - 0.5), z, (int) 8));
 			}
 		}
 	}
