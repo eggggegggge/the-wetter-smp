@@ -89,13 +89,20 @@ public class WarmOceanFishProcedure {
 			pufferfish = (double) (pufferfish + 5);
 			clownfish = (double) (clownfish - 2);
 			koi = (double) (koi - 4);
+			scallop = (double) (scallop - 4);
+			seahorse = (double) (scallop - 5);
+			seaurchin = (double) (seaurchin + 3);
+			crab = (double) (crab + 5);
+			cuttlefish = (double) (cuttlefish + 3);
+			humuhumunukunukuapuaa = (double) (humuhumunukunukuapuaa + 3);
+			jellyfish = (double) (jellyfish + 2);
 		} /* fish */
-		fish = (double) crab;
+		fish = (double) humuhumunukunukuapuaa;
 		if (((time > 13000) && (time < 23000))) {
 			fish = (double) jellyfish;
 		}
 		sel = (double) ((new Random()).nextInt((int) fish + 1));
-		if (((sel >= 0) && (sel <= sel))) {
+		if (((sel >= 0) && (sel <= pufferfish))) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
@@ -106,13 +113,13 @@ public class WarmOceanFishProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"give @s minecraft:cod 1");
+							"give @s minecraft:pufferfish 1");
 				}
 			}
 			if (world instanceof World && !world.isRemote()) {
-				((World) world).addEntity(new ExperienceOrbEntity(((World) world), x, (y - 0.5), z, (int) 2));
+				((World) world).addEntity(new ExperienceOrbEntity(((World) world), x, (y - 0.5), z, (int) 3));
 			}
-		} else if (((sel >= (sel + 1)) && (sel <= sel))) {
+		} else if (((sel >= (pufferfish + 1)) && (sel <= clownfish))) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
@@ -123,13 +130,30 @@ public class WarmOceanFishProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"give @s minecraft:salmon 1");
+							"give @s minecraft:tropical_fish 1");
 				}
 			}
 			if (world instanceof World && !world.isRemote()) {
-				((World) world).addEntity(new ExperienceOrbEntity(((World) world), x, (y - 0.5), z, (int) 2));
+				((World) world).addEntity(new ExperienceOrbEntity(((World) world), x, (y - 0.5), z, (int) 4));
 			}
-		} else if (((sel >= (sel + 1)) && (sel <= scallop))) {
+		} else if (((sel >= (clownfish + 1)) && (sel <= koi))) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("world", world);
+				RemoveBaitProcedure.executeProcedure($_dependencies);
+			}
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"give @s the_wet_smp_rehydrated:koi 1");
+				}
+			}
+			if (world instanceof World && !world.isRemote()) {
+				((World) world).addEntity(new ExperienceOrbEntity(((World) world), x, (y - 0.5), z, (int) 4));
+			}
+		} else if (((sel >= (koi + 1)) && (sel <= scallop))) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
@@ -146,7 +170,24 @@ public class WarmOceanFishProcedure {
 			if (world instanceof World && !world.isRemote()) {
 				((World) world).addEntity(new ExperienceOrbEntity(((World) world), x, (y - 0.5), z, (int) 4));
 			}
-		} else if (((sel >= (scallop + 1)) && (sel <= seaurchin))) {
+		} else if (((sel >= (scallop + 1)) && (sel <= seahorse))) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("world", world);
+				RemoveBaitProcedure.executeProcedure($_dependencies);
+			}
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"give @s the_wet_smp_rehydrated:seahorse 1");
+				}
+			}
+			if (world instanceof World && !world.isRemote()) {
+				((World) world).addEntity(new ExperienceOrbEntity(((World) world), x, (y - 0.5), z, (int) 4));
+			}
+		} else if (((sel >= (seahorse + 1)) && (sel <= seaurchin))) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
@@ -180,7 +221,41 @@ public class WarmOceanFishProcedure {
 			if (world instanceof World && !world.isRemote()) {
 				((World) world).addEntity(new ExperienceOrbEntity(((World) world), x, (y - 0.5), z, (int) 5));
 			}
-		} else if (((sel >= (crab + 1)) && (sel <= jellyfish))) {
+		} else if (((sel >= (crab + 1)) && (sel <= cuttlefish))) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("world", world);
+				RemoveBaitProcedure.executeProcedure($_dependencies);
+			}
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"give @s the_wet_smp_rehydrated:cuttlefish 1");
+				}
+			}
+			if (world instanceof World && !world.isRemote()) {
+				((World) world).addEntity(new ExperienceOrbEntity(((World) world), x, (y - 0.5), z, (int) 2));
+			}
+		} else if (((sel >= (cuttlefish + 1)) && (sel <= humuhumunukunukuapuaa))) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("world", world);
+				RemoveBaitProcedure.executeProcedure($_dependencies);
+			}
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"give @s the_wet_smp_rehydrated:humuhumunukunukuapua_a 1");
+				}
+			}
+			if (world instanceof World && !world.isRemote()) {
+				((World) world).addEntity(new ExperienceOrbEntity(((World) world), x, (y - 0.5), z, (int) 8));
+			}
+		} else if (((sel >= (humuhumunukunukuapuaa + 1)) && (sel <= jellyfish))) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
