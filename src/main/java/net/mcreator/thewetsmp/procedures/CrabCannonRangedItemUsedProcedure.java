@@ -4,8 +4,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
+import net.mcreator.thewetsmp.item.RubyGrapplingHookItem;
+import net.mcreator.thewetsmp.item.OnyxGrapplingHookItem;
 import net.mcreator.thewetsmp.item.ExplosiveCrabCannonItem;
 import net.mcreator.thewetsmp.item.CrabCannonItem;
+import net.mcreator.thewetsmp.item.AquamarineGrapplingHookItem;
 import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 
 import java.util.Map;
@@ -27,7 +30,8 @@ public class CrabCannonRangedItemUsedProcedure {
 		if ((((itemstack).getItem() == CrabCannonItem.block) || ((itemstack).getItem() == ExplosiveCrabCannonItem.block))) {
 			if (entity instanceof PlayerEntity)
 				((PlayerEntity) entity).getCooldownTracker().setCooldown((itemstack).getItem(), (int) 30);
-		} else {
+		} else if ((((itemstack).getItem() == RubyGrapplingHookItem.block)
+				|| (((itemstack).getItem() == AquamarineGrapplingHookItem.block) || ((itemstack).getItem() == OnyxGrapplingHookItem.block)))) {
 			if (entity instanceof PlayerEntity)
 				((PlayerEntity) entity).getCooldownTracker().setCooldown((itemstack).getItem(), (int) 85);
 		}

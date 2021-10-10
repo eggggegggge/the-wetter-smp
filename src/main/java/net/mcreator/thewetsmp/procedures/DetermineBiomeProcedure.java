@@ -550,7 +550,7 @@ public class DetermineBiomeProcedure {
 			}
 		} else if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-						.equals(new ResourceLocation("badlands")))) {
+						.equals(new ResourceLocation("ocean")))) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
@@ -558,11 +558,11 @@ public class DetermineBiomeProcedure {
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
-				DeepFrozenOceanFishProcedure.executeProcedure($_dependencies);
+				OceanFishProcedure.executeProcedure($_dependencies);
 			}
 		} else if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-						.equals(new ResourceLocation("deep_lukewarm_ocean")))) {
+						.equals(new ResourceLocation("plains")))) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
@@ -570,11 +570,11 @@ public class DetermineBiomeProcedure {
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
-				DeepLukewarmOceanFishProcedure.executeProcedure($_dependencies);
+				PlainsFishProcedure.executeProcedure($_dependencies);
 			}
 		} else if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-						.equals(new ResourceLocation("deep_ocean")))) {
+						.equals(new ResourceLocation("river")))) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
@@ -582,11 +582,11 @@ public class DetermineBiomeProcedure {
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
-				DeepOceanFishProcedure.executeProcedure($_dependencies);
+				RiverFishProcedure.executeProcedure($_dependencies);
 			}
 		} else if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-						.equals(new ResourceLocation("desert")))) {
+						.equals(new ResourceLocation("savanna")))) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
@@ -594,11 +594,11 @@ public class DetermineBiomeProcedure {
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
-				DesertFishProcedure.executeProcedure($_dependencies);
+				SavannaFishProcedure.executeProcedure($_dependencies);
 			}
 		} else if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-						.equals(new ResourceLocation("desert_hills")))) {
+						.equals(new ResourceLocation("savanna_plateau")))) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
@@ -606,11 +606,11 @@ public class DetermineBiomeProcedure {
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
-				DesertHillsFishProcedure.executeProcedure($_dependencies);
+				SavannaPlateauFishProcedure.executeProcedure($_dependencies);
 			}
 		} else if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-						.equals(new ResourceLocation("badlands")))) {
+						.equals(new ResourceLocation("shattered_savanna")))) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
@@ -618,11 +618,11 @@ public class DetermineBiomeProcedure {
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
-				DesertLakesFishProcedure.executeProcedure($_dependencies);
+				ShatteredSavannaFishProcedure.executeProcedure($_dependencies);
 			}
 		} else if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-						.equals(new ResourceLocation("eroded_badlands")))) {
+						.equals(new ResourceLocation("shattered_savanna_plateau")))) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
@@ -630,11 +630,11 @@ public class DetermineBiomeProcedure {
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
-				ErodedBadlandsFishProcedure.executeProcedure($_dependencies);
+				ShatteredSavannaPlateauFishProcedure.executeProcedure($_dependencies);
 			}
 		} else if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-						.equals(new ResourceLocation("badlands")))) {
+						.equals(new ResourceLocation("snowy_beach")))) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
@@ -642,11 +642,11 @@ public class DetermineBiomeProcedure {
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
-				FlowerForestFishProcedure.executeProcedure($_dependencies);
+				SnowyBeachFishProcedure.executeProcedure($_dependencies);
 			}
 		} else if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-						.equals(new ResourceLocation("birch_forest")))) {
+						.equals(new ResourceLocation("snowy_mountains")))) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
@@ -654,11 +654,11 @@ public class DetermineBiomeProcedure {
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
-				BirchForestFishProcedure.executeProcedure($_dependencies);
+				SnowyMountainsFishProcedure.executeProcedure($_dependencies);
 			}
 		} else if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-						.equals(new ResourceLocation("birch_forest_hills")))) {
+						.equals(new ResourceLocation("snowy_taiga")))) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
@@ -666,11 +666,11 @@ public class DetermineBiomeProcedure {
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
-				BirchForestHillsFishProcedure.executeProcedure($_dependencies);
+				SnowyTaigaFishProcedure.executeProcedure($_dependencies);
 			}
 		} else if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-						.equals(new ResourceLocation("forest")))) {
+						.equals(new ResourceLocation("snowy_taiga_hills")))) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
@@ -678,11 +678,11 @@ public class DetermineBiomeProcedure {
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
-				ForestFishProcedure.executeProcedure($_dependencies);
+				SnowyTaigaHillsFishProcedure.executeProcedure($_dependencies);
 			}
 		} else if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-						.equals(new ResourceLocation("frozen_ocean")))) {
+						.equals(new ResourceLocation("snowy_taiga_mountains")))) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
@@ -690,11 +690,11 @@ public class DetermineBiomeProcedure {
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
-				FrozenOceanFishProcedure.executeProcedure($_dependencies);
+				SnowyTaigaMountainsFishProcedure.executeProcedure($_dependencies);
 			}
 		} else if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-						.equals(new ResourceLocation("deep_warm_ocean")))) {
+						.equals(new ResourceLocation("snowy_tundra")))) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
@@ -702,11 +702,11 @@ public class DetermineBiomeProcedure {
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
-				DeepWarmOceanFishProcedure.executeProcedure($_dependencies);
+				SnowyTundraFishProcedure.executeProcedure($_dependencies);
 			}
 		} else if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-						.equals(new ResourceLocation("frozen_river")))) {
+						.equals(new ResourceLocation("stone_shore")))) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
@@ -714,11 +714,11 @@ public class DetermineBiomeProcedure {
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
-				FrozenRiverFishProcedure.executeProcedure($_dependencies);
+				StoneShoreFishProcedure.executeProcedure($_dependencies);
 			}
 		} else if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-						.equals(new ResourceLocation("giant_spruce_taiga")))) {
+						.equals(new ResourceLocation("sunflower_plains")))) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
@@ -726,11 +726,11 @@ public class DetermineBiomeProcedure {
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
-				GiantSpruceTaigaFishProcedure.executeProcedure($_dependencies);
+				SunflowerPlainsFishProcedure.executeProcedure($_dependencies);
 			}
 		} else if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-						.equals(new ResourceLocation("giant_spruce_taiga_hills")))) {
+						.equals(new ResourceLocation("swamp")))) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
@@ -738,22 +738,11 @@ public class DetermineBiomeProcedure {
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
-				GiantSpruceTaigaHillsFishProcedure.executeProcedure($_dependencies);
+				SwampFishProcedure.executeProcedure($_dependencies);
 			}
 		} else if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-						.equals(new ResourceLocation("giant_tree_taiga")))) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				RingEffectProcedure.executeProcedure($_dependencies);
-			}
-		} else if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
-				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-						.equals(new ResourceLocation("giant_tree_taiga_hills")))) {
+						.equals(new ResourceLocation("swamp_hills")))) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
@@ -761,11 +750,11 @@ public class DetermineBiomeProcedure {
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
-				GiantTreeTaigaHillsFishProcedure.executeProcedure($_dependencies);
+				SwampHillsFishProcedure.executeProcedure($_dependencies);
 			}
 		} else if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-						.equals(new ResourceLocation("gravelly_mountains")))) {
+						.equals(new ResourceLocation("taiga")))) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
@@ -773,11 +762,11 @@ public class DetermineBiomeProcedure {
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
-				GravellyMountainsFishProcedure.executeProcedure($_dependencies);
+				TaigaFishProcedure.executeProcedure($_dependencies);
 			}
 		} else if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-						.equals(new ResourceLocation("ice_spikes")))) {
+						.equals(new ResourceLocation("taiga_hills")))) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
@@ -785,11 +774,11 @@ public class DetermineBiomeProcedure {
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
-				IceSpikesFishProcedure.executeProcedure($_dependencies);
+				TaigaHillsFishProcedure.executeProcedure($_dependencies);
 			}
 		} else if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-						.equals(new ResourceLocation("jungle")))) {
+						.equals(new ResourceLocation("taiga_mountains")))) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
@@ -797,11 +786,11 @@ public class DetermineBiomeProcedure {
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
-				JungleFishProcedure.executeProcedure($_dependencies);
+				TaigaMountainsFishProcedure.executeProcedure($_dependencies);
 			}
 		} else if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-						.equals(new ResourceLocation("jungle_edge")))) {
+						.equals(new ResourceLocation("tall_birch_forest")))) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
@@ -809,11 +798,11 @@ public class DetermineBiomeProcedure {
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
-				JungleEdgeFishProcedure.executeProcedure($_dependencies);
+				TallBirchForestFishProcedure.executeProcedure($_dependencies);
 			}
 		} else if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-						.equals(new ResourceLocation("jungle_hills")))) {
+						.equals(new ResourceLocation("tall_birch_hills")))) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
@@ -821,11 +810,11 @@ public class DetermineBiomeProcedure {
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
-				JungleHillsFishProcedure.executeProcedure($_dependencies);
+				TallBirchHillsFishProcedure.executeProcedure($_dependencies);
 			}
 		} else if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-						.equals(new ResourceLocation("lukewarm_ocean")))) {
+						.equals(new ResourceLocation("warm_ocean")))) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
@@ -833,7 +822,44 @@ public class DetermineBiomeProcedure {
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
-				LukewarmOceanFishProcedure.executeProcedure($_dependencies);
+				WarmOceanFishProcedure.executeProcedure($_dependencies);
+			}
+		} else if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
+						.equals(new ResourceLocation("wooded_badlands_plateau")))) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("world", world);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				WoodedBadlandsPlateauFishProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
+						.equals(new ResourceLocation("wooded_mountains")))) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("world", world);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				WoodedMountainsFishProcedure.executeProcedure($_dependencies);
+			}
+		} else if ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
+						.equals(new ResourceLocation("wooded_hills")))) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("world", world);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				WoodedHillsFishProcedure.executeProcedure($_dependencies);
 			}
 		}
 	}

@@ -3,21 +3,21 @@
   "_type": "rangeditem",
   "definition": {
     "renderType": 1,
-    "texture": "crab",
-    "customModelName": "crab_cannon:explosive",
-    "name": "Explosive Crab Cannon",
+    "texture": "aquamarine",
+    "customModelName": "bufferblaster:default",
+    "name": "Buffer Blaster",
     "specialInfo": [],
     "creativeTab": {
       "value": "COMBAT"
     },
     "stackSize": 1,
     "ammoItem": {
-      "value": "CUSTOM:Crab"
+      "value": ""
     },
     "shootConstantly": false,
-    "usageCount": 0,
+    "usageCount": 11,
     "actionSound": {
-      "value": "CUSTOM:crabcannon"
+      "value": "item.firecharge.use"
     },
     "hasGlow": false,
     "animation": "bow",
@@ -26,21 +26,24 @@
     "onRangedItemUsed": {
       "name": "CrabCannonRangedItemUsed"
     },
-    "bulletPower": 0.5,
-    "bulletDamage": 5.0,
-    "bulletKnockback": 2,
+    "bulletPower": 0.8,
+    "bulletDamage": 2.0,
+    "bulletKnockback": 1,
     "bulletParticles": false,
     "bulletIgnitesFire": false,
     "bulletItemTexture": {
-      "value": "CUSTOM:Crab"
+      "value": "CUSTOM:Buffer"
     },
-    "bulletModel": "Modelcrab",
-    "customBulletModelTexture": "crab_projectile.png",
+    "bulletModel": "Modelbufferblast",
+    "customBulletModelTexture": "buffer_blast.png",
     "onBulletHitsBlock": {
-      "name": "ExplosiveCrabCannonHitEntityProcedure"
+      "name": "BufferBlasterMiss"
+    },
+    "onBulletHitsPlayer": {
+      "name": "BufferBlasterHitsPlayerProcedure"
     },
     "onBulletHitsEntity": {
-      "name": "ExplosiveCrabCannonHitEntityProcedure"
+      "name": "BufferBlasterHitsPlayerProcedure"
     }
   }
 }

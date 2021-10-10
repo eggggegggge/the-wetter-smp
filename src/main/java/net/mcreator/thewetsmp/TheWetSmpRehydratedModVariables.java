@@ -67,19 +67,28 @@ public class TheWetSmpRehydratedModVariables {
 		@Override
 		public INBT writeNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side) {
 			CompoundNBT nbt = new CompoundNBT();
-			nbt.putBoolean("onyxGrapplingHookLaunch", instance.onyxGrapplingHookLaunch);
+			nbt.putDouble("bufferBlasterHunger", instance.bufferBlasterHunger);
+			nbt.putDouble("bufferBlasterHealth", instance.bufferBlasterHealth);
+			nbt.putBoolean("bufferBlasterIgnited", instance.bufferBlasterIgnited);
+			nbt.putDouble("bufferBlasterOxygen", instance.bufferBlasterOxygen);
 			return nbt;
 		}
 
 		@Override
 		public void readNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side, INBT inbt) {
 			CompoundNBT nbt = (CompoundNBT) inbt;
-			instance.onyxGrapplingHookLaunch = nbt.getBoolean("onyxGrapplingHookLaunch");
+			instance.bufferBlasterHunger = nbt.getDouble("bufferBlasterHunger");
+			instance.bufferBlasterHealth = nbt.getDouble("bufferBlasterHealth");
+			instance.bufferBlasterIgnited = nbt.getBoolean("bufferBlasterIgnited");
+			instance.bufferBlasterOxygen = nbt.getDouble("bufferBlasterOxygen");
 		}
 	}
 
 	public static class PlayerVariables {
-		public boolean onyxGrapplingHookLaunch = false;
+		public double bufferBlasterHunger = 100.0;
+		public double bufferBlasterHealth = 100.0;
+		public boolean bufferBlasterIgnited = false;
+		public double bufferBlasterOxygen = 100.0;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				TheWetSmpRehydratedMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity),
@@ -113,7 +122,10 @@ public class TheWetSmpRehydratedModVariables {
 				.orElse(new PlayerVariables()));
 		PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 		if (!event.isWasDeath()) {
-			clone.onyxGrapplingHookLaunch = original.onyxGrapplingHookLaunch;
+			clone.bufferBlasterHunger = original.bufferBlasterHunger;
+			clone.bufferBlasterHealth = original.bufferBlasterHealth;
+			clone.bufferBlasterIgnited = original.bufferBlasterIgnited;
+			clone.bufferBlasterOxygen = original.bufferBlasterOxygen;
 		}
 	}
 	public static class PlayerVariablesSyncMessage {
@@ -137,7 +149,10 @@ public class TheWetSmpRehydratedModVariables {
 				if (!context.getDirection().getReceptionSide().isServer()) {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new PlayerVariables()));
-					variables.onyxGrapplingHookLaunch = message.data.onyxGrapplingHookLaunch;
+					variables.bufferBlasterHunger = message.data.bufferBlasterHunger;
+					variables.bufferBlasterHealth = message.data.bufferBlasterHealth;
+					variables.bufferBlasterIgnited = message.data.bufferBlasterIgnited;
+					variables.bufferBlasterOxygen = message.data.bufferBlasterOxygen;
 				}
 			});
 			context.setPacketHandled(true);

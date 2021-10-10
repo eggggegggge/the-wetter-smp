@@ -1,11 +1,11 @@
 {
   "criteria": {
-    "grant_aquamarine_glass_recipe": {
+    "grant_buffer_recipes": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "the_wet_smp_rehydrated:aquamarine_glass",
+            "item": "the_wet_smp_rehydrated:buffer",
             "count": {
               "min": 1,
               "max": 64
@@ -18,7 +18,6 @@
   "rewards": {
     "experience": 1,
     "recipes": [
-      "the_wet_smp_rehydrated:aquamarine_glass_pane_recipe",
       "the_wet_smp_rehydrated:buffer_blaster_recipe"
     ]
   },

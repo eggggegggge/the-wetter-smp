@@ -71,7 +71,7 @@ public class CrabCannonItem extends TheWetSmpRehydratedModElements.ModElement {
 
 		@Override
 		public UseAction getUseAction(ItemStack itemstack) {
-			return UseAction.NONE;
+			return UseAction.BOW;
 		}
 
 		@Override

@@ -18,7 +18,6 @@ import net.minecraft.util.ActionResultType;
 import net.minecraft.util.ActionResult;
 import net.minecraft.network.IPacket;
 import net.minecraft.item.UseAction;
-import net.minecraft.item.ShootableItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
@@ -31,9 +30,11 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 
-import net.mcreator.thewetsmp.procedures.ExplosiveCrabCannonHitEntityProcedureProcedure;
 import net.mcreator.thewetsmp.procedures.CrabCannonRangedItemUsedProcedure;
-import net.mcreator.thewetsmp.entity.renderer.ExplosiveCrabCannonRenderer;
+import net.mcreator.thewetsmp.procedures.BufferBlasterMissProcedure;
+import net.mcreator.thewetsmp.procedures.BufferBlasterHitsPlayerProcedureProcedure;
+import net.mcreator.thewetsmp.entity.renderer.BufferBlasterRenderer;
+import net.mcreator.thewetsmp.block.BufferBlock;
 import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
 import java.util.Random;
@@ -41,15 +42,15 @@ import java.util.Map;
 import java.util.HashMap;
 
 @TheWetSmpRehydratedModElements.ModElement.Tag
-public class ExplosiveCrabCannonItem extends TheWetSmpRehydratedModElements.ModElement {
-	@ObjectHolder("the_wet_smp_rehydrated:explosive_crab_cannon")
+public class BufferBlasterItem extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:buffer_blaster")
 	public static final Item block = null;
 	public static final EntityType arrow = (EntityType.Builder.<ArrowCustomEntity>create(ArrowCustomEntity::new, EntityClassification.MISC)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
-			.size(0.5f, 0.5f)).build("entitybulletexplosive_crab_cannon").setRegistryName("entitybulletexplosive_crab_cannon");
-	public ExplosiveCrabCannonItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 147);
-		FMLJavaModLoadingContext.get().getModEventBus().register(new ExplosiveCrabCannonRenderer.ModelRegisterHandler());
+			.size(0.5f, 0.5f)).build("entitybulletbuffer_blaster").setRegistryName("entitybulletbuffer_blaster");
+	public BufferBlasterItem(TheWetSmpRehydratedModElements instance) {
+		super(instance, 494);
+		FMLJavaModLoadingContext.get().getModEventBus().register(new BufferBlasterRenderer.ModelRegisterHandler());
 	}
 
 	@Override
@@ -59,8 +60,8 @@ public class ExplosiveCrabCannonItem extends TheWetSmpRehydratedModElements.ModE
 	}
 	public static class ItemRanged extends Item {
 		public ItemRanged() {
-			super(new Item.Properties().group(ItemGroup.COMBAT).maxStackSize(1));
-			setRegistryName("explosive_crab_cannon");
+			super(new Item.Properties().group(ItemGroup.COMBAT).maxDamage(11));
+			setRegistryName("buffer_blaster");
 		}
 
 		@Override
@@ -87,41 +88,14 @@ public class ExplosiveCrabCannonItem extends TheWetSmpRehydratedModElements.ModE
 				double y = entity.getPosY();
 				double z = entity.getPosZ();
 				if (true) {
-					ItemStack stack = ShootableItem.getHeldAmmo(entity, e -> e.getItem() == CrabItem.block);
-					if (stack == ItemStack.EMPTY) {
-						for (int i = 0; i < entity.inventory.mainInventory.size(); i++) {
-							ItemStack teststack = entity.inventory.mainInventory.get(i);
-							if (teststack != null && teststack.getItem() == CrabItem.block) {
-								stack = teststack;
-								break;
-							}
-						}
-					}
-					if (entity.abilities.isCreativeMode || stack != ItemStack.EMPTY) {
-						ArrowCustomEntity entityarrow = shoot(world, entity, random, 0.5f, 5, 2);
-						itemstack.damageItem(1, entity, e -> e.sendBreakAnimation(entity.getActiveHand()));
-						if (entity.abilities.isCreativeMode) {
-							entityarrow.pickupStatus = AbstractArrowEntity.PickupStatus.CREATIVE_ONLY;
-						} else {
-							if (new ItemStack(CrabItem.block).isDamageable()) {
-								if (stack.attemptDamageItem(1, random, entity)) {
-									stack.shrink(1);
-									stack.setDamage(0);
-									if (stack.isEmpty())
-										entity.inventory.deleteStack(stack);
-								}
-							} else {
-								stack.shrink(1);
-								if (stack.isEmpty())
-									entity.inventory.deleteStack(stack);
-							}
-						}
-						{
-							Map<String, Object> $_dependencies = new HashMap<>();
-							$_dependencies.put("entity", entity);
-							$_dependencies.put("itemstack", itemstack);
-							CrabCannonRangedItemUsedProcedure.executeProcedure($_dependencies);
-						}
+					ArrowCustomEntity entityarrow = shoot(world, entity, random, 0.8f, 2, 1);
+					itemstack.damageItem(1, entity, e -> e.sendBreakAnimation(entity.getActiveHand()));
+					entityarrow.pickupStatus = AbstractArrowEntity.PickupStatus.DISALLOWED;
+					{
+						Map<String, Object> $_dependencies = new HashMap<>();
+						$_dependencies.put("entity", entity);
+						$_dependencies.put("itemstack", itemstack);
+						CrabCannonRangedItemUsedProcedure.executeProcedure($_dependencies);
 					}
 				}
 			}
@@ -154,12 +128,33 @@ public class ExplosiveCrabCannonItem extends TheWetSmpRehydratedModElements.ModE
 		@Override
 		@OnlyIn(Dist.CLIENT)
 		public ItemStack getItem() {
-			return new ItemStack(CrabItem.block);
+			return new ItemStack(BufferBlock.block);
 		}
 
 		@Override
 		protected ItemStack getArrowStack() {
-			return new ItemStack(CrabItem.block);
+			return null;
+		}
+
+		@Override
+		public void onCollideWithPlayer(PlayerEntity entity) {
+			super.onCollideWithPlayer(entity);
+			Entity sourceentity = this.func_234616_v_();
+			double x = this.getPosX();
+			double y = this.getPosY();
+			double z = this.getPosZ();
+			World world = this.world;
+			Entity imediatesourceentity = this;
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("sourceentity", sourceentity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				BufferBlasterHitsPlayerProcedureProcedure.executeProcedure($_dependencies);
+			}
 		}
 
 		@Override
@@ -174,12 +169,13 @@ public class ExplosiveCrabCannonItem extends TheWetSmpRehydratedModElements.ModE
 			Entity imediatesourceentity = this;
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("imediatesourceentity", imediatesourceentity);
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("sourceentity", sourceentity);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				ExplosiveCrabCannonHitEntityProcedureProcedure.executeProcedure($_dependencies);
+				BufferBlasterHitsPlayerProcedureProcedure.executeProcedure($_dependencies);
 			}
 		}
 
@@ -195,12 +191,11 @@ public class ExplosiveCrabCannonItem extends TheWetSmpRehydratedModElements.ModE
 			if (this.inGround) {
 				{
 					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("imediatesourceentity", imediatesourceentity);
 					$_dependencies.put("x", x);
 					$_dependencies.put("y", y);
 					$_dependencies.put("z", z);
 					$_dependencies.put("world", world);
-					ExplosiveCrabCannonHitEntityProcedureProcedure.executeProcedure($_dependencies);
+					BufferBlasterMissProcedure.executeProcedure($_dependencies);
 				}
 				this.remove();
 			}
@@ -218,7 +213,7 @@ public class ExplosiveCrabCannonItem extends TheWetSmpRehydratedModElements.ModE
 		double y = entity.getPosY();
 		double z = entity.getPosZ();
 		world.playSound((PlayerEntity) null, (double) x, (double) y, (double) z,
-				(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("the_wet_smp_rehydrated:crabcannon")),
+				(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.firecharge.use")),
 				SoundCategory.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
 		return entityarrow;
 	}
@@ -228,17 +223,17 @@ public class ExplosiveCrabCannonItem extends TheWetSmpRehydratedModElements.ModE
 		double d0 = target.getPosY() + (double) target.getEyeHeight() - 1.1;
 		double d1 = target.getPosX() - entity.getPosX();
 		double d3 = target.getPosZ() - entity.getPosZ();
-		entityarrow.shoot(d1, d0 - entityarrow.getPosY() + (double) MathHelper.sqrt(d1 * d1 + d3 * d3) * 0.2F, d3, 0.5f * 2, 12.0F);
+		entityarrow.shoot(d1, d0 - entityarrow.getPosY() + (double) MathHelper.sqrt(d1 * d1 + d3 * d3) * 0.2F, d3, 0.8f * 2, 12.0F);
 		entityarrow.setSilent(true);
-		entityarrow.setDamage(5);
-		entityarrow.setKnockbackStrength(2);
+		entityarrow.setDamage(2);
+		entityarrow.setKnockbackStrength(1);
 		entityarrow.setIsCritical(false);
 		entity.world.addEntity(entityarrow);
 		double x = entity.getPosX();
 		double y = entity.getPosY();
 		double z = entity.getPosZ();
 		entity.world.playSound((PlayerEntity) null, (double) x, (double) y, (double) z,
-				(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("the_wet_smp_rehydrated:crabcannon")),
+				(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.firecharge.use")),
 				SoundCategory.PLAYERS, 1, 1f / (new Random().nextFloat() * 0.5f + 1));
 		return entityarrow;
 	}
