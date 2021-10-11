@@ -2,12 +2,12 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "barrel_top",
-    "textureTop": "barrel_top",
-    "textureLeft": "barrel_side",
-    "textureFront": "barrel_side",
-    "textureRight": "barrel_side",
-    "textureBack": "barrel_side",
+    "texture": "savanna_crate_top",
+    "textureTop": "savanna_crate_top",
+    "textureLeft": "savanna_crate_side",
+    "textureFront": "savanna_crate_side",
+    "textureRight": "savanna_crate_side",
+    "textureBack": "savanna_crate_side",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 0,
@@ -32,7 +32,7 @@
         "subtract": false
       }
     ],
-    "name": "Crate",
+    "name": "Savanna Crate",
     "specialInfo": [],
     "hardness": 1.0,
     "resistance": 10.0,
@@ -123,11 +123,7 @@
     "fluidRestrictions": [],
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
-    "blocksToReplace": [
-      {
-        "value": "Blocks.STONE"
-      }
-    ],
+    "blocksToReplace": [],
     "frequencyPerChunks": 10,
     "frequencyOnChunk": 16,
     "minGenerateHeight": 0,

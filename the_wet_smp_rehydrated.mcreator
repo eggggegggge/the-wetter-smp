@@ -7868,6 +7868,76 @@
       "ids": {},
       "registry_name": "grant_buffer_recipes",
       "path": "~/Recipes/GrantRecipes"
+    },
+    {
+      "name": "BirchCrate",
+      "type": "block",
+      "sortid": 499,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "birch_crate",
+      "path": "~/Blocks"
+    },
+    {
+      "name": "JungleCrate",
+      "type": "block",
+      "sortid": 500,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "jungle_crate",
+      "path": "~/Blocks"
+    },
+    {
+      "name": "CrateGUI",
+      "type": "gui",
+      "sortid": 501,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crate_gui",
+      "path": "~/GUIs"
+    },
+    {
+      "name": "BambooCrate",
+      "type": "block",
+      "sortid": 502,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bamboo_crate",
+      "path": "~/Blocks"
+    },
+    {
+      "name": "BadlandsCrate",
+      "type": "block",
+      "sortid": 503,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "badlands_crate",
+      "path": "~/Blocks"
+    },
+    {
+      "name": "SavannaCrate",
+      "type": "block",
+      "sortid": 504,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "savanna_crate",
+      "path": "~/Blocks"
+    },
+    {
+      "name": "MountainCrate",
+      "type": "block",
+      "sortid": 505,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mountain_crate",
+      "path": "~/Blocks"
     }
   ],
   "variable_elements": [
@@ -7964,6 +8034,7 @@
       "item.the_wet_smp_rehydrated.lapis_embedded_suspicious_stew": "Lapis Embedded Suspicious Stew",
       "advancements.grant_maroon_pearl_recipes.title": "Grant Rings Recipe",
       "advancements.grant_white_pearl_recipes.title": "Grant Rings Recipe",
+      "block.the_wet_smp_rehydrated.bamboo_crate": "Bamboo Crate",
       "advancements.grant_white_dye_recipes.title": "Grant Rings Recipe",
       "entity.the_wet_smp_rehydrated.buffer_block_removal": "Buffer Block Removal",
       "item.the_wet_smp_rehydrated.osmium_ingot": "Osmium Ingot",
@@ -8031,6 +8102,7 @@
       "item.the_wet_smp_rehydrated.onyx_embedded_beetroot_soup": "Onyx Embedded Beetroot Soup",
       "item.the_wet_smp_rehydrated.onyx_orefish": "Onyx Orefish",
       "item.the_wet_smp_rehydrated.ruby_grappling_hook": "Ruby Grappling Hook",
+      "block.the_wet_smp_rehydrated.mountain_crate": "Mountain Crate",
       "block.the_wet_smp_rehydrated.sepia_concrete": "Sepia Concrete",
       "effect.motivation": "Motivation",
       "block.the_wet_smp_rehydrated.lit_white_redstone_lamp": "Lit White Restone Lamp",
@@ -8197,11 +8269,13 @@
       "item.the_wet_smp.lapis_orefish": "Lapis Orefish",
       "block.the_wet_smp_rehydrated.light_grey_redstone_lamp": "Light Grey Redstone Lamp",
       "block.the_wet_smp_rehydrated.white_pearl_button": "White Pearl Button",
+      "block.the_wet_smp_rehydrated.jungle_crate": "Jungle Crate",
       "item.minecraft.lingering_potion.effect.peace_potion": "Lingering Potion of Peace",
       "block.the_wet_smp_rehydrated.grey_redstone_lamp": "Grey Redstone Lamp",
       "block.the_wet_smp_rehydrated.lit_pink_redstone_lamp": "Lit Pink Restone Lamp",
       "item.the_wet_smp.onyx_orefish": "Onyx Orefish",
       "block.the_wet_smp_rehydrated.sea_urchin": "Sea Urchin",
+      "block.the_wet_smp_rehydrated.badlands_crate": "Badlands Crate",
       "item.the_wet_smp.lapis_embedded_bowl": "Lapis Embedded Bowl",
       "item.the_wet_smp.onyx_embedded_rabbit_stew": "Onyx Embedded Rabbit Stew",
       "item.the_wet_smp_rehydrated.leather_piston_helmet": "Leather Piston Boots Helmet",
@@ -8361,6 +8435,7 @@
       "item.the_wet_smp.onyx_embedded_suspicious_stew": "Onyx Embedded Suspicious Stew",
       "item.the_wet_smp.effervescent_watcher": "Effervescent Watcher",
       "advancements.grant_pink_dye_recipes.title": "Grant Rings Recipe",
+      "block.the_wet_smp_rehydrated.birch_crate": "Birch Crate",
       "block.the_wet_smp_rehydrated.black_pearl_pressure_plate": "Black Pearl Pressure Plate",
       "enchantment.the_wet_smp.prospector": "Prospector",
       "item.the_wet_smp_rehydrated.iron_piston_chestplate": "Iron Piston Boots Body",
@@ -8421,6 +8496,7 @@
       "block.the_wet_smp.buffer": "Buffer",
       "block.the_wet_smp.air_vent": "Air Vent",
       "block.the_wet_smp.aquamarine_glass": "Aquamarine Glass",
+      "block.the_wet_smp_rehydrated.savanna_crate": "Savanna Crate",
       "block.the_wet_smp.aquamarine_glass_pane": "Aquamarine Glass Pane",
       "block.the_wet_smp_rehydrated.red_redstone_lamp": "Red Redstone Lamp",
       "item.the_wet_smp_rehydrated.effervescent_watcher": "Effervescent Watcher",
@@ -8493,6 +8569,10 @@
       },
       {
         "name": "Paintings",
+        "children": []
+      },
+      {
+        "name": "GUIs",
         "children": []
       }
     ]

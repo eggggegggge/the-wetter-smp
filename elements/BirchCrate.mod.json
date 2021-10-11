@@ -2,12 +2,12 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "barrel_top",
-    "textureTop": "barrel_top",
-    "textureLeft": "barrel_side",
-    "textureFront": "barrel_side",
-    "textureRight": "barrel_side",
-    "textureBack": "barrel_side",
+    "texture": "birch_barrel_top",
+    "textureTop": "birch_barrel_top",
+    "textureLeft": "birch_barrel_side",
+    "textureFront": "birch_barrel_side",
+    "textureRight": "birch_barrel_side",
+    "textureBack": "birch_barrel_side",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 0,
@@ -32,7 +32,7 @@
         "subtract": false
       }
     ],
-    "name": "Crate",
+    "name": "Birch Crate",
     "specialInfo": [],
     "hardness": 1.0,
     "resistance": 10.0,

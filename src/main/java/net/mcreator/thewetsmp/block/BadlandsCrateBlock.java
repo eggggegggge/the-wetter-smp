@@ -58,13 +58,13 @@ import java.util.stream.IntStream;
 import io.netty.buffer.Unpooled;
 
 @TheWetSmpRehydratedModElements.ModElement.Tag
-public class CrateBlock extends TheWetSmpRehydratedModElements.ModElement {
-	@ObjectHolder("the_wet_smp_rehydrated:crate")
+public class BadlandsCrateBlock extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:badlands_crate")
 	public static final Block block = null;
-	@ObjectHolder("the_wet_smp_rehydrated:crate")
+	@ObjectHolder("the_wet_smp_rehydrated:badlands_crate")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
-	public CrateBlock(TheWetSmpRehydratedModElements instance) {
-		super(instance, 25);
+	public BadlandsCrateBlock(TheWetSmpRehydratedModElements instance) {
+		super(instance, 503);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 
@@ -76,15 +76,15 @@ public class CrateBlock extends TheWetSmpRehydratedModElements.ModElement {
 	private static class TileEntityRegisterHandler {
 		@SubscribeEvent
 		public void registerTileEntity(RegistryEvent.Register<TileEntityType<?>> event) {
-			event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("crate"));
+			event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("badlands_crate"));
 		}
 	}
 
 	public static class CustomBlock extends FallingBlock {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).harvestLevel(0)
-					.harvestTool(ToolType.AXE).setRequiresTool());
-			setRegistryName("crate");
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.BASALT).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).harvestLevel(0)
+					.harvestTool(ToolType.PICKAXE).setRequiresTool());
+			setRegistryName("badlands_crate");
 		}
 
 		@Override
@@ -103,7 +103,7 @@ public class CrateBlock extends TheWetSmpRehydratedModElements.ModElement {
 				NetworkHooks.openGui((ServerPlayerEntity) entity, new INamedContainerProvider() {
 					@Override
 					public ITextComponent getDisplayName() {
-						return new StringTextComponent("Crate");
+						return new StringTextComponent("Badlands Crate");
 					}
 
 					@Override
@@ -220,7 +220,7 @@ public class CrateBlock extends TheWetSmpRehydratedModElements.ModElement {
 
 		@Override
 		public ITextComponent getDefaultName() {
-			return new StringTextComponent("crate");
+			return new StringTextComponent("badlands_crate");
 		}
 
 		@Override
@@ -235,7 +235,7 @@ public class CrateBlock extends TheWetSmpRehydratedModElements.ModElement {
 
 		@Override
 		public ITextComponent getDisplayName() {
-			return new StringTextComponent("Crate");
+			return new StringTextComponent("Badlands Crate");
 		}
 
 		@Override

@@ -10,7 +10,7 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "CUSTOM:BufferBlaster"
+        "value": "CUSTOM:Buffer"
       },
       {
         "value": "Blocks.PLANKS"

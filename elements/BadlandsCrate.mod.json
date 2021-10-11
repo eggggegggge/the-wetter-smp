@@ -2,12 +2,12 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "barrel_top",
-    "textureTop": "barrel_top",
-    "textureLeft": "barrel_side",
-    "textureFront": "barrel_side",
-    "textureRight": "barrel_side",
-    "textureBack": "barrel_side",
+    "texture": "badlands_crate_top",
+    "textureTop": "badlands_crate_top",
+    "textureLeft": "badlands_crate_side",
+    "textureFront": "badlands_crate_side",
+    "textureRight": "badlands_crate_side",
+    "textureBack": "badlands_crate_side",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 0,
@@ -32,7 +32,7 @@
         "subtract": false
       }
     ],
-    "name": "Crate",
+    "name": "Badlands Crate",
     "specialInfo": [],
     "hardness": 1.0,
     "resistance": 10.0,
@@ -41,7 +41,7 @@
     "creativeTab": {
       "value": "MISC"
     },
-    "destroyTool": "axe",
+    "destroyTool": "pickaxe",
     "customDrop": {
       "value": ""
     },
@@ -52,7 +52,7 @@
     "canRedstoneConnect": false,
     "lightOpacity": 15,
     "material": {
-      "value": "WOOD"
+      "value": "ROCK"
     },
     "tickRate": 10,
     "tickRandomly": false,
@@ -77,7 +77,7 @@
     "isNotColidable": false,
     "isCustomSoundType": false,
     "soundOnStep": {
-      "value": "WOOD"
+      "value": "BASALT"
     },
     "breakSound": {
       "value": ""

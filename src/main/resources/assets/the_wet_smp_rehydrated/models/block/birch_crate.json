@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "the_wet_smp_rehydrated:blocks/birch_barrel_top",
+    "up": "the_wet_smp_rehydrated:blocks/birch_barrel_top",
+    "north": "the_wet_smp_rehydrated:blocks/birch_barrel_side",
+    "east": "the_wet_smp_rehydrated:blocks/birch_barrel_side",
+    "south": "the_wet_smp_rehydrated:blocks/birch_barrel_side",
+    "west": "the_wet_smp_rehydrated:blocks/birch_barrel_side",
+    "particle": "the_wet_smp_rehydrated:blocks/birch_barrel_top"
+  }
+}
