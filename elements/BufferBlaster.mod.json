@@ -41,9 +41,6 @@
     },
     "onBulletHitsPlayer": {
       "name": "BufferBlasterHitsPlayerProcedure"
-    },
-    "onBulletHitsEntity": {
-      "name": "BufferBlasterHitsPlayerProcedure"
     }
   }
 }

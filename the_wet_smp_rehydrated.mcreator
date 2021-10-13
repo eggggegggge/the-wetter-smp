@@ -8118,6 +8118,82 @@
       "ids": {},
       "registry_name": "brew_soul_supplement_potion",
       "path": "~/Recipes"
+    },
+    {
+      "name": "RiverCrate",
+      "type": "block",
+      "sortid": 519,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "river_crate",
+      "path": "~/Blocks"
+    },
+    {
+      "name": "SoulSubduction",
+      "type": "potioneffect",
+      "sortid": 520,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "soul_subduction",
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "SoulSubductionExpirationProcedure",
+      "type": "procedure",
+      "sortid": 521,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "soul_subduction_expiration_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "SoulSubductionPotion",
+      "type": "potion",
+      "sortid": 522,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "soul_subduction_potion",
+      "path": "~/Potions"
+    },
+    {
+      "name": "BrewSoulSubductionPotion",
+      "type": "recipe",
+      "sortid": 523,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "brew_soul_subduction_potion",
+      "path": "~/Recipes"
+    },
+    {
+      "name": "SoulSubductionAppliedProcedure",
+      "type": "procedure",
+      "sortid": 524,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "soul_subduction_applied_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [
@@ -8220,6 +8296,7 @@
       "item.the_wet_smp_rehydrated.osmium_ingot": "Osmium Ingot",
       "item.the_wet_smp_rehydrated.buffer_blaster": "Buffer Blaster",
       "item.the_wet_smp.diamond_orefish": "Diamond Orefish",
+      "item.minecraft.potion.effect.soul_subduction_potion": "Potion of Soul Subduction",
       "item.the_wet_smp_rehydrated.iron_piston_helmet": "Iron Piston Boots Helmet",
       "effect.salvation": "Salvation",
       "item.the_wet_smp_rehydrated.seahorse": "Seahorse",
@@ -8264,6 +8341,7 @@
       "block.the_wet_smp_rehydrated.aquamarine_construct": "Aquamarine Construct",
       "item.the_wet_smp_rehydrated.savanna_tetra": "Savanna Tetra",
       "item.the_wet_smp.pink_jellyfish": "Pink Jellyfish",
+      "item.minecraft.lingering_potion.effect.soul_subduction_potion": "Lingering Potion of Soul Subduction",
       "item.the_wet_smp.buffer_block_removal_spawn_egg": "Buffer Block Removal Spawn Egg",
       "advancements.grant_sepia_recipes.descr": "a",
       "item.the_wet_smp_rehydrated.netherite_piston_helmet": "Iron Piston Boots Helmet",
@@ -8298,6 +8376,7 @@
       "advancements.grant_blue_pearl_recipes.descr": "a",
       "advancements.grant_lapis_recipes.descr": "a",
       "advancements.grant_red_dye_recipes.descr": "a",
+      "item.minecraft.splash_potion.effect.soul_subduction_potion": "Splash Potion of Soul Subduction",
       "item.the_wet_smp_rehydrated.diamond_piston_boots": "Diamond Piston Boots",
       "advancements.grant_effervescent_watcher_recipes.descr": "a",
       "item.the_wet_smp.diamond_piston_leggings": "Chainmail Piston Boots Leggings",
@@ -8485,6 +8564,7 @@
       "item.the_wet_smp.aquamarine_grappling_hook": "Aquamarine Grappling Hook",
       "item.the_wet_smp_rehydrated.yellow_jellyfish": "Yellow Jellyfish",
       "item.the_wet_smp.onyx_grappling_hook": "Onyx Grappling Hook",
+      "item.minecraft.tipped_arrow.effect.soul_subduction_potion": "Arrow of Soul Subduction",
       "item.minecraft.splash_potion.effect.salvation_potion": "Splash Potion of Salvation",
       "item.the_wet_smp.sea_urchin": "Sea Urchin",
       "advancements.grant_aquamarine_recipes.title": "Grant Rings Recipe",
@@ -8601,8 +8681,10 @@
       "item.the_wet_smp_rehydrated.iron_piston_boots": "Iron Piston Boots",
       "item.minecraft.lingering_potion.effect.haywire_potion": "Lingering Potion of Haywire",
       "advancements.grant_light_grey_dye_recipes.title": "Grant Rings Recipe",
+      "effect.soul_subduction": "Soul Subduction",
       "item.the_wet_smp.chorusfish": "Chorusfish",
       "advancements.grant_magenta_dye_recipes.descr": "a",
+      "block.the_wet_smp_rehydrated.river_crate": "River Crate",
       "item.the_wet_smp_rehydrated.onyx_grappling_hook": "Onyx Grappling Hook",
       "item.the_wet_smp.golden_piston_boots": "Golden Piston Boots",
       "item.the_wet_smp_rehydrated.koi": "Koi",

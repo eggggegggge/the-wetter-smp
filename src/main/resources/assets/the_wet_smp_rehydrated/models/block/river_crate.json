@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "the_wet_smp_rehydrated:blocks/river_crate_top",
+    "up": "the_wet_smp_rehydrated:blocks/river_crate_top",
+    "north": "the_wet_smp_rehydrated:blocks/river_crate_side_two",
+    "east": "the_wet_smp_rehydrated:blocks/river_crate_side_one",
+    "south": "the_wet_smp_rehydrated:blocks/river_crate_side_two",
+    "west": "the_wet_smp_rehydrated:blocks/river_crate_side_one",
+    "particle": "the_wet_smp_rehydrated:blocks/river_crate_top"
+  }
+}
