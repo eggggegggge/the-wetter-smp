@@ -101,7 +101,7 @@ public class BrushBreakBlockProcedureProcedure {
 					((World) world).getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-							"loot spawn ~ ~ ~ loot the_wet_smp:blocks/brush_break_gravel");
+							"loot spawn ~ ~ ~ loot the_wet_smp_rehydrated:blocks/brush_break_gravel");
 				}
 			}
 		}

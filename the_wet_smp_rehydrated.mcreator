@@ -3563,7 +3563,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "BaitCheck",
@@ -5087,7 +5087,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "BadlandsPlateauFish",
@@ -5121,7 +5121,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "BambooJungleFish",
@@ -5155,7 +5155,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "BambooJungleHillsFish",
@@ -5189,7 +5189,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "BeachFish",
@@ -5223,7 +5223,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "DarkForestFish",
@@ -5257,7 +5257,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "DarkForestHillsFish",
@@ -5291,7 +5291,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "DevSalmon",
@@ -5335,7 +5335,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "DeepFrozenOceanFish",
@@ -5369,7 +5369,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "DeepLukewarmOceanFish",
@@ -5403,7 +5403,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "DeepOceanFish",
@@ -5437,7 +5437,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "DeepWarmOceanFish",
@@ -5471,7 +5471,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "WhitePearl",
@@ -5865,7 +5865,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "DesertHillsFish",
@@ -5899,7 +5899,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "ScallopCollectionProcedure",
@@ -5967,7 +5967,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "ErodedBadlandsFish",
@@ -6001,7 +6001,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "FlowerForestFish",
@@ -6035,7 +6035,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "BirchForestFish",
@@ -6069,7 +6069,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "BirchForestHillsFish",
@@ -6103,7 +6103,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "ForestFish",
@@ -6137,7 +6137,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "FrozenOceanFish",
@@ -6171,7 +6171,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "FrozenRiverFish",
@@ -6205,7 +6205,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "GiantSpruceTaigaFish",
@@ -6239,7 +6239,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "GiantSpruceTaigaHillsFish",
@@ -6273,7 +6273,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "GiantTreeTaigaFish",
@@ -6307,7 +6307,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "GiantTreeTaigaHillsFish",
@@ -6341,7 +6341,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "GravellyMountainsFish",
@@ -6375,7 +6375,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "IceSpikesFish",
@@ -6409,7 +6409,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "JungleFish",
@@ -6443,7 +6443,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "JungleEdgeFish",
@@ -6477,7 +6477,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "JungleHillsFish",
@@ -6511,7 +6511,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "LukewarmOceanFish",
@@ -6545,7 +6545,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "ModifiedBadlandsPlateauFish",
@@ -6579,7 +6579,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "ModifiedGravellyMountainsFish",
@@ -6613,7 +6613,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "ModifiedJungleFish",
@@ -6647,7 +6647,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "ModifiedJungleEdgeFish",
@@ -6681,7 +6681,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "ModifiedWoodedBadlandsPlateauFish",
@@ -6715,7 +6715,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "MountainEdgeFish",
@@ -6749,7 +6749,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "MountainsFish",
@@ -6783,7 +6783,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "MushroomFieldShoreFish",
@@ -6817,7 +6817,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "MushroomFieldsFish",
@@ -6851,7 +6851,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "OceanFish",
@@ -6885,7 +6885,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "PlainsFish",
@@ -6919,7 +6919,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "RiverFish",
@@ -6953,7 +6953,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "SavannaFish",
@@ -6987,7 +6987,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "SavannaPlateauFish",
@@ -7021,7 +7021,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "ShatteredSavannaFish",
@@ -7055,7 +7055,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "ShatteredSavannaPlateauFish",
@@ -7089,7 +7089,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "SnowyBeachFish",
@@ -7123,7 +7123,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "SnowyMountainsFish",
@@ -7157,7 +7157,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "SnowyTaigaFish",
@@ -7191,7 +7191,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "SnowyTaigaHillsFish",
@@ -7225,7 +7225,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "SnowyTaigaMountainsFish",
@@ -7259,7 +7259,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "SnowyTundraFish",
@@ -7293,7 +7293,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "StoneShoreFish",
@@ -7327,7 +7327,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "SunflowerPlainsFish",
@@ -7361,7 +7361,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "SwampFish",
@@ -7395,7 +7395,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "SwampHillsFish",
@@ -7429,7 +7429,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "TaigaFish",
@@ -7463,7 +7463,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "TaigaHillsFish",
@@ -7497,7 +7497,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "TaigaMountainsFish",
@@ -7531,7 +7531,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "TallBirchForestFish",
@@ -7565,7 +7565,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "TallBirchHillsFish",
@@ -7599,7 +7599,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "WarmOceanFish",
@@ -7633,7 +7633,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "WoodedBadlandsPlateauFish",
@@ -7667,7 +7667,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "WoodedHillsFish",
@@ -7701,7 +7701,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "WoodedMountainsFish",
@@ -7735,7 +7735,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Fishing"
+      "path": "~/Procedures/Fishing/Fish"
     },
     {
       "name": "DetermineBiome",
@@ -8194,6 +8194,244 @@
         ]
       },
       "path": "~/Procedures"
+    },
+    {
+      "name": "BirchTreasure",
+      "type": "procedure",
+      "sortid": 525,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "birch_treasure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Fishing/Treasure"
+    },
+    {
+      "name": "JungleTreasure",
+      "type": "procedure",
+      "sortid": 526,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "jungle_treasure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Fishing/Treasure"
+    },
+    {
+      "name": "BambooTreasure",
+      "type": "procedure",
+      "sortid": 527,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bamboo_treasure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Fishing/Treasure"
+    },
+    {
+      "name": "BadlandsTreasure",
+      "type": "procedure",
+      "sortid": 528,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "badlands_treasure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Fishing/Treasure"
+    },
+    {
+      "name": "SavannaTreasure",
+      "type": "procedure",
+      "sortid": 529,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "savanna_treasure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Fishing/Treasure"
+    },
+    {
+      "name": "MountainTreasure",
+      "type": "procedure",
+      "sortid": 530,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mountain_treasure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Fishing/Treasure"
+    },
+    {
+      "name": "PlaceBlockProcedure",
+      "type": "procedure",
+      "sortid": 531,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "place_block_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [
@@ -8277,8 +8515,8 @@
   ],
   "language_map": {
     "en_us": {
-      "block.the_wet_smp_rehydrated.lit_cyan_redstone_lamp": "Lit Cyan Restone Lamp",
       "item.the_wet_smp_rehydrated.skeletal_eel": "Skeletal Eel",
+      "block.the_wet_smp_rehydrated.lit_cyan_redstone_lamp": "Lit Cyan Restone Lamp",
       "effect.snack_bulwark": "Snack Bulwark",
       "advancements.grant_ruby_recipes.descr": "a",
       "item.the_wet_smp_rehydrated.molten_charr": "Molten Charr",
@@ -8289,32 +8527,32 @@
       "advancements.grant_netherite_boots_recipes.title": "Grant Chain Piston Boots Recipe",
       "item.the_wet_smp_rehydrated.lapis_embedded_suspicious_stew": "Lapis Embedded Suspicious Stew",
       "advancements.grant_maroon_pearl_recipes.title": "Grant Rings Recipe",
-      "advancements.grant_white_pearl_recipes.title": "Grant Rings Recipe",
       "block.the_wet_smp_rehydrated.bamboo_crate": "Bamboo Crate",
+      "advancements.grant_white_pearl_recipes.title": "Grant Rings Recipe",
       "advancements.grant_white_dye_recipes.title": "Grant Rings Recipe",
       "entity.the_wet_smp_rehydrated.buffer_block_removal": "Buffer Block Removal",
       "item.the_wet_smp_rehydrated.osmium_ingot": "Osmium Ingot",
-      "item.the_wet_smp_rehydrated.buffer_blaster": "Buffer Blaster",
       "item.the_wet_smp.diamond_orefish": "Diamond Orefish",
+      "item.the_wet_smp_rehydrated.buffer_blaster": "Buffer Blaster",
       "item.minecraft.potion.effect.soul_subduction_potion": "Potion of Soul Subduction",
       "item.the_wet_smp_rehydrated.iron_piston_helmet": "Iron Piston Boots Helmet",
       "effect.salvation": "Salvation",
       "item.the_wet_smp_rehydrated.seahorse": "Seahorse",
       "item.the_wet_smp_rehydrated.lapis_embedded_mushroom_stew": "Lapis Embedded Mushroom Stew",
       "item.the_wet_smp_rehydrated.raw_osmium": "Raw Osmium",
-      "item.the_wet_smp.lapis_embedded_beetroot_soup": "Lapis Embedded Beetroot Soup",
       "item.the_wet_smp_rehydrated.golden_piston_helmet": "Chainmail Piston Boots Helmet",
+      "item.the_wet_smp.lapis_embedded_beetroot_soup": "Lapis Embedded Beetroot Soup",
       "block.the_wet_smp_rehydrated.lit_light_grey_redstone_lamp": "Lit Light Grey Restone Lamp",
       "item.the_wet_smp_rehydrated.gold_pearl": "Gold Pearl",
-      "advancements.grant_sepia_wool_recipes.descr": "a",
       "item.the_wet_smp.lapis_embedded_rabbit_stew": "Lapis Embedded Rabbit Stew",
+      "advancements.grant_sepia_wool_recipes.descr": "a",
       "item.the_wet_smp.voidswimmer": "Voidswimmer",
       "item.minecraft.splash_potion.effect.haywire_potion": "Splash Potion of Haywire",
       "item.the_wet_smp_rehydrated.leather_piston_chestplate": "Leather Piston Boots Body",
       "block.the_wet_smp_rehydrated.deepslate_osmium_ore": "Deepslate Osmium Ore",
       "item.the_wet_smp.golden_piston_helmet": "Chainmail Piston Boots Helmet",
-      "effect.vampirism": "Vampirism",
       "item.the_wet_smp.diamond_piston_boots": "Diamond Piston Boots",
+      "effect.vampirism": "Vampirism",
       "item.the_wet_smp.iron_piston_boots": "Iron Piston Boots",
       "item.the_wet_smp.ruby_ring": "Ruby Ring",
       "block.the_wet_smp_rehydrated.singing_singing_bass": "Singing Bass",
@@ -8329,8 +8567,8 @@
       "item.minecraft.tipped_arrow.effect.salvation_potion": "Arrow of Salvation",
       "item.the_wet_smp.aquamarine_embedded_beetroot_soup": "Aquamarine Embedded Beetroot Soup",
       "item.the_wet_smp.crab": "Crab",
-      "item.the_wet_smp.strange_gel": "Strange Gel",
       "item.the_wet_smp_rehydrated.glow_koi": "Glow Koi",
+      "item.the_wet_smp.strange_gel": "Strange Gel",
       "advancements.grant_emerald_recipes.descr": "a",
       "advancements.grant_green_dye_recipes.title": "Grant Rings Recipe",
       "advancements.grant_light_blue_dye_recipes.descr": "a",
@@ -8352,16 +8590,16 @@
       "advancements.grant_aquamarine_recipes.descr": "a",
       "block.the_wet_smp_rehydrated.lit_lime_redstone_lamp": "Lit Lime Restone Lamp",
       "item.the_wet_smp_rehydrated.halocline_diverfish": "Halocline Diverfish",
-      "item.the_wet_smp_rehydrated.lapis_ring": "Lapis Ring",
       "item.the_wet_smp.minnow": "Minnow",
+      "item.the_wet_smp_rehydrated.lapis_ring": "Lapis Ring",
       "advancements.grant_light_grey_dye_recipes.descr": "a",
       "advancements.grant_grey_dye_recipes.title": "Grant Rings Recipe",
       "item.the_wet_smp.ruby_embedded_suspicious_stew": "Ruby Embedded Suspicious Stew",
       "item.the_wet_smp_rehydrated.netherite_piston_chestplate": "Iron Piston Boots Body",
       "advancements.grant_iron_boots_recipes.title": "Grant Chain Piston Boots Recipe",
-      "item.the_wet_smp.aquamarine": "Aquamarine",
-      "item.the_wet_smp_rehydrated.onyx_embedded_beetroot_soup": "Onyx Embedded Beetroot Soup",
       "item.the_wet_smp_rehydrated.onyx_orefish": "Onyx Orefish",
+      "item.the_wet_smp_rehydrated.onyx_embedded_beetroot_soup": "Onyx Embedded Beetroot Soup",
+      "item.the_wet_smp.aquamarine": "Aquamarine",
       "item.the_wet_smp_rehydrated.ruby_grappling_hook": "Ruby Grappling Hook",
       "block.the_wet_smp_rehydrated.mountain_crate": "Mountain Crate",
       "block.the_wet_smp_rehydrated.sepia_concrete": "Sepia Concrete",
@@ -8388,8 +8626,8 @@
       "block.the_wet_smp_rehydrated.brown_redstone_lamp": "Brown Redstone Lamp",
       "item.the_wet_smp.warped_wart": "Warped Wart",
       "block.the_wet_smp_rehydrated.osmium_pillar": "Osmium Pillar",
-      "item.the_wet_smp.seahorse": "Seahorse",
       "item.the_wet_smp_rehydrated.golden_piston_chestplate": "Chainmail Piston Boots Body",
+      "item.the_wet_smp.seahorse": "Seahorse",
       "item.the_wet_smp.iron_piston_chestplate": "Iron Piston Boots Body",
       "subtitles.veil6": "Eerie noise",
       "advancements.grant_piston_recipes.descr": "a",
@@ -8840,7 +9078,16 @@
         "children": [
           {
             "name": "Fishing",
-            "children": []
+            "children": [
+              {
+                "name": "Fish",
+                "children": []
+              },
+              {
+                "name": "Treasure",
+                "children": []
+              }
+            ]
           }
         ]
       },
@@ -8850,6 +9097,10 @@
       },
       {
         "name": "GUIs",
+        "children": []
+      },
+      {
+        "name": "Tags",
         "children": []
       }
     ]
