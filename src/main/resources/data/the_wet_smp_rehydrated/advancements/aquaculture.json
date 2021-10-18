@@ -1,0 +1,37 @@
+{
+  "display": {
+    "background": "the_wet_smp_rehydrated:textures/prismarine_bricks.png",
+    "icon": {
+      "item": "minecraft:fishing_rod"
+    },
+    "title": {
+      "translate": "advancements.aquaculture.title"
+    },
+    "description": {
+      "translate": "advancements.aquaculture.descr"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "aquaculture": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:fishing_rod",
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 0
+  }
+}
