@@ -18,11 +18,11 @@ import net.minecraft.block.Block;
 import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
 @TheWetSmpRehydratedModElements.ModElement.Tag
-public class OceanCrateBlock extends TheWetSmpRehydratedModElements.ModElement {
-	@ObjectHolder("the_wet_smp_rehydrated:ocean_crate")
+public class BasaltCrateBlock extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:basalt_crate")
 	public static final Block block = null;
-	public OceanCrateBlock(TheWetSmpRehydratedModElements instance) {
-		super(instance, 533);
+	public BasaltCrateBlock(TheWetSmpRehydratedModElements instance) {
+		super(instance, 540);
 	}
 
 	@Override
@@ -32,9 +32,9 @@ public class OceanCrateBlock extends TheWetSmpRehydratedModElements.ModElement {
 	}
 	public static class CustomBlock extends FallingBlock {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.SAND).sound(SoundType.STONE).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).harvestLevel(0)
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.BASALT).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).harvestLevel(0)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool());
-			setRegistryName("ocean_crate");
+			setRegistryName("basalt_crate");
 		}
 
 		@Override

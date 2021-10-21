@@ -2,12 +2,12 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "ocean_crate_top",
-    "textureTop": "ocean_crate_top",
-    "textureLeft": "ocean_crate_side",
-    "textureFront": "ocean_crate_side",
-    "textureRight": "ocean_crate_side",
-    "textureBack": "ocean_crate_side",
+    "texture": "basalt_crate_top",
+    "textureTop": "basalt_crate_top",
+    "textureLeft": "basalt_crate_side",
+    "textureFront": "basalt_crate_side",
+    "textureRight": "basalt_crate_side",
+    "textureBack": "basalt_crate_side",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 0,
@@ -32,7 +32,7 @@
         "subtract": false
       }
     ],
-    "name": "Ocean Crate",
+    "name": "Basalt Crate",
     "specialInfo": [],
     "hardness": 1.0,
     "resistance": 10.0,
@@ -52,7 +52,7 @@
     "canRedstoneConnect": false,
     "lightOpacity": 15,
     "material": {
-      "value": "SAND"
+      "value": "ROCK"
     },
     "tickRate": 10,
     "tickRandomly": false,
@@ -77,7 +77,7 @@
     "isNotColidable": false,
     "isCustomSoundType": false,
     "soundOnStep": {
-      "value": "STONE"
+      "value": "BASALT"
     },
     "breakSound": {
       "value": ""

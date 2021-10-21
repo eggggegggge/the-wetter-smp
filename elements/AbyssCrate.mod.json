@@ -2,12 +2,12 @@
   "_fv": 24,
   "_type": "block",
   "definition": {
-    "texture": "ocean_crate_top",
-    "textureTop": "ocean_crate_top",
-    "textureLeft": "ocean_crate_side",
-    "textureFront": "ocean_crate_side",
-    "textureRight": "ocean_crate_side",
-    "textureBack": "ocean_crate_side",
+    "texture": "abyss_crate_top",
+    "textureTop": "abyss_crate_top",
+    "textureLeft": "abyss_crate_side",
+    "textureFront": "abyss_crate_side",
+    "textureRight": "abyss_crate_side",
+    "textureBack": "abyss_crate_side",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 0,
@@ -32,7 +32,7 @@
         "subtract": false
       }
     ],
-    "name": "Ocean Crate",
+    "name": "Abyss Crate",
     "specialInfo": [],
     "hardness": 1.0,
     "resistance": 10.0,
@@ -52,7 +52,7 @@
     "canRedstoneConnect": false,
     "lightOpacity": 15,
     "material": {
-      "value": "SAND"
+      "value": "MISCELLANEOUS"
     },
     "tickRate": 10,
     "tickRandomly": false,
