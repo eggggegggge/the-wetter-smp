@@ -7877,7 +7877,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "birch_crate",
-      "path": "~/Blocks"
+      "path": "~/Legacy Content"
     },
     {
       "name": "JungleCrate",
@@ -7887,7 +7887,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "jungle_crate",
-      "path": "~/Blocks"
+      "path": "~/Legacy Content"
     },
     {
       "name": "CrateGUI",
@@ -7917,7 +7917,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "badlands_crate",
-      "path": "~/Blocks"
+      "path": "~/Legacy Content"
     },
     {
       "name": "SavannaCrate",
@@ -7927,7 +7927,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "savanna_crate",
-      "path": "~/Blocks"
+      "path": "~/Legacy Content"
     },
     {
       "name": "MountainCrate",
@@ -7937,7 +7937,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "mountain_crate",
-      "path": "~/Blocks"
+      "path": "~/Legacy Content"
     },
     {
       "name": "Pushback",
@@ -8120,16 +8120,6 @@
       "path": "~/Recipes"
     },
     {
-      "name": "RiverCrate",
-      "type": "block",
-      "sortid": 519,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "river_crate",
-      "path": "~/Blocks"
-    },
-    {
       "name": "SoulSubduction",
       "type": "potioneffect",
       "sortid": 520,
@@ -8196,210 +8186,6 @@
       "path": "~/Procedures"
     },
     {
-      "name": "BirchTreasure",
-      "type": "procedure",
-      "sortid": 525,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "birch_treasure",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Fishing/Treasure"
-    },
-    {
-      "name": "JungleTreasure",
-      "type": "procedure",
-      "sortid": 526,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "jungle_treasure",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Fishing/Treasure"
-    },
-    {
-      "name": "BambooTreasure",
-      "type": "procedure",
-      "sortid": 527,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "bamboo_treasure",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Fishing/Treasure"
-    },
-    {
-      "name": "BadlandsTreasure",
-      "type": "procedure",
-      "sortid": 528,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "badlands_treasure",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Fishing/Treasure"
-    },
-    {
-      "name": "SavannaTreasure",
-      "type": "procedure",
-      "sortid": 529,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "savanna_treasure",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Fishing/Treasure"
-    },
-    {
-      "name": "MountainTreasure",
-      "type": "procedure",
-      "sortid": 530,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "mountain_treasure",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Fishing/Treasure"
-    },
-    {
       "name": "PlaceBlockProcedure",
       "type": "procedure",
       "sortid": 531,
@@ -8434,40 +8220,6 @@
       "path": "~/Procedures"
     },
     {
-      "name": "RiverTreasure",
-      "type": "procedure",
-      "sortid": 532,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "river_treasure",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Fishing/Treasure"
-    },
-    {
       "name": "OceanCrate",
       "type": "block",
       "sortid": 533,
@@ -8478,40 +8230,6 @@
       "path": "~/Blocks"
     },
     {
-      "name": "OceanTreasure",
-      "type": "procedure",
-      "sortid": 534,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "ocean_treasure",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Fishing/Treasure"
-    },
-    {
       "name": "DeepOceanCrate",
       "type": "block",
       "sortid": 535,
@@ -8519,7 +8237,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "deep_ocean_crate",
-      "path": "~/Blocks"
+      "path": "~/Legacy Content"
     },
     {
       "name": "OakCrate",
@@ -8529,41 +8247,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "oak_crate",
-      "path": "~/Blocks"
-    },
-    {
-      "name": "DeepOceanTreasure",
-      "type": "procedure",
-      "sortid": 537,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "deep_ocean_treasure",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Fishing/Treasure"
+      "path": "~/Legacy Content"
     },
     {
       "name": "SnowyCrate",
@@ -8573,7 +8257,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "snowy_crate",
-      "path": "~/Blocks"
+      "path": "~/Legacy Content"
     },
     {
       "name": "Aquaculture",
@@ -8584,40 +8268,6 @@
       "ids": {},
       "registry_name": "aquaculture",
       "path": "~/Advancements"
-    },
-    {
-      "name": "DetermineTreasureBiome",
-      "type": "procedure",
-      "sortid": 540,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "determine_treasure_biome",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Fishing"
     }
   ],
   "variable_elements": [
@@ -9113,7 +8763,6 @@
       "effect.soul_subduction": "Soul Subduction",
       "item.the_wet_smp.chorusfish": "Chorusfish",
       "advancements.grant_magenta_dye_recipes.descr": "a",
-      "block.the_wet_smp_rehydrated.river_crate": "River Crate",
       "item.the_wet_smp_rehydrated.onyx_grappling_hook": "Onyx Grappling Hook",
       "item.the_wet_smp.golden_piston_boots": "Golden Piston Boots",
       "item.the_wet_smp_rehydrated.koi": "Koi",
