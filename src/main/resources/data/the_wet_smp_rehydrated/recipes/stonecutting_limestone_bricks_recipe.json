@@ -1,0 +1,9 @@
+{
+  "group": "limestonebricks",
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "the_wet_smp_rehydrated:limestone"
+  },
+  "result": "the_wet_smp_rehydrated:limestone_bricks"
+}

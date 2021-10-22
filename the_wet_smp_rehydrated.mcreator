@@ -8290,16 +8290,6 @@
       "path": "~/Blocks"
     },
     {
-      "name": "BlazingFishingBobberEntity",
-      "type": "code",
-      "sortid": 542,
-      "compiles": true,
-      "locked_code": true,
-      "ids": {},
-      "registry_name": "blazing_fishing_bobber_entity",
-      "path": "~/Custom Elements"
-    },
-    {
       "name": "Limestone",
       "type": "block",
       "sortid": 543,
@@ -8338,6 +8328,66 @@
       "ids": {},
       "registry_name": "limestone_bricks",
       "path": "~/Blocks"
+    },
+    {
+      "name": "LimestonePillarRecipe",
+      "type": "recipe",
+      "sortid": 547,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "limestone_pillar_recipe",
+      "path": "~/Recipes"
+    },
+    {
+      "name": "LimestoneBricksRecipe",
+      "type": "recipe",
+      "sortid": 548,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "limestone_bricks_recipe",
+      "path": "~/Recipes"
+    },
+    {
+      "name": "LimestoneTilesRecipe",
+      "type": "recipe",
+      "sortid": 549,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "limestone_tiles_recipe",
+      "path": "~/Recipes"
+    },
+    {
+      "name": "StonecuttingLimestonePillarRecipe",
+      "type": "recipe",
+      "sortid": 550,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "stonecutting_limestone_pillar_recipe",
+      "path": "~/Recipes"
+    },
+    {
+      "name": "StonecuttingLimestoneTilesRecipe",
+      "type": "recipe",
+      "sortid": 551,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "stonecutting_limestone_tiles_recipe",
+      "path": "~/Recipes"
+    },
+    {
+      "name": "StonecuttingLimestoneBricksRecipe",
+      "type": "recipe",
+      "sortid": 552,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "stonecutting_limestone_bricks_recipe",
+      "path": "~/Recipes"
     }
   ],
   "variable_elements": [
@@ -9022,10 +9072,6 @@
       },
       {
         "name": "Advancements",
-        "children": []
-      },
-      {
-        "name": "Custom Elements",
         "children": []
       }
     ]
