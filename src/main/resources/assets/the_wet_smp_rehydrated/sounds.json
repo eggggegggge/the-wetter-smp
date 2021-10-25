@@ -70,5 +70,15 @@
         "stream": false
       }
     ]
+  },
+  "disc.troll": {
+    "category": "record",
+    "subtitle": "subtitles.disc.troll",
+    "sounds": [
+      {
+        "name": "the_wet_smp_rehydrated:troll_music_disc",
+        "stream": true
+      }
+    ]
   }
 }

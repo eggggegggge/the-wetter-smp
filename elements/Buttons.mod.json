@@ -1,0 +1,62 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:PinkPearlButton"
+      },
+      {
+        "value": "CUSTOM:MaroonPearlButton"
+      },
+      {
+        "value": "CUSTOM:BluePearlButton"
+      },
+      {
+        "value": "CUSTOM:BlackPearlButton"
+      },
+      {
+        "value": "CUSTOM:GoldPearlButton"
+      },
+      {
+        "value": "CUSTOM:WhitePearlButton"
+      },
+      {
+        "value": "Blocks.STONE_BUTTON"
+      },
+      {
+        "value": "Blocks.POLISHED_BLACKSTONE_BUTTON"
+      },
+      {
+        "value": "Blocks.WOODEN_BUTTON"
+      },
+      {
+        "value": "Blocks.SPRUCE_BUTTON"
+      },
+      {
+        "value": "Blocks.BIRCH_BUTTON"
+      },
+      {
+        "value": "Blocks.JUNGLE_BUTTON"
+      },
+      {
+        "value": "Blocks.ACACIA_BUTTON"
+      },
+      {
+        "value": "Blocks.DARK_OAK_BUTTON"
+      },
+      {
+        "value": "Blocks.CRIMSON_BUTTON"
+      },
+      {
+        "value": "Blocks.WARPED_BUTTON"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "buttons",
+    "namespace": "minecraft"
+  }
+}

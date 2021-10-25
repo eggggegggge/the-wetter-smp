@@ -1,0 +1,116 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:Koi"
+      },
+      {
+        "value": "CUSTOM:GlowKoi"
+      },
+      {
+        "value": "CUSTOM:Goldfish"
+      },
+      {
+        "value": "CUSTOM:JungleSnapper"
+      },
+      {
+        "value": "CUSTOM:Fishling"
+      },
+      {
+        "value": "CUSTOM:EffervescentWatcher"
+      },
+      {
+        "value": "CUSTOM:Chorusfish"
+      },
+      {
+        "value": "CUSTOM:Bass"
+      },
+      {
+        "value": "CUSTOM:ShroomyKoi"
+      },
+      {
+        "value": "CUSTOM:Soulscale"
+      },
+      {
+        "value": "CUSTOM:GoldenSkiffia"
+      },
+      {
+        "value": "CUSTOM:NightKoi"
+      },
+      {
+        "value": "CUSTOM:Shulkfish"
+      },
+      {
+        "value": "CUSTOM:HumuhumunukunukuapuaA"
+      },
+      {
+        "value": "CUSTOM:Minnow"
+      },
+      {
+        "value": "CUSTOM:Anchovy"
+      },
+      {
+        "value": "CUSTOM:Seahorse"
+      },
+      {
+        "value": "CUSTOM:Pupfish"
+      },
+      {
+        "value": "CUSTOM:SavannaTetra"
+      },
+      {
+        "value": "CUSTOM:SilverEye"
+      },
+      {
+        "value": "CUSTOM:WatchfulReedfish"
+      },
+      {
+        "value": "CUSTOM:Flowerfish"
+      },
+      {
+        "value": "CUSTOM:Cuttlefish"
+      },
+      {
+        "value": "CUSTOM:ShiitakeOrfe"
+      },
+      {
+        "value": "CUSTOM:FungiGobi"
+      },
+      {
+        "value": "CUSTOM:BadlandsCarp"
+      },
+      {
+        "value": "CUSTOM:HaloclineDiverfish"
+      },
+      {
+        "value": "CUSTOM:BrineKoi"
+      },
+      {
+        "value": "Items.FISH#0"
+      },
+      {
+        "value": "Items.FISH#1"
+      },
+      {
+        "value": "Items.FISH#2"
+      },
+      {
+        "value": "Items.FISH#3"
+      },
+      {
+        "value": "Items.COOKED_FISH#0"
+      },
+      {
+        "value": "Items.COOKED_FISH#1"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "fishes",
+    "namespace": "minecraft"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "criteria": {
+    "grant_limestone_recipes": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "the_wet_smp_rehydrated:limestone",
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1,
+    "recipes": [
+      "the_wet_smp_rehydrated:limestone_pillar_recipe",
+      "the_wet_smp_rehydrated:limestone_bricks_recipe",
+      "the_wet_smp_rehydrated:limestone_tiles_recipe",
+      "the_wet_smp_rehydrated:stonecutting_limestone_pillar_recipe",
+      "the_wet_smp_rehydrated:stonecutting_limestone_tiles_recipe",
+      "the_wet_smp_rehydrated:stonecutting_limestone_bricks_recipe"
+    ]
+  },
+  "parent": "the_wet_smp_rehydrated:get_all_rings"
+}
