@@ -13,10 +13,12 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.thewetsmp.potion.SnackBulwarkPotionEffect;
+import net.mcreator.thewetsmp.potion.RuggedPotionEffect;
 import net.mcreator.thewetsmp.potion.PeacePotionEffect;
 import net.mcreator.thewetsmp.potion.LacunaPotionEffect;
 import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 
+import java.util.Random;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.Collection;
@@ -53,12 +55,18 @@ public class DamageProcedureProcedure {
 				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure DamageProcedure!");
 			return;
 		}
+		if (dependencies.get("sourceentity") == null) {
+			if (!dependencies.containsKey("sourceentity"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency sourceentity for procedure DamageProcedure!");
+			return;
+		}
 		if (dependencies.get("amount") == null) {
 			if (!dependencies.containsKey("amount"))
 				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency amount for procedure DamageProcedure!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
+		Entity sourceentity = (Entity) dependencies.get("sourceentity");
 		double amount = dependencies.get("amount") instanceof Integer ? (int) dependencies.get("amount") : (double) dependencies.get("amount");
 		double test = 0;
 		if ((new Object() {
@@ -126,6 +134,41 @@ public class DamageProcedureProcedure {
 							_evt.setCanceled(true);
 					}
 				}
+			}
+		} else if ((new Object() {
+			boolean check(Entity _entity) {
+				if (_entity instanceof LivingEntity) {
+					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+					for (EffectInstance effect : effects) {
+						if (effect.getPotion() == PeacePotionEffect.potion)
+							return true;
+					}
+				}
+				return false;
+			}
+		}.check(sourceentity))) {
+			if (dependencies.get("event") != null) {
+				Object _obj = dependencies.get("event");
+				if (_obj instanceof Event) {
+					Event _evt = (Event) _obj;
+					if (_evt.isCancelable())
+						_evt.setCanceled(true);
+				}
+			}
+		} else if ((new Object() {
+			boolean check(Entity _entity) {
+				if (_entity instanceof LivingEntity) {
+					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+					for (EffectInstance effect : effects) {
+						if (effect.getPotion() == RuggedPotionEffect.potion)
+							return true;
+					}
+				}
+				return false;
+			}
+		}.check(entity))) {
+			if ((((new Random()).nextInt((int) 99 + 1)) <= ((amount) * 2))) {
+				sourceentity.attackEntityFrom(DamageSource.MAGIC, (float) 2);
 			}
 		}
 	}
