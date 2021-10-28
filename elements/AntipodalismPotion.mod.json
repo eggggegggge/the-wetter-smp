@@ -1,0 +1,21 @@
+{
+  "_fv": 24,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Potion of Antipodalism",
+    "splashName": "Splash Potion of Antipodalism",
+    "lingeringName": "Lingering Potion of Antipodalism",
+    "arrowName": "Arrow of Antipodalism",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:Antipodalism"
+        },
+        "duration": 1,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": false
+      }
+    ]
+  }
+}
