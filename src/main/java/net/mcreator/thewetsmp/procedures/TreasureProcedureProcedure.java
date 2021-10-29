@@ -61,6 +61,68 @@ public class TreasureProcedureProcedure {
 							"loot give @s loot the_wet_smp_rehydrated:desert_treasure");
 				}
 			}
+		} else if ((((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
+						.equals(new ResourceLocation("ocean")))
+				|| ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+						&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
+								.equals(new ResourceLocation("cold_ocean")))
+						|| (world.func_241828_r().getRegistry(Registry.BIOME_KEY)
+								.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+								&& world.func_241828_r().getRegistry(Registry.BIOME_KEY)
+										.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
+										.equals(new ResourceLocation("frozen_ocean")))))
+				|| (((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+						&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
+								.equals(new ResourceLocation("warm_ocean")))
+						|| (world.func_241828_r().getRegistry(Registry.BIOME_KEY)
+								.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+								&& world.func_241828_r().getRegistry(Registry.BIOME_KEY)
+										.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))).equals(new ResourceLocation("river"))))
+						|| ((world.func_241828_r().getRegistry(Registry.BIOME_KEY)
+								.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+								&& world.func_241828_r().getRegistry(Registry.BIOME_KEY)
+										.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
+										.equals(new ResourceLocation("lukewarm_ocean")))
+								|| (world.func_241828_r().getRegistry(Registry.BIOME_KEY)
+										.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+										&& world.func_241828_r().getRegistry(Registry.BIOME_KEY)
+												.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
+												.equals(new ResourceLocation("frozen_river"))))))) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"loot give @s loot the_wet_smp_rehydrated:ocean_treasure");
+				}
+			}
+		} else if (((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
+						.equals(new ResourceLocation("deep_cold_ocean")))
+				|| (((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+						&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
+								.equals(new ResourceLocation("deep_frozen_ocean")))
+						|| (world.func_241828_r().getRegistry(Registry.BIOME_KEY)
+								.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+								&& world.func_241828_r().getRegistry(Registry.BIOME_KEY)
+										.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))).equals(new ResourceLocation("deep_ocean"))))
+						|| ((world.func_241828_r().getRegistry(Registry.BIOME_KEY)
+								.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+								&& world.func_241828_r().getRegistry(Registry.BIOME_KEY)
+										.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
+										.equals(new ResourceLocation("deep_lukewarm_ocean")))
+								|| (world.func_241828_r().getRegistry(Registry.BIOME_KEY)
+										.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+										&& world.func_241828_r().getRegistry(Registry.BIOME_KEY)
+												.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
+												.equals(new ResourceLocation("deep_warm_ocean"))))))) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"loot give @s loot the_wet_smp_rehydrated:deep_ocean_treasure");
+				}
+			}
 		} else {
 			{
 				Entity _ent = entity;
