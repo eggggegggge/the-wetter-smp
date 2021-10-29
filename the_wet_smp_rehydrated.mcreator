@@ -8625,6 +8625,73 @@
       "ids": {},
       "registry_name": "desert_treasure",
       "path": "~/Loot Tables"
+    },
+    {
+      "name": "TreasureProcedure",
+      "type": "procedure",
+      "sortid": 578,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "treasure_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Fishing"
+    },
+    {
+      "name": "JunkProcedure",
+      "type": "procedure",
+      "sortid": 579,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "junk_procedure",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Procedures/Fishing"
+    },
+    {
+      "name": "TreasurePowder",
+      "type": "item",
+      "sortid": 580,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "treasure_powder",
+      "path": "~/Items"
+    },
+    {
+      "name": "JunkPowder",
+      "type": "item",
+      "sortid": 581,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "junk_powder",
+      "path": "~/Items"
     }
   ],
   "variable_elements": [
@@ -8781,6 +8848,7 @@
       "advancements.grant_light_blue_dye_recipes.descr": "a",
       "advancements.grant_yellow_dye_recipes.descr": "a",
       "item.the_wet_smp_rehydrated.red_jellyfish": "Red Jellyfish",
+      "item.the_wet_smp_rehydrated.junk_powder": "Junk Powder",
       "item.the_wet_smp_rehydrated.white_pearl": "White Pearl",
       "item.minecraft.lingering_potion.effect.lacuna_potion": "Lingering Potion of Lacuna",
       "block.the_wet_smp_rehydrated.aquamarine_construct": "Aquamarine Construct",
@@ -9193,6 +9261,7 @@
       "advancements.grant_nether_wart_block_recipes.descr": "a",
       "item.the_wet_smp.aquamarine_embedded_bowl": "Aquamarine Embedded Bowl",
       "item.the_wet_smp_rehydrated.soulscale": "Soulscale",
+      "item.the_wet_smp_rehydrated.treasure_powder": "Treasure Powder",
       "item.minecraft.tipped_arrow.effect.pushback_potion": "Arrow of Pushback",
       "item.the_wet_smp.osmium_ingot": "Osmium Ingot",
       "item.the_wet_smp_rehydrated.onyx_embedded_suspicious_stew": "Onyx Embedded Suspicious Stew",

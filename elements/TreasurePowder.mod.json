@@ -3,9 +3,9 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "the_fish",
+    "texture": "treasure_powder",
     "customModelName": "Normal",
-    "name": "Dev. Salmon",
+    "name": "Treasure Powder",
     "rarity": "EPIC",
     "creativeTab": {
       "value": "MATERIALS"
@@ -25,7 +25,7 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInfo": [
-      "Straight from the River Deveron"
+      "Indirectly produced from ingredients found near the River Deveron"
     ],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",

@@ -18,11 +18,11 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 import java.util.List;
 
 @TheWetSmpRehydratedModElements.ModElement.Tag
-public class DevSalmonItem extends TheWetSmpRehydratedModElements.ModElement {
-	@ObjectHolder("the_wet_smp_rehydrated:dev_salmon")
+public class JunkPowderItem extends TheWetSmpRehydratedModElements.ModElement {
+	@ObjectHolder("the_wet_smp_rehydrated:junk_powder")
 	public static final Item block = null;
-	public DevSalmonItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 16);
+	public JunkPowderItem(TheWetSmpRehydratedModElements instance) {
+		super(instance, 581);
 	}
 
 	@Override
@@ -32,7 +32,7 @@ public class DevSalmonItem extends TheWetSmpRehydratedModElements.ModElement {
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ItemGroup.MATERIALS).maxStackSize(64).rarity(Rarity.EPIC));
-			setRegistryName("dev_salmon");
+			setRegistryName("junk_powder");
 		}
 
 		@Override
@@ -53,7 +53,8 @@ public class DevSalmonItem extends TheWetSmpRehydratedModElements.ModElement {
 		@Override
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("Straight from the River Deveron"));
+			list.add(new StringTextComponent(
+					"Chemical waste produced by the production of items some ingredients of which came from the River Deveron"));
 		}
 	}
 }

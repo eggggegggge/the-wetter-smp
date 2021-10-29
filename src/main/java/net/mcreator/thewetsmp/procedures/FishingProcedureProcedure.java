@@ -16,9 +16,14 @@ import net.minecraft.util.Util;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
+import net.mcreator.thewetsmp.item.TreasurePowderItem;
+import net.mcreator.thewetsmp.item.JunkPowderItem;
+import net.mcreator.thewetsmp.item.DevSalmonItem;
 import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 
 import java.util.Random;
@@ -99,8 +104,8 @@ public class FishingProcedureProcedure {
 		junk = (double) 87;
 		treasure = (double) 99;
 		if ((luck > 1)) {
-			fish = (double) 60;
-			junk = (double) 70;
+			fish = (double) 69;
+			junk = (double) 79;
 			treasure = (double) 99;
 		} else if ((luck < 0)) {
 			fish = (double) 39;
@@ -133,8 +138,9 @@ public class FishingProcedureProcedure {
 					mcserv.getPlayerList().func_232641_a_(new StringTextComponent("you're fuckin line broked"), ChatType.SYSTEM, Util.DUMMY_UUID);
 			}
 		} else {
-			wutda = (double) ((new Random()).nextInt((int) 1 + 1));
-			if (((wutda >= 0) && (wutda <= fish))) {
+			wutda = (double) ((new Random()).nextInt((int) treasure + 1));
+			if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)
+					.getItem() == DevSalmonItem.block)) {
 				{
 					Map<String, Object> $_dependencies = new HashMap<>();
 					$_dependencies.put("entity", entity);
@@ -149,17 +155,66 @@ public class FishingProcedureProcedure {
 					if (mcserv != null)
 						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("fishh"), ChatType.SYSTEM, Util.DUMMY_UUID);
 				}
-			} else if (((wutda >= (fish + 1)) && (wutda <= junk))) {
+			} else if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)
+					.getItem() == JunkPowderItem.block)) {
 				if (!world.isRemote()) {
 					MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 					if (mcserv != null)
 						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("jank"), ChatType.SYSTEM, Util.DUMMY_UUID);
 				}
-			} else if (((wutda >= (junk + 1)) && (wutda <= treasure))) {
+			} else if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)
+					.getItem() == TreasurePowderItem.block)) {
+				{
+					Map<String, Object> $_dependencies = new HashMap<>();
+					$_dependencies.put("entity", entity);
+					$_dependencies.put("world", world);
+					$_dependencies.put("x", x);
+					$_dependencies.put("y", y);
+					$_dependencies.put("z", z);
+					TreasureProcedureProcedure.executeProcedure($_dependencies);
+				}
 				if (!world.isRemote()) {
 					MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 					if (mcserv != null)
 						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("trombone"), ChatType.SYSTEM, Util.DUMMY_UUID);
+				}
+			} else {
+				if (((wutda >= 0) && (wutda <= fish))) {
+					{
+						Map<String, Object> $_dependencies = new HashMap<>();
+						$_dependencies.put("entity", entity);
+						$_dependencies.put("world", world);
+						$_dependencies.put("x", x);
+						$_dependencies.put("y", y);
+						$_dependencies.put("z", z);
+						DetermineBiomeProcedure.executeProcedure($_dependencies);
+					}
+					if (!world.isRemote()) {
+						MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+						if (mcserv != null)
+							mcserv.getPlayerList().func_232641_a_(new StringTextComponent("fishh"), ChatType.SYSTEM, Util.DUMMY_UUID);
+					}
+				} else if (((wutda >= (fish + 1)) && (wutda <= junk))) {
+					if (!world.isRemote()) {
+						MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+						if (mcserv != null)
+							mcserv.getPlayerList().func_232641_a_(new StringTextComponent("jank"), ChatType.SYSTEM, Util.DUMMY_UUID);
+					}
+				} else if (((wutda >= (junk + 1)) && (wutda <= treasure))) {
+					{
+						Map<String, Object> $_dependencies = new HashMap<>();
+						$_dependencies.put("entity", entity);
+						$_dependencies.put("world", world);
+						$_dependencies.put("x", x);
+						$_dependencies.put("y", y);
+						$_dependencies.put("z", z);
+						TreasureProcedureProcedure.executeProcedure($_dependencies);
+					}
+					if (!world.isRemote()) {
+						MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+						if (mcserv != null)
+							mcserv.getPlayerList().func_232641_a_(new StringTextComponent("trombone"), ChatType.SYSTEM, Util.DUMMY_UUID);
+					}
 				}
 			}
 		}

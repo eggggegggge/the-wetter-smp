@@ -8,8 +8,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.thewetsmp.item.YellowJellyfishItem;
+import net.mcreator.thewetsmp.item.TreasurePowderItem;
 import net.mcreator.thewetsmp.item.RedJellyfishItem;
 import net.mcreator.thewetsmp.item.PinkJellyfishItem;
+import net.mcreator.thewetsmp.item.JunkPowderItem;
 import net.mcreator.thewetsmp.item.GreenJellyfishItem;
 import net.mcreator.thewetsmp.item.DevSalmonItem;
 import net.mcreator.thewetsmp.item.BlueJellyfishItem;
@@ -41,31 +43,32 @@ public class BaitCheckProcedure {
 				for (int _idx = 0; _idx < _iitemhandlerref.get().getSlots(); _idx++) {
 					ItemStack itemstackiterator = _iitemhandlerref.get().getStackInSlot(_idx).copy();
 					if (((itemstackiterator).getItem() == GreenJellyfishItem.block)) {
-						if ((bait > 49)) {
-							bait = (double) 49;
+						if ((bait > 29)) {
+							bait = (double) 29;
 						}
 						return bait;
 					} else if (((itemstackiterator).getItem() == BlueJellyfishItem.block)) {
-						if ((bait > 49)) {
-							bait = (double) 49;
+						if ((bait > 29)) {
+							bait = (double) 29;
 						}
 						return bait;
 					} else if (((itemstackiterator).getItem() == RedJellyfishItem.block)) {
-						if ((bait > 49)) {
-							bait = (double) 49;
+						if ((bait > 29)) {
+							bait = (double) 29;
 						}
 						return bait;
 					} else if (((itemstackiterator).getItem() == YellowJellyfishItem.block)) {
-						if ((bait > 49)) {
-							bait = (double) 49;
+						if ((bait > 29)) {
+							bait = (double) 29;
 						}
 						return bait;
 					} else if (((itemstackiterator).getItem() == PinkJellyfishItem.block)) {
-						if ((bait > 50)) {
-							bait = (double) 50;
+						if ((bait > 30)) {
+							bait = (double) 30;
 						}
 						return bait;
-					} else if (((itemstackiterator).getItem() == DevSalmonItem.block)) {
+					} else if ((((itemstackiterator).getItem() == TreasurePowderItem.block)
+							|| (((itemstackiterator).getItem() == DevSalmonItem.block) || ((itemstackiterator).getItem() == JunkPowderItem.block)))) {
 						if ((bait > 0)) {
 							bait = (double) 0;
 						}
@@ -74,6 +77,6 @@ public class BaitCheckProcedure {
 				}
 			}
 		}
-		return 74;
+		return 44;
 	}
 }
