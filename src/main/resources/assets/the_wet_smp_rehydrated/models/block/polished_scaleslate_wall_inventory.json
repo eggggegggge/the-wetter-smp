@@ -1,0 +1,7 @@
+{
+  "parent": "block/wall_inventory",
+  "textures": {
+    "wall": "the_wet_smp_rehydrated:blocks/scaleslate_polished",
+    "particle": "the_wet_smp_rehydrated:blocks/scaleslate_polished"
+  }
+}

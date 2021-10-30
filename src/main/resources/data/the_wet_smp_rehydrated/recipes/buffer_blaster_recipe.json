@@ -3,15 +3,14 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "012",
-    " 45",
-    "678"
+    " 45"
   ],
   "key": {
     "0": {
       "item": "the_wet_smp_rehydrated:buffer"
     },
     "1": {
-      "tag": "minecraft:planks"
+      "item": "the_wet_smp_rehydrated:aquamarine_glass"
     },
     "2": {
       "tag": "minecraft:planks"
@@ -21,15 +20,6 @@
     },
     "5": {
       "item": "minecraft:redstone"
-    },
-    "6": {
-      "item": "the_wet_smp_rehydrated:aquamarine_glass"
-    },
-    "7": {
-      "tag": "minecraft:planks"
-    },
-    "8": {
-      "tag": "minecraft:planks"
     }
   },
   "result": {

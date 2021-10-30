@@ -1,0 +1,9 @@
+{
+  "group": "polishedscaleslatestairs",
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "the_wet_smp_rehydrated:cobbled_scaleslate"
+  },
+  "result": "the_wet_smp_rehydrated:polished_scaleslate_stairs"
+}

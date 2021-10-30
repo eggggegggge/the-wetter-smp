@@ -1,0 +1,46 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 4,
+    "group": "scaleslatetiles",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:ScaleslateBricks"
+      },
+      {
+        "value": "CUSTOM:ScaleslateBricks"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:ScaleslateBricks"
+      },
+      {
+        "value": "CUSTOM:ScaleslateBricks"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:ScaleslateTiles"
+    },
+    "name": "scaleslate_tiles_recipe",
+    "namespace": "mod"
+  }
+}

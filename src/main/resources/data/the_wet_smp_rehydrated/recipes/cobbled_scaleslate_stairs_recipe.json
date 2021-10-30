@@ -1,0 +1,33 @@
+{
+  "group": "scaleslatestairs",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0  ",
+    "34 ",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "the_wet_smp_rehydrated:cobbled_scaleslate"
+    },
+    "3": {
+      "item": "the_wet_smp_rehydrated:cobbled_scaleslate"
+    },
+    "4": {
+      "item": "the_wet_smp_rehydrated:cobbled_scaleslate"
+    },
+    "6": {
+      "item": "the_wet_smp_rehydrated:cobbled_scaleslate"
+    },
+    "7": {
+      "item": "the_wet_smp_rehydrated:cobbled_scaleslate"
+    },
+    "8": {
+      "item": "the_wet_smp_rehydrated:cobbled_scaleslate"
+    }
+  },
+  "result": {
+    "item": "the_wet_smp_rehydrated:cobbled_scaleslate_stairs",
+    "count": 4
+  }
+}

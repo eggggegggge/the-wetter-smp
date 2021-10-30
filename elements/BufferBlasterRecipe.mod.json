@@ -13,7 +13,7 @@
         "value": "CUSTOM:Buffer"
       },
       {
-        "value": "Blocks.PLANKS"
+        "value": "CUSTOM:AquamarineGlass"
       },
       {
         "value": "Blocks.PLANKS"
@@ -28,13 +28,13 @@
         "value": "Items.REDSTONE"
       },
       {
-        "value": "CUSTOM:AquamarineGlass"
+        "value": ""
       },
       {
-        "value": "Blocks.PLANKS"
+        "value": ""
       },
       {
-        "value": "Blocks.PLANKS"
+        "value": ""
       }
     ],
     "recipeReturnStack": {

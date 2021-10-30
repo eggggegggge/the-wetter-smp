@@ -1,0 +1,22 @@
+{
+  "group": "polishedscaleslateslab",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "the_wet_smp_rehydrated:polished_scaleslate"
+    },
+    "1": {
+      "item": "the_wet_smp_rehydrated:polished_scaleslate"
+    },
+    "2": {
+      "item": "the_wet_smp_rehydrated:polished_scaleslate"
+    }
+  },
+  "result": {
+    "item": "the_wet_smp_rehydrated:polished_scaleslate_slab",
+    "count": 6
+  }
+}

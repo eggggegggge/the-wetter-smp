@@ -1,0 +1,39 @@
+{
+  "criteria": {
+    "grant_polished_scaleslate_recipes": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "the_wet_smp_rehydrated:cobbled_scaleslate",
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1,
+    "recipes": [
+      "the_wet_smp_rehydrated:scaleslate_bricks_recipe",
+      "the_wet_smp_rehydrated:polished_scaleslate_slab_recipe",
+      "the_wet_smp_rehydrated:polished_scaleslate_stairs_recipe",
+      "the_wet_smp_rehydrated:polished_scaleslate_wall_recipe",
+      "the_wet_smp_rehydrated:stonecutting_polished_scaleslate_slab_recipe",
+      "the_wet_smp_rehydrated:stonecutting_polished_scaleslate_stairs",
+      "the_wet_smp_rehydrated:stonecutting_polished_scaleslate_wall_recipe",
+      "the_wet_smp_rehydrated:stonecutting_polished_to_scaleslate_bricks_recipe",
+      "the_wet_smp_rehydrated:stonecutting_polished_to_scaleslate_brick_slab",
+      "the_wet_smp_rehydrated:stonecutting_polished_to_scaleslate_brick_stairs_recipe",
+      "the_wet_smp_rehydrated:stonecutting_polished_to_scaleslate_brick_wall_recipe",
+      "the_wet_smp_rehydrated:stonecutting_polished_to_scaleslate_tiles_recipe",
+      "the_wet_smp_rehydrated:stonecutting_polished_to_scaleslate_tile_slab_recipe",
+      "the_wet_smp_rehydrated:stonecutting_polished_to_scaleslate_tile_stairs_recipe",
+      "the_wet_smp_rehydrated:stonecutting_polished_to_scaleslate_tile_wall_recipe"
+    ]
+  },
+  "parent": "the_wet_smp_rehydrated:get_all_rings"
+}

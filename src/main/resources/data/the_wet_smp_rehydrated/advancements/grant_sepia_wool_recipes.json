@@ -19,7 +19,7 @@
     "experience": 1,
     "recipes": [
       "the_wet_smp_rehydrated:sepia_carpet_recipe_1",
-      "minecraft:sepia_painting_recipe",
+      "the_wet_smp_rehydrated:deleted_mod_element",
       "minecraft:sepia_bed_recipe"
     ]
   },

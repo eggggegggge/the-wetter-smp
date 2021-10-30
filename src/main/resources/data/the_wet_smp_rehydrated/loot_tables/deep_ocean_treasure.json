@@ -135,7 +135,7 @@
         {
           "type": "minecraft:item",
           "weight": 1,
-          "name": "the_wet_smp_rehydrated:ocean_crate"
+          "name": "the_wet_smp_rehydrated:prismarine_crate"
         },
         {
           "type": "minecraft:item",
@@ -191,20 +191,20 @@
           "name": "the_wet_smp_rehydrated:aquamarine"
         },
         {
-        	"type": "minecraft:item",
-        	"weight": 8,
-        	"name": "minecraft:sea_lantern"
-        }
+          "type": "minecraft:item",
+          "weight": 8,
+          "name": "minecraft:sea_lantern"
+        },
         {
-        	"type": "minecraft:item",
-        	"weight": 1,
-        	"name": "minecraft:heart_of_the_sea"
-        }
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:heart_of_the_sea"
+        },
         {
-        	"type": "minecraft:item",
-        	"weight": 6,
-        	"name": "the_wet_smp_rehydrated:scaleslate"
-            "functions": [
+          "type": "minecraft:item",
+          "weight": 6,
+          "name": "the_wet_smp_rehydrated:scaleslate",
+          "functions": [
             {
               "function": "minecraft:set_count",
               "count": {
@@ -215,7 +215,6 @@
               "add": false
             }
           ]
-        }
         }
       ]
     }

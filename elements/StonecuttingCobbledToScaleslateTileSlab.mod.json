@@ -1,0 +1,20 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Stone cutting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "scaleslatetileslab",
+    "recipeShapeless": false,
+    "stoneCuttingInputStack": {
+      "value": "CUSTOM:CobbledScaleslate"
+    },
+    "stoneCuttingReturnStack": {
+      "value": "CUSTOM:ScaleslateTilesSlab"
+    },
+    "name": "stonecutting_cobbled_to_scaleslate_tile_slab",
+    "namespace": "mod"
+  }
+}

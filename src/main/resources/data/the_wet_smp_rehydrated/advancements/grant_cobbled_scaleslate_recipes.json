@@ -1,0 +1,46 @@
+{
+  "criteria": {
+    "grant_cobbled_scaleslate_recipes": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "the_wet_smp_rehydrated:cobbled_scaleslate",
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1,
+    "recipes": [
+      "the_wet_smp_rehydrated:cobbled_scaleslate_smelt_recipe",
+      "the_wet_smp_rehydrated:cobbled_scaleslate_stairs_recipe",
+      "the_wet_smp_rehydrated:cobbled_scaleslate_slab_recipe",
+      "the_wet_smp_rehydrated:cobbled_scaleslate_wall_recipe",
+      "the_wet_smp_rehydrated:polished_scaleslate_recipe",
+      "the_wet_smp_rehydrated:stonecutting_chiseled_deepslate_recipe",
+      "the_wet_smp_rehydrated:stonecutting_cobbled_scaleslate_slab_recipe",
+      "the_wet_smp_rehydrated:stonecutting_cobbled_scaleslate_stairs_recipe",
+      "the_wet_smp_rehydrated:stonecutting_cobbled_scaleslate_wall_recipe",
+      "the_wet_smp_rehydrated:stonecutting_cobbled_to_scaleslate_brick_slab",
+      "the_wet_smp_rehydrated:stonecutting_cobbled_to_scaleslate_brick_stairs",
+      "the_wet_smp_rehydrated:stonecutting_cobbled_to_scaleslate_brick_wall",
+      "the_wet_smp_rehydrated:stonecutting_cobbled_to_scaleslate_bricks",
+      "the_wet_smp_rehydrated:stonecutting_cobbled_to_scaleslate_tile_slab",
+      "the_wet_smp_rehydrated:stonecutting_cobbled_to_scaleslate_tile_stairs",
+      "the_wet_smp_rehydrated:stonecutting_cobbled_to_scaleslate_tile_wall_recipe",
+      "the_wet_smp_rehydrated:stonecutting_cobbled_to_scaleslate_tiles_recipe",
+      "the_wet_smp_rehydrated:stonecutting_cobbled_to_polished_scaleslate",
+      "the_wet_smp_rehydrated:stonecutting_cobbled_to_polished_scaleslate_slab_recipe",
+      "the_wet_smp_rehydrated:stonecutting_cobbled_to_polished_scaleslate_stairs_recipe",
+      "the_wet_smp_rehydrated:stonecutting_cobbled_to_polished_scaleslate_wall_recipe",
+      "the_wet_smp_rehydrated:chiseled_scaleslate_recipe"
+    ]
+  },
+  "parent": "the_wet_smp_rehydrated:get_all_rings"
+}

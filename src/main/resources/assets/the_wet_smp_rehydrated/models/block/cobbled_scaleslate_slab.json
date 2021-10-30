@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "the_wet_smp_rehydrated:blocks/scaleslate_side",
+    "top": "the_wet_smp_rehydrated:blocks/scaleslate_side",
+    "side": "the_wet_smp_rehydrated:blocks/scaleslate_side"
+  }
+}

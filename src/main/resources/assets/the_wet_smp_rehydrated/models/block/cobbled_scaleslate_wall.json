@@ -1,0 +1,7 @@
+{
+  "parent": "block/template_wall_side",
+  "textures": {
+    "wall": "the_wet_smp_rehydrated:blocks/scaleslate_side",
+    "particle": "the_wet_smp_rehydrated:blocks/scaleslate_side"
+  }
+}

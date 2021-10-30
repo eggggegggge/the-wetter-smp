@@ -1,0 +1,22 @@
+{
+  "group": "scaleslatetileslab",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "the_wet_smp_rehydrated:scaleslate_tiles"
+    },
+    "1": {
+      "item": "the_wet_smp_rehydrated:scaleslate_tiles"
+    },
+    "2": {
+      "item": "the_wet_smp_rehydrated:scaleslate_tiles"
+    }
+  },
+  "result": {
+    "item": "the_wet_smp_rehydrated:scaleslate_tile_slab",
+    "count": 6
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "group": "scaleslatetileslab",
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "the_wet_smp_rehydrated:scaleslate_bricks"
+  },
+  "result": "the_wet_smp_rehydrated:scaleslate_tile_slab"
+}

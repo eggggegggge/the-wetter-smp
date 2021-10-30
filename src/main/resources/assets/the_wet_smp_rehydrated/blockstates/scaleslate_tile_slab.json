@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "the_wet_smp_rehydrated:block/scaleslate_tile_slab"
+    },
+    "type=top": {
+      "model": "the_wet_smp_rehydrated:block/scaleslate_tile_slab_top"
+    },
+    "type=double": {
+      "model": "the_wet_smp_rehydrated:block/scaleslate_tile_slab_full"
+    }
+  }
+}

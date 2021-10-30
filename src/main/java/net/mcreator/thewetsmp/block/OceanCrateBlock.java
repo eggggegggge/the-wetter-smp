@@ -19,7 +19,7 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
 @TheWetSmpRehydratedModElements.ModElement.Tag
 public class OceanCrateBlock extends TheWetSmpRehydratedModElements.ModElement {
-	@ObjectHolder("the_wet_smp_rehydrated:ocean_crate")
+	@ObjectHolder("the_wet_smp_rehydrated:prismarine_crate")
 	public static final Block block = null;
 	public OceanCrateBlock(TheWetSmpRehydratedModElements instance) {
 		super(instance, 533);
@@ -34,7 +34,7 @@ public class OceanCrateBlock extends TheWetSmpRehydratedModElements.ModElement {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.SAND).sound(SoundType.STONE).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).harvestLevel(0)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool());
-			setRegistryName("ocean_crate");
+			setRegistryName("prismarine_crate");
 		}
 
 		@Override
