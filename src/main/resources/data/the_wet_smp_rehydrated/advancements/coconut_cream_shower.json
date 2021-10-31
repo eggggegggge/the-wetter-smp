@@ -1,0 +1,31 @@
+{
+  "display": {
+    "icon": {
+      "item": "the_wet_smp_rehydrated:golden_banana"
+    },
+    "title": {
+      "translate": "advancements.coconut_cream_shower.title"
+    },
+    "description": {
+      "translate": "advancements.coconut_cream_shower.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "coconut_cream_shower": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "item": "the_wet_smp_rehydrated:golden_banana"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 5
+  },
+  "parent": "the_wet_smp_rehydrated:get_all_rings"
+}
