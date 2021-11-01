@@ -95,8 +95,7 @@ public class GiantSpruceTaigaFishProcedure {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
-				$_dependencies.put("world", world);
-				RemoveBaitProcedure.executeProcedure($_dependencies);
+				RingEffectProcedure.executeProcedure($_dependencies);
 			}
 			{
 				Entity _ent = entity;
@@ -112,8 +111,7 @@ public class GiantSpruceTaigaFishProcedure {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
-				$_dependencies.put("world", world);
-				RemoveBaitProcedure.executeProcedure($_dependencies);
+				RingEffectProcedure.executeProcedure($_dependencies);
 			}
 			{
 				Entity _ent = entity;
