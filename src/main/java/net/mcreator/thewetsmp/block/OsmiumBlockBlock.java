@@ -26,6 +26,7 @@ import java.util.Collections;
 public class OsmiumBlockBlock extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:osmium_block")
 	public static final Block block = null;
+
 	public OsmiumBlockBlock(TheWetSmpRehydratedModElements instance) {
 		super(instance, 155);
 	}
@@ -35,6 +36,7 @@ public class OsmiumBlockBlock extends TheWetSmpRehydratedModElements.ModElement 
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(ItemGroup.DECORATIONS)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(5f, 6f).setLightLevel(s -> 0).harvestLevel(2)

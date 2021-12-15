@@ -39,10 +39,11 @@ public class PlaceBlockProcedureProcedure {
 			executeProcedure(dependencies);
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure PlaceBlockProcedure!");
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure PlaceBlockProcedure!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
@@ -60,24 +61,24 @@ public class PlaceBlockProcedureProcedure {
 				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency z for procedure PlaceBlockProcedure!");
 			return;
 		}
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure PlaceBlockProcedure!");
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure PlaceBlockProcedure!");
 			return;
 		}
-		Entity entity = (Entity) dependencies.get("entity");
+		IWorld world = (IWorld) dependencies.get("world");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		IWorld world = (IWorld) dependencies.get("world");
-		if (((new Object() {
+		Entity entity = (Entity) dependencies.get("entity");
+		if (new Object() {
 			public double getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "new")) == 1)) {
+		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "new") == 1) {
 			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);

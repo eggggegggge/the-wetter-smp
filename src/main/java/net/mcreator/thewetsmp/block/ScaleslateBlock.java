@@ -26,6 +26,7 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 public class ScaleslateBlock extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:scaleslate")
 	public static final Block block = null;
+
 	public ScaleslateBlock(TheWetSmpRehydratedModElements instance) {
 		super(instance, 584);
 	}
@@ -36,8 +37,10 @@ public class ScaleslateBlock extends TheWetSmpRehydratedModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
+
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.NETHER_BRICK).hardnessAndResistance(3f, 6f).setLightLevel(s -> 0)
 					.harvestLevel(0).harvestTool(ToolType.PICKAXE).setRequiresTool());

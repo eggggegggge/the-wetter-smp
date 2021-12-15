@@ -15,6 +15,7 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 public class StrangeGelItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:strange_gel")
 	public static final Item block = null;
+
 	public StrangeGelItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 37);
 	}
@@ -23,6 +24,7 @@ public class StrangeGelItem extends TheWetSmpRehydratedModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ItemGroup.BREWING).maxStackSize(64).rarity(Rarity.COMMON));

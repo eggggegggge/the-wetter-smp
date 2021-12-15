@@ -1,21 +1,21 @@
 {
   "replace": false,
   "values": [
-    "the_wet_smp_rehydrated:pink_pearl_button",
-    "the_wet_smp_rehydrated:maroon_pearl_button",
-    "the_wet_smp_rehydrated:blue_pearl_button",
-    "the_wet_smp_rehydrated:black_pearl_button",
-    "the_wet_smp_rehydrated:gold_pearl_button",
-    "the_wet_smp_rehydrated:white_pearl_button",
-    "minecraft:stone_button",
-    "minecraft:polished_blackstone_button",
-    "minecraft:oak_button",
-    "minecraft:spruce_button",
-    "minecraft:birch_button",
-    "minecraft:jungle_button",
-    "minecraft:acacia_button",
-    "minecraft:dark_oak_button",
     "minecraft:crimson_button",
-    "minecraft:warped_button"
+    "the_wet_smp_rehydrated:maroon_pearl_button",
+    "minecraft:dark_oak_button",
+    "the_wet_smp_rehydrated:white_pearl_button",
+    "minecraft:oak_button",
+    "the_wet_smp_rehydrated:blue_pearl_button",
+    "minecraft:warped_button",
+    "the_wet_smp_rehydrated:pink_pearl_button",
+    "minecraft:polished_blackstone_button",
+    "minecraft:jungle_button",
+    "minecraft:stone_button",
+    "the_wet_smp_rehydrated:black_pearl_button",
+    "minecraft:spruce_button",
+    "minecraft:acacia_button",
+    "minecraft:birch_button",
+    "the_wet_smp_rehydrated:gold_pearl_button"
   ]
 }

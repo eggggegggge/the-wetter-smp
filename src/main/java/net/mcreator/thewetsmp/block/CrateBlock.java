@@ -37,6 +37,7 @@ import io.netty.buffer.Unpooled;
 public class CrateBlock extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:crate")
 	public static final Block block = null;
+
 	public CrateBlock(TheWetSmpRehydratedModElements instance) {
 		super(instance, 25);
 	}
@@ -46,6 +47,7 @@ public class CrateBlock extends TheWetSmpRehydratedModElements.ModElement {
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(ItemGroup.MISC)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends FallingBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).harvestLevel(0)

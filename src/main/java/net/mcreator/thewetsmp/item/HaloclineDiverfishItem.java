@@ -15,6 +15,7 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 public class HaloclineDiverfishItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:halocline_diverfish")
 	public static final Item block = null;
+
 	public HaloclineDiverfishItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 139);
 	}
@@ -23,6 +24,7 @@ public class HaloclineDiverfishItem extends TheWetSmpRehydratedModElements.ModEl
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(FishingItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));

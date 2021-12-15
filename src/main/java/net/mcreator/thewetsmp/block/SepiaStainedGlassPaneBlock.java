@@ -18,6 +18,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.PaneBlock;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
@@ -30,6 +31,7 @@ import java.util.Collections;
 public class SepiaStainedGlassPaneBlock extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:sepia_stained_glass_pane")
 	public static final Block block = null;
+
 	public SepiaStainedGlassPaneBlock(TheWetSmpRehydratedModElements instance) {
 		super(instance, 152);
 	}
@@ -45,6 +47,7 @@ public class SepiaStainedGlassPaneBlock extends TheWetSmpRehydratedModElements.M
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getTranslucent());
 	}
+
 	public static class CustomBlock extends PaneBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.GLASS).sound(SoundType.GLASS).hardnessAndResistance(0.3f, 0.3f).setLightLevel(s -> 0).notSolid()
@@ -62,7 +65,7 @@ public class SepiaStainedGlassPaneBlock extends TheWetSmpRehydratedModElements.M
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
-			return Collections.singletonList(new ItemStack(this, 1));
+			return Collections.singletonList(new ItemStack(Blocks.AIR));
 		}
 	}
 }

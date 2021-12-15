@@ -25,6 +25,7 @@ import java.util.Collections;
 public class SepiaTerracottaBlock extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:sepia_terracotta")
 	public static final Block block = null;
+
 	public SepiaTerracottaBlock(TheWetSmpRehydratedModElements instance) {
 		super(instance, 150);
 	}
@@ -34,6 +35,7 @@ public class SepiaTerracottaBlock extends TheWetSmpRehydratedModElements.ModElem
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(ItemGroup.DECORATIONS)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1.25f, 4.2f).setLightLevel(s -> 0)

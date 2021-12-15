@@ -11,10 +11,11 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 import java.util.Map;
 
 public class ValidPlacementConditionProcedure {
+
 	public static boolean executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("blockstate") == null) {
-			if (!dependencies.containsKey("blockstate"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency blockstate for procedure ValidPlacementCondition!");
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure ValidPlacementCondition!");
 			return false;
 		}
 		if (dependencies.get("x") == null) {
@@ -32,22 +33,22 @@ public class ValidPlacementConditionProcedure {
 				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency z for procedure ValidPlacementCondition!");
 			return false;
 		}
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure ValidPlacementCondition!");
+		if (dependencies.get("blockstate") == null) {
+			if (!dependencies.containsKey("blockstate"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency blockstate for procedure ValidPlacementCondition!");
 			return false;
 		}
-		BlockState blockstate = (BlockState) dependencies.get("blockstate");
+		IWorld world = (IWorld) dependencies.get("world");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		IWorld world = (IWorld) dependencies.get("world");
-		if ((blockstate.getBlock() == SeaUrchinBlock.block)) {
-			if ((Blocks.SNOW.getDefaultState().isValidPosition(world, new BlockPos((int) x, (int) y, (int) z)))) {
-				return (true);
+		BlockState blockstate = (BlockState) dependencies.get("blockstate");
+		if (blockstate.getBlock() == SeaUrchinBlock.block) {
+			if (Blocks.SNOW.getDefaultState().isValidPosition(world, new BlockPos((int) x, (int) y, (int) z))) {
+				return true;
 			}
-			return (false);
+			return false;
 		}
-		return (false);
+		return false;
 	}
 }

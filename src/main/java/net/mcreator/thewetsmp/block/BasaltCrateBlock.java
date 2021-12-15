@@ -21,6 +21,7 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 public class BasaltCrateBlock extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:basalt_crate")
 	public static final Block block = null;
+
 	public BasaltCrateBlock(TheWetSmpRehydratedModElements instance) {
 		super(instance, 540);
 	}
@@ -30,6 +31,7 @@ public class BasaltCrateBlock extends TheWetSmpRehydratedModElements.ModElement 
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(ItemGroup.MISC)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends FallingBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.BASALT).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).harvestLevel(0)

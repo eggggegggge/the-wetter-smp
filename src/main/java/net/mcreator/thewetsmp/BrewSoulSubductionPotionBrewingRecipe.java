@@ -23,6 +23,7 @@ public class BrewSoulSubductionPotionBrewingRecipe extends TheWetSmpRehydratedMo
 	public void init(FMLCommonSetupEvent event) {
 		BrewingRecipeRegistry.addRecipe(new CustomBrewingRecipe());
 	}
+
 	public static class CustomBrewingRecipe implements IBrewingRecipe {
 		@Override
 		public boolean isInput(ItemStack input) {

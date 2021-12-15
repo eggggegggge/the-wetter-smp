@@ -15,6 +15,7 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 public class GoldOrefishItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:gold_orefish")
 	public static final Item block = null;
+
 	public GoldOrefishItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 123);
 	}
@@ -23,6 +24,7 @@ public class GoldOrefishItem extends TheWetSmpRehydratedModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(FishingItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));

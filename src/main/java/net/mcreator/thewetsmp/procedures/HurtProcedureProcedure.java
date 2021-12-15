@@ -45,6 +45,7 @@ public class HurtProcedureProcedure {
 			}
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("sourceentity") == null) {
 			if (!dependencies.containsKey("sourceentity"))
@@ -52,7 +53,7 @@ public class HurtProcedureProcedure {
 			return;
 		}
 		Entity sourceentity = (Entity) dependencies.get("sourceentity");
-		if ((new Object() {
+		if (new Object() {
 			boolean check(Entity _entity) {
 				if (_entity instanceof LivingEntity) {
 					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -63,7 +64,7 @@ public class HurtProcedureProcedure {
 				}
 				return false;
 			}
-		}.check(sourceentity))) {
+		}.check(sourceentity)) {
 			if (dependencies.get("event") != null) {
 				Object _obj = dependencies.get("event");
 				if (_obj instanceof Event) {

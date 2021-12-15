@@ -14,13 +14,16 @@ import net.minecraft.block.BlockState;
 import net.mcreator.thewetsmp.procedures.RingEffectProcedure;
 import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
+import java.util.stream.Stream;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.AbstractMap;
 
 @TheWetSmpRehydratedModElements.ModElement.Tag
 public class LostLapisRingItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:lapis_ring")
 	public static final Item block = null;
+
 	public LostLapisRingItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 4);
 	}
@@ -29,6 +32,7 @@ public class LostLapisRingItem extends TheWetSmpRehydratedModElements.ModElement
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ItemGroup.TOOLS).maxStackSize(1).rarity(Rarity.COMMON));
@@ -56,11 +60,9 @@ public class LostLapisRingItem extends TheWetSmpRehydratedModElements.ModElement
 			double x = entity.getPosX();
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				RingEffectProcedure.executeProcedure($_dependencies);
-			}
+
+			RingEffectProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+					(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 	}
 }

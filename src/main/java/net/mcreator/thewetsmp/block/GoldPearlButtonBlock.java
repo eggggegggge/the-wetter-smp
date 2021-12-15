@@ -28,6 +28,7 @@ import java.util.Collections;
 public class GoldPearlButtonBlock extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:gold_pearl_button")
 	public static final Block block = null;
+
 	public GoldPearlButtonBlock(TheWetSmpRehydratedModElements instance) {
 		super(instance, 84);
 	}
@@ -43,6 +44,7 @@ public class GoldPearlButtonBlock extends TheWetSmpRehydratedModElements.ModElem
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
+
 	public static class CustomBlock extends StoneButtonBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.GLASS).sound(SoundType.LANTERN).hardnessAndResistance(0.3f, 0.3f).setLightLevel(s -> 0)

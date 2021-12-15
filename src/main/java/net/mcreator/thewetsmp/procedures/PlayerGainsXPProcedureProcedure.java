@@ -41,6 +41,7 @@ public class PlayerGainsXPProcedureProcedure {
 			}
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -48,7 +49,7 @@ public class PlayerGainsXPProcedureProcedure {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if ((new Object() {
+		if (new Object() {
 			boolean check(Entity _entity) {
 				if (_entity instanceof LivingEntity) {
 					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -59,10 +60,10 @@ public class PlayerGainsXPProcedureProcedure {
 				}
 				return false;
 			}
-		}.check(entity))) {
-			if ((!(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getMaxHealth() : -1) == ((entity instanceof LivingEntity)
+		}.check(entity)) {
+			if (!(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getMaxHealth() : -1) == ((entity instanceof LivingEntity)
 					? ((LivingEntity) entity).getHealth()
-					: -1)))) {
+					: -1))) {
 				if (dependencies.get("event") != null) {
 					Object _obj = dependencies.get("event");
 					if (_obj instanceof Event) {

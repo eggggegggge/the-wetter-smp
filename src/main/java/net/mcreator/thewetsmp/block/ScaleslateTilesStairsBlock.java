@@ -24,6 +24,7 @@ import java.util.Collections;
 public class ScaleslateTilesStairsBlock extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:scaleslate_tile_stairs")
 	public static final Block block = null;
+
 	public ScaleslateTilesStairsBlock(TheWetSmpRehydratedModElements instance) {
 		super(instance, 600);
 	}
@@ -34,6 +35,7 @@ public class ScaleslateTilesStairsBlock extends TheWetSmpRehydratedModElements.M
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends StairsBlock {
 		public CustomBlock() {
 			super(() -> new Block(Block.Properties.create(Material.ROCK).sound(SoundType.NETHER_BRICK).hardnessAndResistance(3.5f, 6f)

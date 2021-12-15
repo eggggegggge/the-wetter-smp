@@ -19,15 +19,11 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 import java.util.Map;
 
 public class BufferBlasterHitsPlayerProcedureProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure BufferBlasterHitsPlayerProcedure!");
-			return;
-		}
-		if (dependencies.get("sourceentity") == null) {
-			if (!dependencies.containsKey("sourceentity"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency sourceentity for procedure BufferBlasterHitsPlayerProcedure!");
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure BufferBlasterHitsPlayerProcedure!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
@@ -45,27 +41,32 @@ public class BufferBlasterHitsPlayerProcedureProcedure {
 				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency z for procedure BufferBlasterHitsPlayerProcedure!");
 			return;
 		}
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure BufferBlasterHitsPlayerProcedure!");
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure BufferBlasterHitsPlayerProcedure!");
 			return;
 		}
-		Entity entity = (Entity) dependencies.get("entity");
-		Entity sourceentity = (Entity) dependencies.get("sourceentity");
+		if (dependencies.get("sourceentity") == null) {
+			if (!dependencies.containsKey("sourceentity"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency sourceentity for procedure BufferBlasterHitsPlayerProcedure!");
+			return;
+		}
+		IWorld world = (IWorld) dependencies.get("world");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		IWorld world = (IWorld) dependencies.get("world");
+		Entity entity = (Entity) dependencies.get("entity");
+		Entity sourceentity = (Entity) dependencies.get("sourceentity");
 		if (world instanceof ServerWorld) {
 			((ServerWorld) world).spawnParticle(BufferParticleParticle.particle, x, y, z, (int) 5, 1, 2, 1, 0);
 		}
-		if ((sourceentity == entity)) {
-			System.out.println("");
+		if (sourceentity == entity) {
+			System.out.println("Buffer blaster hit an invalid target");
 		} else {
-			if (((((sourceentity.getCapability(TheWetSmpRehydratedModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new TheWetSmpRehydratedModVariables.PlayerVariables())).bufferBlasterHunger) == 100)
-					&& (((sourceentity.getCapability(TheWetSmpRehydratedModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-							.orElse(new TheWetSmpRehydratedModVariables.PlayerVariables())).bufferBlasterHealth) == 100))) {
+			if ((sourceentity.getCapability(TheWetSmpRehydratedModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new TheWetSmpRehydratedModVariables.PlayerVariables())).bufferBlasterHunger == 100
+					&& (sourceentity.getCapability(TheWetSmpRehydratedModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new TheWetSmpRehydratedModVariables.PlayerVariables())).bufferBlasterHealth == 100) {
 				{
 					double _setval = (double) ((sourceentity instanceof PlayerEntity)
 							? ((PlayerEntity) sourceentity).getFoodStats().getFoodLevel()
@@ -124,8 +125,8 @@ public class BufferBlasterHitsPlayerProcedureProcedure {
 									.orElse(new TheWetSmpRehydratedModVariables.PlayerVariables())).bufferBlasterHunger));
 				sourceentity.setAir((int) ((sourceentity.getCapability(TheWetSmpRehydratedModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new TheWetSmpRehydratedModVariables.PlayerVariables())).bufferBlasterOxygen));
-				if ((((sourceentity.getCapability(TheWetSmpRehydratedModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new TheWetSmpRehydratedModVariables.PlayerVariables())).bufferBlasterIgnited) == (true))) {
+				if ((sourceentity.getCapability(TheWetSmpRehydratedModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new TheWetSmpRehydratedModVariables.PlayerVariables())).bufferBlasterIgnited == true) {
 					sourceentity.setFire((int) 5);
 				}
 				{

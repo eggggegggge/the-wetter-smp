@@ -63,6 +63,7 @@ public class DeepOceanCrateBlock extends TheWetSmpRehydratedModElements.ModEleme
 	public static final Block block = null;
 	@ObjectHolder("the_wet_smp_rehydrated:deep_ocean_crate")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
+
 	public DeepOceanCrateBlock(TheWetSmpRehydratedModElements instance) {
 		super(instance, 535);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
@@ -73,6 +74,7 @@ public class DeepOceanCrateBlock extends TheWetSmpRehydratedModElements.ModEleme
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(ItemGroup.MISC)).setRegistryName(block.getRegistryName()));
 	}
+
 	private static class TileEntityRegisterHandler {
 		@SubscribeEvent
 		public void registerTileEntity(RegistryEvent.Register<TileEntityType<?>> event) {
@@ -147,6 +149,7 @@ public class DeepOceanCrateBlock extends TheWetSmpRehydratedModElements.ModEleme
 					InventoryHelper.dropInventoryItems(world, pos, (CustomTileEntity) tileentity);
 					world.updateComparatorOutputLevel(pos, this);
 				}
+
 				super.onReplaced(state, world, pos, newState, isMoving);
 			}
 		}
@@ -168,6 +171,7 @@ public class DeepOceanCrateBlock extends TheWetSmpRehydratedModElements.ModEleme
 
 	public static class CustomTileEntity extends LockableLootTileEntity implements ISidedInventory {
 		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(18, ItemStack.EMPTY);
+
 		protected CustomTileEntity() {
 			super(tileEntityType);
 		}
@@ -267,7 +271,9 @@ public class DeepOceanCrateBlock extends TheWetSmpRehydratedModElements.ModEleme
 		public boolean canExtractItem(int index, ItemStack stack, Direction direction) {
 			return true;
 		}
+
 		private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
+
 		@Override
 		public <T> LazyOptional<T> getCapability(Capability<T> capability, @Nullable Direction facing) {
 			if (!this.removed && facing != null && capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)

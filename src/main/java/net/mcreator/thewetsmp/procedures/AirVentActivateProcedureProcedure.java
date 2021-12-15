@@ -20,7 +20,13 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 import java.util.Map;
 
 public class AirVentActivateProcedureProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure AirVentActivateProcedure!");
+			return;
+		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
 				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency x for procedure AirVentActivateProcedure!");
@@ -36,16 +42,11 @@ public class AirVentActivateProcedureProcedure {
 				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency z for procedure AirVentActivateProcedure!");
 			return;
 		}
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure AirVentActivateProcedure!");
-			return;
-		}
+		IWorld world = (IWorld) dependencies.get("world");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		IWorld world = (IWorld) dependencies.get("world");
-		if (((world.getBlockState(new BlockPos((int) x, (int) (y - 2), (int) z))).getBlock() == Blocks.MAGMA_BLOCK)) {
+		if ((world.getBlockState(new BlockPos((int) x, (int) (y - 2), (int) z))).getBlock() == Blocks.MAGMA_BLOCK) {
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				BlockState _bs = HotAirVentBlock.block.getDefaultState();
@@ -60,7 +61,7 @@ public class AirVentActivateProcedureProcedure {
 				}
 				world.setBlockState(_bp, _bs, 3);
 			}
-		} else if (((world.getBlockState(new BlockPos((int) x, (int) (y - 2), (int) z))).getBlock() == Blocks.ICE)) {
+		} else if ((world.getBlockState(new BlockPos((int) x, (int) (y - 2), (int) z))).getBlock() == Blocks.ICE) {
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				BlockState _bs = ColdAirVentBlock.block.getDefaultState();

@@ -16,13 +16,16 @@ import net.minecraft.entity.LivingEntity;
 import net.mcreator.thewetsmp.procedures.EmEatProcedure;
 import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
+import java.util.stream.Stream;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.AbstractMap;
 
 @TheWetSmpRehydratedModElements.ModElement.Tag
 public class EmeraldEmbeddedRabbitStewItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:emerald_embedded_rabbit_stew")
 	public static final Item block = null;
+
 	public EmeraldEmbeddedRabbitStewItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 44);
 	}
@@ -31,10 +34,13 @@ public class EmeraldEmbeddedRabbitStewItem extends TheWetSmpRehydratedModElement
 	public void initElements() {
 		elements.items.add(() -> new FoodItemCustom());
 	}
+
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
 			super(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(1).rarity(Rarity.COMMON)
-					.food((new Food.Builder()).hunger(10).saturation(12f).meat().build()));
+					.food((new Food.Builder()).hunger(10).saturation(12f)
+
+							.meat().build()));
 			setRegistryName("emerald_embedded_rabbit_stew");
 		}
 
@@ -50,11 +56,9 @@ public class EmeraldEmbeddedRabbitStewItem extends TheWetSmpRehydratedModElement
 			double x = entity.getPosX();
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				EmEatProcedure.executeProcedure($_dependencies);
-			}
+
+			EmEatProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+					(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			if (itemstack.isEmpty()) {
 				return retval;
 			} else {

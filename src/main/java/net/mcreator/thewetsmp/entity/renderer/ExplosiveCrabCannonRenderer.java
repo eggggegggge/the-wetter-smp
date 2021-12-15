@@ -36,6 +36,7 @@ public class ExplosiveCrabCannonRenderer {
 	@OnlyIn(Dist.CLIENT)
 	public static class CustomRender extends EntityRenderer<ExplosiveCrabCannonItem.ArrowCustomEntity> {
 		private static final ResourceLocation texture = new ResourceLocation("the_wet_smp_rehydrated:textures/crab_projectile.png");
+
 		public CustomRender(EntityRendererManager renderManager) {
 			super(renderManager);
 		}
@@ -59,14 +60,15 @@ public class ExplosiveCrabCannonRenderer {
 		}
 	}
 
-	// Made with Blockbench
-	// Paste this code into your mod.
+	//Made with Blockbench
+	//Paste this code into your mod.
 	public static class Modelcrab extends EntityModel<Entity> {
 		private final ModelRenderer bone;
 		private final ModelRenderer bone2;
 		private final ModelRenderer bone3;
 		private final ModelRenderer bone4;
 		private final ModelRenderer bone5;
+
 		public Modelcrab() {
 			textureWidth = 16;
 			textureHeight = 16;
@@ -113,8 +115,10 @@ public class ExplosiveCrabCannonRenderer {
 		}
 
 		public void setRotationAngles(Entity e, float f, float f1, float f2, float f3, float f4) {
+
 		}
 	}
+
 	@OnlyIn(Dist.CLIENT)
 	public static void addBoxHelper(ModelRenderer renderer, int texU, int texV, float x, float y, float z, int dx, int dy, int dz, float delta) {
 		addBoxHelper(renderer, texU, texV, x, y, z, dx, dy, dz, delta, renderer.mirror);

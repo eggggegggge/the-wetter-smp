@@ -15,6 +15,7 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 public class FungiGobiItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:fungi_gobi")
 	public static final Item block = null;
+
 	public FungiGobiItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 118);
 	}
@@ -23,6 +24,7 @@ public class FungiGobiItem extends TheWetSmpRehydratedModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(FishingItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));

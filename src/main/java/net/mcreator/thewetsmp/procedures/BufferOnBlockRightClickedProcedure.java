@@ -17,14 +17,17 @@ import net.minecraft.block.BlockState;
 import net.mcreator.thewetsmp.block.AquamarineGlassBlock;
 import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 
+import java.util.stream.Stream;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.AbstractMap;
 
 public class BufferOnBlockRightClickedProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure BufferOnBlockRightClicked!");
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure BufferOnBlockRightClicked!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
@@ -42,44 +45,44 @@ public class BufferOnBlockRightClickedProcedure {
 				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency z for procedure BufferOnBlockRightClicked!");
 			return;
 		}
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure BufferOnBlockRightClicked!");
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure BufferOnBlockRightClicked!");
 			return;
 		}
-		Entity entity = (Entity) dependencies.get("entity");
+		IWorld world = (IWorld) dependencies.get("world");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		IWorld world = (IWorld) dependencies.get("world");
+		Entity entity = (Entity) dependencies.get("entity");
 		boolean latency = false;
 		boolean no = false;
-		if ((!((new Object() {
+		if (!((new Object() {
 			public boolean getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
 				if (tileEntity != null)
 					return tileEntity.getTileData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "cooldown")) == (true)))) {
-			if ((((entity.getDisplayName().getString())).equals((new Object() {
+		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "cooldown")) == true)) {
+			if ((entity.getDisplayName().getString()).equals(new Object() {
 				public String getValue(IWorld world, BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);
 					if (tileEntity != null)
 						return tileEntity.getTileData().getString(tag);
 					return "";
 				}
-			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "owner"))))) {
-				if (((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == AquamarineGlassBlock.block)) {
-					if (((world.getBlockState(new BlockPos((int) x, (int) (y - 2), (int) z))).getBlock() == AquamarineGlassBlock.block)) {
-						if (((new Object() {
+			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "owner"))) {
+				if ((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == AquamarineGlassBlock.block) {
+					if ((world.getBlockState(new BlockPos((int) x, (int) (y - 2), (int) z))).getBlock() == AquamarineGlassBlock.block) {
+						if ((new Object() {
 							public boolean getValue(IWorld world, BlockPos pos, String tag) {
 								TileEntity tileEntity = world.getTileEntity(pos);
 								if (tileEntity != null)
 									return tileEntity.getTileData().getBoolean(tag);
 								return false;
 							}
-						}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "latencyLoaded")) == (false))) {
+						}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "latencyLoaded")) == false) {
 							if (!world.isRemote()) {
 								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 								TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -118,86 +121,55 @@ public class BufferOnBlockRightClickedProcedure {
 												.getValue(new ResourceLocation("the_wet_smp_rehydrated:buffer.new_latency")),
 										SoundCategory.NEUTRAL, (float) 0.1, (float) 1, false);
 							}
-							{
-								Map<String, Object> $_dependencies = new HashMap<>();
-								$_dependencies.put("world", world);
-								$_dependencies.put("x", x);
-								$_dependencies.put("y", y);
-								$_dependencies.put("z", z);
-								Y4StoreInfoProcedure.executeProcedure($_dependencies);
-							}
-							{
-								Map<String, Object> $_dependencies = new HashMap<>();
-								$_dependencies.put("world", world);
-								$_dependencies.put("x", x);
-								$_dependencies.put("y", y);
-								$_dependencies.put("z", z);
-								Y3StoreInfoProcedure.executeProcedure($_dependencies);
-							}
-							{
-								Map<String, Object> $_dependencies = new HashMap<>();
-								$_dependencies.put("world", world);
-								$_dependencies.put("x", x);
-								$_dependencies.put("y", y);
-								$_dependencies.put("z", z);
-								Y2StoreInfoProcedure.executeProcedure($_dependencies);
-							}
-							{
-								Map<String, Object> $_dependencies = new HashMap<>();
-								$_dependencies.put("world", world);
-								$_dependencies.put("x", x);
-								$_dependencies.put("y", y);
-								$_dependencies.put("z", z);
-								Y1StoreInfoProcedure.executeProcedure($_dependencies);
-							}
-							{
-								Map<String, Object> $_dependencies = new HashMap<>();
-								$_dependencies.put("world", world);
-								$_dependencies.put("x", x);
-								$_dependencies.put("y", y);
-								$_dependencies.put("z", z);
-								Y0StoreInfoProcedure.executeProcedure($_dependencies);
-							}
-							{
-								Map<String, Object> $_dependencies = new HashMap<>();
-								$_dependencies.put("world", world);
-								$_dependencies.put("x", x);
-								$_dependencies.put("y", y);
-								$_dependencies.put("z", z);
-								YN1StoreInfoProcedure.executeProcedure($_dependencies);
-							}
-							{
-								Map<String, Object> $_dependencies = new HashMap<>();
-								$_dependencies.put("world", world);
-								$_dependencies.put("x", x);
-								$_dependencies.put("y", y);
-								$_dependencies.put("z", z);
-								YN2StoreInfoProcedure.executeProcedure($_dependencies);
-							}
-							{
-								Map<String, Object> $_dependencies = new HashMap<>();
-								$_dependencies.put("world", world);
-								$_dependencies.put("x", x);
-								$_dependencies.put("y", y);
-								$_dependencies.put("z", z);
-								YN3StoreInfoProcedure.executeProcedure($_dependencies);
-							}
-							{
-								Map<String, Object> $_dependencies = new HashMap<>();
-								$_dependencies.put("world", world);
-								$_dependencies.put("x", x);
-								$_dependencies.put("y", y);
-								$_dependencies.put("z", z);
-								YN4StoreInfoProcedure.executeProcedure($_dependencies);
-							}
-							{
-								Map<String, Object> $_dependencies = new HashMap<>();
-								$_dependencies.put("world", world);
-								$_dependencies.put("x", x);
-								$_dependencies.put("y", y);
-								$_dependencies.put("z", z);
-								ZN3StoreInfoProcedure.executeProcedure($_dependencies);
-							}
+							Y4StoreInfoProcedure.executeProcedure(Stream
+									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+
+							Y3StoreInfoProcedure.executeProcedure(Stream
+									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+
+							Y2StoreInfoProcedure.executeProcedure(Stream
+									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+
+							Y1StoreInfoProcedure.executeProcedure(Stream
+									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+
+							Y0StoreInfoProcedure.executeProcedure(Stream
+									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+
+							YN1StoreInfoProcedure.executeProcedure(Stream
+									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+
+							YN2StoreInfoProcedure.executeProcedure(Stream
+									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+
+							YN3StoreInfoProcedure.executeProcedure(Stream
+									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+
+							YN4StoreInfoProcedure.executeProcedure(Stream
+									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+
+							ZN3StoreInfoProcedure.executeProcedure(Stream
+									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 							if (!world.isRemote()) {
 								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 								TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -229,6 +201,7 @@ public class BufferOnBlockRightClickedProcedure {
 								private int ticks = 0;
 								private float waitTicks;
 								private IWorld world;
+
 								public void start(IWorld world, int waitTicks) {
 									this.waitTicks = waitTicks;
 									MinecraftForge.EVENT_BUS.register(this);
@@ -325,86 +298,55 @@ public class BufferOnBlockRightClickedProcedure {
 												.getValue(new ResourceLocation("the_wet_smp_rehydrated:buffer.latency")),
 										SoundCategory.NEUTRAL, (float) 0.1, (float) 1, false);
 							}
-							{
-								Map<String, Object> $_dependencies = new HashMap<>();
-								$_dependencies.put("world", world);
-								$_dependencies.put("x", x);
-								$_dependencies.put("y", y);
-								$_dependencies.put("z", z);
-								BuildLatencyProcedure.executeProcedure($_dependencies);
-							}
-							{
-								Map<String, Object> $_dependencies = new HashMap<>();
-								$_dependencies.put("world", world);
-								$_dependencies.put("x", x);
-								$_dependencies.put("y", y);
-								$_dependencies.put("z", z);
-								BuildLatency2Procedure.executeProcedure($_dependencies);
-							}
-							{
-								Map<String, Object> $_dependencies = new HashMap<>();
-								$_dependencies.put("world", world);
-								$_dependencies.put("x", x);
-								$_dependencies.put("y", y);
-								$_dependencies.put("z", z);
-								BuildLatency3Procedure.executeProcedure($_dependencies);
-							}
-							{
-								Map<String, Object> $_dependencies = new HashMap<>();
-								$_dependencies.put("world", world);
-								$_dependencies.put("x", x);
-								$_dependencies.put("y", y);
-								$_dependencies.put("z", z);
-								BuildLatency4Procedure.executeProcedure($_dependencies);
-							}
-							{
-								Map<String, Object> $_dependencies = new HashMap<>();
-								$_dependencies.put("world", world);
-								$_dependencies.put("x", x);
-								$_dependencies.put("y", y);
-								$_dependencies.put("z", z);
-								BuildLatency5Procedure.executeProcedure($_dependencies);
-							}
-							{
-								Map<String, Object> $_dependencies = new HashMap<>();
-								$_dependencies.put("world", world);
-								$_dependencies.put("x", x);
-								$_dependencies.put("y", y);
-								$_dependencies.put("z", z);
-								BuildLatency6Procedure.executeProcedure($_dependencies);
-							}
-							{
-								Map<String, Object> $_dependencies = new HashMap<>();
-								$_dependencies.put("world", world);
-								$_dependencies.put("x", x);
-								$_dependencies.put("y", y);
-								$_dependencies.put("z", z);
-								BuildLatency7Procedure.executeProcedure($_dependencies);
-							}
-							{
-								Map<String, Object> $_dependencies = new HashMap<>();
-								$_dependencies.put("world", world);
-								$_dependencies.put("x", x);
-								$_dependencies.put("y", y);
-								$_dependencies.put("z", z);
-								BuildLatency8Procedure.executeProcedure($_dependencies);
-							}
-							{
-								Map<String, Object> $_dependencies = new HashMap<>();
-								$_dependencies.put("world", world);
-								$_dependencies.put("x", x);
-								$_dependencies.put("y", y);
-								$_dependencies.put("z", z);
-								BuildLatency9Procedure.executeProcedure($_dependencies);
-							}
-							{
-								Map<String, Object> $_dependencies = new HashMap<>();
-								$_dependencies.put("world", world);
-								$_dependencies.put("x", x);
-								$_dependencies.put("y", y);
-								$_dependencies.put("z", z);
-								BuildLatency10Procedure.executeProcedure($_dependencies);
-							}
+							BuildLatencyProcedure.executeProcedure(Stream
+									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+
+							BuildLatency2Procedure.executeProcedure(Stream
+									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+
+							BuildLatency3Procedure.executeProcedure(Stream
+									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+
+							BuildLatency4Procedure.executeProcedure(Stream
+									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+
+							BuildLatency5Procedure.executeProcedure(Stream
+									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+
+							BuildLatency6Procedure.executeProcedure(Stream
+									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+
+							BuildLatency7Procedure.executeProcedure(Stream
+									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+
+							BuildLatency8Procedure.executeProcedure(Stream
+									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+
+							BuildLatency9Procedure.executeProcedure(Stream
+									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+
+							BuildLatency10Procedure.executeProcedure(Stream
+									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 						}
 					}
 				}

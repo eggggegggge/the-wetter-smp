@@ -15,6 +15,7 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 public class FaienceScarabItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:faience_scarab")
 	public static final Item block = null;
+
 	public FaienceScarabItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 576);
 	}
@@ -23,6 +24,7 @@ public class FaienceScarabItem extends TheWetSmpRehydratedModElements.ModElement
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ItemGroup.MATERIALS).maxStackSize(64).rarity(Rarity.COMMON));

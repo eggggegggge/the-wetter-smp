@@ -13,10 +13,12 @@ import net.minecraft.potion.EffectInstance;
 public class HaywirePotionPotion {
 	@ObjectHolder("the_wet_smp_rehydrated:haywire_potion")
 	public static final Potion potionType = null;
+
 	@SubscribeEvent
 	public static void registerPotion(RegistryEvent.Register<Potion> event) {
 		event.getRegistry().register(new PotionCustom());
 	}
+
 	public static class PotionCustom extends Potion {
 		public PotionCustom() {
 			super(new EffectInstance(HaywirePotionEffect.potion, 900, 0, false, true));

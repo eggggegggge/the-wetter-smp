@@ -21,6 +21,7 @@ import java.util.List;
 public class TreasurePowderItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:treasure_powder")
 	public static final Item block = null;
+
 	public TreasurePowderItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 580);
 	}
@@ -29,6 +30,7 @@ public class TreasurePowderItem extends TheWetSmpRehydratedModElements.ModElemen
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ItemGroup.MATERIALS).maxStackSize(64).rarity(Rarity.EPIC));

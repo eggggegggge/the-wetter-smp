@@ -16,6 +16,7 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 public class HumuhumunukunukuapuaAItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:humuhumunukunukuapua_a")
 	public static final Item block = null;
+
 	public HumuhumunukunukuapuaAItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 143);
 	}
@@ -24,6 +25,7 @@ public class HumuhumunukunukuapuaAItem extends TheWetSmpRehydratedModElements.Mo
 	public void initElements() {
 		elements.items.add(() -> new FoodItemCustom());
 	}
+
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
 			super(new Item.Properties().group(FishingItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)

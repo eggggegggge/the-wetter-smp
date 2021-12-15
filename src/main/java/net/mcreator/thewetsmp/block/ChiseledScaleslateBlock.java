@@ -20,6 +20,7 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 public class ChiseledScaleslateBlock extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:chiseled_scaleslate")
 	public static final Block block = null;
+
 	public ChiseledScaleslateBlock(TheWetSmpRehydratedModElements instance) {
 		super(instance, 602);
 	}
@@ -30,6 +31,7 @@ public class ChiseledScaleslateBlock extends TheWetSmpRehydratedModElements.ModE
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.NETHER_BRICK).hardnessAndResistance(3f, 6f).setLightLevel(s -> 0)

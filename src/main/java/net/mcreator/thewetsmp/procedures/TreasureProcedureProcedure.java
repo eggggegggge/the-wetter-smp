@@ -10,14 +10,17 @@ import net.minecraft.entity.Entity;
 
 import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 
+import java.util.stream.Stream;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.AbstractMap;
 
 public class TreasureProcedureProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure TreasureProcedure!");
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure TreasureProcedure!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
@@ -35,25 +38,25 @@ public class TreasureProcedureProcedure {
 				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency z for procedure TreasureProcedure!");
 			return;
 		}
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure TreasureProcedure!");
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure TreasureProcedure!");
 			return;
 		}
-		Entity entity = (Entity) dependencies.get("entity");
+		IWorld world = (IWorld) dependencies.get("world");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		IWorld world = (IWorld) dependencies.get("world");
-		if ((((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+		Entity entity = (Entity) dependencies.get("entity");
+		if (world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-						.equals(new ResourceLocation("desert")))
-				|| (world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+						.equals(new ResourceLocation("desert"))
+				|| world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 						&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-								.equals(new ResourceLocation("desert_hills"))))
-				|| (world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+								.equals(new ResourceLocation("desert_hills"))
+				|| world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 						&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-								.equals(new ResourceLocation("desert_lakes"))))) {
+								.equals(new ResourceLocation("desert_lakes"))) {
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
@@ -61,34 +64,27 @@ public class TreasureProcedureProcedure {
 							"loot give @s loot the_wet_smp_rehydrated:desert_treasure");
 				}
 			}
-		} else if ((((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+		} else if (world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-						.equals(new ResourceLocation("ocean")))
-				|| ((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+						.equals(new ResourceLocation("ocean"))
+				|| world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 						&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-								.equals(new ResourceLocation("cold_ocean")))
-						|| (world.func_241828_r().getRegistry(Registry.BIOME_KEY)
-								.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
-								&& world.func_241828_r().getRegistry(Registry.BIOME_KEY)
-										.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-										.equals(new ResourceLocation("frozen_ocean")))))
-				|| (((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+								.equals(new ResourceLocation("cold_ocean"))
+				|| world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 						&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-								.equals(new ResourceLocation("warm_ocean")))
-						|| (world.func_241828_r().getRegistry(Registry.BIOME_KEY)
-								.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
-								&& world.func_241828_r().getRegistry(Registry.BIOME_KEY)
-										.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))).equals(new ResourceLocation("river"))))
-						|| ((world.func_241828_r().getRegistry(Registry.BIOME_KEY)
-								.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
-								&& world.func_241828_r().getRegistry(Registry.BIOME_KEY)
-										.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-										.equals(new ResourceLocation("lukewarm_ocean")))
-								|| (world.func_241828_r().getRegistry(Registry.BIOME_KEY)
-										.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
-										&& world.func_241828_r().getRegistry(Registry.BIOME_KEY)
-												.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-												.equals(new ResourceLocation("frozen_river"))))))) {
+								.equals(new ResourceLocation("frozen_ocean"))
+				|| world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+						&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
+								.equals(new ResourceLocation("warm_ocean"))
+				|| world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+						&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
+								.equals(new ResourceLocation("river"))
+				|| world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+						&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
+								.equals(new ResourceLocation("lukewarm_ocean"))
+				|| world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+						&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
+								.equals(new ResourceLocation("frozen_river"))) {
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
@@ -96,26 +92,21 @@ public class TreasureProcedureProcedure {
 							"loot give @s loot the_wet_smp_rehydrated:ocean_treasure");
 				}
 			}
-		} else if (((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+		} else if (world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 				&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-						.equals(new ResourceLocation("deep_cold_ocean")))
-				|| (((world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+						.equals(new ResourceLocation("deep_cold_ocean"))
+				|| world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
 						&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-								.equals(new ResourceLocation("deep_frozen_ocean")))
-						|| (world.func_241828_r().getRegistry(Registry.BIOME_KEY)
-								.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
-								&& world.func_241828_r().getRegistry(Registry.BIOME_KEY)
-										.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))).equals(new ResourceLocation("deep_ocean"))))
-						|| ((world.func_241828_r().getRegistry(Registry.BIOME_KEY)
-								.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
-								&& world.func_241828_r().getRegistry(Registry.BIOME_KEY)
-										.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-										.equals(new ResourceLocation("deep_lukewarm_ocean")))
-								|| (world.func_241828_r().getRegistry(Registry.BIOME_KEY)
-										.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
-										&& world.func_241828_r().getRegistry(Registry.BIOME_KEY)
-												.getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
-												.equals(new ResourceLocation("deep_warm_ocean"))))))) {
+								.equals(new ResourceLocation("deep_frozen_ocean"))
+				|| world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+						&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
+								.equals(new ResourceLocation("deep_ocean"))
+				|| world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+						&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
+								.equals(new ResourceLocation("deep_lukewarm_ocean"))
+				|| world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z))) != null
+						&& world.func_241828_r().getRegistry(Registry.BIOME_KEY).getKey(world.getBiome(new BlockPos((int) x, (int) y, (int) z)))
+								.equals(new ResourceLocation("deep_warm_ocean"))) {
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
@@ -135,11 +126,7 @@ public class TreasureProcedureProcedure {
 		if (world instanceof World && !world.isRemote()) {
 			((World) world).addEntity(new ExperienceOrbEntity(((World) world), x, (y - 0.5), z, (int) 2));
 		}
-		{
-			Map<String, Object> $_dependencies = new HashMap<>();
-			$_dependencies.put("entity", entity);
-			$_dependencies.put("world", world);
-			RemoveBaitProcedure.executeProcedure($_dependencies);
-		}
+		RemoveBaitProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
+				.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 	}
 }

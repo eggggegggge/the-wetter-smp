@@ -15,6 +15,7 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 public class YellowJellyfishItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:yellow_jellyfish")
 	public static final Item block = null;
+
 	public YellowJellyfishItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 110);
 	}
@@ -23,6 +24,7 @@ public class YellowJellyfishItem extends TheWetSmpRehydratedModElements.ModEleme
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(FishingItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));

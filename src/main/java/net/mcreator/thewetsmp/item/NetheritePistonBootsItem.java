@@ -22,8 +22,10 @@ import net.minecraft.entity.Entity;
 import net.mcreator.thewetsmp.procedures.PistonBootsJumpProcedure;
 import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
+import java.util.stream.Stream;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.AbstractMap;
 
 @TheWetSmpRehydratedModElements.ModElement.Tag
 public class NetheritePistonBootsItem extends TheWetSmpRehydratedModElements.ModElement {
@@ -35,6 +37,7 @@ public class NetheritePistonBootsItem extends TheWetSmpRehydratedModElements.Mod
 	public static final Item legs = null;
 	@ObjectHolder("the_wet_smp_rehydrated:netherite_piston_boots")
 	public static final Item boots = null;
+
 	public NetheritePistonBootsItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 32);
 	}
@@ -96,12 +99,11 @@ public class NetheritePistonBootsItem extends TheWetSmpRehydratedModElements.Mod
 						double x = entity.getPosX();
 						double y = entity.getPosY();
 						double z = entity.getPosZ();
-						{
-							Map<String, Object> $_dependencies = new HashMap<>();
-							$_dependencies.put("entity", entity);
-							PistonBootsJumpProcedure.executeProcedure($_dependencies);
-						}
+
+						PistonBootsJumpProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+								(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 					}
 				}.setRegistryName("netherite_piston_boots"));
 	}
+
 }

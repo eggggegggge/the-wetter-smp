@@ -17,6 +17,7 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 public class WuuthradItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:wuuthrad")
 	public static final Item block = null;
+
 	public WuuthradItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 555);
 	}

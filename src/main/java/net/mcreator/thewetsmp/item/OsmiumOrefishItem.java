@@ -15,6 +15,7 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 public class OsmiumOrefishItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:osmium_orefish")
 	public static final Item block = null;
+
 	public OsmiumOrefishItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 125);
 	}
@@ -23,6 +24,7 @@ public class OsmiumOrefishItem extends TheWetSmpRehydratedModElements.ModElement
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(FishingItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));

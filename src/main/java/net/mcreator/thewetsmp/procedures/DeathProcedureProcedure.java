@@ -40,6 +40,7 @@ public class DeathProcedureProcedure {
 			}
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -53,7 +54,7 @@ public class DeathProcedureProcedure {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		Entity sourceentity = (Entity) dependencies.get("sourceentity");
-		if ((new Object() {
+		if (new Object() {
 			boolean check(Entity _entity) {
 				if (_entity instanceof LivingEntity) {
 					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -64,11 +65,11 @@ public class DeathProcedureProcedure {
 				}
 				return false;
 			}
-		}.check(sourceentity))) {
+		}.check(sourceentity)) {
 			if (sourceentity instanceof LivingEntity)
 				((LivingEntity) sourceentity)
 						.setHealth((float) (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHealth() : -1)
-								+ (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getMaxHealth() : -1) / 8.5)));
+								+ ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getMaxHealth() : -1) / 8.5));
 		}
 	}
 }

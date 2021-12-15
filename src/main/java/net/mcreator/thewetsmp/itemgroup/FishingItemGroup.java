@@ -31,5 +31,6 @@ public class FishingItemGroup extends TheWetSmpRehydratedModElements.ModElement 
 			}
 		};
 	}
+
 	public static ItemGroup tab;
 }

@@ -16,6 +16,7 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 public class ShulkfishItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:shulkfish")
 	public static final Item block = null;
+
 	public ShulkfishItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 105);
 	}
@@ -24,10 +25,13 @@ public class ShulkfishItem extends TheWetSmpRehydratedModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new FoodItemCustom());
 	}
+
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
 			super(new Item.Properties().group(FishingItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
-					.food((new Food.Builder()).hunger(0).saturation(0f).build()));
+					.food((new Food.Builder()).hunger(0).saturation(0f)
+
+							.build()));
 			setRegistryName("shulkfish");
 		}
 

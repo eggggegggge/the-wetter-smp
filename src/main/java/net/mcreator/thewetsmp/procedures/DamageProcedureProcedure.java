@@ -18,7 +18,6 @@ import net.mcreator.thewetsmp.potion.PeacePotionEffect;
 import net.mcreator.thewetsmp.potion.LacunaPotionEffect;
 import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 
-import java.util.Random;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.Collection;
@@ -49,6 +48,7 @@ public class DamageProcedureProcedure {
 			}
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -69,7 +69,7 @@ public class DamageProcedureProcedure {
 		Entity sourceentity = (Entity) dependencies.get("sourceentity");
 		double amount = dependencies.get("amount") instanceof Integer ? (int) dependencies.get("amount") : (double) dependencies.get("amount");
 		double test = 0;
-		if ((new Object() {
+		if (new Object() {
 			boolean check(Entity _entity) {
 				if (_entity instanceof LivingEntity) {
 					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -80,16 +80,16 @@ public class DamageProcedureProcedure {
 				}
 				return false;
 			}
-		}.check(entity))) {
-			if ((((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).getFoodStats().getFoodLevel() : 0) != 0)) {
-				if ((((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).getFoodStats().getFoodLevel() : 0) < ((amount) * 0.685))) {
+		}.check(entity)) {
+			if (((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).getFoodStats().getFoodLevel() : 0) != 0) {
+				if (((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).getFoodStats().getFoodLevel() : 0) < amount * 0.685) {
 					if (entity instanceof PlayerEntity)
 						((PlayerEntity) entity).getFoodStats().setFoodLevel((int) 0);
 				} else {
 					if (entity instanceof PlayerEntity)
 						((PlayerEntity) entity).getFoodStats()
 								.setFoodLevel((int) (((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).getFoodStats().getFoodLevel() : 0)
-										- ((amount) * 0.685)));
+										- amount * 0.685));
 					if (dependencies.get("event") != null) {
 						Object _obj = dependencies.get("event");
 						if (_obj instanceof Event) {
@@ -100,7 +100,7 @@ public class DamageProcedureProcedure {
 					}
 				}
 			}
-		} else if ((new Object() {
+		} else if (new Object() {
 			boolean check(Entity _entity) {
 				if (_entity instanceof LivingEntity) {
 					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -111,9 +111,9 @@ public class DamageProcedureProcedure {
 				}
 				return false;
 			}
-		}.check(entity))) {
-			entity.attackEntityFrom(DamageSource.GENERIC, (float) (((amount) / 2) + (amount)));
-		} else if ((new Object() {
+		}.check(entity)) {
+			entity.attackEntityFrom(DamageSource.GENERIC, (float) (amount / 2 + amount));
+		} else if (new Object() {
 			boolean check(Entity _entity) {
 				if (_entity instanceof LivingEntity) {
 					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -124,8 +124,8 @@ public class DamageProcedureProcedure {
 				}
 				return false;
 			}
-		}.check(entity))) {
-			if (((entity.getPosY()) >= (-64))) {
+		}.check(entity)) {
+			if (entity.getPosY() >= -64) {
 				if (dependencies.get("event") != null) {
 					Object _obj = dependencies.get("event");
 					if (_obj instanceof Event) {
@@ -135,7 +135,7 @@ public class DamageProcedureProcedure {
 					}
 				}
 			}
-		} else if ((new Object() {
+		} else if (new Object() {
 			boolean check(Entity _entity) {
 				if (_entity instanceof LivingEntity) {
 					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -146,7 +146,7 @@ public class DamageProcedureProcedure {
 				}
 				return false;
 			}
-		}.check(sourceentity))) {
+		}.check(sourceentity)) {
 			if (dependencies.get("event") != null) {
 				Object _obj = dependencies.get("event");
 				if (_obj instanceof Event) {
@@ -155,7 +155,7 @@ public class DamageProcedureProcedure {
 						_evt.setCanceled(true);
 				}
 			}
-		} else if ((new Object() {
+		} else if (new Object() {
 			boolean check(Entity _entity) {
 				if (_entity instanceof LivingEntity) {
 					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -166,8 +166,8 @@ public class DamageProcedureProcedure {
 				}
 				return false;
 			}
-		}.check(entity))) {
-			if ((((new Random()).nextInt((int) 99 + 1)) <= ((amount) * 2))) {
+		}.check(entity)) {
+			if (Math.random() * 100 <= amount * 2) {
 				sourceentity.attackEntityFrom(DamageSource.MAGIC, (float) 2);
 			}
 		}

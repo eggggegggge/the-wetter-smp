@@ -25,6 +25,7 @@ import com.google.common.collect.ImmutableMultimap;
 public class BrushItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:brush")
 	public static final Item block = null;
+
 	public BrushItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 6);
 	}
@@ -34,6 +35,7 @@ public class BrushItem extends TheWetSmpRehydratedModElements.ModElement {
 		elements.items.add(() -> new ItemToolCustom() {
 		}.setRegistryName("brush"));
 	}
+
 	private static class ItemToolCustom extends Item {
 		protected ItemToolCustom() {
 			super(new Item.Properties().group(ItemGroup.TOOLS).maxDamage(21));

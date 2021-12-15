@@ -24,8 +24,5 @@
       }
     }
   },
-  "rewards": {
-    "experience": 0
-  },
   "parent": "minecraft:husbandry/root"
 }

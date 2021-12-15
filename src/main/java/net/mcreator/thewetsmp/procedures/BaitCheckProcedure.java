@@ -21,62 +21,57 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Map;
 
 public class BaitCheckProcedure {
+
 	public static double executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure BaitCheck!");
-			return 0;
-		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
 				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure BaitCheck!");
 			return 0;
 		}
-		Entity entity = (Entity) dependencies.get("entity");
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure BaitCheck!");
+			return 0;
+		}
 		IWorld world = (IWorld) dependencies.get("world");
+		Entity entity = (Entity) dependencies.get("entity");
 		double bait = 0;
-		bait = (double) 100;
+		bait = (double) 44;
 		{
 			AtomicReference<IItemHandler> _iitemhandlerref = new AtomicReference<>();
 			entity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> _iitemhandlerref.set(capability));
 			if (_iitemhandlerref.get() != null) {
 				for (int _idx = 0; _idx < _iitemhandlerref.get().getSlots(); _idx++) {
 					ItemStack itemstackiterator = _iitemhandlerref.get().getStackInSlot(_idx).copy();
-					if (((itemstackiterator).getItem() == GreenJellyfishItem.block)) {
-						if ((bait > 29)) {
+					if (itemstackiterator.getItem() == GreenJellyfishItem.block) {
+						if (bait > 29) {
 							bait = (double) 29;
 						}
-						return bait;
-					} else if (((itemstackiterator).getItem() == BlueJellyfishItem.block)) {
-						if ((bait > 29)) {
+					} else if (itemstackiterator.getItem() == BlueJellyfishItem.block) {
+						if (bait > 29) {
 							bait = (double) 29;
 						}
-						return bait;
-					} else if (((itemstackiterator).getItem() == RedJellyfishItem.block)) {
-						if ((bait > 29)) {
+					} else if (itemstackiterator.getItem() == RedJellyfishItem.block) {
+						if (bait > 29) {
 							bait = (double) 29;
 						}
-						return bait;
-					} else if (((itemstackiterator).getItem() == YellowJellyfishItem.block)) {
-						if ((bait > 29)) {
+					} else if (itemstackiterator.getItem() == YellowJellyfishItem.block) {
+						if (bait > 29) {
 							bait = (double) 29;
 						}
-						return bait;
-					} else if (((itemstackiterator).getItem() == PinkJellyfishItem.block)) {
-						if ((bait > 30)) {
+					} else if (itemstackiterator.getItem() == PinkJellyfishItem.block) {
+						if (bait > 30) {
 							bait = (double) 30;
 						}
-						return bait;
-					} else if ((((itemstackiterator).getItem() == TreasurePowderItem.block)
-							|| (((itemstackiterator).getItem() == DevSalmonItem.block) || ((itemstackiterator).getItem() == JunkPowderItem.block)))) {
-						if ((bait > 0)) {
+					} else if (itemstackiterator.getItem() == TreasurePowderItem.block || itemstackiterator.getItem() == DevSalmonItem.block
+							|| itemstackiterator.getItem() == JunkPowderItem.block) {
+						if (bait > 0) {
 							bait = (double) 0;
 						}
-						return bait;
 					}
 				}
 			}
 		}
-		return 44;
+		return bait;
 	}
 }

@@ -14,11 +14,11 @@ import java.util.Map;
 import java.util.Collection;
 
 public class ExplosiveCrabCannonHitEntityProcedureProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("imediatesourceentity") == null) {
-			if (!dependencies.containsKey("imediatesourceentity"))
-				TheWetSmpRehydratedMod.LOGGER
-						.warn("Failed to load dependency imediatesourceentity for procedure ExplosiveCrabCannonHitEntityProcedure!");
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure ExplosiveCrabCannonHitEntityProcedure!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
@@ -36,17 +36,18 @@ public class ExplosiveCrabCannonHitEntityProcedureProcedure {
 				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency z for procedure ExplosiveCrabCannonHitEntityProcedure!");
 			return;
 		}
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure ExplosiveCrabCannonHitEntityProcedure!");
+		if (dependencies.get("imediatesourceentity") == null) {
+			if (!dependencies.containsKey("imediatesourceentity"))
+				TheWetSmpRehydratedMod.LOGGER
+						.warn("Failed to load dependency imediatesourceentity for procedure ExplosiveCrabCannonHitEntityProcedure!");
 			return;
 		}
-		Entity imediatesourceentity = (Entity) dependencies.get("imediatesourceentity");
+		IWorld world = (IWorld) dependencies.get("world");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		IWorld world = (IWorld) dependencies.get("world");
-		if ((new Object() {
+		Entity imediatesourceentity = (Entity) dependencies.get("imediatesourceentity");
+		if (new Object() {
 			boolean check(Entity _entity) {
 				if (_entity instanceof LivingEntity) {
 					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -57,7 +58,7 @@ public class ExplosiveCrabCannonHitEntityProcedureProcedure {
 				}
 				return false;
 			}
-		}.check(imediatesourceentity))) {
+		}.check(imediatesourceentity)) {
 			if (world instanceof World && !((World) world).isRemote) {
 				((World) world).createExplosion(null, (int) x, (int) y, (int) z, (float) 0, Explosion.Mode.NONE);
 			}

@@ -48,15 +48,11 @@ public class BrushBreakBlockProcedureProcedure {
 			executeProcedure(dependencies);
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("blockstate") == null) {
-			if (!dependencies.containsKey("blockstate"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency blockstate for procedure BrushBreakBlockProcedure!");
-			return;
-		}
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure BrushBreakBlockProcedure!");
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure BrushBreakBlockProcedure!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
@@ -74,20 +70,25 @@ public class BrushBreakBlockProcedureProcedure {
 				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency z for procedure BrushBreakBlockProcedure!");
 			return;
 		}
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure BrushBreakBlockProcedure!");
+		if (dependencies.get("blockstate") == null) {
+			if (!dependencies.containsKey("blockstate"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency blockstate for procedure BrushBreakBlockProcedure!");
 			return;
 		}
-		BlockState blockstate = (BlockState) dependencies.get("blockstate");
-		Entity entity = (Entity) dependencies.get("entity");
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure BrushBreakBlockProcedure!");
+			return;
+		}
+		IWorld world = (IWorld) dependencies.get("world");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		IWorld world = (IWorld) dependencies.get("world");
+		BlockState blockstate = (BlockState) dependencies.get("blockstate");
+		Entity entity = (Entity) dependencies.get("entity");
 		double lootroll = 0;
-		if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == BrushItem.block)) {
-			if (((blockstate.getBlock() == Blocks.SAND) || (blockstate.getBlock() == Blocks.GRAVEL))) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == BrushItem.block) {
+			if (blockstate.getBlock() == Blocks.SAND || blockstate.getBlock() == Blocks.GRAVEL) {
 				if (dependencies.get("event") != null) {
 					Object _obj = dependencies.get("event");
 					if (_obj instanceof Event) {

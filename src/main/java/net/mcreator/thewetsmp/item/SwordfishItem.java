@@ -17,6 +17,7 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 public class SwordfishItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:swordfish")
 	public static final Item block = null;
+
 	public SwordfishItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 145);
 	}

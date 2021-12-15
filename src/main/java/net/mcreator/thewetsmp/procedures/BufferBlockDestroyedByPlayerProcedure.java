@@ -50,10 +50,11 @@ public class BufferBlockDestroyedByPlayerProcedure {
 			executeProcedure(dependencies);
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure BufferBlockDestroyedByPlayer!");
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure BufferBlockDestroyedByPlayer!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
@@ -71,26 +72,26 @@ public class BufferBlockDestroyedByPlayerProcedure {
 				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency z for procedure BufferBlockDestroyedByPlayer!");
 			return;
 		}
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure BufferBlockDestroyedByPlayer!");
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure BufferBlockDestroyedByPlayer!");
 			return;
 		}
-		Entity entity = (Entity) dependencies.get("entity");
+		IWorld world = (IWorld) dependencies.get("world");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		IWorld world = (IWorld) dependencies.get("world");
-		if ((((Entity) world
+		Entity entity = (Entity) dependencies.get("entity");
+		if (((Entity) world
 				.getEntitiesWithinAABB(BufferBlockRemovalEntity.CustomEntity.class,
 						new AxisAlignedBB(x - (9 / 2d), y - (9 / 2d), z - (9 / 2d), x + (9 / 2d), y + (9 / 2d), z + (9 / 2d)), null)
 				.stream().sorted(new Object() {
 					Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 						return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
 					}
-				}.compareDistOf(x, y, z)).findFirst().orElse(null)) != null)) {
-			if ((!(((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == BufferBlock.block)
-					|| ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == AquamarineGlassBlock.block)))) {
+				}.compareDistOf(x, y, z)).findFirst().orElse(null)) != null) {
+			if (!((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == BufferBlock.block
+					|| (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == AquamarineGlassBlock.block)) {
 				if (dependencies.get("event") != null) {
 					Object _obj = dependencies.get("event");
 					if (_obj instanceof Event) {
@@ -102,16 +103,16 @@ public class BufferBlockDestroyedByPlayerProcedure {
 				world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
 			}
 		}
-		if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == BufferBlock.block)
-				|| ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == AquamarineGlassBlock.block))) {
-			if ((!(((entity.getDisplayName().getString())).equals((new Object() {
+		if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == BufferBlock.block
+				|| (world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == AquamarineGlassBlock.block) {
+			if (!(entity.getDisplayName().getString()).equals(new Object() {
 				public String getValue(IWorld world, BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);
 					if (tileEntity != null)
 						return tileEntity.getTileData().getString(tag);
 					return "";
 				}
-			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "owner")))))) {
+			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "owner"))) {
 				if (dependencies.get("event") != null) {
 					Object _obj = dependencies.get("event");
 					if (_obj instanceof Event) {
@@ -120,14 +121,14 @@ public class BufferBlockDestroyedByPlayerProcedure {
 							_evt.setCanceled(true);
 					}
 				}
-			} else if (((new Object() {
+			} else if ((new Object() {
 				public boolean getValue(IWorld world, BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);
 					if (tileEntity != null)
 						return tileEntity.getTileData().getBoolean(tag);
 					return false;
 				}
-			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "latencyLoaded")) == (true))) {
+			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "latencyLoaded")) == true) {
 				if (dependencies.get("event") != null) {
 					Object _obj = dependencies.get("event");
 					if (_obj instanceof Event) {
@@ -136,14 +137,14 @@ public class BufferBlockDestroyedByPlayerProcedure {
 							_evt.setCanceled(true);
 					}
 				}
-			} else if (((new Object() {
+			} else if ((new Object() {
 				public boolean getValue(IWorld world, BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);
 					if (tileEntity != null)
 						return tileEntity.getTileData().getBoolean(tag);
 					return false;
 				}
-			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "cooldown")) == (true))) {
+			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "cooldown")) == true) {
 				if (dependencies.get("event") != null) {
 					Object _obj = dependencies.get("event");
 					if (_obj instanceof Event) {

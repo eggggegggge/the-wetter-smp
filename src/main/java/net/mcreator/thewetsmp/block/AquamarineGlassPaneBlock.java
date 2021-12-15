@@ -30,6 +30,7 @@ import java.util.Collections;
 public class AquamarineGlassPaneBlock extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:aquamarine_glass_pane")
 	public static final Block block = null;
+
 	public AquamarineGlassPaneBlock(TheWetSmpRehydratedModElements instance) {
 		super(instance, 60);
 	}
@@ -46,6 +47,7 @@ public class AquamarineGlassPaneBlock extends TheWetSmpRehydratedModElements.Mod
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
+
 	public static class CustomBlock extends PaneBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.GLASS).sound(SoundType.GLASS).hardnessAndResistance(2f, 50000f).setLightLevel(s -> 0).notSolid()

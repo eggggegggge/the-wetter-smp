@@ -11,6 +11,7 @@ import java.util.Map;
 import java.util.Collection;
 
 public class SoulSupplementExpirationProcedureProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -18,7 +19,7 @@ public class SoulSupplementExpirationProcedureProcedure {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if ((new Object() {
+		if (new Object() {
 			boolean check(Entity _entity) {
 				if (_entity instanceof LivingEntity) {
 					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -29,7 +30,7 @@ public class SoulSupplementExpirationProcedureProcedure {
 				}
 				return false;
 			}
-		}.check(entity))) {
+		}.check(entity)) {
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {

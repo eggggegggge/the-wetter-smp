@@ -16,6 +16,7 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 public class ChorusfishItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:chorusfish")
 	public static final Item block = null;
+
 	public ChorusfishItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 106);
 	}
@@ -24,10 +25,13 @@ public class ChorusfishItem extends TheWetSmpRehydratedModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new FoodItemCustom());
 	}
+
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
 			super(new Item.Properties().group(FishingItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
-					.food((new Food.Builder()).hunger(1).saturation(0.3f).setAlwaysEdible().build()));
+					.food((new Food.Builder()).hunger(1).saturation(0.3f).setAlwaysEdible()
+
+							.build()));
 			setRegistryName("chorusfish");
 		}
 

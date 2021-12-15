@@ -31,6 +31,7 @@ import java.util.Collections;
 public class SepiaWoolBlock extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:sepia_wool")
 	public static final Block block = null;
+
 	public SepiaWoolBlock(TheWetSmpRehydratedModElements instance) {
 		super(instance, 148);
 	}
@@ -46,6 +47,7 @@ public class SepiaWoolBlock extends TheWetSmpRehydratedModElements.ModElement {
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutoutMipped());
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOL).sound(SoundType.CLOTH).hardnessAndResistance(0.8f, 0.8f).setLightLevel(s -> 0));

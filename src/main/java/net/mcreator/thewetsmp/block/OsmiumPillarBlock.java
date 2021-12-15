@@ -32,6 +32,7 @@ import java.util.Collections;
 public class OsmiumPillarBlock extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:osmium_pillar")
 	public static final Block block = null;
+
 	public OsmiumPillarBlock(TheWetSmpRehydratedModElements instance) {
 		super(instance, 156);
 	}
@@ -41,8 +42,10 @@ public class OsmiumPillarBlock extends TheWetSmpRehydratedModElements.ModElement
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(ItemGroup.DECORATIONS)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
+
 		public CustomBlock() {
 			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(5f, 6f).setLightLevel(s -> 0).harvestLevel(2)
 					.harvestTool(ToolType.PICKAXE).setRequiresTool());

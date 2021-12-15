@@ -36,6 +36,7 @@ public class BufferBlasterRenderer {
 	@OnlyIn(Dist.CLIENT)
 	public static class CustomRender extends EntityRenderer<BufferBlasterItem.ArrowCustomEntity> {
 		private static final ResourceLocation texture = new ResourceLocation("the_wet_smp_rehydrated:textures/buffer_blast.png");
+
 		public CustomRender(EntityRendererManager renderManager) {
 			super(renderManager);
 		}
@@ -64,6 +65,7 @@ public class BufferBlasterRenderer {
 	// Paste this class into your mod and generate all required imports
 	public static class Modelbufferblast extends EntityModel<Entity> {
 		private final ModelRenderer bb_main;
+
 		public Modelbufferblast() {
 			textureWidth = 32;
 			textureHeight = 32;
@@ -89,4 +91,5 @@ public class BufferBlasterRenderer {
 			modelRenderer.rotateAngleZ = z;
 		}
 	}
+
 }

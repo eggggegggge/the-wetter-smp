@@ -15,6 +15,7 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 public class FakeCreeperDiscItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:fake_creeper_disc")
 	public static final Item block = null;
+
 	public FakeCreeperDiscItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 557);
 	}
@@ -23,6 +24,7 @@ public class FakeCreeperDiscItem extends TheWetSmpRehydratedModElements.ModEleme
 	public void initElements() {
 		elements.items.add(() -> new MusicDiscItemCustom());
 	}
+
 	public static class MusicDiscItemCustom extends MusicDiscItem {
 		public MusicDiscItemCustom() {
 			super(0, TheWetSmpRehydratedModElements.sounds.get(new ResourceLocation("the_wet_smp_rehydrated:disc.troll")),

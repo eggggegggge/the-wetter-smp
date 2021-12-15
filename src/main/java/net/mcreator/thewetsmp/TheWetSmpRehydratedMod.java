@@ -47,6 +47,7 @@ public class TheWetSmpRehydratedMod {
 			new ResourceLocation("the_wet_smp_rehydrated", "the_wet_smp_rehydrated"), () -> PROTOCOL_VERSION, PROTOCOL_VERSION::equals,
 			PROTOCOL_VERSION::equals);
 	public TheWetSmpRehydratedModElements elements;
+
 	public TheWetSmpRehydratedMod() {
 		elements = new TheWetSmpRehydratedModElements();
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
@@ -87,8 +88,10 @@ public class TheWetSmpRehydratedMod {
 	public void registerSounds(RegistryEvent.Register<net.minecraft.util.SoundEvent> event) {
 		elements.registerSounds(event);
 	}
+
 	private static class TheWetSmpRehydratedModFMLBusEvents {
 		private final TheWetSmpRehydratedMod parent;
+
 		TheWetSmpRehydratedModFMLBusEvents(TheWetSmpRehydratedMod parent) {
 			this.parent = parent;
 		}

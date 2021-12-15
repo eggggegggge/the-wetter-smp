@@ -23,6 +23,7 @@ public class CrateGUIGuiWindow extends ContainerScreen<CrateGUIGui.GuiContainerM
 	private int x, y, z;
 	private PlayerEntity entity;
 	private final static HashMap guistate = CrateGUIGui.guistate;
+
 	public CrateGUIGuiWindow(CrateGUIGui.GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
 		super(container, inventory, text);
 		this.world = container.world;
@@ -33,7 +34,9 @@ public class CrateGUIGuiWindow extends ContainerScreen<CrateGUIGui.GuiContainerM
 		this.xSize = 176;
 		this.ySize = 153;
 	}
+
 	private static final ResourceLocation texture = new ResourceLocation("the_wet_smp_rehydrated:textures/crate_gui.png");
+
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(ms);

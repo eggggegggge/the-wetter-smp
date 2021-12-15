@@ -17,6 +17,7 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 public class HammerheadItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:hammerhead")
 	public static final Item block = null;
+
 	public HammerheadItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 572);
 	}

@@ -12,14 +12,13 @@ import net.minecraftforge.common.ForgeMod;
 
 import net.minecraft.world.World;
 import net.minecraft.world.IWorldReader;
-import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.DamageSource;
 import net.minecraft.pathfinding.FlyingPathNavigator;
 import net.minecraft.network.IPacket;
 import net.minecraft.entity.projectile.PotionEntity;
-import net.minecraft.entity.projectile.ArrowEntity;
+import net.minecraft.entity.projectile.AbstractArrowEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.ai.controller.FlyingMovementController;
 import net.minecraft.entity.ai.attributes.Attributes;
@@ -40,6 +39,7 @@ public class BufferBlockRemovalEntity extends TheWetSmpRehydratedModElements.Mod
 	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(0).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire()
 			.size(0f, 0f)).build("buffer_block_removal").setRegistryName("buffer_block_removal");
+
 	public BufferBlockRemovalEntity(TheWetSmpRehydratedModElements instance) {
 		super(instance, 24);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BufferBlockRemovalRenderer.ModelRegisterHandler());
@@ -54,6 +54,7 @@ public class BufferBlockRemovalEntity extends TheWetSmpRehydratedModElements.Mod
 	@Override
 	public void init(FMLCommonSetupEvent event) {
 	}
+
 	private static class EntityAttributesRegisterHandler {
 		@SubscribeEvent
 		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
@@ -114,7 +115,7 @@ public class BufferBlockRemovalEntity extends TheWetSmpRehydratedModElements.Mod
 
 		@Override
 		public boolean attackEntityFrom(DamageSource source, float amount) {
-			if (source.getImmediateSource() instanceof ArrowEntity)
+			if (source.getImmediateSource() instanceof AbstractArrowEntity)
 				return false;
 			if (source.getImmediateSource() instanceof PlayerEntity)
 				return false;
@@ -149,8 +150,8 @@ public class BufferBlockRemovalEntity extends TheWetSmpRehydratedModElements.Mod
 		}
 
 		@Override
-		public boolean isNotColliding(IWorldReader worldreader) {
-			return worldreader.checkNoEntityCollision(this, VoxelShapes.create(this.getBoundingBox()));
+		public boolean isNotColliding(IWorldReader world) {
+			return world.checkNoEntityCollision(this);
 		}
 
 		@Override

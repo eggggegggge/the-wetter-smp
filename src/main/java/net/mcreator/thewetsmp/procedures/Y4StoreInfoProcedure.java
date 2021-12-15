@@ -13,7 +13,13 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 import java.util.Map;
 
 public class Y4StoreInfoProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure Y4StoreInfo!");
+			return;
+		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
 				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency x for procedure Y4StoreInfo!");
@@ -29,15 +35,10 @@ public class Y4StoreInfoProcedure {
 				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency z for procedure Y4StoreInfo!");
 			return;
 		}
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure Y4StoreInfo!");
-			return;
-		}
+		IWorld world = (IWorld) dependencies.get("world");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		IWorld world = (IWorld) dependencies.get("world");
 		{
 			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 			if (_ent != null) {

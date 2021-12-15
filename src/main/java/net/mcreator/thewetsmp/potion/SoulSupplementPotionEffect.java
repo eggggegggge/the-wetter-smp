@@ -7,7 +7,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.RegistryEvent;
 
 import net.minecraft.world.World;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.potion.EffectType;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effect;
@@ -17,23 +16,25 @@ import net.minecraft.entity.LivingEntity;
 import net.mcreator.thewetsmp.procedures.SoulSupplementExpirationProcedureProcedure;
 import net.mcreator.thewetsmp.procedures.SoulSupplementAppliedProcedureProcedure;
 
+import java.util.stream.Stream;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.AbstractMap;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class SoulSupplementPotionEffect {
 	@ObjectHolder("the_wet_smp_rehydrated:soul_supplement")
 	public static final Effect potion = null;
+
 	@SubscribeEvent
 	public static void registerEffect(RegistryEvent.Register<Effect> event) {
 		event.getRegistry().register(new EffectCustom());
 	}
+
 	public static class EffectCustom extends Effect {
-		private final ResourceLocation potionIcon;
 		public EffectCustom() {
 			super(EffectType.BENEFICIAL, -13369345);
 			setRegistryName("soul_supplement");
-			potionIcon = new ResourceLocation("the_wet_smp_rehydrated:textures/soul_supplement.png");
 		}
 
 		@Override
@@ -72,11 +73,9 @@ public class SoulSupplementPotionEffect {
 			double x = entity.getPosX();
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				SoulSupplementAppliedProcedureProcedure.executeProcedure($_dependencies);
-			}
+
+			SoulSupplementAppliedProcedureProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+					(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 
 		@Override
@@ -86,11 +85,9 @@ public class SoulSupplementPotionEffect {
 			double x = entity.getPosX();
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				SoulSupplementExpirationProcedureProcedure.executeProcedure($_dependencies);
-			}
+
+			SoulSupplementExpirationProcedureProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 
 		@Override

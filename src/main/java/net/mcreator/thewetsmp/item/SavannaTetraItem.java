@@ -16,6 +16,7 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 public class SavannaTetraItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:savanna_tetra")
 	public static final Item block = null;
+
 	public SavannaTetraItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 99);
 	}
@@ -24,10 +25,13 @@ public class SavannaTetraItem extends TheWetSmpRehydratedModElements.ModElement 
 	public void initElements() {
 		elements.items.add(() -> new FoodItemCustom());
 	}
+
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
 			super(new Item.Properties().group(FishingItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
-					.food((new Food.Builder()).hunger(4).saturation(0.2f).meat().build()));
+					.food((new Food.Builder()).hunger(4).saturation(0.2f)
+
+							.meat().build()));
 			setRegistryName("savanna_tetra");
 		}
 

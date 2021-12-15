@@ -59,15 +59,11 @@ public class RubyMushroomProcedure {
 			executeProcedure(dependencies);
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure RubyMushroom!");
-			return;
-		}
-		if (dependencies.get("sourceentity") == null) {
-			if (!dependencies.containsKey("sourceentity"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency sourceentity for procedure RubyMushroom!");
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure RubyMushroom!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
@@ -85,23 +81,27 @@ public class RubyMushroomProcedure {
 				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency z for procedure RubyMushroom!");
 			return;
 		}
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure RubyMushroom!");
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure RubyMushroom!");
 			return;
 		}
-		Entity entity = (Entity) dependencies.get("entity");
-		Entity sourceentity = (Entity) dependencies.get("sourceentity");
+		if (dependencies.get("sourceentity") == null) {
+			if (!dependencies.containsKey("sourceentity"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency sourceentity for procedure RubyMushroom!");
+			return;
+		}
+		IWorld world = (IWorld) dependencies.get("world");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		IWorld world = (IWorld) dependencies.get("world");
-		if ((EntityTypeTags.getCollection().getTagByID(new ResourceLocation(("forge:mooshrooms").toLowerCase(java.util.Locale.ENGLISH)))
-				.contains(entity.getType()))) {
-			if ((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == AquamarineEmbeddedBowlItem.block)) {
-				if ((((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))
-						.getCount()) >= 2)) {
+		Entity entity = (Entity) dependencies.get("entity");
+		Entity sourceentity = (Entity) dependencies.get("sourceentity");
+		if (EntityTypeTags.getCollection().getTagByID(new ResourceLocation("forge:mooshrooms")).contains(entity.getType())) {
+			if (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+					.getItem() == AquamarineEmbeddedBowlItem.block) {
+				if ((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))
+						.getCount() >= 2) {
 					if (sourceentity instanceof PlayerEntity) {
 						ItemStack _setstack = new ItemStack(AquamarineEmbeddedMushroomStewItem.block);
 						_setstack.setCount((int) 1);
@@ -139,10 +139,10 @@ public class RubyMushroomProcedure {
 								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 					}
 				}
-			} else if ((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == EmeraldEmbeddedBowlItem.block)) {
-				if ((((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))
-						.getCount()) >= 2)) {
+			} else if (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+					.getItem() == EmeraldEmbeddedBowlItem.block) {
+				if ((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))
+						.getCount() >= 2) {
 					if (sourceentity instanceof PlayerEntity) {
 						ItemStack _setstack = new ItemStack(EmeraldEmbeddedMushroomStewItem.block);
 						_setstack.setCount((int) 1);
@@ -180,10 +180,10 @@ public class RubyMushroomProcedure {
 								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 					}
 				}
-			} else if ((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == LapisEmbeddedBowlItem.block)) {
-				if ((((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))
-						.getCount()) >= 2)) {
+			} else if (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+					.getItem() == LapisEmbeddedBowlItem.block) {
+				if ((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))
+						.getCount() >= 2) {
 					if (sourceentity instanceof PlayerEntity) {
 						ItemStack _setstack = new ItemStack(LapisEmbeddedMushroomStewItem.block);
 						_setstack.setCount((int) 1);
@@ -221,10 +221,10 @@ public class RubyMushroomProcedure {
 								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 					}
 				}
-			} else if ((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == OnyxEmbeddedBowlItem.block)) {
-				if ((((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))
-						.getCount()) >= 2)) {
+			} else if (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+					.getItem() == OnyxEmbeddedBowlItem.block) {
+				if ((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))
+						.getCount() >= 2) {
 					if (sourceentity instanceof PlayerEntity) {
 						ItemStack _setstack = new ItemStack(OnyxEmbeddedMushroomStewItem.block);
 						_setstack.setCount((int) 1);
@@ -262,10 +262,10 @@ public class RubyMushroomProcedure {
 								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 					}
 				}
-			} else if ((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == RubyEmbeddedBowlItem.block)) {
-				if ((((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))
-						.getCount()) >= 2)) {
+			} else if (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+					.getItem() == RubyEmbeddedBowlItem.block) {
+				if ((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))
+						.getCount() >= 2) {
 					if (sourceentity instanceof PlayerEntity) {
 						ItemStack _setstack = new ItemStack(RubyEmbeddedMushroomStewItem.block);
 						_setstack.setCount((int) 1);

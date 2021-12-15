@@ -15,6 +15,7 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 public class RubyEmbeddedBowlItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:ruby_embedded_bowl")
 	public static final Item block = null;
+
 	public RubyEmbeddedBowlItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 14);
 	}
@@ -23,6 +24,7 @@ public class RubyEmbeddedBowlItem extends TheWetSmpRehydratedModElements.ModElem
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ItemGroup.MATERIALS).maxStackSize(64).rarity(Rarity.COMMON));

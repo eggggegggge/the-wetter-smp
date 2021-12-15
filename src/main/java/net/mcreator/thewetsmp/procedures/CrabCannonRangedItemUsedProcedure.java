@@ -15,6 +15,7 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 import java.util.Map;
 
 public class CrabCannonRangedItemUsedProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -28,16 +29,16 @@ public class CrabCannonRangedItemUsedProcedure {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
-		if ((((itemstack).getItem() == CrabCannonItem.block) || ((itemstack).getItem() == ExplosiveCrabCannonItem.block))) {
+		if (itemstack.getItem() == CrabCannonItem.block || itemstack.getItem() == ExplosiveCrabCannonItem.block) {
 			if (entity instanceof PlayerEntity)
-				((PlayerEntity) entity).getCooldownTracker().setCooldown((itemstack).getItem(), (int) 30);
-		} else if (((itemstack).getItem() == BufferBlasterItem.block)) {
+				((PlayerEntity) entity).getCooldownTracker().setCooldown(itemstack.getItem(), (int) 30);
+		} else if (itemstack.getItem() == BufferBlasterItem.block) {
 			if (entity instanceof PlayerEntity)
-				((PlayerEntity) entity).getCooldownTracker().setCooldown((itemstack).getItem(), (int) 300);
-		} else if ((((itemstack).getItem() == RubyGrapplingHookItem.block)
-				|| (((itemstack).getItem() == AquamarineGrapplingHookItem.block) || ((itemstack).getItem() == OnyxGrapplingHookItem.block)))) {
+				((PlayerEntity) entity).getCooldownTracker().setCooldown(itemstack.getItem(), (int) 300);
+		} else if (itemstack.getItem() == RubyGrapplingHookItem.block || itemstack.getItem() == AquamarineGrapplingHookItem.block
+				|| itemstack.getItem() == OnyxGrapplingHookItem.block) {
 			if (entity instanceof PlayerEntity)
-				((PlayerEntity) entity).getCooldownTracker().setCooldown((itemstack).getItem(), (int) 85);
+				((PlayerEntity) entity).getCooldownTracker().setCooldown(itemstack.getItem(), (int) 85);
 		}
 	}
 }

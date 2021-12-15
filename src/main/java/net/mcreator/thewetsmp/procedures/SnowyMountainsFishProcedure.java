@@ -7,22 +7,18 @@ import net.minecraft.entity.Entity;
 
 import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 
+import java.util.stream.Stream;
 import java.util.Random;
 import java.util.Map;
 import java.util.HashMap;
-
-import com.google.common.collect.ImmutableMap;
+import java.util.AbstractMap;
 
 public class SnowyMountainsFishProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure SnowyMountainsFish!");
-			return;
-		}
-		if (dependencies.get("y") == null) {
-			if (!dependencies.containsKey("y"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency y for procedure SnowyMountainsFish!");
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure SnowyMountainsFish!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
@@ -30,21 +26,26 @@ public class SnowyMountainsFishProcedure {
 				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency x for procedure SnowyMountainsFish!");
 			return;
 		}
+		if (dependencies.get("y") == null) {
+			if (!dependencies.containsKey("y"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency y for procedure SnowyMountainsFish!");
+			return;
+		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
 				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency z for procedure SnowyMountainsFish!");
 			return;
 		}
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure SnowyMountainsFish!");
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure SnowyMountainsFish!");
 			return;
 		}
-		Entity entity = (Entity) dependencies.get("entity");
-		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
-		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
-		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
+		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
+		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
+		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
+		Entity entity = (Entity) dependencies.get("entity");
 		double sel = 0;
 		double time = 0;
 		double altitude = 0;
@@ -52,22 +53,20 @@ public class SnowyMountainsFishProcedure {
 		double luck = 0;
 		double copperfish = 0;
 		double bass = 0;
-		/* fishing factors */
-		luck = (double) LuckCheckProcedure.executeProcedure(ImmutableMap.of("entity", entity));/* loot factors */
+		/*fishing factors*/
+		luck = (double) LuckCheckProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+				(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));/*loot factors*/
 		time = (double) (world.getWorldInfo().getDayTime());
-		altitude = (double) (Math.floor(y));/* define base values */
+		altitude = (double) (Math.floor(y));/*define base values*/
 		bass = (double) 39;
-		copperfish = (double) 58;/* apply modifiers */
-		/* fish */
+		copperfish = (double) 58;/*apply modifiers*/
+		/*fish*/
 		fish = (double) copperfish;
 		sel = (double) ((new Random()).nextInt((int) fish + 1));
-		if (((sel >= 0) && (sel <= bass))) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("world", world);
-				RemoveBaitProcedure.executeProcedure($_dependencies);
-			}
+		if (sel >= 0 && sel <= bass) {
+			RemoveBaitProcedure
+					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
+							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
@@ -78,13 +77,10 @@ public class SnowyMountainsFishProcedure {
 			if (world instanceof World && !world.isRemote()) {
 				((World) world).addEntity(new ExperienceOrbEntity(((World) world), x, (y - 0.5), z, (int) 3));
 			}
-		} else if (((sel >= (bass + 1)) && (sel <= copperfish))) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("world", world);
-				RemoveBaitProcedure.executeProcedure($_dependencies);
-			}
+		} else if (sel >= bass + 1 && sel <= copperfish) {
+			RemoveBaitProcedure
+					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
+							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {

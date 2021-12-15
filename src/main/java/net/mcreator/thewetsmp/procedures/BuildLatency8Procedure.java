@@ -16,7 +16,13 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Map;
 
 public class BuildLatency8Procedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure BuildLatency8!");
+			return;
+		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
 				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency x for procedure BuildLatency8!");
@@ -32,15 +38,10 @@ public class BuildLatency8Procedure {
 				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency z for procedure BuildLatency8!");
 			return;
 		}
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure BuildLatency8!");
-			return;
-		}
+		IWorld world = (IWorld) dependencies.get("world");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		IWorld world = (IWorld) dependencies.get("world");
 		{
 			BlockPos _bp = new BlockPos((int) (x + 4), (int) (y - 3), (int) (z + 4));
 			BlockState _bs = (new Object() {

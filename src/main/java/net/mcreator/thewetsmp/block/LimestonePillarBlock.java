@@ -31,6 +31,7 @@ import java.util.Collections;
 public class LimestonePillarBlock extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:limestone_pillar")
 	public static final Block block = null;
+
 	public LimestonePillarBlock(TheWetSmpRehydratedModElements instance) {
 		super(instance, 545);
 	}
@@ -41,8 +42,10 @@ public class LimestonePillarBlock extends TheWetSmpRehydratedModElements.ModElem
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
+
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.NETHER_GOLD).hardnessAndResistance(0.8f, 0.8f).setLightLevel(s -> 0)
 					.harvestLevel(0).harvestTool(ToolType.PICKAXE).setRequiresTool());

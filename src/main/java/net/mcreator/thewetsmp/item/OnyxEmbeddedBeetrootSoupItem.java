@@ -16,13 +16,16 @@ import net.minecraft.entity.LivingEntity;
 import net.mcreator.thewetsmp.procedures.OnEatProcedure;
 import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
+import java.util.stream.Stream;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.AbstractMap;
 
 @TheWetSmpRehydratedModElements.ModElement.Tag
 public class OnyxEmbeddedBeetrootSoupItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:onyx_embedded_beetroot_soup")
 	public static final Item block = null;
+
 	public OnyxEmbeddedBeetrootSoupItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 50);
 	}
@@ -31,10 +34,13 @@ public class OnyxEmbeddedBeetrootSoupItem extends TheWetSmpRehydratedModElements
 	public void initElements() {
 		elements.items.add(() -> new FoodItemCustom());
 	}
+
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
 			super(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(1).rarity(Rarity.COMMON)
-					.food((new Food.Builder()).hunger(6).saturation(7.2f).build()));
+					.food((new Food.Builder()).hunger(6).saturation(7.2f)
+
+							.build()));
 			setRegistryName("onyx_embedded_beetroot_soup");
 		}
 
@@ -50,11 +56,9 @@ public class OnyxEmbeddedBeetrootSoupItem extends TheWetSmpRehydratedModElements
 			double x = entity.getPosX();
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				OnEatProcedure.executeProcedure($_dependencies);
-			}
+
+			OnEatProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+					(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			if (itemstack.isEmpty()) {
 				return retval;
 			} else {

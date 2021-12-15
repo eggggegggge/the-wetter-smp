@@ -25,6 +25,7 @@ import java.util.Collections;
 public class LimestoneBricksBlock extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:limestone_bricks")
 	public static final Block block = null;
+
 	public LimestoneBricksBlock(TheWetSmpRehydratedModElements instance) {
 		super(instance, 546);
 	}
@@ -35,6 +36,7 @@ public class LimestoneBricksBlock extends TheWetSmpRehydratedModElements.ModElem
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.NETHER_GOLD).hardnessAndResistance(0.8f, 0.8f).setLightLevel(s -> 0)

@@ -2,27 +2,28 @@ package net.mcreator.thewetsmp.procedures;
 
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.scoreboard.Scoreboard;
+import net.minecraft.scoreboard.ScoreObjective;
+import net.minecraft.scoreboard.ScoreCriteria;
+import net.minecraft.scoreboard.Score;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.item.ExperienceOrbEntity;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 
-import java.util.Random;
+import java.util.stream.Stream;
 import java.util.Map;
 import java.util.HashMap;
-
-import com.google.common.collect.ImmutableMap;
+import java.util.AbstractMap;
 
 public class RiverFishProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure RiverFish!");
-			return;
-		}
-		if (dependencies.get("y") == null) {
-			if (!dependencies.containsKey("y"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency y for procedure RiverFish!");
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure RiverFish!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
@@ -30,21 +31,26 @@ public class RiverFishProcedure {
 				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency x for procedure RiverFish!");
 			return;
 		}
+		if (dependencies.get("y") == null) {
+			if (!dependencies.containsKey("y"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency y for procedure RiverFish!");
+			return;
+		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
 				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency z for procedure RiverFish!");
 			return;
 		}
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure RiverFish!");
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure RiverFish!");
 			return;
 		}
-		Entity entity = (Entity) dependencies.get("entity");
-		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
-		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
-		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
+		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
+		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
+		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
+		Entity entity = (Entity) dependencies.get("entity");
 		double sel = 0;
 		double time = 0;
 		double altitude = 0;
@@ -54,37 +60,70 @@ public class RiverFishProcedure {
 		double luck = 0;
 		double koi = 0;
 		double scallop = 0;
-		/* fishing factors */
-		luck = (double) LuckCheckProcedure.executeProcedure(ImmutableMap.of("entity", entity));/* loot factors */
+		/*fishing factors*/
+		luck = (double) LuckCheckProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+				(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));/*loot factors*/
 		time = (double) (world.getWorldInfo().getDayTime());
-		altitude = (double) (Math.floor(y));/* define base values */
+		altitude = (double) (Math.floor(y));/*define base values*/
 		salmon = (double) 10;
 		scallop = (double) 18;
 		koi = (double) 23;
-		jellyfish = (double) 27;/* apply modifiers */
-		if ((luck > 1)) {
+		jellyfish = (double) 27;/*apply modifiers*/
+		if (luck > 1) {
 			salmon = (double) (salmon - 3);
 			scallop = (double) (scallop + 1);
 			koi = (double) (koi + 2);
 			jellyfish = (double) (jellyfish - 2);
-		} else if ((luck < 0)) {
+		} else if (luck < 0) {
 			salmon = (double) (salmon + 3);
 			scallop = (double) (scallop - 1);
 			koi = (double) (koi - 2);
 			jellyfish = (double) (jellyfish + 0);
-		} /* fish */
+		} /*fish*/
 		fish = (double) koi;
-		if (((time > 13000) && (time < 23000))) {
+		if (time > 13000 && time < 23000) {
 			fish = (double) jellyfish;
 		}
-		sel = (double) ((new Random()).nextInt((int) fish + 1));
-		if (((sel >= 0) && (sel <= salmon))) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("world", world);
-				RemoveBaitProcedure.executeProcedure($_dependencies);
+		{
+			Entity _ent = entity;
+			if (_ent instanceof PlayerEntity) {
+				Scoreboard _sc = ((PlayerEntity) _ent).getWorldScoreboard();
+				ScoreObjective _so = _sc.getObjective("PlayerRNG");
+				if (_so == null) {
+					_so = _sc.addObjective("PlayerRNG", ScoreCriteria.DUMMY, new StringTextComponent("PlayerRNG"), ScoreCriteria.RenderType.INTEGER);
+				}
+				Score _scr = _sc.getOrCreateScore(((PlayerEntity) _ent).getScoreboardName(), _so);
+				_scr.setScorePoints((int) (Math.random() * (fish + 1)));
 			}
+		}
+		if (new Object() {
+			public int getScore(String score) {
+				if (entity instanceof PlayerEntity) {
+					Scoreboard _sc = ((PlayerEntity) entity).getWorldScoreboard();
+					ScoreObjective _so = _sc.getObjective(score);
+					if (_so != null) {
+						Score _scr = _sc.getOrCreateScore(((PlayerEntity) entity).getScoreboardName(), _so);
+						return _scr.getScorePoints();
+					}
+				}
+				return 0;
+			}
+		}.getScore("PlayerRNG") >= 0 && new Object() {
+			public int getScore(String score) {
+				if (entity instanceof PlayerEntity) {
+					Scoreboard _sc = ((PlayerEntity) entity).getWorldScoreboard();
+					ScoreObjective _so = _sc.getObjective(score);
+					if (_so != null) {
+						Score _scr = _sc.getOrCreateScore(((PlayerEntity) entity).getScoreboardName(), _so);
+						return _scr.getScorePoints();
+					}
+				}
+				return 0;
+			}
+		}.getScore("PlayerRNG") <= salmon) {
+			RemoveBaitProcedure
+					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
+							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
@@ -95,13 +134,34 @@ public class RiverFishProcedure {
 			if (world instanceof World && !world.isRemote()) {
 				((World) world).addEntity(new ExperienceOrbEntity(((World) world), x, (y - 0.5), z, (int) 2));
 			}
-		} else if (((sel >= (salmon + 1)) && (sel <= scallop))) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("world", world);
-				RemoveBaitProcedure.executeProcedure($_dependencies);
+		} else if (new Object() {
+			public int getScore(String score) {
+				if (entity instanceof PlayerEntity) {
+					Scoreboard _sc = ((PlayerEntity) entity).getWorldScoreboard();
+					ScoreObjective _so = _sc.getObjective(score);
+					if (_so != null) {
+						Score _scr = _sc.getOrCreateScore(((PlayerEntity) entity).getScoreboardName(), _so);
+						return _scr.getScorePoints();
+					}
+				}
+				return 0;
 			}
+		}.getScore("PlayerRNG") >= salmon + 1 && new Object() {
+			public int getScore(String score) {
+				if (entity instanceof PlayerEntity) {
+					Scoreboard _sc = ((PlayerEntity) entity).getWorldScoreboard();
+					ScoreObjective _so = _sc.getObjective(score);
+					if (_so != null) {
+						Score _scr = _sc.getOrCreateScore(((PlayerEntity) entity).getScoreboardName(), _so);
+						return _scr.getScorePoints();
+					}
+				}
+				return 0;
+			}
+		}.getScore("PlayerRNG") <= scallop) {
+			RemoveBaitProcedure
+					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
+							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
@@ -112,13 +172,34 @@ public class RiverFishProcedure {
 			if (world instanceof World && !world.isRemote()) {
 				((World) world).addEntity(new ExperienceOrbEntity(((World) world), x, (y - 0.5), z, (int) 4));
 			}
-		} else if (((sel >= (scallop + 1)) && (sel <= koi))) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("world", world);
-				RemoveBaitProcedure.executeProcedure($_dependencies);
+		} else if (new Object() {
+			public int getScore(String score) {
+				if (entity instanceof PlayerEntity) {
+					Scoreboard _sc = ((PlayerEntity) entity).getWorldScoreboard();
+					ScoreObjective _so = _sc.getObjective(score);
+					if (_so != null) {
+						Score _scr = _sc.getOrCreateScore(((PlayerEntity) entity).getScoreboardName(), _so);
+						return _scr.getScorePoints();
+					}
+				}
+				return 0;
 			}
+		}.getScore("PlayerRNG") >= scallop + 1 && new Object() {
+			public int getScore(String score) {
+				if (entity instanceof PlayerEntity) {
+					Scoreboard _sc = ((PlayerEntity) entity).getWorldScoreboard();
+					ScoreObjective _so = _sc.getObjective(score);
+					if (_so != null) {
+						Score _scr = _sc.getOrCreateScore(((PlayerEntity) entity).getScoreboardName(), _so);
+						return _scr.getScorePoints();
+					}
+				}
+				return 0;
+			}
+		}.getScore("PlayerRNG") <= koi) {
+			RemoveBaitProcedure
+					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
+							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
@@ -129,13 +210,34 @@ public class RiverFishProcedure {
 			if (world instanceof World && !world.isRemote()) {
 				((World) world).addEntity(new ExperienceOrbEntity(((World) world), x, (y - 0.5), z, (int) 4));
 			}
-		} else if (((sel >= (koi + 1)) && (sel <= jellyfish))) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("world", world);
-				RemoveBaitProcedure.executeProcedure($_dependencies);
+		} else if (new Object() {
+			public int getScore(String score) {
+				if (entity instanceof PlayerEntity) {
+					Scoreboard _sc = ((PlayerEntity) entity).getWorldScoreboard();
+					ScoreObjective _so = _sc.getObjective(score);
+					if (_so != null) {
+						Score _scr = _sc.getOrCreateScore(((PlayerEntity) entity).getScoreboardName(), _so);
+						return _scr.getScorePoints();
+					}
+				}
+				return 0;
 			}
+		}.getScore("PlayerRNG") >= koi + 1 && new Object() {
+			public int getScore(String score) {
+				if (entity instanceof PlayerEntity) {
+					Scoreboard _sc = ((PlayerEntity) entity).getWorldScoreboard();
+					ScoreObjective _so = _sc.getObjective(score);
+					if (_so != null) {
+						Score _scr = _sc.getOrCreateScore(((PlayerEntity) entity).getScoreboardName(), _so);
+						return _scr.getScorePoints();
+					}
+				}
+				return 0;
+			}
+		}.getScore("PlayerRNG") <= jellyfish) {
+			RemoveBaitProcedure
+					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
+							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
@@ -145,6 +247,18 @@ public class RiverFishProcedure {
 			}
 			if (world instanceof World && !world.isRemote()) {
 				((World) world).addEntity(new ExperienceOrbEntity(((World) world), x, (y - 0.5), z, (int) 8));
+			}
+		}
+		{
+			Entity _ent = entity;
+			if (_ent instanceof PlayerEntity) {
+				Scoreboard _sc = ((PlayerEntity) _ent).getWorldScoreboard();
+				ScoreObjective _so = _sc.getObjective("PlayerRNG");
+				if (_so == null) {
+					_so = _sc.addObjective("PlayerRNG", ScoreCriteria.DUMMY, new StringTextComponent("PlayerRNG"), ScoreCriteria.RenderType.INTEGER);
+				}
+				Score _scr = _sc.getOrCreateScore(((PlayerEntity) _ent).getScoreboardName(), _so);
+				_scr.setScorePoints((int) (-1));
 			}
 		}
 	}

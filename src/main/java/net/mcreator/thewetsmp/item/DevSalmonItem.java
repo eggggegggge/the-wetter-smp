@@ -21,6 +21,7 @@ import java.util.List;
 public class DevSalmonItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:dev_salmon")
 	public static final Item block = null;
+
 	public DevSalmonItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 16);
 	}
@@ -29,6 +30,7 @@ public class DevSalmonItem extends TheWetSmpRehydratedModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ItemGroup.MATERIALS).maxStackSize(64).rarity(Rarity.EPIC));

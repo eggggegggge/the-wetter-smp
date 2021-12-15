@@ -29,6 +29,7 @@ import java.util.Collections;
 public class MaroonPearlPressurePlateBlock extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:maroon_pearl_pressure_plate")
 	public static final Block block = null;
+
 	public MaroonPearlPressurePlateBlock(TheWetSmpRehydratedModElements instance) {
 		super(instance, 88);
 	}
@@ -44,6 +45,7 @@ public class MaroonPearlPressurePlateBlock extends TheWetSmpRehydratedModElement
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
+
 	public static class CustomBlock extends PressurePlateBlock {
 		public CustomBlock() {
 			super(Sensitivity.MOBS,

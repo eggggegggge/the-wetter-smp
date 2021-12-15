@@ -3,6 +3,7 @@ package net.mcreator.thewetsmp.procedures;
 import java.util.Map;
 
 public class AntipodalismAppliedProcedureProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		boolean swift = false;
 		boolean slowness = false;
@@ -28,5 +29,6 @@ public class AntipodalismAppliedProcedureProcedure {
 		boolean sat = false;
 		boolean wither = false;
 		boolean absorption = false;
+
 	}
 }

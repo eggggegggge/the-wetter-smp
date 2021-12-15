@@ -15,6 +15,7 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 public class EmeraldEmbeddedBowlItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:emerald_embedded_bowl")
 	public static final Item block = null;
+
 	public EmeraldEmbeddedBowlItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 11);
 	}
@@ -23,6 +24,7 @@ public class EmeraldEmbeddedBowlItem extends TheWetSmpRehydratedModElements.ModE
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ItemGroup.MATERIALS).maxStackSize(64).rarity(Rarity.COMMON));

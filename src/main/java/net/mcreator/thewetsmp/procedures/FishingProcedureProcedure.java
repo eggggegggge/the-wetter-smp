@@ -26,11 +26,10 @@ import net.mcreator.thewetsmp.item.JunkPowderItem;
 import net.mcreator.thewetsmp.item.DevSalmonItem;
 import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 
-import java.util.Random;
+import java.util.stream.Stream;
 import java.util.Map;
 import java.util.HashMap;
-
-import com.google.common.collect.ImmutableMap;
+import java.util.AbstractMap;
 
 public class FishingProcedureProcedure {
 	@Mod.EventBusSubscriber
@@ -52,10 +51,11 @@ public class FishingProcedureProcedure {
 			executeProcedure(dependencies);
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure FishingProcedure!");
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure FishingProcedure!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
@@ -73,16 +73,16 @@ public class FishingProcedureProcedure {
 				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency z for procedure FishingProcedure!");
 			return;
 		}
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure FishingProcedure!");
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure FishingProcedure!");
 			return;
 		}
-		Entity entity = (Entity) dependencies.get("entity");
+		IWorld world = (IWorld) dependencies.get("world");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		IWorld world = (IWorld) dependencies.get("world");
+		Entity entity = (Entity) dependencies.get("entity");
 		double baitpower = 0;
 		double treasure = 0;
 		double junk = 0;
@@ -98,22 +98,25 @@ public class FishingProcedureProcedure {
 					_evt.setCanceled(true);
 			}
 		}
-		baitpower = (double) BaitCheckProcedure.executeProcedure(ImmutableMap.of("entity", entity, "world", world));
-		luck = (double) LuckCheckProcedure.executeProcedure(ImmutableMap.of("entity", entity));
+		baitpower = (double) BaitCheckProcedure
+				.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
+						.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+		luck = (double) LuckCheckProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+				(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		fish = (double) 50;
 		junk = (double) 87;
 		treasure = (double) 99;
-		if ((luck > 1)) {
+		if (luck > 1) {
 			fish = (double) 69;
 			junk = (double) 79;
 			treasure = (double) 99;
-		} else if ((luck < 0)) {
+		} else if (luck < 0) {
 			fish = (double) 39;
 			junk = (double) 89;
 			treasure = (double) 99;
 		}
-		baitDeterm = (double) ((new Random()).nextInt((int) 99 + 1));
-		if ((baitDeterm < baitpower)) {
+		baitDeterm = (double) (Math.random() * 100);
+		if (baitDeterm < baitpower) {
 			if (world instanceof World && !world.isRemote()) {
 				((World) world)
 						.playSound(null, new BlockPos((int) x, (int) y, (int) z),
@@ -126,90 +129,69 @@ public class FishingProcedureProcedure {
 								.getValue(new ResourceLocation("the_wet_smp_rehydrated:linebreak")),
 						SoundCategory.AMBIENT, (float) 1, (float) 1, false);
 			}
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("world", world);
-				RemoveBaitProcedure.executeProcedure($_dependencies);
-			}
+			RemoveBaitProcedure
+					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
+							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			if (!world.isRemote()) {
 				MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 				if (mcserv != null)
 					mcserv.getPlayerList().func_232641_a_(new StringTextComponent("you're fuckin line broked"), ChatType.SYSTEM, Util.DUMMY_UUID);
 			}
 		} else {
-			wutda = (double) ((new Random()).nextInt((int) treasure + 1));
-			if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)
-					.getItem() == DevSalmonItem.block)) {
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("entity", entity);
-					$_dependencies.put("world", world);
-					$_dependencies.put("x", x);
-					$_dependencies.put("y", y);
-					$_dependencies.put("z", z);
-					DetermineBiomeProcedure.executeProcedure($_dependencies);
-				}
+			wutda = (double) (Math.random() * (treasure + 1));
+			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)
+					.getItem() == DevSalmonItem.block) {
+				DetermineBiomeProcedure.executeProcedure(Stream
+						.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity),
+								new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+						.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 				if (!world.isRemote()) {
 					MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 					if (mcserv != null)
 						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("fishh"), ChatType.SYSTEM, Util.DUMMY_UUID);
 				}
-			} else if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)
-					.getItem() == JunkPowderItem.block)) {
+			} else if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)
+					.getItem() == JunkPowderItem.block) {
 				if (!world.isRemote()) {
 					MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 					if (mcserv != null)
 						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("jank"), ChatType.SYSTEM, Util.DUMMY_UUID);
 				}
-			} else if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)
-					.getItem() == TreasurePowderItem.block)) {
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("entity", entity);
-					$_dependencies.put("world", world);
-					$_dependencies.put("x", x);
-					$_dependencies.put("y", y);
-					$_dependencies.put("z", z);
-					TreasureProcedureProcedure.executeProcedure($_dependencies);
-				}
+			} else if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)
+					.getItem() == TreasurePowderItem.block) {
+				TreasureProcedureProcedure.executeProcedure(Stream
+						.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity),
+								new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
+						.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 				if (!world.isRemote()) {
 					MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 					if (mcserv != null)
 						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("trombone"), ChatType.SYSTEM, Util.DUMMY_UUID);
 				}
 			} else {
-				if (((wutda >= 0) && (wutda <= fish))) {
-					{
-						Map<String, Object> $_dependencies = new HashMap<>();
-						$_dependencies.put("entity", entity);
-						$_dependencies.put("world", world);
-						$_dependencies.put("x", x);
-						$_dependencies.put("y", y);
-						$_dependencies.put("z", z);
-						DetermineBiomeProcedure.executeProcedure($_dependencies);
-					}
+				if (wutda >= 0 && wutda <= fish) {
+					DetermineBiomeProcedure.executeProcedure(Stream
+							.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity),
+									new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+									new AbstractMap.SimpleEntry<>("z", z))
+							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 					if (!world.isRemote()) {
 						MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 						if (mcserv != null)
 							mcserv.getPlayerList().func_232641_a_(new StringTextComponent("fishh"), ChatType.SYSTEM, Util.DUMMY_UUID);
 					}
-				} else if (((wutda >= (fish + 1)) && (wutda <= junk))) {
+				} else if (wutda >= fish + 1 && wutda <= junk) {
 					if (!world.isRemote()) {
 						MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 						if (mcserv != null)
 							mcserv.getPlayerList().func_232641_a_(new StringTextComponent("jank"), ChatType.SYSTEM, Util.DUMMY_UUID);
 					}
-				} else if (((wutda >= (junk + 1)) && (wutda <= treasure))) {
-					{
-						Map<String, Object> $_dependencies = new HashMap<>();
-						$_dependencies.put("entity", entity);
-						$_dependencies.put("world", world);
-						$_dependencies.put("x", x);
-						$_dependencies.put("y", y);
-						$_dependencies.put("z", z);
-						TreasureProcedureProcedure.executeProcedure($_dependencies);
-					}
+				} else if (wutda >= junk + 1 && wutda <= treasure) {
+					TreasureProcedureProcedure.executeProcedure(Stream
+							.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity),
+									new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+									new AbstractMap.SimpleEntry<>("z", z))
+							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 					if (!world.isRemote()) {
 						MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 						if (mcserv != null)

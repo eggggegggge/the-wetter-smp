@@ -12,24 +12,26 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 import java.util.Map;
 
 public class OnyxGrapple1Procedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("imediatesourceentity") == null) {
-			if (!dependencies.containsKey("imediatesourceentity"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency imediatesourceentity for procedure OnyxGrapple1!");
-			return;
-		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
 				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure OnyxGrapple1!");
 			return;
 		}
-		Entity imediatesourceentity = (Entity) dependencies.get("imediatesourceentity");
+		if (dependencies.get("imediatesourceentity") == null) {
+			if (!dependencies.containsKey("imediatesourceentity"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency imediatesourceentity for procedure OnyxGrapple1!");
+			return;
+		}
 		IWorld world = (IWorld) dependencies.get("world");
+		Entity imediatesourceentity = (Entity) dependencies.get("imediatesourceentity");
 		imediatesourceentity.setNoGravity((true));
 		new Object() {
 			private int ticks = 0;
 			private float waitTicks;
 			private IWorld world;
+
 			public void start(IWorld world, int waitTicks) {
 				this.waitTicks = waitTicks;
 				MinecraftForge.EVENT_BUS.register(this);

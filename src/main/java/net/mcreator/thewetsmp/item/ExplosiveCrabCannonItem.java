@@ -36,9 +36,11 @@ import net.mcreator.thewetsmp.procedures.CrabCannonRangedItemUsedProcedure;
 import net.mcreator.thewetsmp.entity.renderer.ExplosiveCrabCannonRenderer;
 import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
+import java.util.stream.Stream;
 import java.util.Random;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.AbstractMap;
 
 @TheWetSmpRehydratedModElements.ModElement.Tag
 public class ExplosiveCrabCannonItem extends TheWetSmpRehydratedModElements.ModElement {
@@ -47,6 +49,7 @@ public class ExplosiveCrabCannonItem extends TheWetSmpRehydratedModElements.ModE
 	public static final EntityType arrow = (EntityType.Builder.<ArrowCustomEntity>create(ArrowCustomEntity::new, EntityClassification.MISC)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
 			.size(0.5f, 0.5f)).build("entitybulletexplosive_crab_cannon").setRegistryName("entitybulletexplosive_crab_cannon");
+
 	public ExplosiveCrabCannonItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 147);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ExplosiveCrabCannonRenderer.ModelRegisterHandler());
@@ -57,6 +60,7 @@ public class ExplosiveCrabCannonItem extends TheWetSmpRehydratedModElements.ModE
 		elements.items.add(() -> new ItemRanged());
 		elements.entities.add(() -> arrow);
 	}
+
 	public static class ItemRanged extends Item {
 		public ItemRanged() {
 			super(new Item.Properties().group(ItemGroup.COMBAT).maxStackSize(1));
@@ -116,12 +120,10 @@ public class ExplosiveCrabCannonItem extends TheWetSmpRehydratedModElements.ModE
 									entity.inventory.deleteStack(stack);
 							}
 						}
-						{
-							Map<String, Object> $_dependencies = new HashMap<>();
-							$_dependencies.put("entity", entity);
-							$_dependencies.put("itemstack", itemstack);
-							CrabCannonRangedItemUsedProcedure.executeProcedure($_dependencies);
-						}
+
+						CrabCannonRangedItemUsedProcedure.executeProcedure(
+								Stream.of(new AbstractMap.SimpleEntry<>("entity", entity), new AbstractMap.SimpleEntry<>("itemstack", itemstack))
+										.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 					}
 				}
 			}
@@ -172,15 +174,11 @@ public class ExplosiveCrabCannonItem extends TheWetSmpRehydratedModElements.ModE
 			double z = this.getPosZ();
 			World world = this.world;
 			Entity imediatesourceentity = this;
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("imediatesourceentity", imediatesourceentity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				ExplosiveCrabCannonHitEntityProcedureProcedure.executeProcedure($_dependencies);
-			}
+
+			ExplosiveCrabCannonHitEntityProcedureProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("imediatesourceentity", imediatesourceentity))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 
 		@Override
@@ -193,19 +191,17 @@ public class ExplosiveCrabCannonItem extends TheWetSmpRehydratedModElements.ModE
 			Entity entity = this.func_234616_v_();
 			Entity imediatesourceentity = this;
 			if (this.inGround) {
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("imediatesourceentity", imediatesourceentity);
-					$_dependencies.put("x", x);
-					$_dependencies.put("y", y);
-					$_dependencies.put("z", z);
-					$_dependencies.put("world", world);
-					ExplosiveCrabCannonHitEntityProcedureProcedure.executeProcedure($_dependencies);
-				}
+
+				ExplosiveCrabCannonHitEntityProcedureProcedure.executeProcedure(Stream
+						.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+								new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z),
+								new AbstractMap.SimpleEntry<>("imediatesourceentity", imediatesourceentity))
+						.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 				this.remove();
 			}
 		}
 	}
+
 	public static ArrowCustomEntity shoot(World world, LivingEntity entity, Random random, float power, double damage, int knockback) {
 		ArrowCustomEntity entityarrow = new ArrowCustomEntity(arrow, entity, world);
 		entityarrow.shoot(entity.getLookVec().x, entity.getLookVec().y, entity.getLookVec().z, power * 2, 0);

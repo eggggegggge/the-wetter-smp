@@ -16,6 +16,7 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 public class PupfishItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:pupfish")
 	public static final Item block = null;
+
 	public PupfishItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 98);
 	}
@@ -24,10 +25,13 @@ public class PupfishItem extends TheWetSmpRehydratedModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new FoodItemCustom());
 	}
+
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
 			super(new Item.Properties().group(FishingItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
-					.food((new Food.Builder()).hunger(2).saturation(1f).meat().build()));
+					.food((new Food.Builder()).hunger(2).saturation(1f)
+
+							.meat().build()));
 			setRegistryName("pupfish");
 		}
 

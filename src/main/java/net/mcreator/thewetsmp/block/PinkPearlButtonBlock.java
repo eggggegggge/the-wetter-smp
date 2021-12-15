@@ -28,6 +28,7 @@ import java.util.Collections;
 public class PinkPearlButtonBlock extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:pink_pearl_button")
 	public static final Block block = null;
+
 	public PinkPearlButtonBlock(TheWetSmpRehydratedModElements instance) {
 		super(instance, 80);
 	}
@@ -43,6 +44,7 @@ public class PinkPearlButtonBlock extends TheWetSmpRehydratedModElements.ModElem
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
+
 	public static class CustomBlock extends StoneButtonBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.GLASS).sound(SoundType.LANTERN).hardnessAndResistance(0.3f, 0.3f).setLightLevel(s -> 0)

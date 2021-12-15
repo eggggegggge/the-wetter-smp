@@ -44,15 +44,18 @@ import net.minecraft.block.Block;
 import net.mcreator.thewetsmp.procedures.SingingBassBrokenProcedureProcedure;
 import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
+import java.util.stream.Stream;
 import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
+import java.util.AbstractMap;
 
 @TheWetSmpRehydratedModElements.ModElement.Tag
 public class SingingSingingBassBlock extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:singing_singing_bass")
 	public static final Block block = null;
+
 	public SingingSingingBassBlock(TheWetSmpRehydratedModElements instance) {
 		super(instance, 343);
 	}
@@ -68,9 +71,11 @@ public class SingingSingingBassBlock extends TheWetSmpRehydratedModElements.ModE
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
+
 	public static class CustomBlock extends Block implements IWaterLoggable {
 		public static final DirectionProperty FACING = DirectionalBlock.FACING;
 		public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
+
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).harvestLevel(0)
 					.harvestTool(ToolType.AXE).setRequiresTool().notSolid().setOpaque((bs, br, bp) -> false));
@@ -95,27 +100,45 @@ public class SingingSingingBassBlock extends TheWetSmpRehydratedModElements.ModE
 				case SOUTH :
 				default :
 					return VoxelShapes
-							.or(makeCuboidShape(14, 3, 1, 2, 15, 0), makeCuboidShape(16, 4, 1, 14, 14, 0), makeCuboidShape(2, 4, 1, 0, 14, 0))
+							.or(makeCuboidShape(14, 3, 1, 2, 15, 0), makeCuboidShape(16, 4, 1, 14, 14, 0), makeCuboidShape(2, 4, 1, 0, 14, 0)
+
+							)
+
 							.withOffset(offset.x, offset.y, offset.z);
 				case NORTH :
 					return VoxelShapes
-							.or(makeCuboidShape(2, 3, 15, 14, 15, 16), makeCuboidShape(0, 4, 15, 2, 14, 16), makeCuboidShape(14, 4, 15, 16, 14, 16))
+							.or(makeCuboidShape(2, 3, 15, 14, 15, 16), makeCuboidShape(0, 4, 15, 2, 14, 16), makeCuboidShape(14, 4, 15, 16, 14, 16)
+
+							)
+
 							.withOffset(offset.x, offset.y, offset.z);
 				case EAST :
 					return VoxelShapes
-							.or(makeCuboidShape(1, 3, 2, 0, 15, 14), makeCuboidShape(1, 4, 0, 0, 14, 2), makeCuboidShape(1, 4, 14, 0, 14, 16))
+							.or(makeCuboidShape(1, 3, 2, 0, 15, 14), makeCuboidShape(1, 4, 0, 0, 14, 2), makeCuboidShape(1, 4, 14, 0, 14, 16)
+
+							)
+
 							.withOffset(offset.x, offset.y, offset.z);
 				case WEST :
 					return VoxelShapes
-							.or(makeCuboidShape(15, 3, 14, 16, 15, 2), makeCuboidShape(15, 4, 16, 16, 14, 14), makeCuboidShape(15, 4, 2, 16, 14, 0))
+							.or(makeCuboidShape(15, 3, 14, 16, 15, 2), makeCuboidShape(15, 4, 16, 16, 14, 14), makeCuboidShape(15, 4, 2, 16, 14, 0)
+
+							)
+
 							.withOffset(offset.x, offset.y, offset.z);
 				case UP :
 					return VoxelShapes
-							.or(makeCuboidShape(2, 1, 3, 14, 0, 15), makeCuboidShape(0, 1, 4, 2, 0, 14), makeCuboidShape(14, 1, 4, 16, 0, 14))
+							.or(makeCuboidShape(2, 1, 3, 14, 0, 15), makeCuboidShape(0, 1, 4, 2, 0, 14), makeCuboidShape(14, 1, 4, 16, 0, 14)
+
+							)
+
 							.withOffset(offset.x, offset.y, offset.z);
 				case DOWN :
 					return VoxelShapes
-							.or(makeCuboidShape(2, 15, 13, 14, 16, 1), makeCuboidShape(0, 15, 12, 2, 16, 2), makeCuboidShape(14, 15, 12, 16, 16, 2))
+							.or(makeCuboidShape(2, 15, 13, 14, 16, 1), makeCuboidShape(0, 15, 12, 2, 16, 2), makeCuboidShape(14, 15, 12, 16, 16, 2)
+
+							)
+
 							.withOffset(offset.x, offset.y, offset.z);
 			}
 		}
@@ -172,14 +195,11 @@ public class SingingSingingBassBlock extends TheWetSmpRehydratedModElements.ModE
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				SingingBassBrokenProcedureProcedure.executeProcedure($_dependencies);
-			}
+
+			SingingBassBrokenProcedureProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			return retval;
 		}
 
@@ -189,14 +209,11 @@ public class SingingSingingBassBlock extends TheWetSmpRehydratedModElements.ModE
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				SingingBassBrokenProcedureProcedure.executeProcedure($_dependencies);
-			}
+
+			SingingBassBrokenProcedureProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 	}
 }

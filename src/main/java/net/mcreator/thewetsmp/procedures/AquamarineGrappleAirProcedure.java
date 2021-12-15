@@ -9,17 +9,8 @@ import java.util.Map;
 import java.util.Collections;
 
 public class AquamarineGrappleAirProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure AquamarineGrappleAir!");
-			return;
-		}
-		if (dependencies.get("imediatesourceentity") == null) {
-			if (!dependencies.containsKey("imediatesourceentity"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency imediatesourceentity for procedure AquamarineGrappleAir!");
-			return;
-		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
 				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency x for procedure AquamarineGrappleAir!");
@@ -35,12 +26,22 @@ public class AquamarineGrappleAirProcedure {
 				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency z for procedure AquamarineGrappleAir!");
 			return;
 		}
-		Entity entity = (Entity) dependencies.get("entity");
-		Entity imediatesourceentity = (Entity) dependencies.get("imediatesourceentity");
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure AquamarineGrappleAir!");
+			return;
+		}
+		if (dependencies.get("imediatesourceentity") == null) {
+			if (!dependencies.containsKey("imediatesourceentity"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency imediatesourceentity for procedure AquamarineGrappleAir!");
+			return;
+		}
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		if (((imediatesourceentity.getMotion().getY()) < 0)) {
+		Entity entity = (Entity) dependencies.get("entity");
+		Entity imediatesourceentity = (Entity) dependencies.get("imediatesourceentity");
+		if (imediatesourceentity.getMotion().getY() < 0) {
 			if (!imediatesourceentity.world.isRemote())
 				imediatesourceentity.remove();
 			{

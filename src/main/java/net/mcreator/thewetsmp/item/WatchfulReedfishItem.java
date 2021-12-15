@@ -15,6 +15,7 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 public class WatchfulReedfishItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:watchful_reedfish")
 	public static final Item block = null;
+
 	public WatchfulReedfishItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 130);
 	}
@@ -23,6 +24,7 @@ public class WatchfulReedfishItem extends TheWetSmpRehydratedModElements.ModElem
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(FishingItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));

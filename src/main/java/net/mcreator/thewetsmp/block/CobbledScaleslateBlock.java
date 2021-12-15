@@ -25,6 +25,7 @@ import java.util.Collections;
 public class CobbledScaleslateBlock extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:cobbled_scaleslate")
 	public static final Block block = null;
+
 	public CobbledScaleslateBlock(TheWetSmpRehydratedModElements instance) {
 		super(instance, 585);
 	}
@@ -35,6 +36,7 @@ public class CobbledScaleslateBlock extends TheWetSmpRehydratedModElements.ModEl
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.NETHER_BRICK).hardnessAndResistance(3.5f, 6f).setLightLevel(s -> 0)

@@ -16,6 +16,7 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 public class GoldenBananaItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:golden_banana")
 	public static final Item block = null;
+
 	public GoldenBananaItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 664);
 	}
@@ -24,10 +25,13 @@ public class GoldenBananaItem extends TheWetSmpRehydratedModElements.ModElement 
 	public void initElements() {
 		elements.items.add(() -> new FoodItemCustom());
 	}
+
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
 			super(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(64).rarity(Rarity.COMMON)
-					.food((new Food.Builder()).hunger(6).saturation(3f).build()));
+					.food((new Food.Builder()).hunger(6).saturation(3f)
+
+							.build()));
 			setRegistryName("golden_banana");
 		}
 

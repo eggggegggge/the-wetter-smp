@@ -38,6 +38,7 @@ import java.util.Collections;
 public class CobbledScaleslateWallBlock extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:cobbled_scaleslate_wall")
 	public static final Block block = null;
+
 	public CobbledScaleslateWallBlock(TheWetSmpRehydratedModElements instance) {
 		super(instance, 589);
 	}
@@ -48,17 +49,20 @@ public class CobbledScaleslateWallBlock extends TheWetSmpRehydratedModElements.M
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends WallBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.NETHER_BRICK).hardnessAndResistance(3.5f, 6f).setLightLevel(s -> 0)
 					.harvestLevel(0).harvestTool(ToolType.PICKAXE).setRequiresTool());
 			setRegistryName("cobbled_scaleslate_wall");
 		}
+
 		private static final VoxelShape CENTER_POLE_SHAPE = Block.makeCuboidShape(7.0D, 0.0D, 7.0D, 9.0D, 16.0D, 9.0D);
 		private static final VoxelShape WALL_CONNECTION_NORTH_SIDE_SHAPE = Block.makeCuboidShape(7.0D, 0.0D, 0.0D, 9.0D, 16.0D, 9.0D);
 		private static final VoxelShape WALL_CONNECTION_SOUTH_SIDE_SHAPE = Block.makeCuboidShape(7.0D, 0.0D, 7.0D, 9.0D, 16.0D, 16.0D);
 		private static final VoxelShape WALL_CONNECTION_WEST_SIDE_SHAPE = Block.makeCuboidShape(0.0D, 0.0D, 7.0D, 9.0D, 16.0D, 9.0D);
 		private static final VoxelShape WALL_CONNECTION_EAST_SIDE_SHAPE = Block.makeCuboidShape(7.0D, 0.0D, 7.0D, 16.0D, 16.0D, 9.0D);
+
 		private boolean shouldConnect(BlockState state, boolean checkattach, Direction face) {
 			boolean flag = state.getBlock() instanceof WallBlock
 					|| state.getBlock() instanceof FenceGateBlock && FenceGateBlock.isParallel(state, face);
@@ -88,13 +92,9 @@ public class CobbledScaleslateWallBlock extends TheWetSmpRehydratedModElements.M
 			return this.func_235626_a_(iworldreader, blockstate5, blockpos5, blockstate4, flag, flag1, flag2, flag3);
 		}
 
-		@Override /**
-					 * Update the provided state given the provided neighbor facing and neighbor
-					 * state, returning a new state. For example, fences make their connections to
-					 * the passed in state if possible, and wet concrete powder immediately returns
-					 * its solidified counterpart. Note that this method should ideally consider
-					 * only the specific face passed in.
-					 */
+		@Override /** 
+					* Update the provided state given the provided neighbor facing and neighbor state, returning a new state. For example, fences make their connections to the passed in state if possible, and wet concrete powder immediately returns its solidified counterpart. Note that this method should ideally consider only the specific face passed in.
+					*/
 		public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos,
 				BlockPos facingPos) {
 			if (stateIn.get(WATERLOGGED)) {

@@ -36,9 +36,11 @@ import net.mcreator.thewetsmp.procedures.CrabCannonRangedItemUsedProcedure;
 import net.mcreator.thewetsmp.entity.renderer.OnyxGrapplingHookRenderer;
 import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
+import java.util.stream.Stream;
 import java.util.Random;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.AbstractMap;
 
 @TheWetSmpRehydratedModElements.ModElement.Tag
 public class OnyxGrapplingHookItem extends TheWetSmpRehydratedModElements.ModElement {
@@ -47,6 +49,7 @@ public class OnyxGrapplingHookItem extends TheWetSmpRehydratedModElements.ModEle
 	public static final EntityType arrow = (EntityType.Builder.<ArrowCustomEntity>create(ArrowCustomEntity::new, EntityClassification.MISC)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
 			.size(0.5f, 0.5f)).build("entitybulletonyx_grappling_hook").setRegistryName("entitybulletonyx_grappling_hook");
+
 	public OnyxGrapplingHookItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 35);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new OnyxGrapplingHookRenderer.ModelRegisterHandler());
@@ -57,6 +60,7 @@ public class OnyxGrapplingHookItem extends TheWetSmpRehydratedModElements.ModEle
 		elements.items.add(() -> new ItemRanged());
 		elements.entities.add(() -> arrow);
 	}
+
 	public static class ItemRanged extends Item {
 		public ItemRanged() {
 			super(new Item.Properties().group(ItemGroup.TRANSPORTATION).maxStackSize(1));
@@ -90,12 +94,10 @@ public class OnyxGrapplingHookItem extends TheWetSmpRehydratedModElements.ModEle
 					ArrowCustomEntity entityarrow = shoot(world, entity, random, 0.7f, 0, 0);
 					itemstack.damageItem(1, entity, e -> e.sendBreakAnimation(entity.getActiveHand()));
 					entityarrow.pickupStatus = AbstractArrowEntity.PickupStatus.DISALLOWED;
-					{
-						Map<String, Object> $_dependencies = new HashMap<>();
-						$_dependencies.put("entity", entity);
-						$_dependencies.put("itemstack", itemstack);
-						CrabCannonRangedItemUsedProcedure.executeProcedure($_dependencies);
-					}
+
+					CrabCannonRangedItemUsedProcedure.executeProcedure(
+							Stream.of(new AbstractMap.SimpleEntry<>("entity", entity), new AbstractMap.SimpleEntry<>("itemstack", itemstack))
+									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 				}
 			}
 		}
@@ -150,25 +152,21 @@ public class OnyxGrapplingHookItem extends TheWetSmpRehydratedModElements.ModEle
 			World world = this.world;
 			Entity entity = this.func_234616_v_();
 			Entity imediatesourceentity = this;
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("imediatesourceentity", imediatesourceentity);
-				$_dependencies.put("world", world);
-				OnyxGrapple1Procedure.executeProcedure($_dependencies);
-			}
+
+			OnyxGrapple1Procedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("imediatesourceentity", imediatesourceentity))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			if (this.inGround) {
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("entity", entity);
-					$_dependencies.put("x", x);
-					$_dependencies.put("y", y);
-					$_dependencies.put("z", z);
-					OnyxGrapple2Procedure.executeProcedure($_dependencies);
-				}
+
+				OnyxGrapple2Procedure.executeProcedure(Stream
+						.of(new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z),
+								new AbstractMap.SimpleEntry<>("entity", entity))
+						.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 				this.remove();
 			}
 		}
 	}
+
 	public static ArrowCustomEntity shoot(World world, LivingEntity entity, Random random, float power, double damage, int knockback) {
 		ArrowCustomEntity entityarrow = new ArrowCustomEntity(arrow, entity, world);
 		entityarrow.shoot(entity.getLookVec().x, entity.getLookVec().y, entity.getLookVec().z, power * 2, 0);

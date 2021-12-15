@@ -16,6 +16,7 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 public class EffervescentWatcherItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:effervescent_watcher")
 	public static final Item block = null;
+
 	public EffervescentWatcherItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 104);
 	}
@@ -24,10 +25,13 @@ public class EffervescentWatcherItem extends TheWetSmpRehydratedModElements.ModE
 	public void initElements() {
 		elements.items.add(() -> new FoodItemCustom());
 	}
+
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
 			super(new Item.Properties().group(FishingItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
-					.food((new Food.Builder()).hunger(0).saturation(0.3f).meat().build()));
+					.food((new Food.Builder()).hunger(0).saturation(0.3f)
+
+							.meat().build()));
 			setRegistryName("effervescent_watcher");
 		}
 

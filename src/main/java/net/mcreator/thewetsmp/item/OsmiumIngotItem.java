@@ -15,6 +15,7 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 public class OsmiumIngotItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:osmium_ingot")
 	public static final Item block = null;
+
 	public OsmiumIngotItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 23);
 	}
@@ -23,6 +24,7 @@ public class OsmiumIngotItem extends TheWetSmpRehydratedModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ItemGroup.MISC).maxStackSize(64).rarity(Rarity.COMMON));

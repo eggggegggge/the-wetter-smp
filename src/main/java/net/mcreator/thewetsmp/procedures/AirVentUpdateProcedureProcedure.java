@@ -17,7 +17,13 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
 import java.util.Map;
 
 public class AirVentUpdateProcedureProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure AirVentUpdateProcedure!");
+			return;
+		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
 				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency x for procedure AirVentUpdateProcedure!");
@@ -33,18 +39,13 @@ public class AirVentUpdateProcedureProcedure {
 				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency z for procedure AirVentUpdateProcedure!");
 			return;
 		}
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure AirVentUpdateProcedure!");
-			return;
-		}
+		IWorld world = (IWorld) dependencies.get("world");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		IWorld world = (IWorld) dependencies.get("world");
-		if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == HotAirVentBlock.block)) {
-			if ((((world.getBlockState(new BlockPos((int) x, (int) (y - 2), (int) z))).getBlock() == Blocks.MAGMA_BLOCK)
-					&& ((world instanceof World) ? ((World) world).isBlockPowered(new BlockPos((int) x, (int) y, (int) z)) : false))) {
+		if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == HotAirVentBlock.block) {
+			if ((world.getBlockState(new BlockPos((int) x, (int) (y - 2), (int) z))).getBlock() == Blocks.MAGMA_BLOCK
+					&& ((world instanceof World) ? ((World) world).isBlockPowered(new BlockPos((int) x, (int) y, (int) z)) : false)) {
 				if (world instanceof ServerWorld) {
 					((ServerWorld) world).spawnParticle(HotAirParticle.particle, (x + 0.5), y, (z + 0.5), (int) 10, 0.2, 0.8, 0.2, 0);
 				}
@@ -64,9 +65,9 @@ public class AirVentUpdateProcedureProcedure {
 					world.setBlockState(_bp, _bs, 3);
 				}
 			}
-		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == ColdAirVentBlock.block)) {
-			if ((((world.getBlockState(new BlockPos((int) x, (int) (y - 2), (int) z))).getBlock() == Blocks.ICE)
-					&& ((world instanceof World) ? ((World) world).isBlockPowered(new BlockPos((int) x, (int) y, (int) z)) : false))) {
+		} else if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == ColdAirVentBlock.block) {
+			if ((world.getBlockState(new BlockPos((int) x, (int) (y - 2), (int) z))).getBlock() == Blocks.ICE
+					&& ((world instanceof World) ? ((World) world).isBlockPowered(new BlockPos((int) x, (int) y, (int) z)) : false)) {
 				if (world instanceof ServerWorld) {
 					((ServerWorld) world).spawnParticle(HotAirParticle.particle, (x + 0.5), y, (z + 0.5), (int) 10, 0.2, 0.8, 0.2, 0);
 				}

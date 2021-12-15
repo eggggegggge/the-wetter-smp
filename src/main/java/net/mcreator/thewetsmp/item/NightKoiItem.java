@@ -16,6 +16,7 @@ import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 public class NightKoiItem extends TheWetSmpRehydratedModElements.ModElement {
 	@ObjectHolder("the_wet_smp_rehydrated:night_koi")
 	public static final Item block = null;
+
 	public NightKoiItem(TheWetSmpRehydratedModElements instance) {
 		super(instance, 94);
 	}
@@ -24,10 +25,13 @@ public class NightKoiItem extends TheWetSmpRehydratedModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new FoodItemCustom());
 	}
+
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
 			super(new Item.Properties().group(FishingItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
-					.food((new Food.Builder()).hunger(2).saturation(0f).meat().build()));
+					.food((new Food.Builder()).hunger(2).saturation(0f)
+
+							.meat().build()));
 			setRegistryName("night_koi");
 		}
 

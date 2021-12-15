@@ -36,6 +36,7 @@ public class OnyxGrapplingHookRenderer {
 	@OnlyIn(Dist.CLIENT)
 	public static class CustomRender extends EntityRenderer<OnyxGrapplingHookItem.ArrowCustomEntity> {
 		private static final ResourceLocation texture = new ResourceLocation("the_wet_smp_rehydrated:textures/onyxhook.png");
+
 		public CustomRender(EntityRendererManager renderManager) {
 			super(renderManager);
 		}
@@ -64,6 +65,7 @@ public class OnyxGrapplingHookRenderer {
 	// Paste this class into your mod and generate all required imports
 	public static class Modelcustom_model extends EntityModel<Entity> {
 		private final ModelRenderer bb_main;
+
 		public Modelcustom_model() {
 			textureWidth = 10;
 			textureHeight = 10;
@@ -89,4 +91,5 @@ public class OnyxGrapplingHookRenderer {
 			modelRenderer.rotateAngleZ = z;
 		}
 	}
+
 }
