@@ -9454,7 +9454,7 @@
       "type": "loottable",
       "sortid": 661,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "ids": {},
       "registry_name": "badlands_treasure",
       "path": "~/Loot Tables"
@@ -9518,6 +9518,26 @@
       "ids": {},
       "registry_name": "coconut_cream_shower",
       "path": "~/Advancements"
+    },
+    {
+      "name": "DripstoneCaveTreasure",
+      "type": "loottable",
+      "sortid": 669,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "dripstone_cave_treasure",
+      "path": "~/Loot Tables"
+    },
+    {
+      "name": "LushCaveTreasure",
+      "type": "loottable",
+      "sortid": 670,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "lush_cave_treasure",
+      "path": "~/Loot Tables"
     }
   ],
   "variable_elements": [

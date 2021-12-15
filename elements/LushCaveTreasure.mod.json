@@ -1,0 +1,10 @@
+{
+  "_fv": 24,
+  "_type": "loottable",
+  "definition": {
+    "type": "Generic",
+    "pools": [],
+    "name": "lush_cave_treasure",
+    "namespace": "mod"
+  }
+}
