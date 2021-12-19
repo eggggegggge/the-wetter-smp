@@ -1,47 +1,31 @@
 
 package net.mcreator.thewetsmp.block;
 
-import net.minecraftforge.registries.ObjectHolder;
-import net.minecraftforge.common.ToolType;
+import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.FallingBlock;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.item.TieredItem;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.core.BlockPos;
 
-import net.minecraft.world.IBlockReader;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.Item;
-import net.minecraft.item.BlockItem;
-import net.minecraft.block.material.Material;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.FallingBlock;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Block;
-
-import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
-
-@TheWetSmpRehydratedModElements.ModElement.Tag
-public class BambooCrateBlock extends TheWetSmpRehydratedModElements.ModElement {
-	@ObjectHolder("the_wet_smp_rehydrated:bamboo_crate")
-	public static final Block block = null;
-
-	public BambooCrateBlock(TheWetSmpRehydratedModElements instance) {
-		super(instance, 502);
+public class BambooCrateBlock extends FallingBlock {
+	public BambooCrateBlock() {
+		super(BlockBehaviour.Properties.of(Material.BAMBOO).sound(SoundType.BAMBOO).strength(1f, 10f).requiresCorrectToolForDrops());
+		setRegistryName("bamboo_crate");
 	}
 
 	@Override
-	public void initElements() {
-		elements.blocks.add(() -> new CustomBlock());
-		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(ItemGroup.MISC)).setRegistryName(block.getRegistryName()));
+	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
+		return 15;
 	}
 
-	public static class CustomBlock extends FallingBlock {
-		public CustomBlock() {
-			super(Block.Properties.create(Material.BAMBOO).sound(SoundType.BAMBOO).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0)
-					.harvestLevel(0).harvestTool(ToolType.AXE).setRequiresTool());
-			setRegistryName("bamboo_crate");
-		}
-
-		@Override
-		public int getOpacity(BlockState state, IBlockReader worldIn, BlockPos pos) {
-			return 15;
-		}
+	@Override
+	public boolean canHarvestBlock(BlockState state, BlockGetter world, BlockPos pos, Player player) {
+		if (player.getInventory().getSelected().getItem()instanceof TieredItem tieredItem)
+			return tieredItem.getTier().getLevel() >= 0;
+		return false;
 	}
 }

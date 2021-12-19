@@ -2,59 +2,24 @@ package net.mcreator.thewetsmp.procedures;
 
 import net.minecraftforge.items.CapabilityItemHandler;
 
-import net.minecraft.world.IWorld;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.BlockItem;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.BlockState;
-
-import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.core.BlockPos;
 
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.Map;
 
 public class BuildLatency3Procedure {
-
-	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure BuildLatency3!");
-			return;
-		}
-		if (dependencies.get("x") == null) {
-			if (!dependencies.containsKey("x"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency x for procedure BuildLatency3!");
-			return;
-		}
-		if (dependencies.get("y") == null) {
-			if (!dependencies.containsKey("y"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency y for procedure BuildLatency3!");
-			return;
-		}
-		if (dependencies.get("z") == null) {
-			if (!dependencies.containsKey("z"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency z for procedure BuildLatency3!");
-			return;
-		}
-		IWorld world = (IWorld) dependencies.get("world");
-		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
-		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
-		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
+	public static void execute(LevelAccessor world, double x, double y, double z) {
 		{
 			BlockPos _bp = new BlockPos((int) (x + 4), (int) (y + 2), (int) (z + 4));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -62,22 +27,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (162)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 162)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x + 3), (int) (y + 2), (int) (z + 4));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -85,22 +45,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (163)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 163)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x + 2), (int) (y + 2), (int) (z + 4));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -108,22 +63,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (164)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 164)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x + 1), (int) (y + 2), (int) (z + 4));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -131,22 +81,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (165)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 165)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) x, (int) (y + 2), (int) (z + 4));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -154,22 +99,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (166)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 166)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x - 1), (int) (y + 2), (int) (z + 4));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -177,22 +117,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (167)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 167)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x - 2), (int) (y + 2), (int) (z + 4));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -200,22 +135,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (168)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 168)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x - 3), (int) (y + 2), (int) (z + 4));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -223,22 +153,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (169)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 169)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x - 4), (int) (y + 2), (int) (z + 4));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -246,22 +171,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (170)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 170)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x + 4), (int) (y + 2), (int) (z + 3));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -269,22 +189,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (171)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 171)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x + 3), (int) (y + 2), (int) (z + 3));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -292,22 +207,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (172)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 172)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x + 2), (int) (y + 2), (int) (z + 3));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -315,22 +225,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (173)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 173)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x + 1), (int) (y + 2), (int) (z + 3));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -338,22 +243,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (174)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 174)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) x, (int) (y + 2), (int) (z + 3));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -361,22 +261,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (175)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 175)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x - 1), (int) (y + 2), (int) (z + 3));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -384,22 +279,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (176)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 176)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x - 2), (int) (y + 2), (int) (z + 3));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -407,22 +297,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (177)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 177)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x - 3), (int) (y + 2), (int) (z + 3));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -430,22 +315,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (178)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 178)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x - 4), (int) (y + 2), (int) (z + 3));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -453,22 +333,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (179)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 179)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x + 4), (int) (y + 2), (int) (z + 2));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -476,22 +351,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (180)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 180)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x + 3), (int) (y + 2), (int) (z + 2));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -499,22 +369,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (181)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 181)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x + 2), (int) (y + 2), (int) (z + 2));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -522,22 +387,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (182)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 182)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x + 1), (int) (y + 2), (int) (z + 2));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -545,22 +405,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (183)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 183)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) x, (int) (y + 2), (int) (z + 2));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -568,22 +423,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (184)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 184)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x - 1), (int) (y + 2), (int) (z + 2));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -591,22 +441,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (185)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 185)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x - 2), (int) (y + 2), (int) (z + 2));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -614,22 +459,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (186)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 186)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x - 3), (int) (y + 2), (int) (z + 2));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -637,22 +477,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (187)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 187)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x - 4), (int) (y + 2), (int) (z + 2));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -660,22 +495,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (188)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 188)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x + 4), (int) (y + 2), (int) (z + 1));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -683,22 +513,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (189)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 189)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x + 3), (int) (y + 2), (int) (z + 1));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -706,22 +531,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (190)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 190)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x + 2), (int) (y + 2), (int) (z + 1));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -729,22 +549,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (191)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 191)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x + 1), (int) (y + 2), (int) (z + 1));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -752,22 +567,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (192)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 192)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) x, (int) (y + 2), (int) (z + 1));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -775,22 +585,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (193)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 193)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x - 1), (int) (y + 2), (int) (z + 1));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -798,22 +603,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (194)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 194)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x - 2), (int) (y + 2), (int) (z + 1));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -821,22 +621,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (195)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 195)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x - 3), (int) (y + 2), (int) (z + 1));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -844,22 +639,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (196)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 196)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x - 4), (int) (y + 2), (int) (z + 1));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -867,22 +657,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (197)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 197)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x + 4), (int) (y + 2), (int) z);
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -890,22 +675,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (198)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 198)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x + 3), (int) (y + 2), (int) z);
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -913,22 +693,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (199)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 199)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x + 2), (int) (y + 2), (int) z);
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -936,22 +711,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (200)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 200)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x + 1), (int) (y + 2), (int) z);
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -959,22 +729,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (201)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 201)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) x, (int) (y + 2), (int) z);
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -982,22 +747,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (202)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 202)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x - 1), (int) (y + 2), (int) z);
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1005,22 +765,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (203)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 203)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x - 2), (int) (y + 2), (int) z);
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1028,22 +783,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (204)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 204)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x - 3), (int) (y + 2), (int) z);
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1051,22 +801,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (205)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 205)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x - 4), (int) (y + 2), (int) z);
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1074,22 +819,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (206)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 206)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x + 4), (int) (y + 2), (int) (z - 1));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1097,22 +837,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (207)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 207)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x + 3), (int) (y + 2), (int) (z - 1));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1120,22 +855,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (208)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 208)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x + 2), (int) (y + 2), (int) (z - 1));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1143,22 +873,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (209)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 209)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x + 1), (int) (y + 2), (int) (z - 1));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1166,22 +891,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (210)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 210)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) x, (int) (y + 2), (int) (z - 1));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1189,22 +909,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (211)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 211)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x - 1), (int) (y + 2), (int) (z - 1));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1212,22 +927,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (212)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 212)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x - 2), (int) (y + 2), (int) (z - 1));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1235,22 +945,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (213)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 213)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x - 3), (int) (y + 2), (int) (z - 1));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1258,22 +963,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (214)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 214)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x - 4), (int) (y + 2), (int) (z - 1));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1281,22 +981,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (215)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 215)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x + 4), (int) (y + 2), (int) (z - 2));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1304,22 +999,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (216)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 216)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x + 3), (int) (y + 2), (int) (z - 2));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1327,22 +1017,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (217)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 217)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x + 2), (int) (y + 2), (int) (z - 2));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1350,22 +1035,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (218)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 218)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x + 1), (int) (y + 2), (int) (z - 2));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1373,22 +1053,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (219)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 219)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) x, (int) (y + 2), (int) (z - 2));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1396,22 +1071,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (220)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 220)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x - 1), (int) (y + 2), (int) (z - 2));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1419,22 +1089,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (221)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 221)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x - 2), (int) (y + 2), (int) (z - 2));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1442,22 +1107,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (222)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 222)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x - 3), (int) (y + 2), (int) (z - 2));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1465,22 +1125,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (223)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 223)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x - 4), (int) (y + 2), (int) (z - 2));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1488,22 +1143,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (224)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 224)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x + 4), (int) (y + 2), (int) (z - 3));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1511,22 +1161,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (225)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 225)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x + 3), (int) (y + 2), (int) (z - 3));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1534,22 +1179,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (226)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 226)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x + 2), (int) (y + 2), (int) (z - 3));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1557,22 +1197,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (227)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 227)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x + 1), (int) (y + 2), (int) (z - 3));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1580,22 +1215,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (228)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 228)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) x, (int) (y + 2), (int) (z - 3));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1603,22 +1233,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (229)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 229)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x - 1), (int) (y + 2), (int) (z - 3));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1626,22 +1251,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (230)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 230)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x - 2), (int) (y + 2), (int) (z - 3));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1649,22 +1269,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (231)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 231)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x - 3), (int) (y + 2), (int) (z - 3));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1672,22 +1287,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (232)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 232)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x - 4), (int) (y + 2), (int) (z - 3));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1695,22 +1305,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (233)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 233)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x + 4), (int) (y + 2), (int) (z - 4));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1718,22 +1323,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (234)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 234)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x + 3), (int) (y + 2), (int) (z - 4));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1741,22 +1341,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (235)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 235)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x + 2), (int) (y + 2), (int) (z - 4));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1764,22 +1359,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (236)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 236)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x + 1), (int) (y + 2), (int) (z - 4));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1787,22 +1377,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (237)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 237)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) x, (int) (y + 2), (int) (z - 4));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1810,22 +1395,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (238)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 238)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x - 1), (int) (y + 2), (int) (z - 4));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1833,22 +1413,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (239)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 239)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x - 2), (int) (y + 2), (int) (z - 4));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1856,22 +1431,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (240)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 240)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x - 3), (int) (y + 2), (int) (z - 4));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1879,22 +1449,17 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (241)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 241)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 		{
 			BlockPos _bp = new BlockPos((int) (x - 4), (int) (y + 2), (int) (z - 4));
-			BlockState _bs = (new Object() {
-				public BlockState toBlock(ItemStack _stk) {
-					if (_stk.getItem() instanceof BlockItem) {
-						return ((BlockItem) _stk.getItem()).getBlock().getDefaultState();
-					}
-					return Blocks.AIR.getDefaultState();
-				}
-			}.toBlock((new Object() {
-				public ItemStack getItemStack(BlockPos pos, int sltid) {
+			BlockState _bs = ((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int sltid) {
 					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-					TileEntity _ent = world.getTileEntity(pos);
+					BlockEntity _ent = world.getBlockEntity(pos);
 					if (_ent != null) {
 						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 							_retval.set(capability.getStackInSlot(sltid).copy());
@@ -1902,8 +1467,10 @@ public class BuildLatency3Procedure {
 					}
 					return _retval.get();
 				}
-			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (242)))));
-			world.setBlockState(_bp, _bs, 3);
+			}.getItemStack(world, new BlockPos((int) x, (int) y, (int) z), 242)).getItem()instanceof BlockItem _bi
+					? _bi.getBlock().defaultBlockState()
+					: Blocks.AIR.defaultBlockState());
+			world.setBlock(_bp, _bs, 3);
 		}
 	}
 }

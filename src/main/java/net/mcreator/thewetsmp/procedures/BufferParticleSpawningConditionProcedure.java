@@ -1,53 +1,24 @@
 package net.mcreator.thewetsmp.procedures;
 
-import net.minecraft.world.server.ServerWorld;
-import net.minecraft.world.IWorld;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.tileentity.TileEntity;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.core.BlockPos;
 
-import net.mcreator.thewetsmp.particle.BufferParticleParticle;
-import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
-
-import java.util.Map;
+import net.mcreator.thewetsmp.init.TheWetSmpRehydratedModParticles;
 
 public class BufferParticleSpawningConditionProcedure {
-
-	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure BufferParticleSpawningCondition!");
-			return;
-		}
-		if (dependencies.get("x") == null) {
-			if (!dependencies.containsKey("x"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency x for procedure BufferParticleSpawningCondition!");
-			return;
-		}
-		if (dependencies.get("y") == null) {
-			if (!dependencies.containsKey("y"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency y for procedure BufferParticleSpawningCondition!");
-			return;
-		}
-		if (dependencies.get("z") == null) {
-			if (!dependencies.containsKey("z"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency z for procedure BufferParticleSpawningCondition!");
-			return;
-		}
-		IWorld world = (IWorld) dependencies.get("world");
-		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
-		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
-		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
+	public static void execute(LevelAccessor world, double x, double y, double z) {
 		if ((new Object() {
-			public boolean getValue(IWorld world, BlockPos pos, String tag) {
-				TileEntity tileEntity = world.getTileEntity(pos);
-				if (tileEntity != null)
-					return tileEntity.getTileData().getBoolean(tag);
+			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+				BlockEntity blockEntity = world.getBlockEntity(pos);
+				if (blockEntity != null)
+					return blockEntity.getTileData().getBoolean(tag);
 				return false;
 			}
 		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "latencyLoaded")) == true) {
-			if (world instanceof ServerWorld) {
-				((ServerWorld) world).spawnParticle(BufferParticleParticle.particle, x, y, z, (int) 4, 0.3, 0.3, 0.3, 0);
-			}
+			if (world instanceof ServerLevel _level)
+				_level.sendParticles(TheWetSmpRehydratedModParticles.BUFFER_PARTICLE, x, y, z, 4, 0.3, 0.3, 0.3, 0);
 		}
 	}
 }

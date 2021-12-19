@@ -5,79 +5,45 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
-import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.state.Property;
-import net.minecraft.block.BlockState;
+import net.minecraft.world.level.block.state.properties.Property;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.BlockPos;
+import net.minecraft.client.Minecraft;
 
-import net.mcreator.thewetsmp.block.SingingSingingSingingBassBlock;
-import net.mcreator.thewetsmp.block.SingingSingingBassBlock;
-import net.mcreator.thewetsmp.block.SingingBassBlock;
-import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
+import net.mcreator.thewetsmp.init.TheWetSmpRehydratedModBlocks;
 
 import java.util.Map;
 
 public class RightClickSingingBassProcedureProcedure {
-
-	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure RightClickSingingBassProcedure!");
-			return;
-		}
-		if (dependencies.get("x") == null) {
-			if (!dependencies.containsKey("x"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency x for procedure RightClickSingingBassProcedure!");
-			return;
-		}
-		if (dependencies.get("y") == null) {
-			if (!dependencies.containsKey("y"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency y for procedure RightClickSingingBassProcedure!");
-			return;
-		}
-		if (dependencies.get("z") == null) {
-			if (!dependencies.containsKey("z"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency z for procedure RightClickSingingBassProcedure!");
-			return;
-		}
-		IWorld world = (IWorld) dependencies.get("world");
-		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
-		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
-		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
+	public static void execute(LevelAccessor world, double x, double y, double z) {
 		{
 			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-			BlockState _bs = SingingSingingBassBlock.block.getDefaultState();
+			BlockState _bs = TheWetSmpRehydratedModBlocks.SINGING_SINGING_BASS.defaultBlockState();
 			BlockState _bso = world.getBlockState(_bp);
 			for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-				Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
-				if (_property != null && _bs.get(_property) != null)
+				Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+				if (_property != null && _bs.getValue(_property) != null)
 					try {
-						_bs = _bs.with(_property, (Comparable) entry.getValue());
+						_bs = _bs.setValue(_property, (Comparable) entry.getValue());
 					} catch (Exception e) {
 					}
 			}
-			world.setBlockState(_bp, _bs, 3);
+			world.setBlock(_bp, _bs, 3);
 		}
-		if (world instanceof World && !world.isRemote()) {
-			((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-					(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-							.getValue(new ResourceLocation("the_wet_smp_rehydrated:singing_bass.sing")),
-					SoundCategory.RECORDS, (float) 0.5, (float) 1);
-		} else {
-			((World) world).playSound(x, y, z,
-					(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-							.getValue(new ResourceLocation("the_wet_smp_rehydrated:singing_bass.sing")),
-					SoundCategory.RECORDS, (float) 0.5, (float) 1, false);
-		}
+		if (world instanceof Level _level)
+			_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
+					ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("the_wet_smp_rehydrated:singing_bass.sing")), SoundSource.RECORDS,
+					(float) 0.5, 1);
 		new Object() {
 			private int ticks = 0;
 			private float waitTicks;
-			private IWorld world;
+			private LevelAccessor world;
 
-			public void start(IWorld world, int waitTicks) {
+			public void start(LevelAccessor world, int waitTicks) {
 				this.waitTicks = waitTicks;
 				MinecraftForge.EVENT_BUS.register(this);
 				this.world = world;
@@ -93,31 +59,31 @@ public class RightClickSingingBassProcedureProcedure {
 			}
 
 			private void run() {
-				if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == SingingSingingBassBlock.block) {
+				if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == TheWetSmpRehydratedModBlocks.SINGING_SINGING_BASS) {
 					{
 						BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-						BlockState _bs = SingingSingingSingingBassBlock.block.getDefaultState();
+						BlockState _bs = TheWetSmpRehydratedModBlocks.SINGING_SINGING_SINGING_BASS.defaultBlockState();
 						BlockState _bso = world.getBlockState(_bp);
 						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-							Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
-							if (_property != null && _bs.get(_property) != null)
+							Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+							if (_property != null && _bs.getValue(_property) != null)
 								try {
-									_bs = _bs.with(_property, (Comparable) entry.getValue());
+									_bs = _bs.setValue(_property, (Comparable) entry.getValue());
 								} catch (Exception e) {
 								}
 						}
-						world.setBlockState(_bp, _bs, 3);
+						world.setBlock(_bp, _bs, 3);
 					}
 				}
 				MinecraftForge.EVENT_BUS.unregister(this);
 			}
-		}.start(world, (int) 135);
+		}.start(world, 135);
 		new Object() {
 			private int ticks = 0;
 			private float waitTicks;
-			private IWorld world;
+			private LevelAccessor world;
 
-			public void start(IWorld world, int waitTicks) {
+			public void start(LevelAccessor world, int waitTicks) {
 				this.waitTicks = waitTicks;
 				MinecraftForge.EVENT_BUS.register(this);
 				this.world = world;
@@ -133,31 +99,32 @@ public class RightClickSingingBassProcedureProcedure {
 			}
 
 			private void run() {
-				if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == SingingSingingSingingBassBlock.block) {
+				if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
+						.getBlock() == TheWetSmpRehydratedModBlocks.SINGING_SINGING_SINGING_BASS) {
 					{
 						BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-						BlockState _bs = SingingSingingBassBlock.block.getDefaultState();
+						BlockState _bs = TheWetSmpRehydratedModBlocks.SINGING_SINGING_BASS.defaultBlockState();
 						BlockState _bso = world.getBlockState(_bp);
 						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-							Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
-							if (_property != null && _bs.get(_property) != null)
+							Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+							if (_property != null && _bs.getValue(_property) != null)
 								try {
-									_bs = _bs.with(_property, (Comparable) entry.getValue());
+									_bs = _bs.setValue(_property, (Comparable) entry.getValue());
 								} catch (Exception e) {
 								}
 						}
-						world.setBlockState(_bp, _bs, 3);
+						world.setBlock(_bp, _bs, 3);
 					}
 				}
 				MinecraftForge.EVENT_BUS.unregister(this);
 			}
-		}.start(world, (int) 185);
+		}.start(world, 185);
 		new Object() {
 			private int ticks = 0;
 			private float waitTicks;
-			private IWorld world;
+			private LevelAccessor world;
 
-			public void start(IWorld world, int waitTicks) {
+			public void start(LevelAccessor world, int waitTicks) {
 				this.waitTicks = waitTicks;
 				MinecraftForge.EVENT_BUS.register(this);
 				this.world = world;
@@ -173,24 +140,24 @@ public class RightClickSingingBassProcedureProcedure {
 			}
 
 			private void run() {
-				if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == SingingSingingBassBlock.block) {
+				if ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == TheWetSmpRehydratedModBlocks.SINGING_SINGING_BASS) {
 					{
 						BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-						BlockState _bs = SingingBassBlock.block.getDefaultState();
+						BlockState _bs = TheWetSmpRehydratedModBlocks.SINGING_BASS.defaultBlockState();
 						BlockState _bso = world.getBlockState(_bp);
 						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-							Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
-							if (_property != null && _bs.get(_property) != null)
+							Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+							if (_property != null && _bs.getValue(_property) != null)
 								try {
-									_bs = _bs.with(_property, (Comparable) entry.getValue());
+									_bs = _bs.setValue(_property, (Comparable) entry.getValue());
 								} catch (Exception e) {
 								}
 						}
-						world.setBlockState(_bp, _bs, 3);
+						world.setBlock(_bp, _bs, 3);
 					}
 				}
 				MinecraftForge.EVENT_BUS.unregister(this);
 			}
-		}.start(world, (int) 540);
+		}.start(world, 540);
 	}
 }

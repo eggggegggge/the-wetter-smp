@@ -4,193 +4,126 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
-import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.block.BlockState;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.core.BlockPos;
 
-import net.mcreator.thewetsmp.block.YellowRedstoneLampBlock;
-import net.mcreator.thewetsmp.block.WhiteRedstoneLampBlock;
-import net.mcreator.thewetsmp.block.SepiaRedstoneLampBlock;
-import net.mcreator.thewetsmp.block.RedRedstoneLampBlock;
-import net.mcreator.thewetsmp.block.PurpleRedstoneLampBlock;
-import net.mcreator.thewetsmp.block.PinkRedstoneLampBlock;
-import net.mcreator.thewetsmp.block.OrangeRedstoneLampBlock;
-import net.mcreator.thewetsmp.block.MagentaRedstoneLampBlock;
-import net.mcreator.thewetsmp.block.LitYellowRedstoneLampBlock;
-import net.mcreator.thewetsmp.block.LitWhiteRedstoneLampBlock;
-import net.mcreator.thewetsmp.block.LitSepiaRedstoneLampBlock;
-import net.mcreator.thewetsmp.block.LitRedRestoneLampBlock;
-import net.mcreator.thewetsmp.block.LitPurpleRedstoneLampBlock;
-import net.mcreator.thewetsmp.block.LitPinkRedstoneLampBlock;
-import net.mcreator.thewetsmp.block.LitOrangeRedstoneLampBlock;
-import net.mcreator.thewetsmp.block.LitMagentaRedstoneLampBlock;
-import net.mcreator.thewetsmp.block.LitLimeRedstoneLampBlock;
-import net.mcreator.thewetsmp.block.LitLightGreyRedstoneLampBlock;
-import net.mcreator.thewetsmp.block.LitLightBlueRedstoneLampBlock;
-import net.mcreator.thewetsmp.block.LitGreyRedstoneLampBlock;
-import net.mcreator.thewetsmp.block.LitGreenRedstoneLampBlock;
-import net.mcreator.thewetsmp.block.LitCyanRedstoneLampBlock;
-import net.mcreator.thewetsmp.block.LitBrownRedstoneLampBlock;
-import net.mcreator.thewetsmp.block.LitBlueRedstoneLampBlock;
-import net.mcreator.thewetsmp.block.LitBlackRedstoneLampBlock;
-import net.mcreator.thewetsmp.block.LimeRedstoneLampBlock;
-import net.mcreator.thewetsmp.block.LightGreyRedstoneLampBlock;
-import net.mcreator.thewetsmp.block.LightBlueRedstoneLampBlock;
-import net.mcreator.thewetsmp.block.GreyRedstoneLampBlock;
-import net.mcreator.thewetsmp.block.GreenRedstoneLampBlock;
-import net.mcreator.thewetsmp.block.CyanRedstoneLampBlock;
-import net.mcreator.thewetsmp.block.BrownRedstoneLampBlock;
-import net.mcreator.thewetsmp.block.BlueRedstoneLampBlock;
-import net.mcreator.thewetsmp.block.BlackRedstoneLampBlock;
-import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
-
-import java.util.Map;
+import net.mcreator.thewetsmp.init.TheWetSmpRehydratedModBlocks;
 
 public class CustomLampCheckProcedure {
-
-	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure CustomLampCheck!");
-			return;
-		}
-		if (dependencies.get("x") == null) {
-			if (!dependencies.containsKey("x"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency x for procedure CustomLampCheck!");
-			return;
-		}
-		if (dependencies.get("y") == null) {
-			if (!dependencies.containsKey("y"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency y for procedure CustomLampCheck!");
-			return;
-		}
-		if (dependencies.get("z") == null) {
-			if (!dependencies.containsKey("z"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency z for procedure CustomLampCheck!");
-			return;
-		}
-		if (dependencies.get("blockstate") == null) {
-			if (!dependencies.containsKey("blockstate"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency blockstate for procedure CustomLampCheck!");
-			return;
-		}
-		IWorld world = (IWorld) dependencies.get("world");
-		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
-		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
-		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		BlockState blockstate = (BlockState) dependencies.get("blockstate");
-		if ((world instanceof World) ? ((World) world).isBlockPowered(new BlockPos((int) x, (int) y, (int) z)) : false) {
-			if (blockstate.getBlock() == RedRedstoneLampBlock.block) {
+	public static void execute(LevelAccessor world, double x, double y, double z, BlockState blockstate) {
+		if (world instanceof Level _lvl_isPow ? _lvl_isPow.hasNeighborSignal(new BlockPos((int) x, (int) y, (int) z)) : false) {
+			if (blockstate.getBlock() == TheWetSmpRehydratedModBlocks.RED_REDSTONE_LAMP) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = LitRedRestoneLampBlock.block.getDefaultState();
-					world.setBlockState(_bp, _bs, 3);
+					BlockState _bs = TheWetSmpRehydratedModBlocks.LIT_RED_RESTONE_LAMP.defaultBlockState();
+					world.setBlock(_bp, _bs, 3);
 				}
-			} else if (blockstate.getBlock() == OrangeRedstoneLampBlock.block) {
+			} else if (blockstate.getBlock() == TheWetSmpRehydratedModBlocks.ORANGE_REDSTONE_LAMP) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = LitOrangeRedstoneLampBlock.block.getDefaultState();
-					world.setBlockState(_bp, _bs, 3);
+					BlockState _bs = TheWetSmpRehydratedModBlocks.LIT_ORANGE_REDSTONE_LAMP.defaultBlockState();
+					world.setBlock(_bp, _bs, 3);
 				}
-			} else if (blockstate.getBlock() == YellowRedstoneLampBlock.block) {
+			} else if (blockstate.getBlock() == TheWetSmpRehydratedModBlocks.YELLOW_REDSTONE_LAMP) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = LitYellowRedstoneLampBlock.block.getDefaultState();
-					world.setBlockState(_bp, _bs, 3);
+					BlockState _bs = TheWetSmpRehydratedModBlocks.LIT_YELLOW_REDSTONE_LAMP.defaultBlockState();
+					world.setBlock(_bp, _bs, 3);
 				}
-			} else if (blockstate.getBlock() == LimeRedstoneLampBlock.block) {
+			} else if (blockstate.getBlock() == TheWetSmpRehydratedModBlocks.LIME_REDSTONE_LAMP) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = LitLimeRedstoneLampBlock.block.getDefaultState();
-					world.setBlockState(_bp, _bs, 3);
+					BlockState _bs = TheWetSmpRehydratedModBlocks.LIT_LIME_REDSTONE_LAMP.defaultBlockState();
+					world.setBlock(_bp, _bs, 3);
 				}
-			} else if (blockstate.getBlock() == GreenRedstoneLampBlock.block) {
+			} else if (blockstate.getBlock() == TheWetSmpRehydratedModBlocks.GREEN_REDSTONE_LAMP) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = LitGreenRedstoneLampBlock.block.getDefaultState();
-					world.setBlockState(_bp, _bs, 3);
+					BlockState _bs = TheWetSmpRehydratedModBlocks.LIT_GREEN_REDSTONE_LAMP.defaultBlockState();
+					world.setBlock(_bp, _bs, 3);
 				}
-			} else if (blockstate.getBlock() == LightBlueRedstoneLampBlock.block) {
+			} else if (blockstate.getBlock() == TheWetSmpRehydratedModBlocks.LIGHT_BLUE_REDSTONE_LAMP) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = LitLightBlueRedstoneLampBlock.block.getDefaultState();
-					world.setBlockState(_bp, _bs, 3);
+					BlockState _bs = TheWetSmpRehydratedModBlocks.LIT_LIGHT_BLUE_REDSTONE_LAMP.defaultBlockState();
+					world.setBlock(_bp, _bs, 3);
 				}
-			} else if (blockstate.getBlock() == CyanRedstoneLampBlock.block) {
+			} else if (blockstate.getBlock() == TheWetSmpRehydratedModBlocks.CYAN_REDSTONE_LAMP) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = LitCyanRedstoneLampBlock.block.getDefaultState();
-					world.setBlockState(_bp, _bs, 3);
+					BlockState _bs = TheWetSmpRehydratedModBlocks.LIT_CYAN_REDSTONE_LAMP.defaultBlockState();
+					world.setBlock(_bp, _bs, 3);
 				}
-			} else if (blockstate.getBlock() == BlueRedstoneLampBlock.block) {
+			} else if (blockstate.getBlock() == TheWetSmpRehydratedModBlocks.BLUE_REDSTONE_LAMP) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = LitBlueRedstoneLampBlock.block.getDefaultState();
-					world.setBlockState(_bp, _bs, 3);
+					BlockState _bs = TheWetSmpRehydratedModBlocks.LIT_BLUE_REDSTONE_LAMP.defaultBlockState();
+					world.setBlock(_bp, _bs, 3);
 				}
-			} else if (blockstate.getBlock() == PurpleRedstoneLampBlock.block) {
+			} else if (blockstate.getBlock() == TheWetSmpRehydratedModBlocks.PURPLE_REDSTONE_LAMP) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = LitPurpleRedstoneLampBlock.block.getDefaultState();
-					world.setBlockState(_bp, _bs, 3);
+					BlockState _bs = TheWetSmpRehydratedModBlocks.LIT_PURPLE_REDSTONE_LAMP.defaultBlockState();
+					world.setBlock(_bp, _bs, 3);
 				}
-			} else if (blockstate.getBlock() == MagentaRedstoneLampBlock.block) {
+			} else if (blockstate.getBlock() == TheWetSmpRehydratedModBlocks.MAGENTA_REDSTONE_LAMP) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = LitMagentaRedstoneLampBlock.block.getDefaultState();
-					world.setBlockState(_bp, _bs, 3);
+					BlockState _bs = TheWetSmpRehydratedModBlocks.LIT_MAGENTA_REDSTONE_LAMP.defaultBlockState();
+					world.setBlock(_bp, _bs, 3);
 				}
-			} else if (blockstate.getBlock() == PinkRedstoneLampBlock.block) {
+			} else if (blockstate.getBlock() == TheWetSmpRehydratedModBlocks.PINK_REDSTONE_LAMP) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = LitPinkRedstoneLampBlock.block.getDefaultState();
-					world.setBlockState(_bp, _bs, 3);
+					BlockState _bs = TheWetSmpRehydratedModBlocks.LIT_PINK_REDSTONE_LAMP.defaultBlockState();
+					world.setBlock(_bp, _bs, 3);
 				}
-			} else if (blockstate.getBlock() == WhiteRedstoneLampBlock.block) {
+			} else if (blockstate.getBlock() == TheWetSmpRehydratedModBlocks.WHITE_REDSTONE_LAMP) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = LitWhiteRedstoneLampBlock.block.getDefaultState();
-					world.setBlockState(_bp, _bs, 3);
+					BlockState _bs = TheWetSmpRehydratedModBlocks.LIT_WHITE_REDSTONE_LAMP.defaultBlockState();
+					world.setBlock(_bp, _bs, 3);
 				}
-			} else if (blockstate.getBlock() == LightGreyRedstoneLampBlock.block) {
+			} else if (blockstate.getBlock() == TheWetSmpRehydratedModBlocks.LIGHT_GREY_REDSTONE_LAMP) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = LitLightGreyRedstoneLampBlock.block.getDefaultState();
-					world.setBlockState(_bp, _bs, 3);
+					BlockState _bs = TheWetSmpRehydratedModBlocks.LIT_LIGHT_GREY_REDSTONE_LAMP.defaultBlockState();
+					world.setBlock(_bp, _bs, 3);
 				}
-			} else if (blockstate.getBlock() == GreyRedstoneLampBlock.block) {
+			} else if (blockstate.getBlock() == TheWetSmpRehydratedModBlocks.GREY_REDSTONE_LAMP) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = LitGreyRedstoneLampBlock.block.getDefaultState();
-					world.setBlockState(_bp, _bs, 3);
+					BlockState _bs = TheWetSmpRehydratedModBlocks.LIT_GREY_REDSTONE_LAMP.defaultBlockState();
+					world.setBlock(_bp, _bs, 3);
 				}
-			} else if (blockstate.getBlock() == BlackRedstoneLampBlock.block) {
+			} else if (blockstate.getBlock() == TheWetSmpRehydratedModBlocks.BLACK_REDSTONE_LAMP) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = LitBlackRedstoneLampBlock.block.getDefaultState();
-					world.setBlockState(_bp, _bs, 3);
+					BlockState _bs = TheWetSmpRehydratedModBlocks.LIT_BLACK_REDSTONE_LAMP.defaultBlockState();
+					world.setBlock(_bp, _bs, 3);
 				}
-			} else if (blockstate.getBlock() == BrownRedstoneLampBlock.block) {
+			} else if (blockstate.getBlock() == TheWetSmpRehydratedModBlocks.BROWN_REDSTONE_LAMP) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = LitBrownRedstoneLampBlock.block.getDefaultState();
-					world.setBlockState(_bp, _bs, 3);
+					BlockState _bs = TheWetSmpRehydratedModBlocks.LIT_BROWN_REDSTONE_LAMP.defaultBlockState();
+					world.setBlock(_bp, _bs, 3);
 				}
-			} else if (blockstate.getBlock() == SepiaRedstoneLampBlock.block) {
+			} else if (blockstate.getBlock() == TheWetSmpRehydratedModBlocks.SEPIA_REDSTONE_LAMP) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = LitSepiaRedstoneLampBlock.block.getDefaultState();
-					world.setBlockState(_bp, _bs, 3);
+					BlockState _bs = TheWetSmpRehydratedModBlocks.LIT_SEPIA_REDSTONE_LAMP.defaultBlockState();
+					world.setBlock(_bp, _bs, 3);
 				}
 			}
 		} else {
 			new Object() {
 				private int ticks = 0;
 				private float waitTicks;
-				private IWorld world;
+				private LevelAccessor world;
 
-				public void start(IWorld world, int waitTicks) {
+				public void start(LevelAccessor world, int waitTicks) {
 					this.waitTicks = waitTicks;
 					MinecraftForge.EVENT_BUS.register(this);
 					this.world = world;
@@ -206,112 +139,112 @@ public class CustomLampCheckProcedure {
 				}
 
 				private void run() {
-					if (blockstate.getBlock() == LitRedRestoneLampBlock.block) {
+					if (blockstate.getBlock() == TheWetSmpRehydratedModBlocks.LIT_RED_RESTONE_LAMP) {
 						{
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-							BlockState _bs = RedRedstoneLampBlock.block.getDefaultState();
-							world.setBlockState(_bp, _bs, 3);
+							BlockState _bs = TheWetSmpRehydratedModBlocks.RED_REDSTONE_LAMP.defaultBlockState();
+							world.setBlock(_bp, _bs, 3);
 						}
-					} else if (blockstate.getBlock() == LitOrangeRedstoneLampBlock.block) {
+					} else if (blockstate.getBlock() == TheWetSmpRehydratedModBlocks.LIT_ORANGE_REDSTONE_LAMP) {
 						{
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-							BlockState _bs = OrangeRedstoneLampBlock.block.getDefaultState();
-							world.setBlockState(_bp, _bs, 3);
+							BlockState _bs = TheWetSmpRehydratedModBlocks.ORANGE_REDSTONE_LAMP.defaultBlockState();
+							world.setBlock(_bp, _bs, 3);
 						}
-					} else if (blockstate.getBlock() == LitYellowRedstoneLampBlock.block) {
+					} else if (blockstate.getBlock() == TheWetSmpRehydratedModBlocks.LIT_YELLOW_REDSTONE_LAMP) {
 						{
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-							BlockState _bs = YellowRedstoneLampBlock.block.getDefaultState();
-							world.setBlockState(_bp, _bs, 3);
+							BlockState _bs = TheWetSmpRehydratedModBlocks.YELLOW_REDSTONE_LAMP.defaultBlockState();
+							world.setBlock(_bp, _bs, 3);
 						}
-					} else if (blockstate.getBlock() == LitLimeRedstoneLampBlock.block) {
+					} else if (blockstate.getBlock() == TheWetSmpRehydratedModBlocks.LIT_LIME_REDSTONE_LAMP) {
 						{
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-							BlockState _bs = LimeRedstoneLampBlock.block.getDefaultState();
-							world.setBlockState(_bp, _bs, 3);
+							BlockState _bs = TheWetSmpRehydratedModBlocks.LIME_REDSTONE_LAMP.defaultBlockState();
+							world.setBlock(_bp, _bs, 3);
 						}
-					} else if (blockstate.getBlock() == LitGreenRedstoneLampBlock.block) {
+					} else if (blockstate.getBlock() == TheWetSmpRehydratedModBlocks.LIT_GREEN_REDSTONE_LAMP) {
 						{
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-							BlockState _bs = GreenRedstoneLampBlock.block.getDefaultState();
-							world.setBlockState(_bp, _bs, 3);
+							BlockState _bs = TheWetSmpRehydratedModBlocks.GREEN_REDSTONE_LAMP.defaultBlockState();
+							world.setBlock(_bp, _bs, 3);
 						}
-					} else if (blockstate.getBlock() == LitLightBlueRedstoneLampBlock.block) {
+					} else if (blockstate.getBlock() == TheWetSmpRehydratedModBlocks.LIT_LIGHT_BLUE_REDSTONE_LAMP) {
 						{
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-							BlockState _bs = LightBlueRedstoneLampBlock.block.getDefaultState();
-							world.setBlockState(_bp, _bs, 3);
+							BlockState _bs = TheWetSmpRehydratedModBlocks.LIGHT_BLUE_REDSTONE_LAMP.defaultBlockState();
+							world.setBlock(_bp, _bs, 3);
 						}
-					} else if (blockstate.getBlock() == LitCyanRedstoneLampBlock.block) {
+					} else if (blockstate.getBlock() == TheWetSmpRehydratedModBlocks.LIT_CYAN_REDSTONE_LAMP) {
 						{
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-							BlockState _bs = CyanRedstoneLampBlock.block.getDefaultState();
-							world.setBlockState(_bp, _bs, 3);
+							BlockState _bs = TheWetSmpRehydratedModBlocks.CYAN_REDSTONE_LAMP.defaultBlockState();
+							world.setBlock(_bp, _bs, 3);
 						}
-					} else if (blockstate.getBlock() == LitBlueRedstoneLampBlock.block) {
+					} else if (blockstate.getBlock() == TheWetSmpRehydratedModBlocks.LIT_BLUE_REDSTONE_LAMP) {
 						{
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-							BlockState _bs = BlueRedstoneLampBlock.block.getDefaultState();
-							world.setBlockState(_bp, _bs, 3);
+							BlockState _bs = TheWetSmpRehydratedModBlocks.BLUE_REDSTONE_LAMP.defaultBlockState();
+							world.setBlock(_bp, _bs, 3);
 						}
-					} else if (blockstate.getBlock() == LitPurpleRedstoneLampBlock.block) {
+					} else if (blockstate.getBlock() == TheWetSmpRehydratedModBlocks.LIT_PURPLE_REDSTONE_LAMP) {
 						{
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-							BlockState _bs = PurpleRedstoneLampBlock.block.getDefaultState();
-							world.setBlockState(_bp, _bs, 3);
+							BlockState _bs = TheWetSmpRehydratedModBlocks.PURPLE_REDSTONE_LAMP.defaultBlockState();
+							world.setBlock(_bp, _bs, 3);
 						}
-					} else if (blockstate.getBlock() == LitMagentaRedstoneLampBlock.block) {
+					} else if (blockstate.getBlock() == TheWetSmpRehydratedModBlocks.LIT_MAGENTA_REDSTONE_LAMP) {
 						{
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-							BlockState _bs = MagentaRedstoneLampBlock.block.getDefaultState();
-							world.setBlockState(_bp, _bs, 3);
+							BlockState _bs = TheWetSmpRehydratedModBlocks.MAGENTA_REDSTONE_LAMP.defaultBlockState();
+							world.setBlock(_bp, _bs, 3);
 						}
-					} else if (blockstate.getBlock() == LitPinkRedstoneLampBlock.block) {
+					} else if (blockstate.getBlock() == TheWetSmpRehydratedModBlocks.LIT_PINK_REDSTONE_LAMP) {
 						{
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-							BlockState _bs = PinkRedstoneLampBlock.block.getDefaultState();
-							world.setBlockState(_bp, _bs, 3);
+							BlockState _bs = TheWetSmpRehydratedModBlocks.PINK_REDSTONE_LAMP.defaultBlockState();
+							world.setBlock(_bp, _bs, 3);
 						}
-					} else if (blockstate.getBlock() == LitWhiteRedstoneLampBlock.block) {
+					} else if (blockstate.getBlock() == TheWetSmpRehydratedModBlocks.LIT_WHITE_REDSTONE_LAMP) {
 						{
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-							BlockState _bs = WhiteRedstoneLampBlock.block.getDefaultState();
-							world.setBlockState(_bp, _bs, 3);
+							BlockState _bs = TheWetSmpRehydratedModBlocks.WHITE_REDSTONE_LAMP.defaultBlockState();
+							world.setBlock(_bp, _bs, 3);
 						}
-					} else if (blockstate.getBlock() == LitLightGreyRedstoneLampBlock.block) {
+					} else if (blockstate.getBlock() == TheWetSmpRehydratedModBlocks.LIT_LIGHT_GREY_REDSTONE_LAMP) {
 						{
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-							BlockState _bs = LightGreyRedstoneLampBlock.block.getDefaultState();
-							world.setBlockState(_bp, _bs, 3);
+							BlockState _bs = TheWetSmpRehydratedModBlocks.LIGHT_GREY_REDSTONE_LAMP.defaultBlockState();
+							world.setBlock(_bp, _bs, 3);
 						}
-					} else if (blockstate.getBlock() == LitGreyRedstoneLampBlock.block) {
+					} else if (blockstate.getBlock() == TheWetSmpRehydratedModBlocks.LIT_GREY_REDSTONE_LAMP) {
 						{
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-							BlockState _bs = GreyRedstoneLampBlock.block.getDefaultState();
-							world.setBlockState(_bp, _bs, 3);
+							BlockState _bs = TheWetSmpRehydratedModBlocks.GREY_REDSTONE_LAMP.defaultBlockState();
+							world.setBlock(_bp, _bs, 3);
 						}
-					} else if (blockstate.getBlock() == LitBlackRedstoneLampBlock.block) {
+					} else if (blockstate.getBlock() == TheWetSmpRehydratedModBlocks.LIT_BLACK_REDSTONE_LAMP) {
 						{
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-							BlockState _bs = BlackRedstoneLampBlock.block.getDefaultState();
-							world.setBlockState(_bp, _bs, 3);
+							BlockState _bs = TheWetSmpRehydratedModBlocks.BLACK_REDSTONE_LAMP.defaultBlockState();
+							world.setBlock(_bp, _bs, 3);
 						}
-					} else if (blockstate.getBlock() == LitBrownRedstoneLampBlock.block) {
+					} else if (blockstate.getBlock() == TheWetSmpRehydratedModBlocks.LIT_BROWN_REDSTONE_LAMP) {
 						{
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-							BlockState _bs = BrownRedstoneLampBlock.block.getDefaultState();
-							world.setBlockState(_bp, _bs, 3);
+							BlockState _bs = TheWetSmpRehydratedModBlocks.BROWN_REDSTONE_LAMP.defaultBlockState();
+							world.setBlock(_bp, _bs, 3);
 						}
-					} else if (blockstate.getBlock() == LitSepiaRedstoneLampBlock.block) {
+					} else if (blockstate.getBlock() == TheWetSmpRehydratedModBlocks.LIT_SEPIA_REDSTONE_LAMP) {
 						{
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-							BlockState _bs = SepiaRedstoneLampBlock.block.getDefaultState();
-							world.setBlockState(_bp, _bs, 3);
+							BlockState _bs = TheWetSmpRehydratedModBlocks.SEPIA_REDSTONE_LAMP.defaultBlockState();
+							world.setBlock(_bp, _bs, 3);
 						}
 					}
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
-			}.start(world, (int) 4);
+			}.start(world, 4);
 		}
 	}
 }

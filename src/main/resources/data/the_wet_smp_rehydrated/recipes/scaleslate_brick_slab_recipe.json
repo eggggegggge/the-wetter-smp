@@ -2,16 +2,10 @@
   "group": "scaleslatebrickslab",
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "012"
+    "###"
   ],
   "key": {
-    "0": {
-      "item": "the_wet_smp_rehydrated:scaleslate_bricks"
-    },
-    "1": {
-      "item": "the_wet_smp_rehydrated:scaleslate_bricks"
-    },
-    "2": {
+    "#": {
       "item": "the_wet_smp_rehydrated:scaleslate_bricks"
     }
   },

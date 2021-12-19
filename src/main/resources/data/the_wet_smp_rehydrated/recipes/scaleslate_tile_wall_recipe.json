@@ -2,26 +2,11 @@
   "group": "scaleslatetilewall",
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "012",
-    "345"
+    "###",
+    "###"
   ],
   "key": {
-    "0": {
-      "item": "the_wet_smp_rehydrated:scaleslate_tiles"
-    },
-    "1": {
-      "item": "the_wet_smp_rehydrated:scaleslate_tiles"
-    },
-    "2": {
-      "item": "the_wet_smp_rehydrated:scaleslate_tiles"
-    },
-    "3": {
-      "item": "the_wet_smp_rehydrated:scaleslate_tiles"
-    },
-    "4": {
-      "item": "the_wet_smp_rehydrated:scaleslate_tiles"
-    },
-    "5": {
+    "#": {
       "item": "the_wet_smp_rehydrated:scaleslate_tiles"
     }
   },

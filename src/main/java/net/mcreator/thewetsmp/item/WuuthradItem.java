@@ -1,54 +1,41 @@
 
 package net.mcreator.thewetsmp.item;
 
-import net.minecraftforge.registries.ObjectHolder;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.AxeItem;
 
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.item.Items;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.Item;
-import net.minecraft.item.IItemTier;
-import net.minecraft.item.AxeItem;
-
-import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
-
-@TheWetSmpRehydratedModElements.ModElement.Tag
-public class WuuthradItem extends TheWetSmpRehydratedModElements.ModElement {
-	@ObjectHolder("the_wet_smp_rehydrated:wuuthrad")
-	public static final Item block = null;
-
-	public WuuthradItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 555);
-	}
-
-	@Override
-	public void initElements() {
-		elements.items.add(() -> new AxeItem(new IItemTier() {
-			public int getMaxUses() {
+public class WuuthradItem extends AxeItem {
+	public WuuthradItem() {
+		super(new Tier() {
+			public int getUses() {
 				return 1062;
 			}
 
-			public float getEfficiency() {
+			public float getSpeed() {
 				return 10f;
 			}
 
-			public float getAttackDamage() {
+			public float getAttackDamageBonus() {
 				return 2f;
 			}
 
-			public int getHarvestLevel() {
+			public int getLevel() {
 				return 1;
 			}
 
-			public int getEnchantability() {
+			public int getEnchantmentValue() {
 				return 2;
 			}
 
-			public Ingredient getRepairMaterial() {
-				return Ingredient.fromStacks(new ItemStack(Items.IRON_INGOT));
+			public Ingredient getRepairIngredient() {
+				return Ingredient.of(new ItemStack(Items.IRON_INGOT));
 			}
-		}, 1, -2f, new Item.Properties().group(ItemGroup.TOOLS)) {
-		}.setRegistryName("wuuthrad"));
+		}, 1, -2f, new Item.Properties().tab(CreativeModeTab.TAB_TOOLS));
+		setRegistryName("wuuthrad");
 	}
 }

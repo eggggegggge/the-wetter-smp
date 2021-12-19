@@ -3,38 +3,18 @@ package net.mcreator.thewetsmp.procedures;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.CapabilityItemHandler;
 
-import net.minecraft.world.IWorld;
-import net.minecraft.item.ItemStack;
-import net.minecraft.entity.Entity;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.Entity;
 
-import net.mcreator.thewetsmp.item.YellowJellyfishItem;
-import net.mcreator.thewetsmp.item.TreasurePowderItem;
-import net.mcreator.thewetsmp.item.RedJellyfishItem;
-import net.mcreator.thewetsmp.item.PinkJellyfishItem;
-import net.mcreator.thewetsmp.item.JunkPowderItem;
-import net.mcreator.thewetsmp.item.GreenJellyfishItem;
-import net.mcreator.thewetsmp.item.DevSalmonItem;
-import net.mcreator.thewetsmp.item.BlueJellyfishItem;
-import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
+import net.mcreator.thewetsmp.init.TheWetSmpRehydratedModItems;
 
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.Map;
 
 public class BaitCheckProcedure {
-
-	public static double executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure BaitCheck!");
+	public static double execute(LevelAccessor world, Entity entity) {
+		if (entity == null)
 			return 0;
-		}
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure BaitCheck!");
-			return 0;
-		}
-		IWorld world = (IWorld) dependencies.get("world");
-		Entity entity = (Entity) dependencies.get("entity");
 		double bait = 0;
 		bait = (double) 44;
 		{
@@ -43,28 +23,29 @@ public class BaitCheckProcedure {
 			if (_iitemhandlerref.get() != null) {
 				for (int _idx = 0; _idx < _iitemhandlerref.get().getSlots(); _idx++) {
 					ItemStack itemstackiterator = _iitemhandlerref.get().getStackInSlot(_idx).copy();
-					if (itemstackiterator.getItem() == GreenJellyfishItem.block) {
+					if (itemstackiterator.getItem() == TheWetSmpRehydratedModItems.GREEN_JELLYFISH) {
 						if (bait > 29) {
 							bait = (double) 29;
 						}
-					} else if (itemstackiterator.getItem() == BlueJellyfishItem.block) {
+					} else if (itemstackiterator.getItem() == TheWetSmpRehydratedModItems.BLUE_JELLYFISH) {
 						if (bait > 29) {
 							bait = (double) 29;
 						}
-					} else if (itemstackiterator.getItem() == RedJellyfishItem.block) {
+					} else if (itemstackiterator.getItem() == TheWetSmpRehydratedModItems.RED_JELLYFISH) {
 						if (bait > 29) {
 							bait = (double) 29;
 						}
-					} else if (itemstackiterator.getItem() == YellowJellyfishItem.block) {
+					} else if (itemstackiterator.getItem() == TheWetSmpRehydratedModItems.YELLOW_JELLYFISH) {
 						if (bait > 29) {
 							bait = (double) 29;
 						}
-					} else if (itemstackiterator.getItem() == PinkJellyfishItem.block) {
+					} else if (itemstackiterator.getItem() == TheWetSmpRehydratedModItems.PINK_JELLYFISH) {
 						if (bait > 30) {
 							bait = (double) 30;
 						}
-					} else if (itemstackiterator.getItem() == TreasurePowderItem.block || itemstackiterator.getItem() == DevSalmonItem.block
-							|| itemstackiterator.getItem() == JunkPowderItem.block) {
+					} else if (itemstackiterator.getItem() == TheWetSmpRehydratedModItems.TREASURE_POWDER
+							|| itemstackiterator.getItem() == TheWetSmpRehydratedModItems.DEV_SALMON
+							|| itemstackiterator.getItem() == TheWetSmpRehydratedModItems.JUNK_POWDER) {
 						if (bait > 0) {
 							bait = (double) 0;
 						}

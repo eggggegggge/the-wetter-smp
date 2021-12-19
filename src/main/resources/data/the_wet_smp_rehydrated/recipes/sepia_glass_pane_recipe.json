@@ -2,37 +2,16 @@
   "group": "sepiaglasspane",
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "012",
-    "345",
-    "678"
+    "GGG",
+    "GSG",
+    "GGG"
   ],
   "key": {
-    "0": {
+    "G": {
       "item": "minecraft:glass_pane"
     },
-    "1": {
-      "item": "minecraft:glass_pane"
-    },
-    "2": {
-      "item": "minecraft:glass_pane"
-    },
-    "3": {
-      "item": "minecraft:glass_pane"
-    },
-    "4": {
+    "S": {
       "item": "the_wet_smp_rehydrated:sepia_dye"
-    },
-    "5": {
-      "item": "minecraft:glass_pane"
-    },
-    "6": {
-      "item": "minecraft:glass_pane"
-    },
-    "7": {
-      "item": "minecraft:glass_pane"
-    },
-    "8": {
-      "item": "minecraft:glass_pane"
     }
   },
   "result": {

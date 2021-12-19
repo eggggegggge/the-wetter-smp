@@ -2,17 +2,14 @@
   "group": "airvent",
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "012"
+    "IRI"
   ],
   "key": {
-    "0": {
+    "I": {
       "item": "minecraft:iron_ingot"
     },
-    "1": {
+    "R": {
       "item": "minecraft:iron_bars"
-    },
-    "2": {
-      "item": "minecraft:iron_ingot"
     }
   },
   "result": {

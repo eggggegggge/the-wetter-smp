@@ -2,27 +2,12 @@
   "group": "polishedscaleslatestairs",
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "0  ",
-    "34 ",
-    "678"
+    "#  ",
+    "## ",
+    "###"
   ],
   "key": {
-    "0": {
-      "item": "the_wet_smp_rehydrated:polished_scaleslate"
-    },
-    "3": {
-      "item": "the_wet_smp_rehydrated:polished_scaleslate"
-    },
-    "4": {
-      "item": "the_wet_smp_rehydrated:polished_scaleslate"
-    },
-    "6": {
-      "item": "the_wet_smp_rehydrated:polished_scaleslate"
-    },
-    "7": {
-      "item": "the_wet_smp_rehydrated:polished_scaleslate"
-    },
-    "8": {
+    "#": {
       "item": "the_wet_smp_rehydrated:polished_scaleslate"
     }
   },

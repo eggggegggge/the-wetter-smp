@@ -1,74 +1,44 @@
 
 package net.mcreator.thewetsmp.item;
 
-import net.minecraftforge.registries.ObjectHolder;
-
-import net.minecraft.world.World;
-import net.minecraft.item.UseAction;
-import net.minecraft.item.Rarity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.Item;
-import net.minecraft.item.Food;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.LivingEntity;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 
 import net.mcreator.thewetsmp.procedures.RuEatProcedure;
-import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
+import net.mcreator.thewetsmp.init.TheWetSmpRehydratedModItems;
 
-import java.util.stream.Stream;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.AbstractMap;
+public class RubyEmbeddedMushroomStewItem extends Item {
+	public RubyEmbeddedMushroomStewItem() {
+		super(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).stacksTo(1).rarity(Rarity.COMMON)
+				.food((new FoodProperties.Builder()).nutrition(6).saturationMod(7.2f)
 
-@TheWetSmpRehydratedModElements.ModElement.Tag
-public class RubyEmbeddedMushroomStewItem extends TheWetSmpRehydratedModElements.ModElement {
-	@ObjectHolder("the_wet_smp_rehydrated:ruby_embedded_mushroom_stew")
-	public static final Item block = null;
-
-	public RubyEmbeddedMushroomStewItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 55);
+						.build()));
+		setRegistryName("ruby_embedded_mushroom_stew");
 	}
 
 	@Override
-	public void initElements() {
-		elements.items.add(() -> new FoodItemCustom());
-	}
+	public ItemStack finishUsingItem(ItemStack itemstack, Level world, LivingEntity entity) {
+		ItemStack retval = new ItemStack(TheWetSmpRehydratedModItems.RUBY_EMBEDDED_BOWL);
+		super.finishUsingItem(itemstack, world, entity);
+		double x = entity.getX();
+		double y = entity.getY();
+		double z = entity.getZ();
 
-	public static class FoodItemCustom extends Item {
-		public FoodItemCustom() {
-			super(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(1).rarity(Rarity.COMMON)
-					.food((new Food.Builder()).hunger(6).saturation(7.2f)
-
-							.build()));
-			setRegistryName("ruby_embedded_mushroom_stew");
-		}
-
-		@Override
-		public UseAction getUseAction(ItemStack itemstack) {
-			return UseAction.EAT;
-		}
-
-		@Override
-		public ItemStack onItemUseFinish(ItemStack itemstack, World world, LivingEntity entity) {
-			ItemStack retval = new ItemStack(RubyEmbeddedBowlItem.block);
-			super.onItemUseFinish(itemstack, world, entity);
-			double x = entity.getPosX();
-			double y = entity.getPosY();
-			double z = entity.getPosZ();
-
-			RuEatProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
-					(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-			if (itemstack.isEmpty()) {
-				return retval;
-			} else {
-				if (entity instanceof PlayerEntity) {
-					PlayerEntity player = (PlayerEntity) entity;
-					if (!player.isCreative() && !player.inventory.addItemStackToInventory(retval))
-						player.dropItem(retval, false);
-				}
-				return itemstack;
+		RuEatProcedure.execute(entity);
+		if (itemstack.isEmpty()) {
+			return retval;
+		} else {
+			if (entity instanceof Player player && !player.getAbilities().instabuild) {
+				if (!player.getInventory().add(retval))
+					player.drop(retval, false);
 			}
+			return itemstack;
 		}
 	}
 }

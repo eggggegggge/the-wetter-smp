@@ -2,37 +2,16 @@
   "group": "redredstonelamp",
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "012",
-    "345",
-    "678"
+    "RRR",
+    "RYR",
+    "RRR"
   ],
   "key": {
-    "0": {
+    "R": {
       "item": "minecraft:redstone_lamp"
     },
-    "1": {
-      "item": "minecraft:redstone_lamp"
-    },
-    "2": {
-      "item": "minecraft:redstone_lamp"
-    },
-    "3": {
-      "item": "minecraft:redstone_lamp"
-    },
-    "4": {
+    "Y": {
       "item": "minecraft:yellow_dye"
-    },
-    "5": {
-      "item": "minecraft:redstone_lamp"
-    },
-    "6": {
-      "item": "minecraft:redstone_lamp"
-    },
-    "7": {
-      "item": "minecraft:redstone_lamp"
-    },
-    "8": {
-      "item": "minecraft:redstone_lamp"
     }
   },
   "result": {

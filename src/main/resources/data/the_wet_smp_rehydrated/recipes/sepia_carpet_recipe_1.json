@@ -2,13 +2,10 @@
   "group": "sepiacarpet",
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "01"
+    "##"
   ],
   "key": {
-    "0": {
-      "item": "the_wet_smp_rehydrated:sepia_wool"
-    },
-    "1": {
+    "#": {
       "item": "the_wet_smp_rehydrated:sepia_wool"
     }
   },

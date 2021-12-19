@@ -5,52 +5,26 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
-import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.state.Property;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.BlockState;
-
-import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
+import net.minecraft.world.level.block.state.properties.Property;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.BlockPos;
+import net.minecraft.client.Minecraft;
 
 import java.util.Map;
 
 public class AquamarineConstructTickProcedure {
-
-	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure AquamarineConstructTick!");
-			return;
-		}
-		if (dependencies.get("x") == null) {
-			if (!dependencies.containsKey("x"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency x for procedure AquamarineConstructTick!");
-			return;
-		}
-		if (dependencies.get("y") == null) {
-			if (!dependencies.containsKey("y"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency y for procedure AquamarineConstructTick!");
-			return;
-		}
-		if (dependencies.get("z") == null) {
-			if (!dependencies.containsKey("z"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency z for procedure AquamarineConstructTick!");
-			return;
-		}
-		IWorld world = (IWorld) dependencies.get("world");
-		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
-		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
-		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
+	public static void execute(LevelAccessor world, double x, double y, double z) {
 		new Object() {
 			private int ticks = 0;
 			private float waitTicks;
-			private IWorld world;
+			private LevelAccessor world;
 
-			public void start(IWorld world, int waitTicks) {
+			public void start(LevelAccessor world, int waitTicks) {
 				this.waitTicks = waitTicks;
 				MinecraftForge.EVENT_BUS.register(this);
 				this.world = world;
@@ -68,29 +42,23 @@ public class AquamarineConstructTickProcedure {
 			private void run() {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = Blocks.AIR.getDefaultState();
+					BlockState _bs = Blocks.AIR.defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-						Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
-						if (_property != null && _bs.get(_property) != null)
+						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+						if (_property != null && _bs.getValue(_property) != null)
 							try {
-								_bs = _bs.with(_property, (Comparable) entry.getValue());
+								_bs = _bs.setValue(_property, (Comparable) entry.getValue());
 							} catch (Exception e) {
 							}
 					}
-					world.setBlockState(_bp, _bs, 3);
+					world.setBlock(_bp, _bs, 3);
 				}
-				if (world instanceof World && !world.isRemote()) {
-					((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.bone_block.break")),
-							SoundCategory.BLOCKS, (float) 1, (float) 1);
-				} else {
-					((World) world).playSound(x, y, z,
-							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.bone_block.break")),
-							SoundCategory.BLOCKS, (float) 1, (float) 1, false);
-				}
+				if (world instanceof Level _level)
+					_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
+							ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.bone_block.break")), SoundSource.BLOCKS, 1, 1);
 				MinecraftForge.EVENT_BUS.unregister(this);
 			}
-		}.start(world, (int) 20);
+		}.start(world, 20);
 	}
 }

@@ -3,39 +3,19 @@ package net.mcreator.thewetsmp.procedures;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.CapabilityItemHandler;
 
-import net.minecraft.world.IWorld;
-import net.minecraft.item.ItemStack;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.Entity;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Entity;
 
-import net.mcreator.thewetsmp.item.YellowJellyfishItem;
-import net.mcreator.thewetsmp.item.RedJellyfishItem;
-import net.mcreator.thewetsmp.item.PinkJellyfishItem;
-import net.mcreator.thewetsmp.item.GreenJellyfishItem;
-import net.mcreator.thewetsmp.item.BlueJellyfishItem;
-import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
+import net.mcreator.thewetsmp.init.TheWetSmpRehydratedModItems;
 
-import java.util.stream.Stream;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.AbstractMap;
 
 public class RemoveBaitProcedure {
-
-	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure RemoveBait!");
+	public static void execute(LevelAccessor world, Entity entity) {
+		if (entity == null)
 			return;
-		}
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure RemoveBait!");
-			return;
-		}
-		IWorld world = (IWorld) dependencies.get("world");
-		Entity entity = (Entity) dependencies.get("entity");
 		ItemStack removal = ItemStack.EMPTY;
 		double bait = 0;
 		double sel = 0;
@@ -43,8 +23,7 @@ public class RemoveBaitProcedure {
 		double luck = 0;
 		bait = (double) 100;
 		sel = (double) 2;
-		luck = (double) LuckCheckProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
-				(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+		luck = (double) LuckCheckProcedure.execute(entity);
 		if (luck > 1) {
 			sel = (double) 4;
 		} else if (luck < 0) {
@@ -57,40 +36,40 @@ public class RemoveBaitProcedure {
 			if (_iitemhandlerref.get() != null) {
 				for (int _idx = 0; _idx < _iitemhandlerref.get().getSlots(); _idx++) {
 					ItemStack itemstackiterator = _iitemhandlerref.get().getStackInSlot(_idx).copy();
-					if (itemstackiterator.getItem() == GreenJellyfishItem.block) {
+					if (itemstackiterator.getItem() == TheWetSmpRehydratedModItems.GREEN_JELLYFISH) {
 						if (bait > 49) {
 							bait = (double) 49;
-							removal = new ItemStack(GreenJellyfishItem.block);
+							removal = new ItemStack(TheWetSmpRehydratedModItems.GREEN_JELLYFISH);
 						}
-					} else if (itemstackiterator.getItem() == BlueJellyfishItem.block) {
+					} else if (itemstackiterator.getItem() == TheWetSmpRehydratedModItems.BLUE_JELLYFISH) {
 						if (bait > 49) {
 							bait = (double) 49;
-							removal = new ItemStack(BlueJellyfishItem.block);
+							removal = new ItemStack(TheWetSmpRehydratedModItems.BLUE_JELLYFISH);
 						}
-					} else if (itemstackiterator.getItem() == RedJellyfishItem.block) {
+					} else if (itemstackiterator.getItem() == TheWetSmpRehydratedModItems.RED_JELLYFISH) {
 						if (bait > 49) {
 							bait = (double) 49;
-							removal = new ItemStack(RedJellyfishItem.block);
+							removal = new ItemStack(TheWetSmpRehydratedModItems.RED_JELLYFISH);
 						}
-					} else if (itemstackiterator.getItem() == YellowJellyfishItem.block) {
+					} else if (itemstackiterator.getItem() == TheWetSmpRehydratedModItems.YELLOW_JELLYFISH) {
 						if (bait > 49) {
 							bait = (double) 49;
-							removal = new ItemStack(YellowJellyfishItem.block);
+							removal = new ItemStack(TheWetSmpRehydratedModItems.YELLOW_JELLYFISH);
 						}
-					} else if (itemstackiterator.getItem() == PinkJellyfishItem.block) {
+					} else if (itemstackiterator.getItem() == TheWetSmpRehydratedModItems.PINK_JELLYFISH) {
 						if (bait > 50) {
 							bait = (double) 50;
-							removal = new ItemStack(PinkJellyfishItem.block);
+							removal = new ItemStack(TheWetSmpRehydratedModItems.PINK_JELLYFISH);
 						}
 					}
 				}
 			}
 		}
 		if (rngesus == 0) {
-			if (entity instanceof PlayerEntity) {
+			if (entity instanceof Player _player) {
 				ItemStack _stktoremove = (removal);
-				((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
-						((PlayerEntity) entity).container.func_234641_j_());
+				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
+						_player.inventoryMenu.getCraftSlots());
 			}
 		}
 	}

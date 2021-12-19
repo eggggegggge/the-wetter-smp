@@ -5,204 +5,126 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
-import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.entity.Entity;
-import net.minecraft.block.BlockState;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.BlockPos;
+import net.minecraft.client.Minecraft;
 
-import net.mcreator.thewetsmp.block.AquamarineGlassBlock;
-import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
-
-import java.util.stream.Stream;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.AbstractMap;
+import net.mcreator.thewetsmp.init.TheWetSmpRehydratedModBlocks;
 
 public class BufferOnBlockRightClickedProcedure {
-
-	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure BufferOnBlockRightClicked!");
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+		if (entity == null)
 			return;
-		}
-		if (dependencies.get("x") == null) {
-			if (!dependencies.containsKey("x"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency x for procedure BufferOnBlockRightClicked!");
-			return;
-		}
-		if (dependencies.get("y") == null) {
-			if (!dependencies.containsKey("y"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency y for procedure BufferOnBlockRightClicked!");
-			return;
-		}
-		if (dependencies.get("z") == null) {
-			if (!dependencies.containsKey("z"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency z for procedure BufferOnBlockRightClicked!");
-			return;
-		}
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure BufferOnBlockRightClicked!");
-			return;
-		}
-		IWorld world = (IWorld) dependencies.get("world");
-		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
-		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
-		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		Entity entity = (Entity) dependencies.get("entity");
 		boolean latency = false;
 		boolean no = false;
 		if (!((new Object() {
-			public boolean getValue(IWorld world, BlockPos pos, String tag) {
-				TileEntity tileEntity = world.getTileEntity(pos);
-				if (tileEntity != null)
-					return tileEntity.getTileData().getBoolean(tag);
+			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+				BlockEntity blockEntity = world.getBlockEntity(pos);
+				if (blockEntity != null)
+					return blockEntity.getTileData().getBoolean(tag);
 				return false;
 			}
 		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "cooldown")) == true)) {
 			if ((entity.getDisplayName().getString()).equals(new Object() {
-				public String getValue(IWorld world, BlockPos pos, String tag) {
-					TileEntity tileEntity = world.getTileEntity(pos);
-					if (tileEntity != null)
-						return tileEntity.getTileData().getString(tag);
+				public String getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getTileData().getString(tag);
 					return "";
 				}
 			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "owner"))) {
-				if ((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == AquamarineGlassBlock.block) {
-					if ((world.getBlockState(new BlockPos((int) x, (int) (y - 2), (int) z))).getBlock() == AquamarineGlassBlock.block) {
+				if ((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z)))
+						.getBlock() == TheWetSmpRehydratedModBlocks.AQUAMARINE_GLASS) {
+					if ((world.getBlockState(new BlockPos((int) x, (int) (y - 2), (int) z)))
+							.getBlock() == TheWetSmpRehydratedModBlocks.AQUAMARINE_GLASS) {
 						if ((new Object() {
-							public boolean getValue(IWorld world, BlockPos pos, String tag) {
-								TileEntity tileEntity = world.getTileEntity(pos);
-								if (tileEntity != null)
-									return tileEntity.getTileData().getBoolean(tag);
+							public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+								BlockEntity blockEntity = world.getBlockEntity(pos);
+								if (blockEntity != null)
+									return blockEntity.getTileData().getBoolean(tag);
 								return false;
 							}
 						}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "latencyLoaded")) == false) {
-							if (!world.isRemote()) {
+							if (!world.isClientSide()) {
 								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-								TileEntity _tileEntity = world.getTileEntity(_bp);
+								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_tileEntity != null)
-									_tileEntity.getTileData().putBoolean("latencyLoaded", (true));
-								if (world instanceof World)
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+								if (_blockEntity != null)
+									_blockEntity.getTileData().putBoolean("latencyLoaded", (true));
+								if (world instanceof Level _level)
+									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
-							if (!world.isRemote()) {
+							if (!world.isClientSide()) {
 								BlockPos _bp = new BlockPos((int) x, (int) (y - 1), (int) z);
-								TileEntity _tileEntity = world.getTileEntity(_bp);
+								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_tileEntity != null)
-									_tileEntity.getTileData().putBoolean("latencyLoaded", (true));
-								if (world instanceof World)
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+								if (_blockEntity != null)
+									_blockEntity.getTileData().putBoolean("latencyLoaded", (true));
+								if (world instanceof Level _level)
+									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
-							if (!world.isRemote()) {
+							if (!world.isClientSide()) {
 								BlockPos _bp = new BlockPos((int) x, (int) (y - 2), (int) z);
-								TileEntity _tileEntity = world.getTileEntity(_bp);
+								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_tileEntity != null)
-									_tileEntity.getTileData().putBoolean("latencyLoaded", (true));
-								if (world instanceof World)
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+								if (_blockEntity != null)
+									_blockEntity.getTileData().putBoolean("latencyLoaded", (true));
+								if (world instanceof Level _level)
+									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
-							if (world instanceof World && !world.isRemote()) {
-								((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-												.getValue(new ResourceLocation("the_wet_smp_rehydrated:buffer.new_latency")),
-										SoundCategory.NEUTRAL, (float) 0.1, (float) 1);
-							} else {
-								((World) world).playSound(x, y, z,
-										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-												.getValue(new ResourceLocation("the_wet_smp_rehydrated:buffer.new_latency")),
-										SoundCategory.NEUTRAL, (float) 0.1, (float) 1, false);
-							}
-							Y4StoreInfoProcedure.executeProcedure(Stream
-									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
-											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
-									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-
-							Y3StoreInfoProcedure.executeProcedure(Stream
-									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
-											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
-									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-
-							Y2StoreInfoProcedure.executeProcedure(Stream
-									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
-											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
-									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-
-							Y1StoreInfoProcedure.executeProcedure(Stream
-									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
-											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
-									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-
-							Y0StoreInfoProcedure.executeProcedure(Stream
-									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
-											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
-									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-
-							YN1StoreInfoProcedure.executeProcedure(Stream
-									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
-											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
-									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-
-							YN2StoreInfoProcedure.executeProcedure(Stream
-									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
-											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
-									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-
-							YN3StoreInfoProcedure.executeProcedure(Stream
-									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
-											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
-									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-
-							YN4StoreInfoProcedure.executeProcedure(Stream
-									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
-											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
-									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-
-							ZN3StoreInfoProcedure.executeProcedure(Stream
-									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
-											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
-									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-							if (!world.isRemote()) {
+							if (world instanceof Level _level)
+								_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
+										ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("the_wet_smp_rehydrated:buffer.new_latency")),
+										SoundSource.NEUTRAL, (float) 0.1, 1);
+							Y4StoreInfoProcedure.execute(world, x, y, z);
+							Y3StoreInfoProcedure.execute(world, x, y, z);
+							Y2StoreInfoProcedure.execute(world, x, y, z);
+							Y1StoreInfoProcedure.execute(world, x, y, z);
+							Y0StoreInfoProcedure.execute(world, x, y, z);
+							YN1StoreInfoProcedure.execute(world, x, y, z);
+							YN2StoreInfoProcedure.execute(world, x, y, z);
+							YN3StoreInfoProcedure.execute(world, x, y, z);
+							YN4StoreInfoProcedure.execute(world, x, y, z);
+							ZN3StoreInfoProcedure.execute(world, x, y, z);
+							if (!world.isClientSide()) {
 								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-								TileEntity _tileEntity = world.getTileEntity(_bp);
+								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_tileEntity != null)
-									_tileEntity.getTileData().putBoolean("cooldown", (true));
-								if (world instanceof World)
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+								if (_blockEntity != null)
+									_blockEntity.getTileData().putBoolean("cooldown", (true));
+								if (world instanceof Level _level)
+									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
-							if (!world.isRemote()) {
+							if (!world.isClientSide()) {
 								BlockPos _bp = new BlockPos((int) x, (int) (y - 1), (int) z);
-								TileEntity _tileEntity = world.getTileEntity(_bp);
+								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_tileEntity != null)
-									_tileEntity.getTileData().putBoolean("cooldown", (true));
-								if (world instanceof World)
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+								if (_blockEntity != null)
+									_blockEntity.getTileData().putBoolean("cooldown", (true));
+								if (world instanceof Level _level)
+									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
-							if (!world.isRemote()) {
+							if (!world.isClientSide()) {
 								BlockPos _bp = new BlockPos((int) x, (int) (y - 2), (int) z);
-								TileEntity _tileEntity = world.getTileEntity(_bp);
+								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_tileEntity != null)
-									_tileEntity.getTileData().putBoolean("cooldown", (true));
-								if (world instanceof World)
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+								if (_blockEntity != null)
+									_blockEntity.getTileData().putBoolean("cooldown", (true));
+								if (world instanceof Level _level)
+									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
 							new Object() {
 								private int ticks = 0;
 								private float waitTicks;
-								private IWorld world;
+								private LevelAccessor world;
 
-								public void start(IWorld world, int waitTicks) {
+								public void start(LevelAccessor world, int waitTicks) {
 									this.waitTicks = waitTicks;
 									MinecraftForge.EVENT_BUS.register(this);
 									this.world = world;
@@ -218,149 +140,90 @@ public class BufferOnBlockRightClickedProcedure {
 								}
 
 								private void run() {
-									if (!world.isRemote()) {
+									if (!world.isClientSide()) {
 										BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-										TileEntity _tileEntity = world.getTileEntity(_bp);
+										BlockEntity _blockEntity = world.getBlockEntity(_bp);
 										BlockState _bs = world.getBlockState(_bp);
-										if (_tileEntity != null)
-											_tileEntity.getTileData().putBoolean("cooldown", (false));
-										if (world instanceof World)
-											((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+										if (_blockEntity != null)
+											_blockEntity.getTileData().putBoolean("cooldown", (false));
+										if (world instanceof Level _level)
+											_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 									}
-									if (!world.isRemote()) {
+									if (!world.isClientSide()) {
 										BlockPos _bp = new BlockPos((int) x, (int) (y - 1), (int) z);
-										TileEntity _tileEntity = world.getTileEntity(_bp);
+										BlockEntity _blockEntity = world.getBlockEntity(_bp);
 										BlockState _bs = world.getBlockState(_bp);
-										if (_tileEntity != null)
-											_tileEntity.getTileData().putBoolean("cooldown", (false));
-										if (world instanceof World)
-											((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+										if (_blockEntity != null)
+											_blockEntity.getTileData().putBoolean("cooldown", (false));
+										if (world instanceof Level _level)
+											_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 									}
-									if (world instanceof World && !world.isRemote()) {
-										((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-												(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-														.getValue(new ResourceLocation("block.note_block.chime")),
-												SoundCategory.NEUTRAL, (float) 1, (float) 1);
-									} else {
-										((World) world).playSound(x, y, z,
-												(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-														.getValue(new ResourceLocation("block.note_block.chime")),
-												SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-									}
-									if (!world.isRemote()) {
+									if (world instanceof Level _level)
+										_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
+												ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.chime")),
+												SoundSource.NEUTRAL, 1, 1);
+									if (!world.isClientSide()) {
 										BlockPos _bp = new BlockPos((int) x, (int) (y - 2), (int) z);
-										TileEntity _tileEntity = world.getTileEntity(_bp);
+										BlockEntity _blockEntity = world.getBlockEntity(_bp);
 										BlockState _bs = world.getBlockState(_bp);
-										if (_tileEntity != null)
-											_tileEntity.getTileData().putBoolean("cooldown", (false));
-										if (world instanceof World)
-											((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+										if (_blockEntity != null)
+											_blockEntity.getTileData().putBoolean("cooldown", (false));
+										if (world instanceof Level _level)
+											_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 									}
 									MinecraftForge.EVENT_BUS.unregister(this);
 								}
-							}.start(world, (int) 160);
+							}.start(world, 160);
 						} else {
-							if (!world.isRemote()) {
+							if (!world.isClientSide()) {
 								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-								TileEntity _tileEntity = world.getTileEntity(_bp);
+								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_tileEntity != null)
-									_tileEntity.getTileData().putBoolean("latencyLoaded", (false));
-								if (world instanceof World)
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+								if (_blockEntity != null)
+									_blockEntity.getTileData().putBoolean("latencyLoaded", (false));
+								if (world instanceof Level _level)
+									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
-							if (!world.isRemote()) {
+							if (!world.isClientSide()) {
 								BlockPos _bp = new BlockPos((int) x, (int) (y - 1), (int) z);
-								TileEntity _tileEntity = world.getTileEntity(_bp);
+								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_tileEntity != null)
-									_tileEntity.getTileData().putBoolean("latencyLoaded", (false));
-								if (world instanceof World)
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+								if (_blockEntity != null)
+									_blockEntity.getTileData().putBoolean("latencyLoaded", (false));
+								if (world instanceof Level _level)
+									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
-							if (!world.isRemote()) {
+							if (!world.isClientSide()) {
 								BlockPos _bp = new BlockPos((int) x, (int) (y - 2), (int) z);
-								TileEntity _tileEntity = world.getTileEntity(_bp);
+								BlockEntity _blockEntity = world.getBlockEntity(_bp);
 								BlockState _bs = world.getBlockState(_bp);
-								if (_tileEntity != null)
-									_tileEntity.getTileData().putBoolean("latencyLoaded", (false));
-								if (world instanceof World)
-									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+								if (_blockEntity != null)
+									_blockEntity.getTileData().putBoolean("latencyLoaded", (false));
+								if (world instanceof Level _level)
+									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
-							if (world instanceof World && !world.isRemote()) {
-								((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-												.getValue(new ResourceLocation("the_wet_smp_rehydrated:buffer.latency")),
-										SoundCategory.NEUTRAL, (float) 0.1, (float) 1);
-							} else {
-								((World) world).playSound(x, y, z,
-										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-												.getValue(new ResourceLocation("the_wet_smp_rehydrated:buffer.latency")),
-										SoundCategory.NEUTRAL, (float) 0.1, (float) 1, false);
-							}
-							BuildLatencyProcedure.executeProcedure(Stream
-									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
-											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
-									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-
-							BuildLatency2Procedure.executeProcedure(Stream
-									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
-											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
-									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-
-							BuildLatency3Procedure.executeProcedure(Stream
-									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
-											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
-									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-
-							BuildLatency4Procedure.executeProcedure(Stream
-									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
-											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
-									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-
-							BuildLatency5Procedure.executeProcedure(Stream
-									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
-											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
-									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-
-							BuildLatency6Procedure.executeProcedure(Stream
-									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
-											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
-									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-
-							BuildLatency7Procedure.executeProcedure(Stream
-									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
-											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
-									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-
-							BuildLatency8Procedure.executeProcedure(Stream
-									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
-											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
-									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-
-							BuildLatency9Procedure.executeProcedure(Stream
-									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
-											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
-									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-
-							BuildLatency10Procedure.executeProcedure(Stream
-									.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
-											new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
-									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+							if (world instanceof Level _level)
+								_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
+										ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("the_wet_smp_rehydrated:buffer.latency")),
+										SoundSource.NEUTRAL, (float) 0.1, 1);
+							BuildLatencyProcedure.execute(world, x, y, z);
+							BuildLatency2Procedure.execute(world, x, y, z);
+							BuildLatency3Procedure.execute(world, x, y, z);
+							BuildLatency4Procedure.execute(world, x, y, z);
+							BuildLatency5Procedure.execute(world, x, y, z);
+							BuildLatency6Procedure.execute(world, x, y, z);
+							BuildLatency7Procedure.execute(world, x, y, z);
+							BuildLatency8Procedure.execute(world, x, y, z);
+							BuildLatency9Procedure.execute(world, x, y, z);
+							BuildLatency10Procedure.execute(world, x, y, z);
 						}
 					}
 				}
 			}
 		} else {
-			if (world instanceof World && !world.isRemote()) {
-				((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.chest.locked")),
-						SoundCategory.NEUTRAL, (float) 1, (float) 1);
-			} else {
-				((World) world).playSound(x, y, z,
-						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.chest.locked")),
-						SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-			}
+			if (world instanceof Level _level)
+				_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
+						ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.chest.locked")), SoundSource.NEUTRAL, 1, 1);
 		}
 	}
 }

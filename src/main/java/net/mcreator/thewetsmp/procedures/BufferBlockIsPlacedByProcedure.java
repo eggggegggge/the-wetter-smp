@@ -1,112 +1,68 @@
 package net.mcreator.thewetsmp.procedures;
 
-import net.minecraft.world.server.ServerWorld;
-import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.math.vector.Vector3d;
-import net.minecraft.util.math.vector.Vector2f;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.AxisAlignedBB;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.entity.SpawnReason;
-import net.minecraft.entity.MobEntity;
-import net.minecraft.entity.ILivingEntityData;
-import net.minecraft.entity.Entity;
-import net.minecraft.command.ICommandSource;
-import net.minecraft.command.CommandSource;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Block;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.Vec2;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.core.BlockPos;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSource;
 
+import net.mcreator.thewetsmp.init.TheWetSmpRehydratedModEntities;
 import net.mcreator.thewetsmp.entity.BufferBlockRemovalEntity;
-import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
-
-import java.util.function.Function;
-import java.util.Map;
-import java.util.Comparator;
 
 public class BufferBlockIsPlacedByProcedure {
-
-	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure BufferBlockIsPlacedBy!");
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+		if (entity == null)
 			return;
-		}
-		if (dependencies.get("x") == null) {
-			if (!dependencies.containsKey("x"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency x for procedure BufferBlockIsPlacedBy!");
-			return;
-		}
-		if (dependencies.get("y") == null) {
-			if (!dependencies.containsKey("y"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency y for procedure BufferBlockIsPlacedBy!");
-			return;
-		}
-		if (dependencies.get("z") == null) {
-			if (!dependencies.containsKey("z"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency z for procedure BufferBlockIsPlacedBy!");
-			return;
-		}
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure BufferBlockIsPlacedBy!");
-			return;
-		}
-		IWorld world = (IWorld) dependencies.get("world");
-		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
-		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
-		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		Entity entity = (Entity) dependencies.get("entity");
 		String name = "";
-		if (((Entity) world
-				.getEntitiesWithinAABB(BufferBlockRemovalEntity.CustomEntity.class,
-						new AxisAlignedBB(x - (18 / 2d), y - (18 / 2d), z - (18 / 2d), x + (18 / 2d), y + (18 / 2d), z + (18 / 2d)), null)
-				.stream().sorted(new Object() {
-					Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-						return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
-					}
-				}.compareDistOf(x, y, z)).findFirst().orElse(null)) != null) {
-			if (world instanceof World) {
-				Block.spawnDrops(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (World) world,
+		if (!world.getEntitiesOfClass(BufferBlockRemovalEntity.class, AABB.ofSize(new Vec3(x, y, z), 18, 18, 18), e -> true).isEmpty()) {
+			if (world instanceof Level) {
+				Block.dropResources(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), (Level) world,
 						new BlockPos((int) x, (int) y, (int) z));
 				world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
 			}
 		} else {
 			name = (String) (entity.getDisplayName().getString());
-			if (!world.isRemote()) {
+			if (!world.isClientSide()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-				TileEntity _tileEntity = world.getTileEntity(_bp);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
-				if (_tileEntity != null)
-					_tileEntity.getTileData().putString("owner", name);
-				if (world instanceof World)
-					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+				if (_blockEntity != null)
+					_blockEntity.getTileData().putString("owner", name);
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			if (world instanceof ServerWorld) {
-				Entity entityToSpawn = new BufferBlockRemovalEntity.CustomEntity(BufferBlockRemovalEntity.entity, (World) world);
-				entityToSpawn.setLocationAndAngles((x + 0.5), y, (z + 0.5), (float) 0, (float) 0);
-				entityToSpawn.setRenderYawOffset((float) 0);
-				entityToSpawn.setRotationYawHead((float) 0);
-				entityToSpawn.setMotion(0, 0, 0);
-				if (entityToSpawn instanceof MobEntity)
-					((MobEntity) entityToSpawn).onInitialSpawn((ServerWorld) world, world.getDifficultyForLocation(entityToSpawn.getPosition()),
-							SpawnReason.MOB_SUMMONED, (ILivingEntityData) null, (CompoundNBT) null);
-				world.addEntity(entityToSpawn);
+			if (world instanceof ServerLevel _level) {
+				Entity entityToSpawn = new BufferBlockRemovalEntity(TheWetSmpRehydratedModEntities.BUFFER_BLOCK_REMOVAL, _level);
+				entityToSpawn.moveTo((x + 0.5), y, (z + 0.5), 0, 0);
+				entityToSpawn.setYBodyRot(0);
+				entityToSpawn.setYHeadRot(0);
+				entityToSpawn.setDeltaMovement(0, 0, 0);
+				if (entityToSpawn instanceof Mob _mobToSpawn)
+					_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null,
+							null);
+				world.addFreshEntity(entityToSpawn);
 			}
-			if (world instanceof ServerWorld) {
-				((World) world).getServer().getCommandManager().handleCommand(
-						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
-								new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performCommand(
+						new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
+								_level.getServer(), null).withSuppressedOutput(),
 						"data modify entity @e[type=the_wet_smp:buffer_block_removal,limit=1,sort=nearest] PersistenceRequired set value 1");
-			}
-			if (world instanceof ServerWorld) {
-				((World) world).getServer().getCommandManager().handleCommand(
-						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
-								new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performCommand(
+						new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
+								_level.getServer(), null).withSuppressedOutput(),
 						"data modify entity @e[type=the_wet_smp:buffer_block_removal,limit=1,sort=nearest] Invulnerable set value 1");
-			}
 		}
 	}
 }

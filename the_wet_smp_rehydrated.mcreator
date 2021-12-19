@@ -7698,40 +7698,6 @@
       "path": "~/Procedures/Fishing/Fish"
     },
     {
-      "name": "DetermineBiome",
-      "type": "procedure",
-      "sortid": 493,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "determine_biome",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Fishing"
-    },
-    {
       "name": "BufferBlaster",
       "type": "rangeditem",
       "sortid": 494,
@@ -9538,6 +9504,278 @@
       "ids": {},
       "registry_name": "lush_cave_treasure",
       "path": "~/Loot Tables"
+    },
+    {
+      "name": "DetermineAllBiomes",
+      "type": "procedure",
+      "sortid": 671,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "determine_all_biomes",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Fishing"
+    },
+    {
+      "name": "DetermineBiomes1",
+      "type": "procedure",
+      "sortid": 672,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "determine_biomes_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Fishing"
+    },
+    {
+      "name": "DripstoneCavesFish",
+      "type": "procedure",
+      "sortid": 673,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dripstone_caves_fish",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Fishing/Fish"
+    },
+    {
+      "name": "LushCavesFish",
+      "type": "procedure",
+      "sortid": 674,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "lush_caves_fish",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Fishing/Fish"
+    },
+    {
+      "name": "DetermineBiomes2",
+      "type": "procedure",
+      "sortid": 673,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "determine_biomes_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Fishing"
+    },
+    {
+      "name": "DetermineBiomes3",
+      "type": "procedure",
+      "sortid": 675,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "determine_biomes_3",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Fishing"
+    },
+    {
+      "name": "DetermineBiomes4",
+      "type": "procedure",
+      "sortid": 676,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "determine_biomes_4",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Fishing"
+    },
+    {
+      "name": "DetermineBiomes5",
+      "type": "procedure",
+      "sortid": 677,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "determine_biomes_5",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Fishing"
     }
   ],
   "variable_elements": [
@@ -10304,10 +10542,10 @@
   "workspaceSettings": {
     "modid": "the_wet_smp_rehydrated",
     "modName": "The Wet SMP Rehydrated",
-    "version": "development version",
-    "description": "andy i compiled this for you please don\u0027t leak it",
+    "version": "1.0.0",
+    "description": "its the moist multiplayer incident",
     "author": "the fun gang",
-    "websiteURL": "https://www.youtube.com/",
+    "websiteURL": "https://www.google.com",
     "license": "Custom license",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
@@ -10316,8 +10554,8 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
-    "currentGenerator": "forge-1.16.5",
-    "credits": "the fun gang \u0026 andy",
+    "currentGenerator": "forge-1.17.1",
+    "credits": "the fun gang",
     "modElementsPackage": "net.mcreator.thewetsmp",
     "lockBaseModFiles": false
   },

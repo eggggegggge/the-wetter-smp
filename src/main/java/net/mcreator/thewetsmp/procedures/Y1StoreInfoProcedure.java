@@ -3,49 +3,20 @@ package net.mcreator.thewetsmp.procedures;
 import net.minecraftforge.items.IItemHandlerModifiable;
 import net.minecraftforge.items.CapabilityItemHandler;
 
-import net.minecraft.world.IWorld;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.item.ItemStack;
-
-import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
-
-import java.util.Map;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.core.BlockPos;
 
 public class Y1StoreInfoProcedure {
-
-	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure Y1StoreInfo!");
-			return;
-		}
-		if (dependencies.get("x") == null) {
-			if (!dependencies.containsKey("x"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency x for procedure Y1StoreInfo!");
-			return;
-		}
-		if (dependencies.get("y") == null) {
-			if (!dependencies.containsKey("y"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency y for procedure Y1StoreInfo!");
-			return;
-		}
-		if (dependencies.get("z") == null) {
-			if (!dependencies.containsKey("z"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency z for procedure Y1StoreInfo!");
-			return;
-		}
-		IWorld world = (IWorld) dependencies.get("world");
-		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
-		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
-		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
+	public static void execute(LevelAccessor world, double x, double y, double z) {
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (243);
+				final int _sltid = 243;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x + 4), (int) (y + 1), (int) (z + 4)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -54,12 +25,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (244);
+				final int _sltid = 244;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x + 3), (int) (y + 1), (int) (z + 4)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -68,12 +39,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (245);
+				final int _sltid = 245;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x + 2), (int) (y + 1), (int) (z + 4)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -82,12 +53,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (246);
+				final int _sltid = 246;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 1), (int) (z + 4)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -96,11 +67,11 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (247);
+				final int _sltid = 247;
 				final ItemStack _setstack = (new ItemStack((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) (z + 4)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -109,12 +80,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (248);
+				final int _sltid = 248;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) (z + 4)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -123,12 +94,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (249);
+				final int _sltid = 249;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x - 2), (int) (y + 1), (int) (z + 4)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -137,12 +108,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (250);
+				final int _sltid = 250;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x - 3), (int) (y + 1), (int) (z + 4)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -151,12 +122,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (251);
+				final int _sltid = 251;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x - 4), (int) (y + 1), (int) (z + 4)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -165,12 +136,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (252);
+				final int _sltid = 252;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x + 4), (int) (y + 1), (int) (z + 3)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -179,12 +150,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (253);
+				final int _sltid = 253;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x + 3), (int) (y + 1), (int) (z + 3)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -193,12 +164,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (254);
+				final int _sltid = 254;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x + 2), (int) (y + 1), (int) (z + 3)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -207,12 +178,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) y, (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (255);
+				final int _sltid = 255;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 1), (int) (z + 3)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -221,11 +192,11 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (0);
+				final int _sltid = 0;
 				final ItemStack _setstack = (new ItemStack((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) (z + 3)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -234,12 +205,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (1);
+				final int _sltid = 1;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) (z + 3)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -248,12 +219,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (2);
+				final int _sltid = 2;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x - 2), (int) (y + 1), (int) (z + 3)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -262,12 +233,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (3);
+				final int _sltid = 3;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x - 3), (int) (y + 1), (int) (z + 3)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -276,12 +247,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (4);
+				final int _sltid = 4;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x - 4), (int) (y + 1), (int) (z + 3)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -290,12 +261,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (5);
+				final int _sltid = 5;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x + 4), (int) (y + 1), (int) (z + 2)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -304,12 +275,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (6);
+				final int _sltid = 6;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x + 3), (int) (y + 1), (int) (z + 2)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -318,12 +289,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (7);
+				final int _sltid = 7;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x + 2), (int) (y + 1), (int) (z + 2)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -332,12 +303,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (8);
+				final int _sltid = 8;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 1), (int) (z + 2)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -346,11 +317,11 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (9);
+				final int _sltid = 9;
 				final ItemStack _setstack = (new ItemStack((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) (z + 2)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -359,12 +330,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (10);
+				final int _sltid = 10;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) (z + 2)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -373,12 +344,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (11);
+				final int _sltid = 11;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x - 2), (int) (y + 1), (int) (z + 2)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -387,12 +358,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (12);
+				final int _sltid = 12;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x - 3), (int) (y + 1), (int) (z + 2)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -401,12 +372,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (13);
+				final int _sltid = 13;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x - 4), (int) (y + 1), (int) (z + 2)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -415,12 +386,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (14);
+				final int _sltid = 14;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x + 4), (int) (y + 1), (int) (z + 1)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -429,12 +400,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (15);
+				final int _sltid = 15;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x + 3), (int) (y + 1), (int) (z + 1)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -443,12 +414,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (16);
+				final int _sltid = 16;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x + 2), (int) (y + 1), (int) (z + 1)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -457,12 +428,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (17);
+				final int _sltid = 17;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 1), (int) (z + 1)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -471,11 +442,11 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (18);
+				final int _sltid = 18;
 				final ItemStack _setstack = (new ItemStack((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) (z + 1)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -484,12 +455,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (19);
+				final int _sltid = 19;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) (z + 1)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -498,12 +469,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (20);
+				final int _sltid = 20;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x - 2), (int) (y + 1), (int) (z + 1)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -512,12 +483,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (21);
+				final int _sltid = 21;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x - 3), (int) (y + 1), (int) (z + 1)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -526,12 +497,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (22);
+				final int _sltid = 22;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x - 4), (int) (y + 1), (int) (z + 1)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -540,11 +511,11 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (23);
+				final int _sltid = 23;
 				final ItemStack _setstack = (new ItemStack((world.getBlockState(new BlockPos((int) (x + 4), (int) (y + 1), (int) z))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -553,11 +524,11 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (24);
+				final int _sltid = 24;
 				final ItemStack _setstack = (new ItemStack((world.getBlockState(new BlockPos((int) (x + 3), (int) (y + 1), (int) z))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -566,11 +537,11 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (25);
+				final int _sltid = 25;
 				final ItemStack _setstack = (new ItemStack((world.getBlockState(new BlockPos((int) (x + 2), (int) (y + 1), (int) z))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -579,11 +550,11 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (26);
+				final int _sltid = 26;
 				final ItemStack _setstack = (new ItemStack((world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 1), (int) z))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -592,11 +563,11 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (27);
+				final int _sltid = 27;
 				final ItemStack _setstack = (new ItemStack((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -605,11 +576,11 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (28);
+				final int _sltid = 28;
 				final ItemStack _setstack = (new ItemStack((world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) z))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -618,11 +589,11 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (29);
+				final int _sltid = 29;
 				final ItemStack _setstack = (new ItemStack((world.getBlockState(new BlockPos((int) (x - 2), (int) (y + 1), (int) z))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -631,11 +602,11 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (30);
+				final int _sltid = 30;
 				final ItemStack _setstack = (new ItemStack((world.getBlockState(new BlockPos((int) (x - 3), (int) (y + 1), (int) z))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -644,11 +615,11 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (31);
+				final int _sltid = 31;
 				final ItemStack _setstack = (new ItemStack((world.getBlockState(new BlockPos((int) (x - 4), (int) (y + 1), (int) z))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -657,12 +628,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (32);
+				final int _sltid = 32;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x + 4), (int) (y + 1), (int) (z - 1)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -671,12 +642,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (33);
+				final int _sltid = 33;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x + 3), (int) (y + 1), (int) (z - 1)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -685,12 +656,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (34);
+				final int _sltid = 34;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x + 2), (int) (y + 1), (int) (z - 1)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -699,12 +670,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (35);
+				final int _sltid = 35;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 1), (int) (z - 1)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -713,11 +684,11 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (36);
+				final int _sltid = 36;
 				final ItemStack _setstack = (new ItemStack((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) (z - 1)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -726,12 +697,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (37);
+				final int _sltid = 37;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) (z - 1)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -740,12 +711,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (38);
+				final int _sltid = 38;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x - 2), (int) (y + 1), (int) (z - 1)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -754,12 +725,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (39);
+				final int _sltid = 39;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x - 3), (int) (y + 1), (int) (z - 1)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -768,12 +739,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (40);
+				final int _sltid = 40;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x - 4), (int) (y + 1), (int) (z - 1)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -782,12 +753,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (41);
+				final int _sltid = 41;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x + 4), (int) (y + 1), (int) (z - 2)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -796,12 +767,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (42);
+				final int _sltid = 42;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x + 3), (int) (y + 1), (int) (z - 2)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -810,12 +781,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (43);
+				final int _sltid = 43;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x + 2), (int) (y + 1), (int) (z - 2)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -824,12 +795,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (44);
+				final int _sltid = 44;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 1), (int) (z - 2)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -838,11 +809,11 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (45);
+				final int _sltid = 45;
 				final ItemStack _setstack = (new ItemStack((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) (z - 2)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -851,12 +822,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (46);
+				final int _sltid = 46;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) (z - 2)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -865,12 +836,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (47);
+				final int _sltid = 47;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x - 2), (int) (y + 1), (int) (z - 2)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -879,12 +850,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (48);
+				final int _sltid = 48;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x - 3), (int) (y + 1), (int) (z - 2)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -893,12 +864,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (49);
+				final int _sltid = 49;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x - 4), (int) (y + 1), (int) (z - 2)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -907,12 +878,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (50);
+				final int _sltid = 50;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x + 4), (int) (y + 1), (int) (z - 3)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -921,12 +892,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (51);
+				final int _sltid = 51;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x + 3), (int) (y + 1), (int) (z - 3)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -935,12 +906,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (52);
+				final int _sltid = 52;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x + 2), (int) (y + 1), (int) (z - 3)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -949,12 +920,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (53);
+				final int _sltid = 53;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 1), (int) (z - 3)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -963,11 +934,11 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (54);
+				final int _sltid = 54;
 				final ItemStack _setstack = (new ItemStack((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) (z - 3)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -976,12 +947,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (55);
+				final int _sltid = 55;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) (z - 3)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -990,12 +961,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (56);
+				final int _sltid = 56;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x - 2), (int) (y + 1), (int) (z - 3)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -1004,12 +975,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (57);
+				final int _sltid = 57;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x - 3), (int) (y + 1), (int) (z - 3)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -1018,12 +989,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (58);
+				final int _sltid = 58;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x - 4), (int) (y + 1), (int) (z - 3)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -1032,12 +1003,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (59);
+				final int _sltid = 59;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x + 4), (int) (y + 1), (int) (z - 4)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -1046,12 +1017,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (60);
+				final int _sltid = 60;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x + 3), (int) (y + 1), (int) (z - 4)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -1060,12 +1031,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (61);
+				final int _sltid = 61;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x + 2), (int) (y + 1), (int) (z - 4)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -1074,12 +1045,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (62);
+				final int _sltid = 62;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x + 1), (int) (y + 1), (int) (z - 4)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -1088,11 +1059,11 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (63);
+				final int _sltid = 63;
 				final ItemStack _setstack = (new ItemStack((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) (z - 4)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -1101,12 +1072,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (64);
+				final int _sltid = 64;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x - 1), (int) (y + 1), (int) (z - 4)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -1115,12 +1086,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (65);
+				final int _sltid = 65;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x - 2), (int) (y + 1), (int) (z - 4)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -1129,12 +1100,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (66);
+				final int _sltid = 66;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x - 3), (int) (y + 1), (int) (z - 4)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
@@ -1143,12 +1114,12 @@ public class Y1StoreInfoProcedure {
 			}
 		}
 		{
-			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
+			BlockEntity _ent = world.getBlockEntity(new BlockPos((int) x, (int) (y - 1), (int) z));
 			if (_ent != null) {
-				final int _sltid = (int) (67);
+				final int _sltid = 67;
 				final ItemStack _setstack = (new ItemStack(
 						(world.getBlockState(new BlockPos((int) (x - 4), (int) (y + 1), (int) (z - 4)))).getBlock()));
-				_setstack.setCount((int) 1);
+				_setstack.setCount(1);
 				_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 					if (capability instanceof IItemHandlerModifiable) {
 						((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);

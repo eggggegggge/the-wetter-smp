@@ -1,43 +1,18 @@
 
 package net.mcreator.thewetsmp.item;
 
-import net.minecraftforge.registries.ObjectHolder;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.food.FoodProperties;
 
-import net.minecraft.item.UseAction;
-import net.minecraft.item.Rarity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item;
-import net.minecraft.item.Food;
+import net.mcreator.thewetsmp.init.TheWetSmpRehydratedModTabs;
 
-import net.mcreator.thewetsmp.itemgroup.FishingItemGroup;
-import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
+public class ShulkfishItem extends Item {
+	public ShulkfishItem() {
+		super(new Item.Properties().tab(TheWetSmpRehydratedModTabs.TAB_FISHING).stacksTo(64).rarity(Rarity.COMMON)
+				.food((new FoodProperties.Builder()).nutrition(0).saturationMod(0f)
 
-@TheWetSmpRehydratedModElements.ModElement.Tag
-public class ShulkfishItem extends TheWetSmpRehydratedModElements.ModElement {
-	@ObjectHolder("the_wet_smp_rehydrated:shulkfish")
-	public static final Item block = null;
-
-	public ShulkfishItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 105);
-	}
-
-	@Override
-	public void initElements() {
-		elements.items.add(() -> new FoodItemCustom());
-	}
-
-	public static class FoodItemCustom extends Item {
-		public FoodItemCustom() {
-			super(new Item.Properties().group(FishingItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
-					.food((new Food.Builder()).hunger(0).saturation(0f)
-
-							.build()));
-			setRegistryName("shulkfish");
-		}
-
-		@Override
-		public UseAction getUseAction(ItemStack itemstack) {
-			return UseAction.EAT;
-		}
+						.build()));
+		setRegistryName("shulkfish");
 	}
 }

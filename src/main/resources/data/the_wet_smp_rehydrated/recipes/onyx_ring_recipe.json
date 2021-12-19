@@ -2,27 +2,21 @@
   "group": "rings",
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "012",
-    "3 5",
-    " 7 "
+    "OGO",
+    "L L",
+    " S "
   ],
   "key": {
-    "0": {
+    "O": {
       "item": "the_wet_smp_rehydrated:onyx"
     },
-    "1": {
+    "G": {
       "item": "minecraft:gold_block"
     },
-    "2": {
-      "item": "the_wet_smp_rehydrated:onyx"
-    },
-    "3": {
+    "L": {
       "item": "minecraft:gold_ingot"
     },
-    "5": {
-      "item": "minecraft:gold_ingot"
-    },
-    "7": {
+    "S": {
       "item": "the_wet_smp_rehydrated:osmium_ingot"
     }
   },

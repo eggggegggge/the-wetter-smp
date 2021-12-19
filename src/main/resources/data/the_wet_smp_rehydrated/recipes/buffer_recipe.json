@@ -2,26 +2,17 @@
   "group": "buffer",
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "012",
-    "345"
+    "ACA",
+    "GGG"
   ],
   "key": {
-    "0": {
+    "A": {
       "item": "the_wet_smp_rehydrated:aquamarine"
     },
-    "1": {
+    "C": {
       "item": "minecraft:clock"
     },
-    "2": {
-      "item": "the_wet_smp_rehydrated:aquamarine"
-    },
-    "3": {
-      "item": "minecraft:glass"
-    },
-    "4": {
-      "item": "minecraft:glass"
-    },
-    "5": {
+    "G": {
       "item": "minecraft:glass"
     }
   },

@@ -2,25 +2,16 @@
   "group": "ru_bo",
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " 1 ",
-    "345",
-    " 7 "
+    " R ",
+    "RBR",
+    " R "
   ],
   "key": {
-    "1": {
+    "R": {
       "item": "the_wet_smp_rehydrated:ruby"
     },
-    "3": {
-      "item": "the_wet_smp_rehydrated:ruby"
-    },
-    "4": {
+    "B": {
       "item": "minecraft:bowl"
-    },
-    "5": {
-      "item": "the_wet_smp_rehydrated:ruby"
-    },
-    "7": {
-      "item": "the_wet_smp_rehydrated:ruby"
     }
   },
   "result": {

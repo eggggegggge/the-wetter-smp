@@ -1,90 +1,51 @@
 package net.mcreator.thewetsmp.procedures;
 
-import net.minecraft.world.server.ServerWorld;
-import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.math.vector.Vector3d;
-import net.minecraft.util.math.vector.Vector2f;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.state.Property;
-import net.minecraft.command.ICommandSource;
-import net.minecraft.command.CommandSource;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.BlockState;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.Vec2;
+import net.minecraft.world.level.block.state.properties.Property;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.core.BlockPos;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSource;
 
-import net.mcreator.thewetsmp.block.SepiaConcretePowderBlock;
-import net.mcreator.thewetsmp.block.SepiaConcreteBlock;
-import net.mcreator.thewetsmp.block.SepiaCarpetBlock;
-import net.mcreator.thewetsmp.block.SeaUrchinBlock;
-import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
+import net.mcreator.thewetsmp.init.TheWetSmpRehydratedModBlocks;
 
 import java.util.Map;
 
 public class AdjacentBlockUpdateProcedure {
-
-	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure AdjacentBlockUpdate!");
-			return;
-		}
-		if (dependencies.get("x") == null) {
-			if (!dependencies.containsKey("x"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency x for procedure AdjacentBlockUpdate!");
-			return;
-		}
-		if (dependencies.get("y") == null) {
-			if (!dependencies.containsKey("y"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency y for procedure AdjacentBlockUpdate!");
-			return;
-		}
-		if (dependencies.get("z") == null) {
-			if (!dependencies.containsKey("z"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency z for procedure AdjacentBlockUpdate!");
-			return;
-		}
-		if (dependencies.get("blockstate") == null) {
-			if (!dependencies.containsKey("blockstate"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency blockstate for procedure AdjacentBlockUpdate!");
-			return;
-		}
-		IWorld world = (IWorld) dependencies.get("world");
-		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
-		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
-		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		BlockState blockstate = (BlockState) dependencies.get("blockstate");
-		if (blockstate.getBlock() == SepiaCarpetBlock.block || blockstate.getBlock() == SeaUrchinBlock.block) {
+	public static void execute(LevelAccessor world, double x, double y, double z, BlockState blockstate) {
+		if (blockstate.getBlock() == TheWetSmpRehydratedModBlocks.SEPIA_CARPET || blockstate.getBlock() == TheWetSmpRehydratedModBlocks.SEA_URCHIN) {
 			if ((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == Blocks.AIR
 					|| (world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == Blocks.VOID_AIR
 					|| (world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == Blocks.CAVE_AIR) {
-				if (world instanceof ServerWorld) {
-					((World) world).getServer().getCommandManager().handleCommand(
-							new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
-									new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-							"setblock ~ ~ ~ air destroy");
-				}
+				if (world instanceof ServerLevel _level)
+					_level.getServer().getCommands().performCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level,
+							4, "", new TextComponent(""), _level.getServer(), null).withSuppressedOutput(), "setblock ~ ~ ~ air destroy");
 			}
-		} else if (blockstate.getBlock() == SepiaConcretePowderBlock.block) {
-			if ((world.getFluidState(new BlockPos((int) x, (int) y, (int) (z + 1))).getBlockState()).getBlock() == Blocks.WATER
-					|| (world.getFluidState(new BlockPos((int) x, (int) y, (int) (z - 1))).getBlockState()).getBlock() == Blocks.WATER
-					|| (world.getFluidState(new BlockPos((int) (x + 1), (int) y, (int) z)).getBlockState()).getBlock() == Blocks.WATER
-					|| (world.getFluidState(new BlockPos((int) (x - 1), (int) y, (int) z)).getBlockState()).getBlock() == Blocks.WATER
-					|| (world.getFluidState(new BlockPos((int) x, (int) (y + 1), (int) z)).getBlockState()).getBlock() == Blocks.WATER
-					|| (world.getFluidState(new BlockPos((int) x, (int) (y - 1), (int) z)).getBlockState()).getBlock() == Blocks.WATER) {
+		} else if (blockstate.getBlock() == TheWetSmpRehydratedModBlocks.SEPIA_CONCRETE_POWDER) {
+			if ((world.getFluidState(new BlockPos((int) x, (int) y, (int) (z + 1))).createLegacyBlock()).getBlock() == Blocks.WATER
+					|| (world.getFluidState(new BlockPos((int) x, (int) y, (int) (z - 1))).createLegacyBlock()).getBlock() == Blocks.WATER
+					|| (world.getFluidState(new BlockPos((int) (x + 1), (int) y, (int) z)).createLegacyBlock()).getBlock() == Blocks.WATER
+					|| (world.getFluidState(new BlockPos((int) (x - 1), (int) y, (int) z)).createLegacyBlock()).getBlock() == Blocks.WATER
+					|| (world.getFluidState(new BlockPos((int) x, (int) (y + 1), (int) z)).createLegacyBlock()).getBlock() == Blocks.WATER
+					|| (world.getFluidState(new BlockPos((int) x, (int) (y - 1), (int) z)).createLegacyBlock()).getBlock() == Blocks.WATER) {
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = SepiaConcreteBlock.block.getDefaultState();
+					BlockState _bs = TheWetSmpRehydratedModBlocks.SEPIA_CONCRETE.defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-						Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
-						if (_property != null && _bs.get(_property) != null)
+						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+						if (_property != null && _bs.getValue(_property) != null)
 							try {
-								_bs = _bs.with(_property, (Comparable) entry.getValue());
+								_bs = _bs.setValue(_property, (Comparable) entry.getValue());
 							} catch (Exception e) {
 							}
 					}
-					world.setBlockState(_bp, _bs, 3);
+					world.setBlock(_bp, _bs, 3);
 				}
 			}
 		}

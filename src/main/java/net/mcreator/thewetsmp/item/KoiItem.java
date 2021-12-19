@@ -1,43 +1,18 @@
 
 package net.mcreator.thewetsmp.item;
 
-import net.minecraftforge.registries.ObjectHolder;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.food.FoodProperties;
 
-import net.minecraft.item.UseAction;
-import net.minecraft.item.Rarity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item;
-import net.minecraft.item.Food;
+import net.mcreator.thewetsmp.init.TheWetSmpRehydratedModTabs;
 
-import net.mcreator.thewetsmp.itemgroup.FishingItemGroup;
-import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
+public class KoiItem extends Item {
+	public KoiItem() {
+		super(new Item.Properties().tab(TheWetSmpRehydratedModTabs.TAB_FISHING).stacksTo(64).rarity(Rarity.COMMON)
+				.food((new FoodProperties.Builder()).nutrition(2).saturationMod(0.2f)
 
-@TheWetSmpRehydratedModElements.ModElement.Tag
-public class KoiItem extends TheWetSmpRehydratedModElements.ModElement {
-	@ObjectHolder("the_wet_smp_rehydrated:koi")
-	public static final Item block = null;
-
-	public KoiItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 92);
-	}
-
-	@Override
-	public void initElements() {
-		elements.items.add(() -> new FoodItemCustom());
-	}
-
-	public static class FoodItemCustom extends Item {
-		public FoodItemCustom() {
-			super(new Item.Properties().group(FishingItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
-					.food((new Food.Builder()).hunger(2).saturation(0.2f)
-
-							.meat().build()));
-			setRegistryName("koi");
-		}
-
-		@Override
-		public UseAction getUseAction(ItemStack itemstack) {
-			return UseAction.EAT;
-		}
+						.meat().build()));
+		setRegistryName("koi");
 	}
 }

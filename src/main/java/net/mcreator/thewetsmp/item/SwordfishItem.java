@@ -1,54 +1,41 @@
 
 package net.mcreator.thewetsmp.item;
 
-import net.minecraftforge.registries.ObjectHolder;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.CreativeModeTab;
 
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.item.SwordItem;
-import net.minecraft.item.Items;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.Item;
-import net.minecraft.item.IItemTier;
-
-import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
-
-@TheWetSmpRehydratedModElements.ModElement.Tag
-public class SwordfishItem extends TheWetSmpRehydratedModElements.ModElement {
-	@ObjectHolder("the_wet_smp_rehydrated:swordfish")
-	public static final Item block = null;
-
-	public SwordfishItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 145);
-	}
-
-	@Override
-	public void initElements() {
-		elements.items.add(() -> new SwordItem(new IItemTier() {
-			public int getMaxUses() {
+public class SwordfishItem extends SwordItem {
+	public SwordfishItem() {
+		super(new Tier() {
+			public int getUses() {
 				return 1062;
 			}
 
-			public float getEfficiency() {
+			public float getSpeed() {
 				return 4f;
 			}
 
-			public float getAttackDamage() {
+			public float getAttackDamageBonus() {
 				return 1f;
 			}
 
-			public int getHarvestLevel() {
+			public int getLevel() {
 				return 1;
 			}
 
-			public int getEnchantability() {
+			public int getEnchantmentValue() {
 				return 2;
 			}
 
-			public Ingredient getRepairMaterial() {
-				return Ingredient.fromStacks(new ItemStack(Items.COD), new ItemStack(Items.SALMON), new ItemStack(Items.PUFFERFISH));
+			public Ingredient getRepairIngredient() {
+				return Ingredient.of(new ItemStack(Items.COD), new ItemStack(Items.SALMON), new ItemStack(Items.PUFFERFISH));
 			}
-		}, 3, -1f, new Item.Properties().group(ItemGroup.COMBAT)) {
-		}.setRegistryName("swordfish"));
+		}, 3, -1f, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT));
+		setRegistryName("swordfish");
 	}
 }

@@ -1,76 +1,52 @@
 
 package net.mcreator.thewetsmp.item;
 
-import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.world.World;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.item.Items;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.Item;
-import net.minecraft.item.IArmorMaterial;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.Entity;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.thewetsmp.procedures.PistonBootsJumpProcedure;
-import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
 
-import java.util.stream.Stream;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.AbstractMap;
-
-@TheWetSmpRehydratedModElements.ModElement.Tag
-public class NetheritePistonBootsItem extends TheWetSmpRehydratedModElements.ModElement {
-	@ObjectHolder("the_wet_smp_rehydrated:netherite_piston_helmet")
-	public static final Item helmet = null;
-	@ObjectHolder("the_wet_smp_rehydrated:netherite_piston_chestplate")
-	public static final Item body = null;
-	@ObjectHolder("the_wet_smp_rehydrated:netherite_piston_leggings")
-	public static final Item legs = null;
-	@ObjectHolder("the_wet_smp_rehydrated:netherite_piston_boots")
-	public static final Item boots = null;
-
-	public NetheritePistonBootsItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 32);
-	}
-
-	@Override
-	public void initElements() {
-		IArmorMaterial armormaterial = new IArmorMaterial() {
+public abstract class NetheritePistonBootsItem extends ArmorItem {
+	public NetheritePistonBootsItem(EquipmentSlot slot, Item.Properties properties) {
+		super(new ArmorMaterial() {
 			@Override
-			public int getDurability(EquipmentSlotType slot) {
+			public int getDurabilityForSlot(EquipmentSlot slot) {
 				return new int[]{13, 15, 16, 11}[slot.getIndex()] * 37;
 			}
 
 			@Override
-			public int getDamageReductionAmount(EquipmentSlotType slot) {
+			public int getDefenseForSlot(EquipmentSlot slot) {
 				return new int[]{2, 5, 6, 2}[slot.getIndex()];
 			}
 
 			@Override
-			public int getEnchantability() {
+			public int getEnchantmentValue() {
 				return 15;
 			}
 
 			@Override
-			public net.minecraft.util.SoundEvent getSoundEvent() {
-				return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.armor.equip_netherite"));
+			public SoundEvent getEquipSound() {
+				return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.armor.equip_netherite"));
 			}
 
 			@Override
-			public Ingredient getRepairMaterial() {
-				return Ingredient.fromStacks(new ItemStack(Items.NETHERITE_INGOT));
+			public Ingredient getRepairIngredient() {
+				return Ingredient.of(new ItemStack(Items.NETHERITE_INGOT));
 			}
 
-			@OnlyIn(Dist.CLIENT)
 			@Override
 			public String getName() {
 				return "netherite_piston";
@@ -85,25 +61,23 @@ public class NetheritePistonBootsItem extends TheWetSmpRehydratedModElements.Mod
 			public float getKnockbackResistance() {
 				return 0.1f;
 			}
-		};
-		elements.items.add(
-				() -> new ArmorItem(armormaterial, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.TRANSPORTATION).isImmuneToFire()) {
-					@Override
-					public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-						return "the_wet_smp_rehydrated:textures/models/armor/netherite_piston_boots_armour__layer_"
-								+ (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
-					}
-
-					@Override
-					public void onArmorTick(ItemStack itemstack, World world, PlayerEntity entity) {
-						double x = entity.getPosX();
-						double y = entity.getPosY();
-						double z = entity.getPosZ();
-
-						PistonBootsJumpProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
-								(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-					}
-				}.setRegistryName("netherite_piston_boots"));
+		}, slot, properties);
 	}
 
+	public static class Boots extends NetheritePistonBootsItem {
+		public Boots() {
+			super(EquipmentSlot.FEET, new Item.Properties().tab(CreativeModeTab.TAB_TRANSPORTATION).fireResistant());
+			setRegistryName("netherite_piston_boots");
+		}
+
+		@Override
+		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
+			return "the_wet_smp_rehydrated:textures/models/armor/netherite_piston_boots_armour__layer_1.png";
+		}
+
+		@Override
+		public void onArmorTick(ItemStack itemstack, Level world, Player entity) {
+			PistonBootsJumpProcedure.execute(entity);
+		}
+	}
 }

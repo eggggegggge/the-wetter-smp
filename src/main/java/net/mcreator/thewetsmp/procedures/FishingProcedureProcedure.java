@@ -1,88 +1,45 @@
 package net.mcreator.thewetsmp.procedures;
 
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.fml.server.ServerLifecycleHooks;
+import net.minecraftforge.fmllegacy.server.ServerLifecycleHooks;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.player.ItemFishedEvent;
 
-import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.ChatType;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.Util;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.item.ItemStack;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.ChatType;
+import net.minecraft.client.Minecraft;
+import net.minecraft.Util;
 
-import net.mcreator.thewetsmp.item.TreasurePowderItem;
-import net.mcreator.thewetsmp.item.JunkPowderItem;
-import net.mcreator.thewetsmp.item.DevSalmonItem;
-import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
+import net.mcreator.thewetsmp.init.TheWetSmpRehydratedModItems;
 
-import java.util.stream.Stream;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.AbstractMap;
+import javax.annotation.Nullable;
 
+@Mod.EventBusSubscriber
 public class FishingProcedureProcedure {
-	@Mod.EventBusSubscriber
-	private static class GlobalTrigger {
-		@SubscribeEvent
-		public static void onPlayerFishItem(ItemFishedEvent event) {
-			PlayerEntity entity = event.getPlayer();
-			double i = entity.getPosX();
-			double j = entity.getPosY();
-			double k = entity.getPosZ();
-			World world = entity.world;
-			Map<String, Object> dependencies = new HashMap<>();
-			dependencies.put("x", i);
-			dependencies.put("y", j);
-			dependencies.put("z", k);
-			dependencies.put("world", world);
-			dependencies.put("entity", entity);
-			dependencies.put("event", event);
-			executeProcedure(dependencies);
-		}
+	@SubscribeEvent
+	public static void onPlayerFishItem(ItemFishedEvent event) {
+		Player entity = event.getPlayer();
+		execute(event, entity.level, entity.getX(), entity.getY(), entity.getZ(), entity);
 	}
 
-	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure FishingProcedure!");
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+		execute(null, world, x, y, z, entity);
+	}
+
+	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
+		if (entity == null)
 			return;
-		}
-		if (dependencies.get("x") == null) {
-			if (!dependencies.containsKey("x"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency x for procedure FishingProcedure!");
-			return;
-		}
-		if (dependencies.get("y") == null) {
-			if (!dependencies.containsKey("y"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency y for procedure FishingProcedure!");
-			return;
-		}
-		if (dependencies.get("z") == null) {
-			if (!dependencies.containsKey("z"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency z for procedure FishingProcedure!");
-			return;
-		}
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure FishingProcedure!");
-			return;
-		}
-		IWorld world = (IWorld) dependencies.get("world");
-		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
-		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
-		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		Entity entity = (Entity) dependencies.get("entity");
 		double baitpower = 0;
 		double treasure = 0;
 		double junk = 0;
@@ -90,19 +47,11 @@ public class FishingProcedureProcedure {
 		double luck = 0;
 		double baitDeterm = 0;
 		double wutda = 0;
-		if (dependencies.get("event") != null) {
-			Object _obj = dependencies.get("event");
-			if (_obj instanceof Event) {
-				Event _evt = (Event) _obj;
-				if (_evt.isCancelable())
-					_evt.setCanceled(true);
-			}
+		if (event != null && event.isCancelable()) {
+			event.setCanceled(true);
 		}
-		baitpower = (double) BaitCheckProcedure
-				.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
-						.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-		luck = (double) LuckCheckProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
-				(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+		baitpower = (double) BaitCheckProcedure.execute(world, entity);
+		luck = (double) LuckCheckProcedure.execute(entity);
 		fish = (double) 50;
 		junk = (double) 87;
 		treasure = (double) 99;
@@ -117,85 +66,60 @@ public class FishingProcedureProcedure {
 		}
 		baitDeterm = (double) (Math.random() * 100);
 		if (baitDeterm < baitpower) {
-			if (world instanceof World && !world.isRemote()) {
-				((World) world)
-						.playSound(null, new BlockPos((int) x, (int) y, (int) z),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-										.getValue(new ResourceLocation("the_wet_smp_rehydrated:linebreak")),
-								SoundCategory.AMBIENT, (float) 1, (float) 1);
-			} else {
-				((World) world).playSound(x, y, z,
-						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-								.getValue(new ResourceLocation("the_wet_smp_rehydrated:linebreak")),
-						SoundCategory.AMBIENT, (float) 1, (float) 1, false);
-			}
-			RemoveBaitProcedure
-					.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
-							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-			if (!world.isRemote()) {
+			if (world instanceof Level _level)
+				_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
+						ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("the_wet_smp_rehydrated:linebreak")), SoundSource.AMBIENT, 1, 1);
+			RemoveBaitProcedure.execute(world, entity);
+			if (!world.isClientSide()) {
 				MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 				if (mcserv != null)
-					mcserv.getPlayerList().func_232641_a_(new StringTextComponent("you're fuckin line broked"), ChatType.SYSTEM, Util.DUMMY_UUID);
+					mcserv.getPlayerList().broadcastMessage(new TextComponent("you're fuckin line broked"), ChatType.SYSTEM, Util.NIL_UUID);
 			}
 		} else {
 			wutda = (double) (Math.random() * (treasure + 1));
-			if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)
-					.getItem() == DevSalmonItem.block) {
-				DetermineBiomeProcedure.executeProcedure(Stream
-						.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity),
-								new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
-						.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-				if (!world.isRemote()) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY)
+					.getItem() == TheWetSmpRehydratedModItems.DEV_SALMON) {
+				DetermineAllBiomesProcedure.execute(world, x, y, z, entity);
+				if (!world.isClientSide()) {
 					MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 					if (mcserv != null)
-						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("fishh"), ChatType.SYSTEM, Util.DUMMY_UUID);
+						mcserv.getPlayerList().broadcastMessage(new TextComponent("fishh"), ChatType.SYSTEM, Util.NIL_UUID);
 				}
-			} else if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)
-					.getItem() == JunkPowderItem.block) {
-				if (!world.isRemote()) {
+			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY)
+					.getItem() == TheWetSmpRehydratedModItems.JUNK_POWDER) {
+				if (!world.isClientSide()) {
 					MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 					if (mcserv != null)
-						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("jank"), ChatType.SYSTEM, Util.DUMMY_UUID);
+						mcserv.getPlayerList().broadcastMessage(new TextComponent("jank"), ChatType.SYSTEM, Util.NIL_UUID);
 				}
-			} else if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)
-					.getItem() == TreasurePowderItem.block) {
-				TreasureProcedureProcedure.executeProcedure(Stream
-						.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity),
-								new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
-						.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-				if (!world.isRemote()) {
+			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY)
+					.getItem() == TheWetSmpRehydratedModItems.TREASURE_POWDER) {
+				TreasureProcedureProcedure.execute(world, x, y, z, entity);
+				if (!world.isClientSide()) {
 					MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 					if (mcserv != null)
-						mcserv.getPlayerList().func_232641_a_(new StringTextComponent("trombone"), ChatType.SYSTEM, Util.DUMMY_UUID);
+						mcserv.getPlayerList().broadcastMessage(new TextComponent("trombone"), ChatType.SYSTEM, Util.NIL_UUID);
 				}
 			} else {
 				if (wutda >= 0 && wutda <= fish) {
-					DetermineBiomeProcedure.executeProcedure(Stream
-							.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity),
-									new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
-									new AbstractMap.SimpleEntry<>("z", z))
-							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-					if (!world.isRemote()) {
+					DetermineAllBiomesProcedure.execute(world, x, y, z, entity);
+					if (!world.isClientSide()) {
 						MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 						if (mcserv != null)
-							mcserv.getPlayerList().func_232641_a_(new StringTextComponent("fishh"), ChatType.SYSTEM, Util.DUMMY_UUID);
+							mcserv.getPlayerList().broadcastMessage(new TextComponent("fishh"), ChatType.SYSTEM, Util.NIL_UUID);
 					}
 				} else if (wutda >= fish + 1 && wutda <= junk) {
-					if (!world.isRemote()) {
+					if (!world.isClientSide()) {
 						MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 						if (mcserv != null)
-							mcserv.getPlayerList().func_232641_a_(new StringTextComponent("jank"), ChatType.SYSTEM, Util.DUMMY_UUID);
+							mcserv.getPlayerList().broadcastMessage(new TextComponent("jank"), ChatType.SYSTEM, Util.NIL_UUID);
 					}
 				} else if (wutda >= junk + 1 && wutda <= treasure) {
-					TreasureProcedureProcedure.executeProcedure(Stream
-							.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity),
-									new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
-									new AbstractMap.SimpleEntry<>("z", z))
-							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-					if (!world.isRemote()) {
+					TreasureProcedureProcedure.execute(world, x, y, z, entity);
+					if (!world.isClientSide()) {
 						MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 						if (mcserv != null)
-							mcserv.getPlayerList().func_232641_a_(new StringTextComponent("trombone"), ChatType.SYSTEM, Util.DUMMY_UUID);
+							mcserv.getPlayerList().broadcastMessage(new TextComponent("trombone"), ChatType.SYSTEM, Util.NIL_UUID);
 					}
 				}
 			}

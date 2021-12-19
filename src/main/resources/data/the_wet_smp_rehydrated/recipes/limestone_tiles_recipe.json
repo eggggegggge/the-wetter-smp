@@ -2,20 +2,11 @@
   "group": "limestonetiles",
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "01",
-    "23"
+    "##",
+    "##"
   ],
   "key": {
-    "0": {
-      "item": "the_wet_smp_rehydrated:limestone_bricks"
-    },
-    "1": {
-      "item": "the_wet_smp_rehydrated:limestone_bricks"
-    },
-    "2": {
-      "item": "the_wet_smp_rehydrated:limestone_bricks"
-    },
-    "3": {
+    "#": {
       "item": "the_wet_smp_rehydrated:limestone_bricks"
     }
   },

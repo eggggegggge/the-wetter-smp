@@ -1,23 +1,23 @@
 modLoader="javafml"
-loaderVersion="[36,)"
+loaderVersion="[37,)"
 license="Custom license"
 
 [[mods]]
 modId="the_wet_smp_rehydrated"
-version="development version"
+version="1.0.0"
 displayName="The Wet SMP Rehydrated"
-credits="the fun gang & andy"
-displayURL="https://www.youtube.com/"
+credits="the fun gang"
+displayURL="https://www.google.com"
 logoFile="logo.png"
 authors="the fun gang"
 description='''
-andy i compiled this for you please don't leak it
+its the moist multiplayer incident
 '''
 
 [[dependencies.the_wet_smp_rehydrated]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.5]"
+    versionRange="[1.17.1]"
     ordering="NONE"
     side="BOTH"
 

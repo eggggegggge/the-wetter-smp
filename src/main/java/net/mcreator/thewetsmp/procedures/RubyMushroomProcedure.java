@@ -4,304 +4,183 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 
-import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.Hand;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.tags.EntityTypeTags;
-import net.minecraft.item.ItemStack;
-import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.Minecraft;
 
-import net.mcreator.thewetsmp.item.RubyEmbeddedMushroomStewItem;
-import net.mcreator.thewetsmp.item.RubyEmbeddedBowlItem;
-import net.mcreator.thewetsmp.item.OnyxEmbeddedMushroomStewItem;
-import net.mcreator.thewetsmp.item.OnyxEmbeddedBowlItem;
-import net.mcreator.thewetsmp.item.LapisEmbeddedMushroomStewItem;
-import net.mcreator.thewetsmp.item.LapisEmbeddedBowlItem;
-import net.mcreator.thewetsmp.item.EmeraldEmbeddedMushroomStewItem;
-import net.mcreator.thewetsmp.item.EmeraldEmbeddedBowlItem;
-import net.mcreator.thewetsmp.item.AquamarineEmbeddedMushroomStewItem;
-import net.mcreator.thewetsmp.item.AquamarineEmbeddedBowlItem;
-import net.mcreator.thewetsmp.TheWetSmpRehydratedMod;
+import net.mcreator.thewetsmp.init.TheWetSmpRehydratedModItems;
 
-import java.util.Map;
-import java.util.HashMap;
+import javax.annotation.Nullable;
 
+@Mod.EventBusSubscriber
 public class RubyMushroomProcedure {
-	@Mod.EventBusSubscriber
-	private static class GlobalTrigger {
-		@SubscribeEvent
-		public static void onRightClickEntity(PlayerInteractEvent.EntityInteract event) {
-			Entity entity = event.getTarget();
-			PlayerEntity sourceentity = event.getPlayer();
-			if (event.getHand() != sourceentity.getActiveHand()) {
-				return;
-			}
-			double i = event.getPos().getX();
-			double j = event.getPos().getY();
-			double k = event.getPos().getZ();
-			IWorld world = event.getWorld();
-			Map<String, Object> dependencies = new HashMap<>();
-			dependencies.put("x", i);
-			dependencies.put("y", j);
-			dependencies.put("z", k);
-			dependencies.put("world", world);
-			dependencies.put("entity", entity);
-			dependencies.put("sourceentity", sourceentity);
-			dependencies.put("event", event);
-			executeProcedure(dependencies);
-		}
+	@SubscribeEvent
+	public static void onRightClickEntity(PlayerInteractEvent.EntityInteract event) {
+		Player sourceentity = event.getPlayer();
+		if (event.getHand() != sourceentity.getUsedItemHand())
+			return;
+		execute(event, event.getWorld(), event.getPos().getX(), event.getPos().getY(), event.getPos().getZ(), event.getTarget(), sourceentity);
 	}
 
-	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency world for procedure RubyMushroom!");
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
+		execute(null, world, x, y, z, entity, sourceentity);
+	}
+
+	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
+		if (entity == null || sourceentity == null)
 			return;
-		}
-		if (dependencies.get("x") == null) {
-			if (!dependencies.containsKey("x"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency x for procedure RubyMushroom!");
-			return;
-		}
-		if (dependencies.get("y") == null) {
-			if (!dependencies.containsKey("y"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency y for procedure RubyMushroom!");
-			return;
-		}
-		if (dependencies.get("z") == null) {
-			if (!dependencies.containsKey("z"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency z for procedure RubyMushroom!");
-			return;
-		}
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency entity for procedure RubyMushroom!");
-			return;
-		}
-		if (dependencies.get("sourceentity") == null) {
-			if (!dependencies.containsKey("sourceentity"))
-				TheWetSmpRehydratedMod.LOGGER.warn("Failed to load dependency sourceentity for procedure RubyMushroom!");
-			return;
-		}
-		IWorld world = (IWorld) dependencies.get("world");
-		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
-		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
-		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		Entity entity = (Entity) dependencies.get("entity");
-		Entity sourceentity = (Entity) dependencies.get("sourceentity");
-		if (EntityTypeTags.getCollection().getTagByID(new ResourceLocation("forge:mooshrooms")).contains(entity.getType())) {
-			if (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == AquamarineEmbeddedBowlItem.block) {
-				if ((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))
-						.getCount() >= 2) {
-					if (sourceentity instanceof PlayerEntity) {
-						ItemStack _setstack = new ItemStack(AquamarineEmbeddedMushroomStewItem.block);
-						_setstack.setCount((int) 1);
-						ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) sourceentity), _setstack);
+		if (EntityTypeTags.getAllTags().getTagOrEmpty(new ResourceLocation("forge:mooshrooms")).contains(entity.getType())) {
+			if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
+					.getItem() == TheWetSmpRehydratedModItems.AQUAMARINE_EMBEDDED_BOWL) {
+				if (((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)).getCount() >= 2) {
+					if (sourceentity instanceof Player _player) {
+						ItemStack _setstack = new ItemStack(TheWetSmpRehydratedModItems.AQUAMARINE_EMBEDDED_MUSHROOM_STEW);
+						_setstack.setCount(1);
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-					if (sourceentity instanceof PlayerEntity) {
-						ItemStack _stktoremove = new ItemStack(AquamarineEmbeddedBowlItem.block);
-						((PlayerEntity) sourceentity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
-								((PlayerEntity) sourceentity).container.func_234641_j_());
+					if (sourceentity instanceof Player _player) {
+						ItemStack _stktoremove = new ItemStack(TheWetSmpRehydratedModItems.AQUAMARINE_EMBEDDED_BOWL);
+						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
+								_player.inventoryMenu.getCraftSlots());
 					}
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.mooshroom.milk")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
-					} else {
-						((World) world).playSound(x, y, z,
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.mooshroom.milk")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-					}
+					if (world instanceof Level _level)
+						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.mooshroom.milk")), SoundSource.NEUTRAL, 1, 1);
 				} else {
-					if (sourceentity instanceof LivingEntity) {
-						ItemStack _setstack = new ItemStack(AquamarineEmbeddedMushroomStewItem.block);
-						_setstack.setCount((int) 1);
-						((LivingEntity) sourceentity).setHeldItem(Hand.MAIN_HAND, _setstack);
-						if (sourceentity instanceof ServerPlayerEntity)
-							((ServerPlayerEntity) sourceentity).inventory.markDirty();
+					if (sourceentity instanceof LivingEntity _entity) {
+						ItemStack _setstack = new ItemStack(TheWetSmpRehydratedModItems.AQUAMARINE_EMBEDDED_MUSHROOM_STEW);
+						_setstack.setCount(1);
+						_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+						if (_entity instanceof ServerPlayer _serverPlayer)
+							_serverPlayer.getInventory().setChanged();
 					}
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.mooshroom.milk")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
-					} else {
-						((World) world).playSound(x, y, z,
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.mooshroom.milk")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-					}
+					if (world instanceof Level _level)
+						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.mooshroom.milk")), SoundSource.NEUTRAL, 1, 1);
 				}
-			} else if (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == EmeraldEmbeddedBowlItem.block) {
-				if ((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))
-						.getCount() >= 2) {
-					if (sourceentity instanceof PlayerEntity) {
-						ItemStack _setstack = new ItemStack(EmeraldEmbeddedMushroomStewItem.block);
-						_setstack.setCount((int) 1);
-						ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) sourceentity), _setstack);
+			} else if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
+					.getItem() == TheWetSmpRehydratedModItems.EMERALD_EMBEDDED_BOWL) {
+				if (((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)).getCount() >= 2) {
+					if (sourceentity instanceof Player _player) {
+						ItemStack _setstack = new ItemStack(TheWetSmpRehydratedModItems.EMERALD_EMBEDDED_MUSHROOM_STEW);
+						_setstack.setCount(1);
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-					if (sourceentity instanceof PlayerEntity) {
-						ItemStack _stktoremove = new ItemStack(EmeraldEmbeddedBowlItem.block);
-						((PlayerEntity) sourceentity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
-								((PlayerEntity) sourceentity).container.func_234641_j_());
+					if (sourceentity instanceof Player _player) {
+						ItemStack _stktoremove = new ItemStack(TheWetSmpRehydratedModItems.EMERALD_EMBEDDED_BOWL);
+						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
+								_player.inventoryMenu.getCraftSlots());
 					}
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.mooshroom.milk")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
-					} else {
-						((World) world).playSound(x, y, z,
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.mooshroom.milk")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-					}
+					if (world instanceof Level _level)
+						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.mooshroom.milk")), SoundSource.NEUTRAL, 1, 1);
 				} else {
-					if (sourceentity instanceof LivingEntity) {
-						ItemStack _setstack = new ItemStack(EmeraldEmbeddedMushroomStewItem.block);
-						_setstack.setCount((int) 1);
-						((LivingEntity) sourceentity).setHeldItem(Hand.MAIN_HAND, _setstack);
-						if (sourceentity instanceof ServerPlayerEntity)
-							((ServerPlayerEntity) sourceentity).inventory.markDirty();
+					if (sourceentity instanceof LivingEntity _entity) {
+						ItemStack _setstack = new ItemStack(TheWetSmpRehydratedModItems.EMERALD_EMBEDDED_MUSHROOM_STEW);
+						_setstack.setCount(1);
+						_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+						if (_entity instanceof ServerPlayer _serverPlayer)
+							_serverPlayer.getInventory().setChanged();
 					}
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.mooshroom.milk")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
-					} else {
-						((World) world).playSound(x, y, z,
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.mooshroom.milk")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-					}
+					if (world instanceof Level _level)
+						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.mooshroom.milk")), SoundSource.NEUTRAL, 1, 1);
 				}
-			} else if (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == LapisEmbeddedBowlItem.block) {
-				if ((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))
-						.getCount() >= 2) {
-					if (sourceentity instanceof PlayerEntity) {
-						ItemStack _setstack = new ItemStack(LapisEmbeddedMushroomStewItem.block);
-						_setstack.setCount((int) 1);
-						ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) sourceentity), _setstack);
+			} else if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
+					.getItem() == TheWetSmpRehydratedModItems.LAPIS_EMBEDDED_BOWL) {
+				if (((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)).getCount() >= 2) {
+					if (sourceentity instanceof Player _player) {
+						ItemStack _setstack = new ItemStack(TheWetSmpRehydratedModItems.LAPIS_EMBEDDED_MUSHROOM_STEW);
+						_setstack.setCount(1);
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-					if (sourceentity instanceof PlayerEntity) {
-						ItemStack _stktoremove = new ItemStack(LapisEmbeddedBowlItem.block);
-						((PlayerEntity) sourceentity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
-								((PlayerEntity) sourceentity).container.func_234641_j_());
+					if (sourceentity instanceof Player _player) {
+						ItemStack _stktoremove = new ItemStack(TheWetSmpRehydratedModItems.LAPIS_EMBEDDED_BOWL);
+						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
+								_player.inventoryMenu.getCraftSlots());
 					}
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.mooshroom.milk")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
-					} else {
-						((World) world).playSound(x, y, z,
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.mooshroom.milk")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-					}
+					if (world instanceof Level _level)
+						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.mooshroom.milk")), SoundSource.NEUTRAL, 1, 1);
 				} else {
-					if (sourceentity instanceof LivingEntity) {
-						ItemStack _setstack = new ItemStack(LapisEmbeddedMushroomStewItem.block);
-						_setstack.setCount((int) 1);
-						((LivingEntity) sourceentity).setHeldItem(Hand.MAIN_HAND, _setstack);
-						if (sourceentity instanceof ServerPlayerEntity)
-							((ServerPlayerEntity) sourceentity).inventory.markDirty();
+					if (sourceentity instanceof LivingEntity _entity) {
+						ItemStack _setstack = new ItemStack(TheWetSmpRehydratedModItems.LAPIS_EMBEDDED_MUSHROOM_STEW);
+						_setstack.setCount(1);
+						_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+						if (_entity instanceof ServerPlayer _serverPlayer)
+							_serverPlayer.getInventory().setChanged();
 					}
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.mooshroom.milk")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
-					} else {
-						((World) world).playSound(x, y, z,
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.mooshroom.milk")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-					}
+					if (world instanceof Level _level)
+						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.mooshroom.milk")), SoundSource.NEUTRAL, 1, 1);
 				}
-			} else if (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == OnyxEmbeddedBowlItem.block) {
-				if ((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))
-						.getCount() >= 2) {
-					if (sourceentity instanceof PlayerEntity) {
-						ItemStack _setstack = new ItemStack(OnyxEmbeddedMushroomStewItem.block);
-						_setstack.setCount((int) 1);
-						ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) sourceentity), _setstack);
+			} else if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
+					.getItem() == TheWetSmpRehydratedModItems.ONYX_EMBEDDED_BOWL) {
+				if (((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)).getCount() >= 2) {
+					if (sourceentity instanceof Player _player) {
+						ItemStack _setstack = new ItemStack(TheWetSmpRehydratedModItems.ONYX_EMBEDDED_MUSHROOM_STEW);
+						_setstack.setCount(1);
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-					if (sourceentity instanceof PlayerEntity) {
-						ItemStack _stktoremove = new ItemStack(OnyxEmbeddedBowlItem.block);
-						((PlayerEntity) sourceentity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
-								((PlayerEntity) sourceentity).container.func_234641_j_());
+					if (sourceentity instanceof Player _player) {
+						ItemStack _stktoremove = new ItemStack(TheWetSmpRehydratedModItems.ONYX_EMBEDDED_BOWL);
+						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
+								_player.inventoryMenu.getCraftSlots());
 					}
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.mooshroom.milk")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
-					} else {
-						((World) world).playSound(x, y, z,
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.mooshroom.milk")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-					}
+					if (world instanceof Level _level)
+						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.mooshroom.milk")), SoundSource.NEUTRAL, 1, 1);
 				} else {
-					if (sourceentity instanceof LivingEntity) {
-						ItemStack _setstack = new ItemStack(OnyxEmbeddedMushroomStewItem.block);
-						_setstack.setCount((int) 1);
-						((LivingEntity) sourceentity).setHeldItem(Hand.MAIN_HAND, _setstack);
-						if (sourceentity instanceof ServerPlayerEntity)
-							((ServerPlayerEntity) sourceentity).inventory.markDirty();
+					if (sourceentity instanceof LivingEntity _entity) {
+						ItemStack _setstack = new ItemStack(TheWetSmpRehydratedModItems.ONYX_EMBEDDED_MUSHROOM_STEW);
+						_setstack.setCount(1);
+						_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+						if (_entity instanceof ServerPlayer _serverPlayer)
+							_serverPlayer.getInventory().setChanged();
 					}
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.mooshroom.milk")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
-					} else {
-						((World) world).playSound(x, y, z,
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.mooshroom.milk")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-					}
+					if (world instanceof Level _level)
+						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.mooshroom.milk")), SoundSource.NEUTRAL, 1, 1);
 				}
-			} else if (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == RubyEmbeddedBowlItem.block) {
-				if ((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))
-						.getCount() >= 2) {
-					if (sourceentity instanceof PlayerEntity) {
-						ItemStack _setstack = new ItemStack(RubyEmbeddedMushroomStewItem.block);
-						_setstack.setCount((int) 1);
-						ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) sourceentity), _setstack);
+			} else if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
+					.getItem() == TheWetSmpRehydratedModItems.RUBY_EMBEDDED_BOWL) {
+				if (((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)).getCount() >= 2) {
+					if (sourceentity instanceof Player _player) {
+						ItemStack _setstack = new ItemStack(TheWetSmpRehydratedModItems.RUBY_EMBEDDED_MUSHROOM_STEW);
+						_setstack.setCount(1);
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-					if (sourceentity instanceof PlayerEntity) {
-						ItemStack _stktoremove = new ItemStack(RubyEmbeddedBowlItem.block);
-						((PlayerEntity) sourceentity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
-								((PlayerEntity) sourceentity).container.func_234641_j_());
+					if (sourceentity instanceof Player _player) {
+						ItemStack _stktoremove = new ItemStack(TheWetSmpRehydratedModItems.RUBY_EMBEDDED_BOWL);
+						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1,
+								_player.inventoryMenu.getCraftSlots());
 					}
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.mooshroom.milk")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
-					} else {
-						((World) world).playSound(x, y, z,
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.mooshroom.milk")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-					}
+					if (world instanceof Level _level)
+						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.mooshroom.milk")), SoundSource.NEUTRAL, 1, 1);
 				} else {
-					if (sourceentity instanceof LivingEntity) {
-						ItemStack _setstack = new ItemStack(RubyEmbeddedMushroomStewItem.block);
-						_setstack.setCount((int) 1);
-						((LivingEntity) sourceentity).setHeldItem(Hand.MAIN_HAND, _setstack);
-						if (sourceentity instanceof ServerPlayerEntity)
-							((ServerPlayerEntity) sourceentity).inventory.markDirty();
+					if (sourceentity instanceof LivingEntity _entity) {
+						ItemStack _setstack = new ItemStack(TheWetSmpRehydratedModItems.RUBY_EMBEDDED_MUSHROOM_STEW);
+						_setstack.setCount(1);
+						_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+						if (_entity instanceof ServerPlayer _serverPlayer)
+							_serverPlayer.getInventory().setChanged();
 					}
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.mooshroom.milk")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
-					} else {
-						((World) world).playSound(x, y, z,
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.mooshroom.milk")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-					}
+					if (world instanceof Level _level)
+						_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.mooshroom.milk")), SoundSource.NEUTRAL, 1, 1);
 				}
 			}
 		}

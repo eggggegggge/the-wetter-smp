@@ -2,21 +2,18 @@
   "group": "piston_boots",
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " 1 ",
-    "345"
+    " C ",
+    "PRP"
   ],
   "key": {
-    "1": {
+    "C": {
       "item": "minecraft:chainmail_boots"
     },
-    "3": {
+    "P": {
       "item": "minecraft:piston"
     },
-    "4": {
+    "R": {
       "item": "minecraft:redstone"
-    },
-    "5": {
-      "item": "minecraft:piston"
     }
   },
   "result": {

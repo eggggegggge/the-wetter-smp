@@ -2,23 +2,23 @@
   "group": "bufferblasterrecipe",
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "012",
-    " 45"
+    "BAP",
+    " DR"
   ],
   "key": {
-    "0": {
+    "B": {
       "item": "the_wet_smp_rehydrated:buffer"
     },
-    "1": {
+    "A": {
       "item": "the_wet_smp_rehydrated:aquamarine_glass"
     },
-    "2": {
+    "P": {
       "tag": "minecraft:planks"
     },
-    "4": {
+    "D": {
       "item": "minecraft:dispenser"
     },
-    "5": {
+    "R": {
       "item": "minecraft:redstone"
     }
   },

@@ -1,43 +1,17 @@
 
 package net.mcreator.thewetsmp.item;
 
-import net.minecraftforge.registries.ObjectHolder;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.food.FoodProperties;
 
-import net.minecraft.item.UseAction;
-import net.minecraft.item.Rarity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.Item;
-import net.minecraft.item.Food;
+public class GoldenBananaItem extends Item {
+	public GoldenBananaItem() {
+		super(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).stacksTo(64).rarity(Rarity.COMMON)
+				.food((new FoodProperties.Builder()).nutrition(6).saturationMod(3f)
 
-import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
-
-@TheWetSmpRehydratedModElements.ModElement.Tag
-public class GoldenBananaItem extends TheWetSmpRehydratedModElements.ModElement {
-	@ObjectHolder("the_wet_smp_rehydrated:golden_banana")
-	public static final Item block = null;
-
-	public GoldenBananaItem(TheWetSmpRehydratedModElements instance) {
-		super(instance, 664);
-	}
-
-	@Override
-	public void initElements() {
-		elements.items.add(() -> new FoodItemCustom());
-	}
-
-	public static class FoodItemCustom extends Item {
-		public FoodItemCustom() {
-			super(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(64).rarity(Rarity.COMMON)
-					.food((new Food.Builder()).hunger(6).saturation(3f)
-
-							.build()));
-			setRegistryName("golden_banana");
-		}
-
-		@Override
-		public UseAction getUseAction(ItemStack itemstack) {
-			return UseAction.EAT;
-		}
+						.build()));
+		setRegistryName("golden_banana");
 	}
 }

@@ -2,21 +2,18 @@
   "group": "leather_piston_boots",
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " 1 ",
-    "345"
+    " L ",
+    "PRP"
   ],
   "key": {
-    "1": {
+    "L": {
       "item": "minecraft:leather_boots"
     },
-    "3": {
+    "P": {
       "item": "minecraft:piston"
     },
-    "4": {
+    "R": {
       "item": "minecraft:redstone"
-    },
-    "5": {
-      "item": "minecraft:piston"
     }
   },
   "result": {

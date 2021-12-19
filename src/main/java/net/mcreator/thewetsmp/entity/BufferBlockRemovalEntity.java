@@ -2,188 +2,166 @@
 package net.mcreator.thewetsmp.entity;
 
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.fml.network.NetworkHooks;
-import net.minecraftforge.fml.network.FMLPlayMessages;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
+import net.minecraftforge.fmllegacy.network.NetworkHooks;
+import net.minecraftforge.fmllegacy.network.FMLPlayMessages;
 import net.minecraftforge.common.ForgeMod;
 
-import net.minecraft.world.World;
-import net.minecraft.world.IWorldReader;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.DamageSource;
-import net.minecraft.pathfinding.FlyingPathNavigator;
-import net.minecraft.network.IPacket;
-import net.minecraft.entity.projectile.PotionEntity;
-import net.minecraft.entity.projectile.AbstractArrowEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.ai.controller.FlyingMovementController;
-import net.minecraft.entity.ai.attributes.Attributes;
-import net.minecraft.entity.ai.attributes.AttributeModifierMap;
-import net.minecraft.entity.MobEntity;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.EntityClassification;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.CreatureEntity;
-import net.minecraft.entity.CreatureAttribute;
-import net.minecraft.block.BlockState;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.projectile.ThrownPotion;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.ai.navigation.PathNavigation;
+import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
+import net.minecraft.world.entity.ai.control.FlyingMoveControl;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.PathfinderMob;
+import net.minecraft.world.entity.MobType;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.core.BlockPos;
 
-import net.mcreator.thewetsmp.entity.renderer.BufferBlockRemovalRenderer;
-import net.mcreator.thewetsmp.TheWetSmpRehydratedModElements;
+import net.mcreator.thewetsmp.init.TheWetSmpRehydratedModEntities;
 
-@TheWetSmpRehydratedModElements.ModElement.Tag
-public class BufferBlockRemovalEntity extends TheWetSmpRehydratedModElements.ModElement {
-	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
-			.setShouldReceiveVelocityUpdates(true).setTrackingRange(0).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire()
-			.size(0f, 0f)).build("buffer_block_removal").setRegistryName("buffer_block_removal");
+public class BufferBlockRemovalEntity extends PathfinderMob {
+	public BufferBlockRemovalEntity(FMLPlayMessages.SpawnEntity packet, Level world) {
+		this(TheWetSmpRehydratedModEntities.BUFFER_BLOCK_REMOVAL, world);
+	}
 
-	public BufferBlockRemovalEntity(TheWetSmpRehydratedModElements instance) {
-		super(instance, 24);
-		FMLJavaModLoadingContext.get().getModEventBus().register(new BufferBlockRemovalRenderer.ModelRegisterHandler());
-		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
+	public BufferBlockRemovalEntity(EntityType<BufferBlockRemovalEntity> type, Level world) {
+		super(type, world);
+		xpReward = 0;
+		setNoAi(true);
+		setPersistenceRequired();
+		this.moveControl = new FlyingMoveControl(this, 10, true);
 	}
 
 	@Override
-	public void initElements() {
-		elements.entities.add(() -> entity);
+	public Packet<?> getAddEntityPacket() {
+		return NetworkHooks.getEntitySpawningPacket(this);
 	}
 
 	@Override
-	public void init(FMLCommonSetupEvent event) {
+	protected PathNavigation createNavigation(Level world) {
+		return new FlyingPathNavigation(this, world);
 	}
 
-	private static class EntityAttributesRegisterHandler {
-		@SubscribeEvent
-		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
-			AttributeModifierMap.MutableAttribute ammma = MobEntity.func_233666_p_();
-			ammma = ammma.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0);
-			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 10);
-			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 0);
-			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 0);
-			ammma = ammma.createMutableAttribute(Attributes.FLYING_SPEED, 0);
-			ammma = ammma.createMutableAttribute(ForgeMod.SWIM_SPEED.get(), 0);
-			event.put(entity, ammma.create());
-		}
+	@Override
+	public MobType getMobType() {
+		return MobType.UNDEFINED;
 	}
 
-	public static class CustomEntity extends CreatureEntity {
-		public CustomEntity(FMLPlayMessages.SpawnEntity packet, World world) {
-			this(entity, world);
-		}
+	@Override
+	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
+		return false;
+	}
 
-		public CustomEntity(EntityType<CustomEntity> type, World world) {
-			super(type, world);
-			experienceValue = 0;
-			setNoAI(true);
-			enablePersistence();
-			this.moveController = new FlyingMovementController(this, 10, true);
-			this.navigator = new FlyingPathNavigator(this, this.world);
-		}
+	@Override
+	public SoundEvent getHurtSound(DamageSource ds) {
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(""));
+	}
 
-		@Override
-		public IPacket<?> createSpawnPacket() {
-			return NetworkHooks.getEntitySpawningPacket(this);
-		}
+	@Override
+	public SoundEvent getDeathSound() {
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(""));
+	}
 
-		@Override
-		public CreatureAttribute getCreatureAttribute() {
-			return CreatureAttribute.UNDEFINED;
-		}
+	@Override
+	public boolean causeFallDamage(float l, float d, DamageSource source) {
+		return false;
+	}
 
-		@Override
-		public boolean canDespawn(double distanceToClosestPlayer) {
+	@Override
+	public boolean hurt(DamageSource source, float amount) {
+		if (source.getDirectEntity() instanceof AbstractArrow)
 			return false;
-		}
-
-		@Override
-		public net.minecraft.util.SoundEvent getHurtSound(DamageSource ds) {
-			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(""));
-		}
-
-		@Override
-		public net.minecraft.util.SoundEvent getDeathSound() {
-			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(""));
-		}
-
-		@Override
-		public boolean onLivingFall(float l, float d) {
+		if (source.getDirectEntity() instanceof Player)
 			return false;
-		}
-
-		@Override
-		public boolean attackEntityFrom(DamageSource source, float amount) {
-			if (source.getImmediateSource() instanceof AbstractArrowEntity)
-				return false;
-			if (source.getImmediateSource() instanceof PlayerEntity)
-				return false;
-			if (source.getImmediateSource() instanceof PotionEntity)
-				return false;
-			if (source == DamageSource.FALL)
-				return false;
-			if (source == DamageSource.CACTUS)
-				return false;
-			if (source == DamageSource.DROWN)
-				return false;
-			if (source == DamageSource.LIGHTNING_BOLT)
-				return false;
-			if (source.isExplosion())
-				return false;
-			if (source.getDamageType().equals("trident"))
-				return false;
-			if (source == DamageSource.ANVIL)
-				return false;
-			if (source == DamageSource.DRAGON_BREATH)
-				return false;
-			if (source == DamageSource.WITHER)
-				return false;
-			if (source.getDamageType().equals("witherSkull"))
-				return false;
-			return super.attackEntityFrom(source, amount);
-		}
-
-		@Override
-		public boolean canBreatheUnderwater() {
-			return true;
-		}
-
-		@Override
-		public boolean isNotColliding(IWorldReader world) {
-			return world.checkNoEntityCollision(this);
-		}
-
-		@Override
-		public boolean isPushedByWater() {
+		if (source.getDirectEntity() instanceof ThrownPotion)
 			return false;
-		}
-
-		@Override
-		public boolean canBePushed() {
+		if (source == DamageSource.FALL)
 			return false;
-		}
+		if (source == DamageSource.CACTUS)
+			return false;
+		if (source == DamageSource.DROWN)
+			return false;
+		if (source == DamageSource.LIGHTNING_BOLT)
+			return false;
+		if (source.isExplosion())
+			return false;
+		if (source.getMsgId().equals("trident"))
+			return false;
+		if (source == DamageSource.ANVIL)
+			return false;
+		if (source == DamageSource.DRAGON_BREATH)
+			return false;
+		if (source == DamageSource.WITHER)
+			return false;
+		if (source.getMsgId().equals("witherSkull"))
+			return false;
+		return super.hurt(source, amount);
+	}
 
-		@Override
-		protected void collideWithEntity(Entity entityIn) {
-		}
+	@Override
+	public boolean canBreatheUnderwater() {
+		return true;
+	}
 
-		@Override
-		protected void collideWithNearbyEntities() {
-		}
+	@Override
+	public boolean checkSpawnObstruction(LevelReader world) {
+		return world.isUnobstructed(this);
+	}
 
-		@Override
-		protected void updateFallState(double y, boolean onGroundIn, BlockState state, BlockPos pos) {
-		}
+	@Override
+	public boolean isPushedByFluid() {
+		return false;
+	}
 
-		@Override
-		public void setNoGravity(boolean ignored) {
-			super.setNoGravity(true);
-		}
+	@Override
+	public boolean isPushable() {
+		return false;
+	}
 
-		public void livingTick() {
-			super.livingTick();
-			this.setNoGravity(true);
-		}
+	@Override
+	protected void doPush(Entity entityIn) {
+	}
+
+	@Override
+	protected void pushEntities() {
+	}
+
+	@Override
+	protected void checkFallDamage(double y, boolean onGroundIn, BlockState state, BlockPos pos) {
+	}
+
+	@Override
+	public void setNoGravity(boolean ignored) {
+		super.setNoGravity(true);
+	}
+
+	public void aiStep() {
+		super.aiStep();
+		this.setNoGravity(true);
+	}
+
+	public static void init() {
+	}
+
+	public static AttributeSupplier.Builder createAttributes() {
+		AttributeSupplier.Builder builder = Mob.createMobAttributes();
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0);
+		builder = builder.add(Attributes.MAX_HEALTH, 10);
+		builder = builder.add(Attributes.ARMOR, 0);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 0);
+		builder = builder.add(Attributes.FLYING_SPEED, 0);
+		builder = builder.add(ForgeMod.SWIM_SPEED.get(), 0);
+		return builder;
 	}
 }

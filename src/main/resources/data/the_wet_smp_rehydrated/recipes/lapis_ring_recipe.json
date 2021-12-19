@@ -2,27 +2,21 @@
   "group": "rings",
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "012",
-    "3 5",
-    " 7 "
+    "LGL",
+    "O O",
+    " S "
   ],
   "key": {
-    "0": {
+    "L": {
       "item": "minecraft:lapis_lazuli"
     },
-    "1": {
+    "G": {
       "item": "minecraft:gold_block"
     },
-    "2": {
-      "item": "minecraft:lapis_lazuli"
-    },
-    "3": {
+    "O": {
       "item": "minecraft:gold_ingot"
     },
-    "5": {
-      "item": "minecraft:gold_ingot"
-    },
-    "7": {
+    "S": {
       "item": "the_wet_smp_rehydrated:osmium_ingot"
     }
   },
