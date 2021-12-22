@@ -26,30 +26,30 @@ public class DesertLakesFishProcedure {
 		double minnow = 0;
 		double pupfish = 0;
 		/*fishing factors*/
-		luck = (double) LuckCheckProcedure.execute(entity);/*loot factors*/
-		time = (double) (world.dayTime());
-		altitude = (double) (Math.floor(y));/*define base values*/
-		glassfish = (double) 5;
-		crab = (double) 16;
-		minnow = (double) 23;
-		pupfish = (double) 25;
-		jellyfish = (double) 30;/*apply modifiers*/
+		luck = LuckCheckProcedure.execute(entity);/*loot factors*/
+		time = world.dayTime();
+		altitude = Math.floor(y);/*define base values*/
+		glassfish = 5;
+		crab = 16;
+		minnow = 23;
+		pupfish = 25;
+		jellyfish = 30;/*apply modifiers*/
 		if (luck > 1) {
-			glassfish = (double) (glassfish + 8);
-			crab = (double) (crab - 1);
-			minnow = (double) (minnow - 3);
-			pupfish = (double) (pupfish + 1);
-			jellyfish = (double) (jellyfish - 2);
+			glassfish = glassfish + 8;
+			crab = crab - 1;
+			minnow = minnow - 3;
+			pupfish = pupfish + 1;
+			jellyfish = jellyfish - 2;
 		} else if (luck < 0) {
-			glassfish = (double) (glassfish - 2);
-			crab = (double) (crab + 4);
-			minnow = (double) (minnow + 2);
-			pupfish = (double) (pupfish + 1);
-			jellyfish = (double) (jellyfish + 2);
+			glassfish = glassfish - 2;
+			crab = crab + 4;
+			minnow = minnow + 2;
+			pupfish = pupfish + 1;
+			jellyfish = jellyfish + 2;
 		} /*fish*/
-		fish = (double) crab;
+		fish = crab;
 		if (altitude < 60 || time > 13000 && time > 23000) {
-			fish = (double) jellyfish;
+			fish = jellyfish;
 		}
 		if (entity instanceof Player _player) {
 			Scoreboard _sc = _player.getScoreboard();

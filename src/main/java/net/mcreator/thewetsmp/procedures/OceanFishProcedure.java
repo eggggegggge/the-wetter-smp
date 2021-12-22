@@ -30,38 +30,38 @@ public class OceanFishProcedure {
 		double seahorse = 0;
 		double glassfish = 0;
 		/*fishing factors*/
-		luck = (double) LuckCheckProcedure.execute(entity);/*loot factors*/
-		time = (double) (world.dayTime());
-		altitude = (double) (Math.floor(y));/*define base values*/
-		cod = (double) 10;
-		salmon = (double) 18;
-		scallop = (double) 23;
-		seaurchin = (double) 30;
-		crab = (double) 37;
-		bass = (double) 48;
-		seahorse = (double) 52;
-		glassfish = (double) 53;
-		jellyfish = (double) 60;/*apply modifiers*/
+		luck = LuckCheckProcedure.execute(entity);/*loot factors*/
+		time = world.dayTime();
+		altitude = Math.floor(y);/*define base values*/
+		cod = 10;
+		salmon = 18;
+		scallop = 23;
+		seaurchin = 30;
+		crab = 37;
+		bass = 48;
+		seahorse = 52;
+		glassfish = 53;
+		jellyfish = 60;/*apply modifiers*/
 		if (luck > 1) {
-			cod = (double) (cod - 3);
-			salmon = (double) (salmon - 2);
-			scallop = (double) (scallop + 5);
-			seaurchin = (double) (seaurchin + 4);
-			crab = (double) (crab + 0);
-			bass = (double) (bass - 4);
-			glassfish = (double) (glassfish + 1);
-			jellyfish = (double) (jellyfish - 2);
+			cod = cod - 3;
+			salmon = salmon - 2;
+			scallop = scallop + 5;
+			seaurchin = seaurchin + 4;
+			crab = crab + 0;
+			bass = bass - 4;
+			glassfish = glassfish + 1;
+			jellyfish = jellyfish - 2;
 		} else if (luck < 0) {
-			cod = (double) (cod + 3);
-			salmon = (double) (salmon + 2);
-			scallop = (double) (scallop - 2);
-			seaurchin = (double) (seaurchin - 4);
-			crab = (double) (crab + 2);
-			jellyfish = (double) (jellyfish - 3);
+			cod = cod + 3;
+			salmon = salmon + 2;
+			scallop = scallop - 2;
+			seaurchin = seaurchin - 4;
+			crab = crab + 2;
+			jellyfish = jellyfish - 3;
 		} /*fish*/
-		fish = (double) glassfish;
+		fish = glassfish;
 		if (time > 13000 && time < 23000) {
-			fish = (double) jellyfish;
+			fish = jellyfish;
 		}
 		if (entity instanceof Player _player) {
 			Scoreboard _sc = _player.getScoreboard();

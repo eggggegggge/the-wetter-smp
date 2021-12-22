@@ -32,7 +32,7 @@ public class BufferBlockIsPlacedByProcedure {
 				world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
 			}
 		} else {
-			name = (String) (entity.getDisplayName().getString());
+			name = entity.getDisplayName().getString();
 			if (!world.isClientSide()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);

@@ -31,45 +31,45 @@ public class WarmOceanFishProcedure {
 		double humuhumunukunukuapuaa = 0;
 		double cuttlefish = 0;
 		/*fishing factors*/
-		luck = (double) LuckCheckProcedure.execute(entity);/*loot factors*/
-		time = (double) (world.dayTime());
-		altitude = (double) (Math.floor(y));/*define base values*/
-		pufferfish = (double) 10;
-		clownfish = (double) 18;
-		koi = (double) 23;
-		scallop = (double) 30;
-		seahorse = (double) 35;
-		seaurchin = (double) 40;
-		crab = (double) 45;
-		cuttlefish = (double) 48;
-		humuhumunukunukuapuaa = (double) 49;
-		jellyfish = (double) 55;/*apply modifiers*/
+		luck = LuckCheckProcedure.execute(entity);/*loot factors*/
+		time = world.dayTime();
+		altitude = Math.floor(y);/*define base values*/
+		pufferfish = 10;
+		clownfish = 18;
+		koi = 23;
+		scallop = 30;
+		seahorse = 35;
+		seaurchin = 40;
+		crab = 45;
+		cuttlefish = 48;
+		humuhumunukunukuapuaa = 49;
+		jellyfish = 55;/*apply modifiers*/
 		if (luck > 1) {
-			pufferfish = (double) (pufferfish - 3);
-			clownfish = (double) (clownfish - 2);
-			koi = (double) (koi + 0);
-			scallop = (double) (scallop + 1);
-			seahorse = (double) (seahorse + 3);
-			seaurchin = (double) (seaurchin + 0);
-			crab = (double) (crab + 0);
-			cuttlefish = (double) (cuttlefish + 4);
-			humuhumunukunukuapuaa = (double) (humuhumunukunukuapuaa + 8);
-			jellyfish = (double) (jellyfish + 2);
+			pufferfish = pufferfish - 3;
+			clownfish = clownfish - 2;
+			koi = koi + 0;
+			scallop = scallop + 1;
+			seahorse = seahorse + 3;
+			seaurchin = seaurchin + 0;
+			crab = crab + 0;
+			cuttlefish = cuttlefish + 4;
+			humuhumunukunukuapuaa = humuhumunukunukuapuaa + 8;
+			jellyfish = jellyfish + 2;
 		} else if (luck < 0) {
-			pufferfish = (double) (pufferfish + 5);
-			clownfish = (double) (clownfish - 2);
-			koi = (double) (koi - 4);
-			scallop = (double) (scallop - 4);
-			seahorse = (double) (scallop - 5);
-			seaurchin = (double) (seaurchin + 3);
-			crab = (double) (crab + 5);
-			cuttlefish = (double) (cuttlefish + 3);
-			humuhumunukunukuapuaa = (double) (humuhumunukunukuapuaa + 3);
-			jellyfish = (double) (jellyfish + 2);
+			pufferfish = pufferfish + 5;
+			clownfish = clownfish - 2;
+			koi = koi - 4;
+			scallop = scallop - 4;
+			seahorse = scallop - 5;
+			seaurchin = seaurchin + 3;
+			crab = crab + 5;
+			cuttlefish = cuttlefish + 3;
+			humuhumunukunukuapuaa = humuhumunukunukuapuaa + 3;
+			jellyfish = jellyfish + 2;
 		} /*fish*/
-		fish = (double) humuhumunukunukuapuaa;
+		fish = humuhumunukunukuapuaa;
 		if (time > 13000 && time < 23000) {
-			fish = (double) jellyfish;
+			fish = jellyfish;
 		}
 		if (entity instanceof Player _player) {
 			Scoreboard _sc = _player.getScoreboard();

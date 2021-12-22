@@ -26,30 +26,30 @@ public class MushroomFieldShoreFishProcedure {
 		double dryadsaequorea = 0;
 		double shroomykoi = 0;
 		/*fishing factors*/
-		luck = (double) LuckCheckProcedure.execute(entity);/*loot factors*/
-		time = (double) (world.dayTime());
-		altitude = (double) (Math.floor(y));/*define base values*/
-		fungigoby = (double) 9;
-		shiitakeorfe = (double) 18;
-		dryadsaequorea = (double) 22;
-		shroomykoi = (double) 27;
-		jellyfish = (double) 33;/*apply modifiers*/
+		luck = LuckCheckProcedure.execute(entity);/*loot factors*/
+		time = world.dayTime();
+		altitude = Math.floor(y);/*define base values*/
+		fungigoby = 9;
+		shiitakeorfe = 18;
+		dryadsaequorea = 22;
+		shroomykoi = 27;
+		jellyfish = 33;/*apply modifiers*/
 		if (luck > 1) {
-			fungigoby = (double) (fungigoby - 1);
-			shiitakeorfe = (double) (shiitakeorfe - 1);
-			dryadsaequorea = (double) (dryadsaequorea + 2);
-			shroomykoi = (double) (shroomykoi + 3);
-			jellyfish = (double) (jellyfish + 2);
+			fungigoby = fungigoby - 1;
+			shiitakeorfe = shiitakeorfe - 1;
+			dryadsaequorea = dryadsaequorea + 2;
+			shroomykoi = shroomykoi + 3;
+			jellyfish = jellyfish + 2;
 		} else if (luck < 0) {
-			fungigoby = (double) (fungigoby + 1);
-			shiitakeorfe = (double) (shiitakeorfe + 1);
-			dryadsaequorea = (double) (dryadsaequorea - 2);
-			shroomykoi = (double) (shroomykoi - 5);
-			jellyfish = (double) (jellyfish + 2);
+			fungigoby = fungigoby + 1;
+			shiitakeorfe = shiitakeorfe + 1;
+			dryadsaequorea = dryadsaequorea - 2;
+			shroomykoi = shroomykoi - 5;
+			jellyfish = jellyfish + 2;
 		} /*fish*/
-		fish = (double) shroomykoi;
+		fish = shroomykoi;
 		if (time > 13000 && time < 23000) {
-			fish = (double) jellyfish;
+			fish = jellyfish;
 		}
 		if (entity instanceof Player _player) {
 			Scoreboard _sc = _player.getScoreboard();

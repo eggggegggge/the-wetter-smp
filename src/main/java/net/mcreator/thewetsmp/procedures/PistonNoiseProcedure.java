@@ -14,7 +14,7 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.Minecraft;
+import net.minecraft.core.BlockPos;
 
 import net.mcreator.thewetsmp.init.TheWetSmpRehydratedModItems;
 
@@ -47,9 +47,15 @@ public class PistonNoiseProcedure {
 						.getItem() == TheWetSmpRehydratedModItems.DIAMOND_PISTON_BOOTS
 				|| (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY)
 						.getItem() == TheWetSmpRehydratedModItems.CHAINMAIL_PISTON_BOOTS) {
-			if (world instanceof Level _level)
-				_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
-						ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.piston.extend")), SoundSource.NEUTRAL, 1, 1);
+			if (world instanceof Level _level) {
+				if (!_level.isClientSide()) {
+					_level.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+							ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.piston.extend")), SoundSource.NEUTRAL, 1, 1);
+				} else {
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.piston.extend")),
+							SoundSource.NEUTRAL, 1, 1, false);
+				}
+			}
 		}
 	}
 }

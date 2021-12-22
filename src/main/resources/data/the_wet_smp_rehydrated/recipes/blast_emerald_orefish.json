@@ -1,0 +1,12 @@
+{
+  "group": "emeraldorefish",
+  "type": "minecraft:blasting",
+  "experience": 1,
+  "cookingtime": 100,
+  "ingredient": {
+    "item": "the_wet_smp_rehydrated:emerald_orefish"
+  },
+  "result": {
+    "item": "minecraft:emerald"
+  }
+}

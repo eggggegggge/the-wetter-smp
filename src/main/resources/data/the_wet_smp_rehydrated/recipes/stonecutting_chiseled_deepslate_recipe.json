@@ -3,7 +3,7 @@
   "type": "minecraft:stonecutting",
   "count": 1,
   "ingredient": {
-    "item": "the_wet_smp_rehydrated:cobbled_scaleslate"
+    "item": "the_wet_smp_rehydrated:scaleslate"
   },
   "result": "the_wet_smp_rehydrated:chiseled_scaleslate"
 }

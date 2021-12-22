@@ -18,7 +18,7 @@ import java.util.Collections;
 
 public class PolishedScaleslateBlock extends Block {
 	public PolishedScaleslateBlock() {
-		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.NETHER_BRICKS).strength(3.5f, 6f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE).strength(3.5f, 6f).requiresCorrectToolForDrops());
 		setRegistryName("polished_scaleslate");
 	}
 

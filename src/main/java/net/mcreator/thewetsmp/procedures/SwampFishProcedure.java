@@ -24,23 +24,23 @@ public class SwampFishProcedure {
 		double seahorse = 0;
 		double humuhumunukunukuapuaa = 0;
 		/*fishing factors*/
-		luck = (double) LuckCheckProcedure.execute(entity);/*loot factors*/
-		time = (double) (world.dayTime());
-		altitude = (double) (Math.floor(y));/*define base values*/
-		seahorse = (double) 11;
-		humuhumunukunukuapuaa = (double) 14;
-		jellyfish = (double) 20;/*apply modifiers*/
+		luck = LuckCheckProcedure.execute(entity);/*loot factors*/
+		time = world.dayTime();
+		altitude = Math.floor(y);/*define base values*/
+		seahorse = 11;
+		humuhumunukunukuapuaa = 14;
+		jellyfish = 20;/*apply modifiers*/
 		if (luck > 1) {
-			seahorse = (double) (seahorse + 1);
-			humuhumunukunukuapuaa = (double) (humuhumunukunukuapuaa + 4);
+			seahorse = seahorse + 1;
+			humuhumunukunukuapuaa = humuhumunukunukuapuaa + 4;
 		} else if (luck < 0) {
-			seahorse = (double) (seahorse - 1);
-			humuhumunukunukuapuaa = (double) (humuhumunukunukuapuaa - 3);
-			jellyfish = (double) (jellyfish + 2);
+			seahorse = seahorse - 1;
+			humuhumunukunukuapuaa = humuhumunukunukuapuaa - 3;
+			jellyfish = jellyfish + 2;
 		} /*fish*/
-		fish = (double) humuhumunukunukuapuaa;
+		fish = humuhumunukunukuapuaa;
 		if (time > 13000 && time < 23000) {
-			fish = (double) jellyfish;
+			fish = jellyfish;
 		}
 		if (entity instanceof Player _player) {
 			Scoreboard _sc = _player.getScoreboard();

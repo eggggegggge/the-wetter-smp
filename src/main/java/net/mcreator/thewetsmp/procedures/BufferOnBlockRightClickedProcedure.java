@@ -13,7 +13,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.Minecraft;
 
 import net.mcreator.thewetsmp.init.TheWetSmpRehydratedModBlocks;
 
@@ -78,10 +77,17 @@ public class BufferOnBlockRightClickedProcedure {
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
-							if (world instanceof Level _level)
-								_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
-										ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("the_wet_smp_rehydrated:buffer.new_latency")),
-										SoundSource.NEUTRAL, (float) 0.1, 1);
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+											ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("the_wet_smp_rehydrated:buffer.new_latency")),
+											SoundSource.NEUTRAL, (float) 0.1, 1);
+								} else {
+									_level.playLocalSound(x, y, z,
+											ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("the_wet_smp_rehydrated:buffer.new_latency")),
+											SoundSource.NEUTRAL, (float) 0.1, 1, false);
+								}
+							}
 							Y4StoreInfoProcedure.execute(world, x, y, z);
 							Y3StoreInfoProcedure.execute(world, x, y, z);
 							Y2StoreInfoProcedure.execute(world, x, y, z);
@@ -158,10 +164,17 @@ public class BufferOnBlockRightClickedProcedure {
 										if (world instanceof Level _level)
 											_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 									}
-									if (world instanceof Level _level)
-										_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
-												ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.chime")),
-												SoundSource.NEUTRAL, 1, 1);
+									if (world instanceof Level _level) {
+										if (!_level.isClientSide()) {
+											_level.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+													ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.chime")),
+													SoundSource.NEUTRAL, 1, 1);
+										} else {
+											_level.playLocalSound(x, y, z,
+													ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.chime")),
+													SoundSource.NEUTRAL, 1, 1, false);
+										}
+									}
 									if (!world.isClientSide()) {
 										BlockPos _bp = new BlockPos((int) x, (int) (y - 2), (int) z);
 										BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -202,10 +215,17 @@ public class BufferOnBlockRightClickedProcedure {
 								if (world instanceof Level _level)
 									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 							}
-							if (world instanceof Level _level)
-								_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
-										ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("the_wet_smp_rehydrated:buffer.latency")),
-										SoundSource.NEUTRAL, (float) 0.1, 1);
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+											ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("the_wet_smp_rehydrated:buffer.latency")),
+											SoundSource.NEUTRAL, (float) 0.1, 1);
+								} else {
+									_level.playLocalSound(x, y, z,
+											ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("the_wet_smp_rehydrated:buffer.latency")),
+											SoundSource.NEUTRAL, (float) 0.1, 1, false);
+								}
+							}
 							BuildLatencyProcedure.execute(world, x, y, z);
 							BuildLatency2Procedure.execute(world, x, y, z);
 							BuildLatency3Procedure.execute(world, x, y, z);
@@ -221,9 +241,15 @@ public class BufferOnBlockRightClickedProcedure {
 				}
 			}
 		} else {
-			if (world instanceof Level _level)
-				_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
-						ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.chest.locked")), SoundSource.NEUTRAL, 1, 1);
+			if (world instanceof Level _level) {
+				if (!_level.isClientSide()) {
+					_level.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+							ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.chest.locked")), SoundSource.NEUTRAL, 1, 1);
+				} else {
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.chest.locked")),
+							SoundSource.NEUTRAL, 1, 1, false);
+				}
+			}
 		}
 	}
 }

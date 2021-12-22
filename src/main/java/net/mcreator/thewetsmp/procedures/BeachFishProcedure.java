@@ -26,28 +26,28 @@ public class BeachFishProcedure {
 		double goldfish = 0;
 		double minnow = 0;
 		/*fishing factors*/
-		luck = (double) LuckCheckProcedure.execute(entity);/*loot factors*/
-		time = (double) (world.dayTime());
-		altitude = (double) (Math.floor(y));/*define base values*/
-		seaurchin = (double) 5;
-		crab = (double) 12;
-		clownfish = (double) 18;
-		goldfish = (double) 26;
-		minnow = (double) 32;/*apply modifiers*/
+		luck = LuckCheckProcedure.execute(entity);/*loot factors*/
+		time = world.dayTime();
+		altitude = Math.floor(y);/*define base values*/
+		seaurchin = 5;
+		crab = 12;
+		clownfish = 18;
+		goldfish = 26;
+		minnow = 32;/*apply modifiers*/
 		if (luck > 1) {
-			seaurchin = (double) (seaurchin + 1);
-			crab = (double) (crab - 2);
-			clownfish = (double) (clownfish + 5);
-			goldfish = (double) (goldfish + 1);
-			minnow = (double) (minnow - 3);
+			seaurchin = seaurchin + 1;
+			crab = crab - 2;
+			clownfish = clownfish + 5;
+			goldfish = goldfish + 1;
+			minnow = minnow - 3;
 		} else if (luck < 0) {
-			seaurchin = (double) (seaurchin + 0);
-			crab = (double) (crab + 2);
-			clownfish = (double) (clownfish - 3);
-			goldfish = (double) (goldfish - 4);
-			minnow = (double) (minnow + 2);
+			seaurchin = seaurchin + 0;
+			crab = crab + 2;
+			clownfish = clownfish - 3;
+			goldfish = goldfish - 4;
+			minnow = minnow + 2;
 		} /*fish*/
-		fish = (double) minnow;
+		fish = minnow;
 		if (entity instanceof Player _player) {
 			Scoreboard _sc = _player.getScoreboard();
 			Objective _so = _sc.getObjective("PlayerRNG");

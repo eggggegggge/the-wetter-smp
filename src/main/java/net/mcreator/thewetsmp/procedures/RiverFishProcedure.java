@@ -25,27 +25,27 @@ public class RiverFishProcedure {
 		double koi = 0;
 		double scallop = 0;
 		/*fishing factors*/
-		luck = (double) LuckCheckProcedure.execute(entity);/*loot factors*/
-		time = (double) (world.dayTime());
-		altitude = (double) (Math.floor(y));/*define base values*/
-		salmon = (double) 10;
-		scallop = (double) 18;
-		koi = (double) 23;
-		jellyfish = (double) 27;/*apply modifiers*/
+		luck = LuckCheckProcedure.execute(entity);/*loot factors*/
+		time = world.dayTime();
+		altitude = Math.floor(y);/*define base values*/
+		salmon = 10;
+		scallop = 18;
+		koi = 23;
+		jellyfish = 27;/*apply modifiers*/
 		if (luck > 1) {
-			salmon = (double) (salmon - 3);
-			scallop = (double) (scallop + 1);
-			koi = (double) (koi + 2);
-			jellyfish = (double) (jellyfish - 2);
+			salmon = salmon - 3;
+			scallop = scallop + 1;
+			koi = koi + 2;
+			jellyfish = jellyfish - 2;
 		} else if (luck < 0) {
-			salmon = (double) (salmon + 3);
-			scallop = (double) (scallop - 1);
-			koi = (double) (koi - 2);
-			jellyfish = (double) (jellyfish + 0);
+			salmon = salmon + 3;
+			scallop = scallop - 1;
+			koi = koi - 2;
+			jellyfish = jellyfish + 0;
 		} /*fish*/
-		fish = (double) koi;
+		fish = koi;
 		if (time > 13000 && time < 23000) {
-			fish = (double) jellyfish;
+			fish = jellyfish;
 		}
 		if (entity instanceof Player _player) {
 			Scoreboard _sc = _player.getScoreboard();

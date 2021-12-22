@@ -24,14 +24,14 @@ public class SnowyBeachFishProcedure {
 		double seaurchin = 0;
 		double minnow = 0;
 		/*fishing factors*/
-		luck = (double) LuckCheckProcedure.execute(entity);/*loot factors*/
-		time = (double) (world.dayTime());
-		altitude = (double) (Math.floor(y));/*define base values*/
-		cod = (double) 15;
-		seaurchin = (double) 20;
-		minnow = (double) 32;/*apply modifiers*/
+		luck = LuckCheckProcedure.execute(entity);/*loot factors*/
+		time = world.dayTime();
+		altitude = Math.floor(y);/*define base values*/
+		cod = 15;
+		seaurchin = 20;
+		minnow = 32;/*apply modifiers*/
 		/*fish*/
-		fish = (double) sel;
+		fish = sel;
 		if (entity instanceof Player _player) {
 			Scoreboard _sc = _player.getScoreboard();
 			Objective _so = _sc.getObjective("PlayerRNG");

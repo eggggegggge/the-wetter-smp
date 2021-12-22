@@ -24,20 +24,20 @@ public class WoodedHillsFishProcedure {
 		double bass = 0;
 		double nightkoi = 0;
 		/*fishing factors*/
-		luck = (double) LuckCheckProcedure.execute(entity);/*loot factors*/
-		time = (double) (world.dayTime());
-		altitude = (double) (Math.floor(y));/*define base values*/
-		koi = (double) 10;
-		bass = (double) 22;
-		nightkoi = (double) 27;/*apply modifiers*/
+		luck = LuckCheckProcedure.execute(entity);/*loot factors*/
+		time = world.dayTime();
+		altitude = Math.floor(y);/*define base values*/
+		koi = 10;
+		bass = 22;
+		nightkoi = 27;/*apply modifiers*/
 		if (luck > 1) {
-			koi = (double) (koi + 3);
-			bass = (double) (bass - 1);
+			koi = koi + 3;
+			bass = bass - 1;
 		} else if (luck < 0) {
-			koi = (double) (koi - 4);
-			nightkoi = (double) (nightkoi - 3);
+			koi = koi - 4;
+			nightkoi = nightkoi - 3;
 		} /*fish*/
-		fish = (double) nightkoi;
+		fish = nightkoi;
 		if (entity instanceof Player _player) {
 			Scoreboard _sc = _player.getScoreboard();
 			Objective _so = _sc.getObjective("PlayerRNG");

@@ -1,9 +1,0 @@
-{
-  "group": "scaleslatetilestairs",
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "the_wet_smp_rehydrated:scaleslate_bricks"
-  },
-  "result": "the_wet_smp_rehydrated:scaleslate_tile_stairs"
-}

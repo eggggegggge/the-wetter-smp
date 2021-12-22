@@ -24,22 +24,22 @@ public class JungleFishProcedure {
 		double bass = 0;
 		double junglesnapper = 0;
 		/*fishing factors*/
-		luck = (double) LuckCheckProcedure.execute(entity);/*loot factors*/
-		time = (double) (world.dayTime());
-		altitude = (double) (Math.floor(y));/*define base values*/
-		bass = (double) 11;
-		crab = (double) 19;
-		junglesnapper = (double) 24;/*apply modifiers*/
+		luck = LuckCheckProcedure.execute(entity);/*loot factors*/
+		time = world.dayTime();
+		altitude = Math.floor(y);/*define base values*/
+		bass = 11;
+		crab = 19;
+		junglesnapper = 24;/*apply modifiers*/
 		if (luck > 1) {
-			bass = (double) (bass - 2);
-			crab = (double) (crab - 3);
-			junglesnapper = (double) (junglesnapper + 3);
+			bass = bass - 2;
+			crab = crab - 3;
+			junglesnapper = junglesnapper + 3;
 		} else if (luck < 0) {
-			bass = (double) (bass + 2);
-			crab = (double) (crab + 3);
-			junglesnapper = (double) (junglesnapper + 1);
+			bass = bass + 2;
+			crab = crab + 3;
+			junglesnapper = junglesnapper + 1;
 		} /*fish*/
-		fish = (double) junglesnapper;
+		fish = junglesnapper;
 		if (entity instanceof Player _player) {
 			Scoreboard _sc = _player.getScoreboard();
 			Objective _so = _sc.getObjective("PlayerRNG");

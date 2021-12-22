@@ -23,13 +23,13 @@ public class SnowyMountainsFishProcedure {
 		double copperfish = 0;
 		double bass = 0;
 		/*fishing factors*/
-		luck = (double) LuckCheckProcedure.execute(entity);/*loot factors*/
-		time = (double) (world.dayTime());
-		altitude = (double) (Math.floor(y));/*define base values*/
-		bass = (double) 39;
-		copperfish = (double) 58;/*apply modifiers*/
+		luck = LuckCheckProcedure.execute(entity);/*loot factors*/
+		time = world.dayTime();
+		altitude = Math.floor(y);/*define base values*/
+		bass = 39;
+		copperfish = 58;/*apply modifiers*/
 		/*fish*/
-		fish = (double) copperfish;
+		fish = copperfish;
 		if (entity instanceof Player _player) {
 			Scoreboard _sc = _player.getScoreboard();
 			Objective _so = _sc.getObjective("PlayerRNG");

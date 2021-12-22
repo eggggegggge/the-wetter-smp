@@ -5,7 +5,9 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:gold_ingot",
+            "items": [
+              "minecraft:gold_ingot"
+            ],
             "count": {
               "min": 1,
               "max": 64

@@ -26,31 +26,31 @@ public class PlainsFishProcedure {
 		double bass = 0;
 		double nightkoi = 0;
 		/*fishing factors*/
-		luck = (double) LuckCheckProcedure.execute(entity);/*loot factors*/
-		time = (double) (world.dayTime());
-		altitude = (double) (Math.floor(y));/*define base values*/
-		bass = (double) 11;
-		goldfish = (double) 13;
+		luck = LuckCheckProcedure.execute(entity);/*loot factors*/
+		time = world.dayTime();
+		altitude = Math.floor(y);/*define base values*/
+		bass = 11;
+		goldfish = 13;
 		if (altitude < 60) {
-			glowkoi = (double) 20;
-			jellyfish = (double) 30;
-			nightkoi = (double) 34;/*apply modifiers*/
+			glowkoi = 20;
+			jellyfish = 30;
+			nightkoi = 34;/*apply modifiers*/
 			if (luck > 1) {
-				bass = (double) (bass - 2);
-				goldfish = (double) (goldfish + 0);
-				nightkoi = (double) (nightkoi + 4);
-				glowkoi = (double) (glowkoi + 6);
-				jellyfish = (double) (jellyfish + 0);
+				bass = bass - 2;
+				goldfish = goldfish + 0;
+				nightkoi = nightkoi + 4;
+				glowkoi = glowkoi + 6;
+				jellyfish = jellyfish + 0;
 			} else if (luck < 0) {
-				bass = (double) (bass + 2);
-				goldfish = (double) (goldfish + 1);
-				nightkoi = (double) (nightkoi - 2);
-				glowkoi = (double) (glowkoi - 5);
-				jellyfish = (double) (jellyfish + 0);
+				bass = bass + 2;
+				goldfish = goldfish + 1;
+				nightkoi = nightkoi - 2;
+				glowkoi = glowkoi - 5;
+				jellyfish = jellyfish + 0;
 			} /*fish*/
-			fish = (double) jellyfish;
+			fish = jellyfish;
 			if (time > 13000 && time < 23000) {
-				fish = (double) nightkoi;
+				fish = nightkoi;
 			}
 			if (entity instanceof Player _player) {
 				Scoreboard _sc = _player.getScoreboard();
@@ -233,19 +233,19 @@ public class PlainsFishProcedure {
 					_level.addFreshEntity(new ExperienceOrb(_level, x, (y - 0.5), z, 4));
 			}
 		} else {
-			nightkoi = (double) 18;/*apply modifiers*/
+			nightkoi = 18;/*apply modifiers*/
 			if (luck > 1) {
-				bass = (double) (bass - 2);
-				goldfish = (double) (goldfish + 0);
-				nightkoi = (double) (nightkoi + 4);
+				bass = bass - 2;
+				goldfish = goldfish + 0;
+				nightkoi = nightkoi + 4;
 			} else if (luck < 0) {
-				bass = (double) (bass + 2);
-				goldfish = (double) (goldfish + 1);
-				nightkoi = (double) (nightkoi - 2);
+				bass = bass + 2;
+				goldfish = goldfish + 1;
+				nightkoi = nightkoi - 2;
 			} /*fish*/
-			fish = (double) goldfish;
+			fish = goldfish;
 			if (time > 13000 && time < 23000) {
-				fish = (double) nightkoi;
+				fish = nightkoi;
 			}
 			if (entity instanceof Player _player) {
 				Scoreboard _sc = _player.getScoreboard();

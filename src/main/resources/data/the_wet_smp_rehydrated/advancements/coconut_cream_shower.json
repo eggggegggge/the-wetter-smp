@@ -19,7 +19,9 @@
       "trigger": "minecraft:consume_item",
       "conditions": {
         "item": {
-          "item": "the_wet_smp_rehydrated:golden_banana"
+          "items": [
+            "the_wet_smp_rehydrated:golden_banana"
+          ]
         }
       }
     }

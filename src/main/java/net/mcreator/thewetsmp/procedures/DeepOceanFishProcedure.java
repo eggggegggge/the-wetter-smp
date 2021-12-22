@@ -27,32 +27,32 @@ public class DeepOceanFishProcedure {
 		double brinekoi = 0;
 		double haloclinediverfish = 0;
 		/*fishing factors*/
-		luck = (double) LuckCheckProcedure.execute(entity);/*loot factors*/
-		time = (double) (world.dayTime());
-		altitude = (double) (Math.floor(y));/*define base values*/
-		salmon = (double) 10;
-		scallop = (double) 16;
-		seaurchin = (double) 24;
-		brinekoi = (double) 26;
-		haloclinediverfish = (double) 27;
-		jellyfish = (double) 32;/*apply modifiers*/
+		luck = LuckCheckProcedure.execute(entity);/*loot factors*/
+		time = world.dayTime();
+		altitude = Math.floor(y);/*define base values*/
+		salmon = 10;
+		scallop = 16;
+		seaurchin = 24;
+		brinekoi = 26;
+		haloclinediverfish = 27;
+		jellyfish = 32;/*apply modifiers*/
 		if (luck > 1) {
-			salmon = (double) (salmon - 3);
-			scallop = (double) (scallop - 2);
-			seaurchin = (double) (seaurchin - 5);
-			brinekoi = (double) brinekoi;
-			haloclinediverfish = (double) (haloclinediverfish + 3);
-			jellyfish = (double) (jellyfish + 2);
+			salmon = salmon - 3;
+			scallop = scallop - 2;
+			seaurchin = seaurchin - 5;
+			brinekoi = brinekoi;
+			haloclinediverfish = haloclinediverfish + 3;
+			jellyfish = jellyfish + 2;
 		} else if (luck < 0) {
-			salmon = (double) (salmon + 3);
-			scallop = (double) (scallop + 2);
-			seaurchin = (double) (seaurchin - 4);
-			brinekoi = (double) (brinekoi - 1);
-			jellyfish = (double) (jellyfish - 3);
+			salmon = salmon + 3;
+			scallop = scallop + 2;
+			seaurchin = seaurchin - 4;
+			brinekoi = brinekoi - 1;
+			jellyfish = jellyfish - 3;
 		} /*fish*/
-		fish = (double) haloclinediverfish;
+		fish = haloclinediverfish;
 		if (time > 13000 && time < 23000) {
-			fish = (double) jellyfish;
+			fish = jellyfish;
 		}
 		if (entity instanceof Player _player) {
 			Scoreboard _sc = _player.getScoreboard();

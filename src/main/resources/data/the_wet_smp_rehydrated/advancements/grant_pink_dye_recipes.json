@@ -5,7 +5,9 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:pink_dye",
+            "items": [
+              "minecraft:pink_dye"
+            ],
             "count": {
               "min": 1,
               "max": 64

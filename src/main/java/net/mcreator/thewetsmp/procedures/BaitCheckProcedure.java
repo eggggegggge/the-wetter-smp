@@ -16,7 +16,7 @@ public class BaitCheckProcedure {
 		if (entity == null)
 			return 0;
 		double bait = 0;
-		bait = (double) 44;
+		bait = 44;
 		{
 			AtomicReference<IItemHandler> _iitemhandlerref = new AtomicReference<>();
 			entity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> _iitemhandlerref.set(capability));
@@ -25,29 +25,29 @@ public class BaitCheckProcedure {
 					ItemStack itemstackiterator = _iitemhandlerref.get().getStackInSlot(_idx).copy();
 					if (itemstackiterator.getItem() == TheWetSmpRehydratedModItems.GREEN_JELLYFISH) {
 						if (bait > 29) {
-							bait = (double) 29;
+							bait = 29;
 						}
 					} else if (itemstackiterator.getItem() == TheWetSmpRehydratedModItems.BLUE_JELLYFISH) {
 						if (bait > 29) {
-							bait = (double) 29;
+							bait = 29;
 						}
 					} else if (itemstackiterator.getItem() == TheWetSmpRehydratedModItems.RED_JELLYFISH) {
 						if (bait > 29) {
-							bait = (double) 29;
+							bait = 29;
 						}
 					} else if (itemstackiterator.getItem() == TheWetSmpRehydratedModItems.YELLOW_JELLYFISH) {
 						if (bait > 29) {
-							bait = (double) 29;
+							bait = 29;
 						}
 					} else if (itemstackiterator.getItem() == TheWetSmpRehydratedModItems.PINK_JELLYFISH) {
 						if (bait > 30) {
-							bait = (double) 30;
+							bait = 30;
 						}
 					} else if (itemstackiterator.getItem() == TheWetSmpRehydratedModItems.TREASURE_POWDER
 							|| itemstackiterator.getItem() == TheWetSmpRehydratedModItems.DEV_SALMON
 							|| itemstackiterator.getItem() == TheWetSmpRehydratedModItems.JUNK_POWDER) {
 						if (bait > 0) {
-							bait = (double) 0;
+							bait = 0;
 						}
 					}
 				}

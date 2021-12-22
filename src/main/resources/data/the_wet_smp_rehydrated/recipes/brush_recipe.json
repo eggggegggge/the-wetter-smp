@@ -1,0 +1,20 @@
+{
+  "group": "brush",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "F",
+    "C"
+  ],
+  "key": {
+    "F": {
+      "item": "minecraft:feather"
+    },
+    "C": {
+      "item": "minecraft:copper_ingot"
+    }
+  },
+  "result": {
+    "item": "the_wet_smp_rehydrated:brush",
+    "count": 1
+  }
+}

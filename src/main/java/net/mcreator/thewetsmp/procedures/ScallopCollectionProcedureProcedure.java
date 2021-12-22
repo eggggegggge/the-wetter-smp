@@ -14,7 +14,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.TextComponent;
-import net.minecraft.client.Minecraft;
+import net.minecraft.core.BlockPos;
 
 import net.mcreator.thewetsmp.init.TheWetSmpRehydratedModItems;
 
@@ -55,9 +55,15 @@ public class ScallopCollectionProcedureProcedure {
 				return 0;
 			}
 		}.getScore("PlayerRNG", entity) <= 23) {
-			if (world instanceof Level _level)
-				_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
-						ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beehive.shear")), SoundSource.PLAYERS, 1, 1);
+			if (world instanceof Level _level) {
+				if (!_level.isClientSide()) {
+					_level.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+							ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beehive.shear")), SoundSource.PLAYERS, 1, 1);
+				} else {
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beehive.shear")),
+							SoundSource.PLAYERS, 1, 1, false);
+				}
+			}
 		} else if (new Object() {
 			public int getScore(String score, Entity _ent) {
 				if (_ent instanceof Player _player) {
@@ -83,9 +89,15 @@ public class ScallopCollectionProcedureProcedure {
 				return 0;
 			}
 		}.getScore("PlayerRNG", entity) <= 54) {
-			if (world instanceof Level _level)
-				_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
-						ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beehive.shear")), SoundSource.PLAYERS, 1, 1);
+			if (world instanceof Level _level) {
+				if (!_level.isClientSide()) {
+					_level.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+							ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beehive.shear")), SoundSource.PLAYERS, 1, 1);
+				} else {
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beehive.shear")),
+							SoundSource.PLAYERS, 1, 1, false);
+				}
+			}
 			{
 				Entity _ent = entity;
 				if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -117,9 +129,15 @@ public class ScallopCollectionProcedureProcedure {
 				return 0;
 			}
 		}.getScore("PlayerRNG", entity) <= 72) {
-			if (world instanceof Level _level)
-				_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
-						ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beehive.shear")), SoundSource.PLAYERS, 1, 1);
+			if (world instanceof Level _level) {
+				if (!_level.isClientSide()) {
+					_level.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+							ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beehive.shear")), SoundSource.PLAYERS, 1, 1);
+				} else {
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beehive.shear")),
+							SoundSource.PLAYERS, 1, 1, false);
+				}
+			}
 			{
 				Entity _ent = entity;
 				if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -151,9 +169,15 @@ public class ScallopCollectionProcedureProcedure {
 				return 0;
 			}
 		}.getScore("PlayerRNG", entity) <= 84) {
-			if (world instanceof Level _level)
-				_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
-						ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beehive.shear")), SoundSource.PLAYERS, 1, 1);
+			if (world instanceof Level _level) {
+				if (!_level.isClientSide()) {
+					_level.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+							ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beehive.shear")), SoundSource.PLAYERS, 1, 1);
+				} else {
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beehive.shear")),
+							SoundSource.PLAYERS, 1, 1, false);
+				}
+			}
 			{
 				Entity _ent = entity;
 				if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -185,9 +209,15 @@ public class ScallopCollectionProcedureProcedure {
 				return 0;
 			}
 		}.getScore("PlayerRNG", entity) <= 90) {
-			if (world instanceof Level _level)
-				_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
-						ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beehive.shear")), SoundSource.PLAYERS, 1, 1);
+			if (world instanceof Level _level) {
+				if (!_level.isClientSide()) {
+					_level.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+							ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beehive.shear")), SoundSource.PLAYERS, 1, 1);
+				} else {
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beehive.shear")),
+							SoundSource.PLAYERS, 1, 1, false);
+				}
+			}
 			{
 				Entity _ent = entity;
 				if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -219,9 +249,15 @@ public class ScallopCollectionProcedureProcedure {
 				return 0;
 			}
 		}.getScore("PlayerRNG", entity) <= 93) {
-			if (world instanceof Level _level)
-				_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
-						ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beehive.shear")), SoundSource.PLAYERS, 1, 1);
+			if (world instanceof Level _level) {
+				if (!_level.isClientSide()) {
+					_level.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+							ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beehive.shear")), SoundSource.PLAYERS, 1, 1);
+				} else {
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beehive.shear")),
+							SoundSource.PLAYERS, 1, 1, false);
+				}
+			}
 			{
 				Entity _ent = entity;
 				if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -247,13 +283,25 @@ public class ScallopCollectionProcedureProcedure {
 					_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
 							"give @s the_wet_smp_rehydrated:gold_pearl");
 			}
-			if (world instanceof Level _level)
-				_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
-						ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beehive.shear")), SoundSource.PLAYERS, 1, 1);
+			if (world instanceof Level _level) {
+				if (!_level.isClientSide()) {
+					_level.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+							ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beehive.shear")), SoundSource.PLAYERS, 1, 1);
+				} else {
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beehive.shear")),
+							SoundSource.PLAYERS, 1, 1, false);
+				}
+			}
 		} else {
-			if (world instanceof Level _level)
-				_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
-						ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beehive.shear")), SoundSource.PLAYERS, 1, 1);
+			if (world instanceof Level _level) {
+				if (!_level.isClientSide()) {
+					_level.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+							ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beehive.shear")), SoundSource.PLAYERS, 1, 1);
+				} else {
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beehive.shear")),
+							SoundSource.PLAYERS, 1, 1, false);
+				}
+			}
 		}
 		if (entity instanceof Player _player) {
 			ItemStack _stktoremove = new ItemStack(TheWetSmpRehydratedModItems.SCALLOP);

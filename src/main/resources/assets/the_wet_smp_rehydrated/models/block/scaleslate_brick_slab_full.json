@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_bottom_top",
-  "textures": {
-    "bottom": "the_wet_smp_rehydrated:blocks/scaleslate_bricks",
-    "top": "the_wet_smp_rehydrated:blocks/scaleslate_bricks",
-    "side": "the_wet_smp_rehydrated:blocks/scaleslate_bricks"
-  }
-}

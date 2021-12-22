@@ -13,7 +13,7 @@ import net.minecraft.core.BlockPos;
 
 public class ChiseledScaleslateBlock extends Block {
 	public ChiseledScaleslateBlock() {
-		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.NETHER_BRICKS).strength(3f, 6f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE).strength(3f, 6f).requiresCorrectToolForDrops());
 		setRegistryName("chiseled_scaleslate");
 	}
 

@@ -29,39 +29,39 @@ public class LukewarmOceanFishProcedure {
 		double goldfish = 0;
 		double cuttlefish = 0;
 		/*fishing factors*/
-		luck = (double) LuckCheckProcedure.execute(entity);/*loot factors*/
-		time = (double) (world.dayTime());
-		altitude = (double) (Math.floor(y));/*define base values*/
-		bass = (double) 11;
-		pufferfish = (double) 19;
-		goldfish = (double) 23;
-		cuttlefish = (double) 35;
-		crab = (double) 42;
-		seaurchin = (double) 47;
-		scallop = (double) 52;
-		jellyfish = (double) 57;/*apply modifiers*/
+		luck = LuckCheckProcedure.execute(entity);/*loot factors*/
+		time = world.dayTime();
+		altitude = Math.floor(y);/*define base values*/
+		bass = 11;
+		pufferfish = 19;
+		goldfish = 23;
+		cuttlefish = 35;
+		crab = 42;
+		seaurchin = 47;
+		scallop = 52;
+		jellyfish = 57;/*apply modifiers*/
 		if (luck > 1) {
-			bass = (double) (bass - 3);
-			pufferfish = (double) (pufferfish - 4);
-			goldfish = (double) (goldfish + 0);
-			cuttlefish = (double) (cuttlefish + 2);
-			crab = (double) (crab - 3);
-			seaurchin = (double) (seaurchin - 3);
-			scallop = (double) (scallop - 2);
-			jellyfish = (double) (jellyfish - 2);
+			bass = bass - 3;
+			pufferfish = pufferfish - 4;
+			goldfish = goldfish + 0;
+			cuttlefish = cuttlefish + 2;
+			crab = crab - 3;
+			seaurchin = seaurchin - 3;
+			scallop = scallop - 2;
+			jellyfish = jellyfish - 2;
 		} else if (luck < 0) {
-			bass = (double) (bass + 3);
-			pufferfish = (double) (pufferfish + 4);
-			goldfish = (double) (goldfish + 1);
-			cuttlefish = (double) (cuttlefish - 6);
-			crab = (double) (crab - 4);
-			seaurchin = (double) (seaurchin - 3);
-			scallop = (double) (scallop - 5);
-			jellyfish = (double) (jellyfish - 3);
+			bass = bass + 3;
+			pufferfish = pufferfish + 4;
+			goldfish = goldfish + 1;
+			cuttlefish = cuttlefish - 6;
+			crab = crab - 4;
+			seaurchin = seaurchin - 3;
+			scallop = scallop - 5;
+			jellyfish = jellyfish - 3;
 		} /*fish*/
-		fish = (double) scallop;
+		fish = scallop;
 		if (time > 13000 && time < 23000) {
-			fish = (double) jellyfish;
+			fish = jellyfish;
 		}
 		if (entity instanceof Player _player) {
 			Scoreboard _sc = _player.getScoreboard();

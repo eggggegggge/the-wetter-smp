@@ -5,7 +5,9 @@
       "conditions": {
         "items": [
           {
-            "item": "the_wet_smp_rehydrated:scaleslate_tiles",
+            "items": [
+              "the_wet_smp_rehydrated:scaleslate_tiles"
+            ],
             "count": {
               "min": 1,
               "max": 64

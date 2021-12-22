@@ -24,22 +24,22 @@ public class MountainEdgeFishProcedure {
 		double silvereye = 0;
 		double moltencharr = 0;
 		/*fishing factors*/
-		luck = (double) LuckCheckProcedure.execute(entity);/*loot factors*/
-		time = (double) (world.dayTime());
-		altitude = (double) (Math.floor(y));/*define base values*/
-		silvereye = (double) 11;
-		copperfish = (double) 19;
-		moltencharr = (double) 22;/*apply modifiers*/
+		luck = LuckCheckProcedure.execute(entity);/*loot factors*/
+		time = world.dayTime();
+		altitude = Math.floor(y);/*define base values*/
+		silvereye = 11;
+		copperfish = 19;
+		moltencharr = 22;/*apply modifiers*/
 		if (luck > 1) {
-			copperfish = (double) (copperfish - 2);
-			silvereye = (double) (silvereye - 3);
+			copperfish = copperfish - 2;
+			silvereye = silvereye - 3;
 		} else if (luck < 0) {
-			copperfish = (double) (copperfish - 2);
-			silvereye = (double) (silvereye - 3);
+			copperfish = copperfish - 2;
+			silvereye = silvereye - 3;
 		} /*fish*/
-		fish = (double) copperfish;
+		fish = copperfish;
 		if (altitude < 20) {
-			fish = (double) moltencharr;
+			fish = moltencharr;
 		}
 		if (entity instanceof Player _player) {
 			Scoreboard _sc = _player.getScoreboard();

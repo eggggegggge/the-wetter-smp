@@ -47,7 +47,7 @@ public class DamageProcedureProcedure {
 				}
 			}
 		} else if (entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(TheWetSmpRehydratedModMobEffects.LACUNA) : false) {
-			entity.hurt(DamageSource.GENERIC, (float) (amount * 1.5));
+			entity.hurt(DamageSource.GENERIC, (float) (amount + amount / 2));
 		} else if (entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(TheWetSmpRehydratedModMobEffects.PEACE) : false) {
 			if (entity.getY() >= -64) {
 				if (event != null && event.isCancelable()) {

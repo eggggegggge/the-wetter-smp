@@ -1,0 +1,20 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smelting",
+    "xpReward": 1.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "onyxorefish",
+    "recipeShapeless": false,
+    "smeltingInputStack": {
+      "value": "CUSTOM:OnyxOrefish"
+    },
+    "smeltingReturnStack": {
+      "value": "CUSTOM:Onyx"
+    },
+    "name": "smelt_onyx_orefish",
+    "namespace": "mod"
+  }
+}

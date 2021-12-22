@@ -19,30 +19,31 @@ public class LushCavesFishProcedure {
 		double time = 0;
 		double altitude = 0;
 		double fish = 0;
-		double jellyfish = 0;
 		double luck = 0;
-		double goldbass = 0;
-		double badlandcarp = 0;
+		double osmiumorefish = 0;
+		double rubyorefish = 0;
+		double lapisorefish = 0;
+		double flowerfish = 0;
+		double koi = 0;
 		/*fishing factors*/
-		luck = (double) LuckCheckProcedure.execute(entity);/*loot factors*/
-		time = (double) (world.dayTime());
-		altitude = (double) (Math.floor(y));/*define base values*/
-		goldbass = (double) 3;
-		badlandcarp = (double) 21;
-		jellyfish = (double) 28;/*apply modifiers*/
+		luck = LuckCheckProcedure.execute(entity);/*loot factors*/
+		time = world.dayTime();
+		altitude = Math.floor(y);/*define base values*/
+		rubyorefish = 8;
+		koi = 20;
+		flowerfish = 25;
+		osmiumorefish = 27;
+		lapisorefish = 31;/*apply modifiers*/
 		if (luck > 1) {
-			goldbass = (double) (goldbass + 4);
-			badlandcarp = (double) (badlandcarp - 2);
-			jellyfish = (double) (jellyfish - 3);
+			rubyorefish = rubyorefish + 4;
+			osmiumorefish = osmiumorefish + 3;
+			lapisorefish = lapisorefish + 2;
 		} else if (luck < 0) {
-			goldbass = (double) (goldbass - 2);
-			badlandcarp = (double) (badlandcarp + 4);
-			jellyfish = (double) (jellyfish + 2);
+			rubyorefish = rubyorefish - 2;
+			osmiumorefish = osmiumorefish + 4;
+			lapisorefish = lapisorefish + 3;
 		} /*fish*/
-		fish = (double) badlandcarp;
-		if (altitude < 60) {
-			fish = (double) jellyfish;
-		}
+		fish = lapisorefish;
 		if (entity instanceof Player _player) {
 			Scoreboard _sc = _player.getScoreboard();
 			Objective _so = _sc.getObjective("PlayerRNG");
@@ -75,16 +76,16 @@ public class LushCavesFishProcedure {
 				}
 				return 0;
 			}
-		}.getScore("PlayerRNG", entity) <= goldbass) {
+		}.getScore("PlayerRNG", entity) <= rubyorefish) {
 			RemoveBaitProcedure.execute(world, entity);
 			{
 				Entity _ent = entity;
 				if (!_ent.level.isClientSide() && _ent.getServer() != null)
 					_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-							"give @s the_wet_smp_rehydrated:gold_bass 1");
+							"give @s the_wet_smp_rehydrated:ruby_orefish 1");
 			}
 			if (world instanceof Level _level && !_level.isClientSide())
-				_level.addFreshEntity(new ExperienceOrb(_level, x, (y - 0.5), z, 11));
+				_level.addFreshEntity(new ExperienceOrb(_level, x, (y - 0.5), z, 3));
 		} else if (new Object() {
 			public int getScore(String score, Entity _ent) {
 				if (_ent instanceof Player _player) {
@@ -97,7 +98,7 @@ public class LushCavesFishProcedure {
 				}
 				return 0;
 			}
-		}.getScore("PlayerRNG", entity) >= goldbass + 1 && new Object() {
+		}.getScore("PlayerRNG", entity) >= rubyorefish + 1 && new Object() {
 			public int getScore(String score, Entity _ent) {
 				if (_ent instanceof Player _player) {
 					Scoreboard _sc = _player.getScoreboard();
@@ -109,13 +110,13 @@ public class LushCavesFishProcedure {
 				}
 				return 0;
 			}
-		}.getScore("PlayerRNG", entity) <= badlandcarp) {
+		}.getScore("PlayerRNG", entity) <= koi) {
 			RemoveBaitProcedure.execute(world, entity);
 			{
 				Entity _ent = entity;
 				if (!_ent.level.isClientSide() && _ent.getServer() != null)
 					_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-							"give @s the_wet_smp_rehydrated:badlands_carp 1");
+							"give @s the_wet_smp_rehydrated:koi 1");
 			}
 			if (world instanceof Level _level && !_level.isClientSide())
 				_level.addFreshEntity(new ExperienceOrb(_level, x, (y - 0.5), z, 4));
@@ -131,7 +132,7 @@ public class LushCavesFishProcedure {
 				}
 				return 0;
 			}
-		}.getScore("PlayerRNG", entity) >= badlandcarp + 1 && new Object() {
+		}.getScore("PlayerRNG", entity) >= koi + 1 && new Object() {
 			public int getScore(String score, Entity _ent) {
 				if (_ent instanceof Player _player) {
 					Scoreboard _sc = _player.getScoreboard();
@@ -143,16 +144,84 @@ public class LushCavesFishProcedure {
 				}
 				return 0;
 			}
-		}.getScore("PlayerRNG", entity) <= jellyfish) {
+		}.getScore("PlayerRNG", entity) <= flowerfish) {
 			RemoveBaitProcedure.execute(world, entity);
 			{
 				Entity _ent = entity;
 				if (!_ent.level.isClientSide() && _ent.getServer() != null)
 					_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-							"give @s the_wet_smp_rehydrated:yellow_jellyfish 1");
+							"give @s the_wet_smp_rehydrated:flowerfish 1");
 			}
 			if (world instanceof Level _level && !_level.isClientSide())
 				_level.addFreshEntity(new ExperienceOrb(_level, x, (y - 0.5), z, 8));
+		} else if (new Object() {
+			public int getScore(String score, Entity _ent) {
+				if (_ent instanceof Player _player) {
+					Scoreboard _sc = _player.getScoreboard();
+					Objective _so = _sc.getObjective(score);
+					if (_so != null) {
+						Score _scr = _sc.getOrCreatePlayerScore(_player.getScoreboardName(), _so);
+						return _scr.getScore();
+					}
+				}
+				return 0;
+			}
+		}.getScore("PlayerRNG", entity) >= flowerfish + 1 && new Object() {
+			public int getScore(String score, Entity _ent) {
+				if (_ent instanceof Player _player) {
+					Scoreboard _sc = _player.getScoreboard();
+					Objective _so = _sc.getObjective(score);
+					if (_so != null) {
+						Score _scr = _sc.getOrCreatePlayerScore(_player.getScoreboardName(), _so);
+						return _scr.getScore();
+					}
+				}
+				return 0;
+			}
+		}.getScore("PlayerRNG", entity) <= osmiumorefish) {
+			RemoveBaitProcedure.execute(world, entity);
+			{
+				Entity _ent = entity;
+				if (!_ent.level.isClientSide() && _ent.getServer() != null)
+					_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+							"give @s the_wet_smp_rehydrated:osmium_orefish 1");
+			}
+			if (world instanceof Level _level && !_level.isClientSide())
+				_level.addFreshEntity(new ExperienceOrb(_level, x, (y - 0.5), z, 3));
+		} else if (new Object() {
+			public int getScore(String score, Entity _ent) {
+				if (_ent instanceof Player _player) {
+					Scoreboard _sc = _player.getScoreboard();
+					Objective _so = _sc.getObjective(score);
+					if (_so != null) {
+						Score _scr = _sc.getOrCreatePlayerScore(_player.getScoreboardName(), _so);
+						return _scr.getScore();
+					}
+				}
+				return 0;
+			}
+		}.getScore("PlayerRNG", entity) >= osmiumorefish + 1 && new Object() {
+			public int getScore(String score, Entity _ent) {
+				if (_ent instanceof Player _player) {
+					Scoreboard _sc = _player.getScoreboard();
+					Objective _so = _sc.getObjective(score);
+					if (_so != null) {
+						Score _scr = _sc.getOrCreatePlayerScore(_player.getScoreboardName(), _so);
+						return _scr.getScore();
+					}
+				}
+				return 0;
+			}
+		}.getScore("PlayerRNG", entity) <= lapisorefish) {
+			RemoveBaitProcedure.execute(world, entity);
+			{
+				Entity _ent = entity;
+				if (!_ent.level.isClientSide() && _ent.getServer() != null)
+					_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
+							"give @s the_wet_smp_rehydrated:lapis_koi 1");
+			}
+			if (world instanceof Level _level && !_level.isClientSide())
+				_level.addFreshEntity(new ExperienceOrb(_level, x, (y - 0.5), z, 3));
 		}
 		if (entity instanceof Player _player) {
 			Scoreboard _sc = _player.getScoreboard();

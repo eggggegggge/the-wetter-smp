@@ -11,18 +11,18 @@ public class LuckCheckProcedure {
 		double luck = 0;
 		double unluck = 0;
 		if (entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.LUCK) : false) {
-			luck = (double) ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(MobEffects.LUCK)
+			luck = (entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(MobEffects.LUCK)
 					? _livEnt.getEffect(MobEffects.LUCK).getAmplifier()
-					: 0) + 1);
+					: 0) + 1;
 		} else {
-			luck = (double) 0;
+			luck = 0;
 		}
 		if (entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.UNLUCK) : false) {
-			unluck = (double) ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(MobEffects.UNLUCK)
+			unluck = (entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(MobEffects.UNLUCK)
 					? _livEnt.getEffect(MobEffects.UNLUCK).getAmplifier()
-					: 0) + 2);
+					: 0) + 2;
 		} else {
-			unluck = (double) 0;
+			unluck = 0;
 		}
 		return 1 + luck - unluck;
 	}

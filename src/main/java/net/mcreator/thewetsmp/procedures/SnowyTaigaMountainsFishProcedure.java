@@ -24,19 +24,19 @@ public class SnowyTaigaMountainsFishProcedure {
 		double anchovy = 0;
 		double copperfish = 0;
 		/*fishing factors*/
-		luck = (double) LuckCheckProcedure.execute(entity);/*loot factors*/
-		time = (double) (world.dayTime());
-		altitude = (double) (Math.floor(y));/*define base values*/
-		cod = (double) 11;
-		anchovy = (double) 19;
-		copperfish = (double) 23;/*apply modifiers*/
+		luck = LuckCheckProcedure.execute(entity);/*loot factors*/
+		time = world.dayTime();
+		altitude = Math.floor(y);/*define base values*/
+		cod = 11;
+		anchovy = 19;
+		copperfish = 23;/*apply modifiers*/
 		if (luck > 1) {
-			cod = (double) (cod - 2);
-			anchovy = (double) (anchovy - 3);
+			cod = cod - 2;
+			anchovy = anchovy - 3;
 		} else if (luck < 0) {
-			copperfish = (double) (copperfish - 2);
+			copperfish = copperfish - 2;
 		} /*fish*/
-		fish = (double) sel;
+		fish = sel;
 		if (entity instanceof Player _player) {
 			Scoreboard _sc = _player.getScoreboard();
 			Objective _so = _sc.getObjective("PlayerRNG");

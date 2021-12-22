@@ -12,7 +12,7 @@ public class AquamarineGlassIsPlacedProcedure {
 		if (entity == null)
 			return;
 		String name = "";
-		name = (String) (entity.getDisplayName().getString());
+		name = entity.getDisplayName().getString();
 		if (!world.isClientSide()) {
 			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 			BlockEntity _blockEntity = world.getBlockEntity(_bp);

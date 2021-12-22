@@ -1,7 +1,0 @@
-{
-  "parent": "block/template_wall_side_tall",
-  "textures": {
-    "wall": "the_wet_smp_rehydrated:blocks/scaleslate_bricks",
-    "particle": "the_wet_smp_rehydrated:blocks/scaleslate_bricks"
-  }
-}

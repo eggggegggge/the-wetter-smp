@@ -24,16 +24,16 @@ public class TaigaHillsFishProcedure {
 		double anchovy = 0;
 		double jellyfish = 0;
 		/*fishing factors*/
-		luck = (double) LuckCheckProcedure.execute(entity);/*loot factors*/
-		time = (double) (world.dayTime());
-		altitude = (double) (Math.floor(y));/*define base values*/
-		cod = (double) 11;
-		anchovy = (double) 19;
-		jellyfish = (double) 24;/*apply modifiers*/
+		luck = LuckCheckProcedure.execute(entity);/*loot factors*/
+		time = world.dayTime();
+		altitude = Math.floor(y);/*define base values*/
+		cod = 11;
+		anchovy = 19;
+		jellyfish = 24;/*apply modifiers*/
 		/*fish*/
-		fish = (double) anchovy;
+		fish = anchovy;
 		if (time > 13000 && time < 23000) {
-			fish = (double) jellyfish;
+			fish = jellyfish;
 		}
 		if (entity instanceof Player _player) {
 			Scoreboard _sc = _player.getScoreboard();

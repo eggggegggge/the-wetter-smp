@@ -25,28 +25,28 @@ public class ForestFishProcedure {
 		double nightkoi = 0;
 		double bass = 0;
 		/*fishing factors*/
-		luck = (double) LuckCheckProcedure.execute(entity);/*loot factors*/
-		time = (double) (world.dayTime());
-		altitude = (double) (Math.floor(y));/*define base values*/
-		bass = (double) 12;
-		goldfish = (double) 21;
+		luck = LuckCheckProcedure.execute(entity);/*loot factors*/
+		time = world.dayTime();
+		altitude = Math.floor(y);/*define base values*/
+		bass = 12;
+		goldfish = 21;
 		if (altitude < 60) {
-			nightkoi = (double) 25;
-			jellyfish = (double) 31;/*apply modifiers*/
+			nightkoi = 25;
+			jellyfish = 31;/*apply modifiers*/
 			if (luck > 1) {
-				bass = (double) (bass - 2);
-				goldfish = (double) (goldfish - 3);
-				nightkoi = (double) (nightkoi + 4);
-				jellyfish = (double) (jellyfish + 4);
+				bass = bass - 2;
+				goldfish = goldfish - 3;
+				nightkoi = nightkoi + 4;
+				jellyfish = jellyfish + 4;
 			} else if (luck < 0) {
-				bass = (double) (bass + 2);
-				goldfish = (double) (goldfish + 1);
-				nightkoi = (double) (nightkoi - 3);
-				jellyfish = (double) (jellyfish - 4);
+				bass = bass + 2;
+				goldfish = goldfish + 1;
+				nightkoi = nightkoi - 3;
+				jellyfish = jellyfish - 4;
 			} /*fish*/
-			fish = (double) nightkoi;
+			fish = nightkoi;
 			if (time > 13000 && time < 23000) {
-				fish = (double) jellyfish;
+				fish = jellyfish;
 			}
 			if (entity instanceof Player _player) {
 				Scoreboard _sc = _player.getScoreboard();
@@ -204,17 +204,17 @@ public class ForestFishProcedure {
 					_level.addFreshEntity(new ExperienceOrb(_level, x, (y - 0.5), z, 4));
 			}
 		} else {
-			jellyfish = (double) 25;/*apply modifiers*/
+			jellyfish = 25;/*apply modifiers*/
 			if (luck > 1) {
-				bass = (double) (bass - 2);
-				goldfish = (double) (goldfish - 3);
-				jellyfish = (double) (jellyfish + 4);
+				bass = bass - 2;
+				goldfish = goldfish - 3;
+				jellyfish = jellyfish + 4;
 			} else if (luck < 0) {
-				bass = (double) (bass + 2);
-				goldfish = (double) (goldfish + 1);
-				jellyfish = (double) (jellyfish - 4);
+				bass = bass + 2;
+				goldfish = goldfish + 1;
+				jellyfish = jellyfish - 4;
 			} /*fish*/
-			fish = (double) jellyfish;
+			fish = jellyfish;
 			if (entity instanceof Player _player) {
 				Scoreboard _sc = _player.getScoreboard();
 				Objective _so = _sc.getObjective("PlayerRNG");

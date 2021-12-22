@@ -28,34 +28,34 @@ public class DeepWarmOceanFishProcedure {
 		double humuhumunukunukuapuaa = 0;
 		double jellyfish = 0;
 		/*fishing factors*/
-		luck = (double) LuckCheckProcedure.execute(entity);/*loot factors*/
-		time = (double) (world.dayTime());
-		altitude = (double) (Math.floor(y));/*define base values*/
-		pufferfish = (double) 12;
-		clownfish = (double) 15;
-		scallop = (double) 20;
-		seahorse = (double) 24;
-		seaurchin = (double) 32;
-		humuhumunukunukuapuaa = (double) 34;
-		jellyfish = (double) 40;/*apply modifiers*/
+		luck = LuckCheckProcedure.execute(entity);/*loot factors*/
+		time = world.dayTime();
+		altitude = Math.floor(y);/*define base values*/
+		pufferfish = 12;
+		clownfish = 15;
+		scallop = 20;
+		seahorse = 24;
+		seaurchin = 32;
+		humuhumunukunukuapuaa = 34;
+		jellyfish = 40;/*apply modifiers*/
 		if (luck > 1) {
-			pufferfish = (double) (pufferfish - 3);
-			clownfish = (double) (clownfish + 2);
-			scallop = (double) (scallop - 1);
-			seahorse = (double) (seahorse + 2);
-			seaurchin = (double) (seaurchin - 4);
-			humuhumunukunukuapuaa = (double) (humuhumunukunukuapuaa + 2);
-			jellyfish = (double) (jellyfish - 1);
+			pufferfish = pufferfish - 3;
+			clownfish = clownfish + 2;
+			scallop = scallop - 1;
+			seahorse = seahorse + 2;
+			seaurchin = seaurchin - 4;
+			humuhumunukunukuapuaa = humuhumunukunukuapuaa + 2;
+			jellyfish = jellyfish - 1;
 		} else if (luck < 0) {
-			pufferfish = (double) (pufferfish + 4);
-			clownfish = (double) (clownfish + 2);
-			scallop = (double) (scallop + 1);
-			seahorse = (double) (seahorse + 2);
-			seaurchin = (double) (seaurchin + 2);
-			humuhumunukunukuapuaa = (double) (humuhumunukunukuapuaa + 1);
-			jellyfish = (double) (jellyfish + 1);
+			pufferfish = pufferfish + 4;
+			clownfish = clownfish + 2;
+			scallop = scallop + 1;
+			seahorse = seahorse + 2;
+			seaurchin = seaurchin + 2;
+			humuhumunukunukuapuaa = humuhumunukunukuapuaa + 1;
+			jellyfish = jellyfish + 1;
 		} /*fish*/
-		fish = (double) jellyfish;
+		fish = jellyfish;
 		if (entity instanceof Player _player) {
 			Scoreboard _sc = _player.getScoreboard();
 			Objective _so = _sc.getObjective("PlayerRNG");

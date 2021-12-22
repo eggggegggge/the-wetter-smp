@@ -25,24 +25,24 @@ public class DeepLukewarmOceanFishProcedure {
 		double jellyfish = 0;
 		double luck = 0;
 		/*fishing factors*/
-		luck = (double) LuckCheckProcedure.execute(entity);/*loot factors*/
-		time = (double) (world.dayTime());
-		altitude = (double) (Math.floor(y));/*define base values*/
-		seaurchin = (double) 10;
-		scallop = (double) 18;
-		jellyfish = (double) 23;/*apply modifiers*/
+		luck = LuckCheckProcedure.execute(entity);/*loot factors*/
+		time = world.dayTime();
+		altitude = Math.floor(y);/*define base values*/
+		seaurchin = 10;
+		scallop = 18;
+		jellyfish = 23;/*apply modifiers*/
 		if (luck > 1) {
-			scallop = (double) (scallop + 5);
-			seaurchin = (double) (seaurchin + 4);
-			jellyfish = (double) (jellyfish + 2);
+			scallop = scallop + 5;
+			seaurchin = seaurchin + 4;
+			jellyfish = jellyfish + 2;
 		} else if (luck < 0) {
-			scallop = (double) (scallop - 2);
-			seaurchin = (double) (seaurchin - 4);
-			jellyfish = (double) (jellyfish - 3);
+			scallop = scallop - 2;
+			seaurchin = seaurchin - 4;
+			jellyfish = jellyfish - 3;
 		} /*fish*/
-		fish = (double) scallop;
+		fish = scallop;
 		if (time > 13000 && time < 23000) {
-			fish = (double) jellyfish;
+			fish = jellyfish;
 		}
 		if (entity instanceof Player _player) {
 			Scoreboard _sc = _player.getScoreboard();

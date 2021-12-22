@@ -127,7 +127,10 @@
     "restrictionBiomes": [],
     "blocksToReplace": [
       {
-        "value": "Blocks.STONE"
+        "value": "Blocks.DEEPSLATE"
+      },
+      {
+        "value": "Blocks.TUFF"
       }
     ],
     "frequencyPerChunks": 13,

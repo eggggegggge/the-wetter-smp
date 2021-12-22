@@ -1,0 +1,12 @@
+{
+  "group": "osmiumorefish",
+  "type": "minecraft:blasting",
+  "experience": 1,
+  "cookingtime": 100,
+  "ingredient": {
+    "item": "the_wet_smp_rehydrated:osmium_orefish"
+  },
+  "result": {
+    "item": "the_wet_smp_rehydrated:raw_osmium"
+  }
+}

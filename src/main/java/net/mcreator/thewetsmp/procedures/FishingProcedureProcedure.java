@@ -18,7 +18,7 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.ChatType;
-import net.minecraft.client.Minecraft;
+import net.minecraft.core.BlockPos;
 import net.minecraft.Util;
 
 import net.mcreator.thewetsmp.init.TheWetSmpRehydratedModItems;
@@ -50,25 +50,32 @@ public class FishingProcedureProcedure {
 		if (event != null && event.isCancelable()) {
 			event.setCanceled(true);
 		}
-		baitpower = (double) BaitCheckProcedure.execute(world, entity);
-		luck = (double) LuckCheckProcedure.execute(entity);
-		fish = (double) 50;
-		junk = (double) 87;
-		treasure = (double) 99;
+		baitpower = BaitCheckProcedure.execute(world, entity);
+		luck = LuckCheckProcedure.execute(entity);
+		fish = 50;
+		junk = 87;
+		treasure = 99;
 		if (luck > 1) {
-			fish = (double) 69;
-			junk = (double) 79;
-			treasure = (double) 99;
+			fish = 69;
+			junk = 79;
+			treasure = 99;
 		} else if (luck < 0) {
-			fish = (double) 39;
-			junk = (double) 89;
-			treasure = (double) 99;
+			fish = 39;
+			junk = 89;
+			treasure = 99;
 		}
-		baitDeterm = (double) (Math.random() * 100);
+		baitDeterm = Math.random() * 100;
 		if (baitDeterm < baitpower) {
-			if (world instanceof Level _level)
-				_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
-						ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("the_wet_smp_rehydrated:linebreak")), SoundSource.AMBIENT, 1, 1);
+			if (world instanceof Level _level) {
+				if (!_level.isClientSide()) {
+					_level.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+							ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("the_wet_smp_rehydrated:linebreak")), SoundSource.AMBIENT, 1,
+							1);
+				} else {
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("the_wet_smp_rehydrated:linebreak")),
+							SoundSource.AMBIENT, 1, 1, false);
+				}
+			}
 			RemoveBaitProcedure.execute(world, entity);
 			if (!world.isClientSide()) {
 				MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
@@ -76,7 +83,7 @@ public class FishingProcedureProcedure {
 					mcserv.getPlayerList().broadcastMessage(new TextComponent("you're fuckin line broked"), ChatType.SYSTEM, Util.NIL_UUID);
 			}
 		} else {
-			wutda = (double) (Math.random() * (treasure + 1));
+			wutda = Math.random() * (treasure + 1);
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY)
 					.getItem() == TheWetSmpRehydratedModItems.DEV_SALMON) {
 				DetermineAllBiomesProcedure.execute(world, x, y, z, entity);

@@ -10,7 +10,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.Minecraft;
+import net.minecraft.core.BlockPos;
 
 import net.mcreator.thewetsmp.network.TheWetSmpRehydratedModVariables;
 import net.mcreator.thewetsmp.init.TheWetSmpRehydratedModParticles;
@@ -30,28 +30,28 @@ public class BufferBlasterHitsPlayerProcedureProcedure {
 					&& (sourceentity.getCapability(TheWetSmpRehydratedModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new TheWetSmpRehydratedModVariables.PlayerVariables())).bufferBlasterHealth == 100) {
 				{
-					double _setval = (double) (sourceentity instanceof Player _plr ? _plr.getFoodData().getFoodLevel() : 0);
+					double _setval = sourceentity instanceof Player _plr ? _plr.getFoodData().getFoodLevel() : 0;
 					sourceentity.getCapability(TheWetSmpRehydratedModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.bufferBlasterHunger = _setval;
 						capability.syncPlayerVariables(sourceentity);
 					});
 				}
 				{
-					double _setval = (double) (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1);
+					double _setval = sourceentity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1;
 					sourceentity.getCapability(TheWetSmpRehydratedModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.bufferBlasterHealth = _setval;
 						capability.syncPlayerVariables(sourceentity);
 					});
 				}
 				{
-					double _setval = (double) (sourceentity.getAirSupply());
+					double _setval = sourceentity.getAirSupply();
 					sourceentity.getCapability(TheWetSmpRehydratedModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.bufferBlasterOxygen = _setval;
 						capability.syncPlayerVariables(sourceentity);
 					});
 				}
 				{
-					boolean _setval = (boolean) (sourceentity.isOnFire());
+					boolean _setval = sourceentity.isOnFire();
 					sourceentity.getCapability(TheWetSmpRehydratedModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.bufferBlasterIgnited = _setval;
 						capability.syncPlayerVariables(sourceentity);
@@ -64,9 +64,15 @@ public class BufferBlasterHitsPlayerProcedureProcedure {
 								"execute as @s at @s run particle the_wet_smp_rehydrated:buffer_particle ~ ~1 ~ 0.5 0.5 0.5 0 20 normal");
 				}
 			} else {
-				if (world instanceof Level _level)
-					_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
-							ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.chime")), SoundSource.NEUTRAL, 1, 1);
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.chime")), SoundSource.NEUTRAL, 1, 1);
+					} else {
+						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.chime")),
+								SoundSource.NEUTRAL, 1, 1, false);
+					}
+				}
 				if (sourceentity instanceof LivingEntity _entity)
 					_entity.setHealth((float) (sourceentity.getCapability(TheWetSmpRehydratedModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new TheWetSmpRehydratedModVariables.PlayerVariables())).bufferBlasterHealth);
@@ -81,28 +87,28 @@ public class BufferBlasterHitsPlayerProcedureProcedure {
 					sourceentity.setSecondsOnFire(5);
 				}
 				{
-					double _setval = (double) 100;
+					double _setval = 100;
 					sourceentity.getCapability(TheWetSmpRehydratedModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.bufferBlasterHunger = _setval;
 						capability.syncPlayerVariables(sourceentity);
 					});
 				}
 				{
-					double _setval = (double) 100;
+					double _setval = 100;
 					sourceentity.getCapability(TheWetSmpRehydratedModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.bufferBlasterHealth = _setval;
 						capability.syncPlayerVariables(sourceentity);
 					});
 				}
 				{
-					double _setval = (double) 100;
+					double _setval = 100;
 					sourceentity.getCapability(TheWetSmpRehydratedModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.bufferBlasterOxygen = _setval;
 						capability.syncPlayerVariables(sourceentity);
 					});
 				}
 				{
-					boolean _setval = (boolean) (false);
+					boolean _setval = false;
 					sourceentity.getCapability(TheWetSmpRehydratedModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.bufferBlasterIgnited = _setval;
 						capability.syncPlayerVariables(sourceentity);

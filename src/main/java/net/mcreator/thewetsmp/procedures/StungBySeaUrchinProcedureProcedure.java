@@ -12,16 +12,22 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.Minecraft;
 
 public class StungBySeaUrchinProcedureProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
 		world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
-		if (world instanceof Level _level)
-			_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
-					ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("the_wet_smp_rehydrated:sea_urchin.step")), SoundSource.NEUTRAL, 1, 1);
+		if (world instanceof Level _level) {
+			if (!_level.isClientSide()) {
+				_level.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+						ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("the_wet_smp_rehydrated:sea_urchin.step")), SoundSource.NEUTRAL, 1,
+						1);
+			} else {
+				_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("the_wet_smp_rehydrated:sea_urchin.step")),
+						SoundSource.NEUTRAL, 1, 1, false);
+			}
+		}
 		if (entity instanceof LivingEntity _entity)
 			_entity.hurt(new DamageSource("urchin").bypassArmor(), 3);
 		if (entity instanceof LivingEntity _entity)

@@ -9,7 +9,7 @@
     "group": "scaleslatebricks",
     "recipeShapeless": false,
     "stoneCuttingInputStack": {
-      "value": "CUSTOM:CobbledScaleslate"
+      "value": "CUSTOM:Scaleslate"
     },
     "stoneCuttingReturnStack": {
       "value": "CUSTOM:ScaleslateBricks"

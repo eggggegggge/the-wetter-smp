@@ -13,7 +13,7 @@ import net.minecraft.core.BlockPos;
 
 public class ScaleslateTilesBlock extends Block {
 	public ScaleslateTilesBlock() {
-		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.NETHER_BRICKS).strength(3.5f, 6f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE_TILES).strength(3.5f, 6f).requiresCorrectToolForDrops());
 		setRegistryName("scaleslate_tiles");
 	}
 

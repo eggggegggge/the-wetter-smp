@@ -5,7 +5,9 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:piston",
+            "items": [
+              "minecraft:piston"
+            ],
             "count": {
               "min": 1,
               "max": 64

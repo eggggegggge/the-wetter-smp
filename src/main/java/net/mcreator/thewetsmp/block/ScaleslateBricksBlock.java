@@ -18,7 +18,7 @@ import java.util.Collections;
 
 public class ScaleslateBricksBlock extends Block {
 	public ScaleslateBricksBlock() {
-		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.NETHER_BRICKS).strength(3.5f, 6f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.DEEPSLATE_BRICKS).strength(3.5f, 6f).requiresCorrectToolForDrops());
 		setRegistryName("scaleslate_bricks");
 	}
 

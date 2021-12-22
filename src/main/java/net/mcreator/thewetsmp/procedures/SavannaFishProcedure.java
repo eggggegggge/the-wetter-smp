@@ -24,24 +24,24 @@ public class SavannaFishProcedure {
 		double crab = 0;
 		double savannatetra = 0;
 		/*fishing factors*/
-		luck = (double) LuckCheckProcedure.execute(entity);/*loot factors*/
-		time = (double) (world.dayTime());
-		altitude = (double) (Math.floor(y));/*define base values*/
-		savannatetra = (double) 10;
-		crab = (double) 21;
-		jellyfish = (double) 28;/*apply modifiers*/
+		luck = LuckCheckProcedure.execute(entity);/*loot factors*/
+		time = world.dayTime();
+		altitude = Math.floor(y);/*define base values*/
+		savannatetra = 10;
+		crab = 21;
+		jellyfish = 28;/*apply modifiers*/
 		if (luck > 1) {
-			savannatetra = (double) (savannatetra + 4);
-			crab = (double) (crab - 2);
-			jellyfish = (double) (jellyfish - 3);
+			savannatetra = savannatetra + 4;
+			crab = crab - 2;
+			jellyfish = jellyfish - 3;
 		} else if (luck < 0) {
-			savannatetra = (double) (savannatetra - 3);
-			crab = (double) (crab + 4);
-			jellyfish = (double) (jellyfish + 2);
+			savannatetra = savannatetra - 3;
+			crab = crab + 4;
+			jellyfish = jellyfish + 2;
 		} /*fish*/
-		fish = (double) crab;
+		fish = crab;
 		if (altitude < 60) {
-			fish = (double) jellyfish;
+			fish = jellyfish;
 		}
 		if (entity instanceof Player _player) {
 			Scoreboard _sc = _player.getScoreboard();

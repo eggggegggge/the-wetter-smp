@@ -24,24 +24,24 @@ public class GiantSpruceTaigaHillsFishProcedure {
 		double cod = 0;
 		double anchovy = 0;
 		/*fishing factors*/
-		luck = (double) LuckCheckProcedure.execute(entity);/*loot factors*/
-		time = (double) (world.dayTime());
-		altitude = (double) (Math.floor(y));/*define base values*/
-		cod = (double) 10;
-		anchovy = (double) 18;
-		jellyfish = (double) 23;/*apply modifiers*/
+		luck = LuckCheckProcedure.execute(entity);/*loot factors*/
+		time = world.dayTime();
+		altitude = Math.floor(y);/*define base values*/
+		cod = 10;
+		anchovy = 18;
+		jellyfish = 23;/*apply modifiers*/
 		if (luck > 1) {
-			cod = (double) (cod + 3);
-			anchovy = (double) (anchovy - 2);
-			jellyfish = (double) (jellyfish + 2);
+			cod = cod + 3;
+			anchovy = anchovy - 2;
+			jellyfish = jellyfish + 2;
 		} else if (luck < 0) {
-			cod = (double) (cod + 1);
-			anchovy = (double) (anchovy + 2);
-			jellyfish = (double) (jellyfish + 0);
+			cod = cod + 1;
+			anchovy = anchovy + 2;
+			jellyfish = jellyfish + 0;
 		} /*fish*/
-		fish = (double) anchovy;
+		fish = anchovy;
 		if (time > 13000 && time < 23000) {
-			fish = (double) jellyfish;
+			fish = jellyfish;
 		}
 		if (entity instanceof Player _player) {
 			Scoreboard _sc = _player.getScoreboard();

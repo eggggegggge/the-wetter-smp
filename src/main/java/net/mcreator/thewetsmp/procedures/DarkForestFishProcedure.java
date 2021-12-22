@@ -24,24 +24,24 @@ public class DarkForestFishProcedure {
 		double nightkoi = 0;
 		double dryadsaequorea = 0;
 		/*fishing factors*/
-		luck = (double) LuckCheckProcedure.execute(entity);/*loot factors*/
-		time = (double) (world.dayTime());
-		altitude = (double) (Math.floor(y));/*define base values*/
-		dryadsaequorea = (double) 3;
-		nightkoi = (double) 21;
-		jellyfish = (double) 28;/*apply modifiers*/
+		luck = LuckCheckProcedure.execute(entity);/*loot factors*/
+		time = world.dayTime();
+		altitude = Math.floor(y);/*define base values*/
+		dryadsaequorea = 3;
+		nightkoi = 21;
+		jellyfish = 28;/*apply modifiers*/
 		if (luck > 1) {
-			dryadsaequorea = (double) (dryadsaequorea + 8);
-			nightkoi = (double) (nightkoi - 2);
-			jellyfish = (double) (jellyfish - 3);
+			dryadsaequorea = dryadsaequorea + 8;
+			nightkoi = nightkoi - 2;
+			jellyfish = jellyfish - 3;
 		} else if (luck < 0) {
-			dryadsaequorea = (double) (dryadsaequorea - 2);
-			nightkoi = (double) (nightkoi + 4);
-			jellyfish = (double) (jellyfish + 2);
+			dryadsaequorea = dryadsaequorea - 2;
+			nightkoi = nightkoi + 4;
+			jellyfish = jellyfish + 2;
 		} /*fish*/
-		fish = (double) nightkoi;
+		fish = nightkoi;
 		if (altitude < 60) {
-			fish = (double) jellyfish;
+			fish = jellyfish;
 		}
 		if (entity instanceof Player _player) {
 			Scoreboard _sc = _player.getScoreboard();

@@ -25,27 +25,27 @@ public class IceSpikesFishProcedure {
 		double seaurchin = 0;
 		double minnow = 0;
 		/*fishing factors*/
-		luck = (double) LuckCheckProcedure.execute(entity);/*loot factors*/
-		time = (double) (world.dayTime());
-		altitude = (double) (Math.floor(y));/*define base values*/
-		cod = (double) 17;
-		seaurchin = (double) 21;
-		minnow = (double) 28;
-		jellyfish = (double) 34;/*apply modifiers*/
+		luck = LuckCheckProcedure.execute(entity);/*loot factors*/
+		time = world.dayTime();
+		altitude = Math.floor(y);/*define base values*/
+		cod = 17;
+		seaurchin = 21;
+		minnow = 28;
+		jellyfish = 34;/*apply modifiers*/
 		if (luck > 1) {
-			cod = (double) (cod - 4);
-			seaurchin = (double) (seaurchin - 2);
-			minnow = (double) (minnow - 3);
-			jellyfish = (double) (jellyfish + 0);
+			cod = cod - 4;
+			seaurchin = seaurchin - 2;
+			minnow = minnow - 3;
+			jellyfish = jellyfish + 0;
 		} else if (luck < 0) {
-			cod = (double) (cod + 4);
-			seaurchin = (double) (seaurchin + 2);
-			minnow = (double) (minnow + 3);
-			jellyfish = (double) (jellyfish + 2);
+			cod = cod + 4;
+			seaurchin = seaurchin + 2;
+			minnow = minnow + 3;
+			jellyfish = jellyfish + 2;
 		} /*fish*/
-		fish = (double) minnow;
+		fish = minnow;
 		if (altitude < 60) {
-			fish = (double) jellyfish;
+			fish = jellyfish;
 		}
 		if (entity instanceof Player _player) {
 			Scoreboard _sc = _player.getScoreboard();

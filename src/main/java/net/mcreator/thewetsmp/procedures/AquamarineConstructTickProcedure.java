@@ -13,7 +13,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.Minecraft;
 
 import java.util.Map;
 
@@ -54,9 +53,15 @@ public class AquamarineConstructTickProcedure {
 					}
 					world.setBlock(_bp, _bs, 3);
 				}
-				if (world instanceof Level _level)
-					_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
-							ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.bone_block.break")), SoundSource.BLOCKS, 1, 1);
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.bone_block.break")), SoundSource.BLOCKS, 1, 1);
+					} else {
+						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.bone_block.break")),
+								SoundSource.BLOCKS, 1, 1, false);
+					}
+				}
 				MinecraftForge.EVENT_BUS.unregister(this);
 			}
 		}.start(world, 20);

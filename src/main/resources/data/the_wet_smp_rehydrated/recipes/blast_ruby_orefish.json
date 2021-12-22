@@ -1,0 +1,12 @@
+{
+  "group": "rubyorefish",
+  "type": "minecraft:blasting",
+  "experience": 1,
+  "cookingtime": 100,
+  "ingredient": {
+    "item": "the_wet_smp_rehydrated:ruby_orefish"
+  },
+  "result": {
+    "item": "the_wet_smp_rehydrated:ruby"
+  }
+}

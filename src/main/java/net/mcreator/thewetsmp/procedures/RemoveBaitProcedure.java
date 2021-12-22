@@ -21,15 +21,15 @@ public class RemoveBaitProcedure {
 		double sel = 0;
 		double rngesus = 0;
 		double luck = 0;
-		bait = (double) 100;
-		sel = (double) 2;
-		luck = (double) LuckCheckProcedure.execute(entity);
+		bait = 100;
+		sel = 2;
+		luck = LuckCheckProcedure.execute(entity);
 		if (luck > 1) {
-			sel = (double) 4;
+			sel = 4;
 		} else if (luck < 0) {
-			sel = (double) 1;
+			sel = 1;
 		}
-		rngesus = (double) (Math.random() * (sel + 1));
+		rngesus = Math.random() * (sel + 1);
 		{
 			AtomicReference<IItemHandler> _iitemhandlerref = new AtomicReference<>();
 			entity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> _iitemhandlerref.set(capability));
@@ -38,27 +38,27 @@ public class RemoveBaitProcedure {
 					ItemStack itemstackiterator = _iitemhandlerref.get().getStackInSlot(_idx).copy();
 					if (itemstackiterator.getItem() == TheWetSmpRehydratedModItems.GREEN_JELLYFISH) {
 						if (bait > 49) {
-							bait = (double) 49;
+							bait = 49;
 							removal = new ItemStack(TheWetSmpRehydratedModItems.GREEN_JELLYFISH);
 						}
 					} else if (itemstackiterator.getItem() == TheWetSmpRehydratedModItems.BLUE_JELLYFISH) {
 						if (bait > 49) {
-							bait = (double) 49;
+							bait = 49;
 							removal = new ItemStack(TheWetSmpRehydratedModItems.BLUE_JELLYFISH);
 						}
 					} else if (itemstackiterator.getItem() == TheWetSmpRehydratedModItems.RED_JELLYFISH) {
 						if (bait > 49) {
-							bait = (double) 49;
+							bait = 49;
 							removal = new ItemStack(TheWetSmpRehydratedModItems.RED_JELLYFISH);
 						}
 					} else if (itemstackiterator.getItem() == TheWetSmpRehydratedModItems.YELLOW_JELLYFISH) {
 						if (bait > 49) {
-							bait = (double) 49;
+							bait = 49;
 							removal = new ItemStack(TheWetSmpRehydratedModItems.YELLOW_JELLYFISH);
 						}
 					} else if (itemstackiterator.getItem() == TheWetSmpRehydratedModItems.PINK_JELLYFISH) {
 						if (bait > 50) {
-							bait = (double) 50;
+							bait = 50;
 							removal = new ItemStack(TheWetSmpRehydratedModItems.PINK_JELLYFISH);
 						}
 					}

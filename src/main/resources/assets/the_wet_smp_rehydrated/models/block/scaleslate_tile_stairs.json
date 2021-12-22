@@ -1,8 +1,0 @@
-{
-  "parent": "block/stairs",
-  "textures": {
-    "bottom": "the_wet_smp_rehydrated:blocks/scaleslate_tiles",
-    "top": "the_wet_smp_rehydrated:blocks/scaleslate_tiles",
-    "side": "the_wet_smp_rehydrated:blocks/scaleslate_tiles"
-  }
-}

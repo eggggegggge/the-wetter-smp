@@ -1,0 +1,20 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Blasting",
+    "xpReward": 1.0,
+    "cookingTime": 100,
+    "recipeRetstackSize": 1,
+    "group": "onyxorefish",
+    "recipeShapeless": false,
+    "blastingInputStack": {
+      "value": "CUSTOM:OnyxOrefish"
+    },
+    "blastingReturnStack": {
+      "value": "CUSTOM:Onyx"
+    },
+    "name": "blast_onyx_orefish",
+    "namespace": "mod"
+  }
+}

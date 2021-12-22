@@ -12,7 +12,6 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.Minecraft;
 
 import net.mcreator.thewetsmp.init.TheWetSmpRehydratedModBlocks;
 
@@ -53,9 +52,15 @@ public class AirVentActivateProcedureProcedure {
 		} else {
 			if (world instanceof ServerLevel _level)
 				_level.sendParticles(ParticleTypes.SMOKE, (x + 0.5), (y + 0.2), (z + 0.5), 5, 0.1, 0.2, 0.1, 0);
-			if (world instanceof Level _level)
-				_level.playSound(_level.isClientSide() ? Minecraft.getInstance().player : null, x, y, z,
-						ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.fire.extinguish")), SoundSource.BLOCKS, 1, 1);
+			if (world instanceof Level _level) {
+				if (!_level.isClientSide()) {
+					_level.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+							ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.fire.extinguish")), SoundSource.BLOCKS, 1, 1);
+				} else {
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.fire.extinguish")),
+							SoundSource.BLOCKS, 1, 1, false);
+				}
+			}
 		}
 	}
 }

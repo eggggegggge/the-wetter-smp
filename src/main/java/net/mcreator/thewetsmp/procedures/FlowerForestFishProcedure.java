@@ -26,31 +26,31 @@ public class FlowerForestFishProcedure {
 		double glowkoi = 0;
 		double flowerfish = 0;
 		/*fishing factors*/
-		luck = (double) LuckCheckProcedure.execute(entity);/*loot factors*/
-		time = (double) (world.dayTime());
-		altitude = (double) (Math.floor(y));/*define base values*/
-		koi = (double) 18;
-		goldfish = (double) 25;
-		flowerfish = (double) 29;
+		luck = LuckCheckProcedure.execute(entity);/*loot factors*/
+		time = world.dayTime();
+		altitude = Math.floor(y);/*define base values*/
+		koi = 18;
+		goldfish = 25;
+		flowerfish = 29;
 		if (altitude < 60) {
-			glowkoi = (double) 34;
-			jellyfish = (double) 39;/*apply modifiers*/
+			glowkoi = 34;
+			jellyfish = 39;/*apply modifiers*/
 			if (luck > 1) {
-				koi = (double) (koi + 1);
-				goldfish = (double) (goldfish + 2);
-				flowerfish = (double) (flowerfish + 4);
-				glowkoi = (double) (glowkoi + 7);
-				jellyfish = (double) (jellyfish + 10);
+				koi = koi + 1;
+				goldfish = goldfish + 2;
+				flowerfish = flowerfish + 4;
+				glowkoi = glowkoi + 7;
+				jellyfish = jellyfish + 10;
 			} else if (luck < 0) {
-				koi = (double) (koi + 2);
-				goldfish = (double) (goldfish - 1);
-				flowerfish = (double) (flowerfish - 3);
-				glowkoi = (double) (glowkoi - 7);
-				jellyfish = (double) (jellyfish - 4);
+				koi = koi + 2;
+				goldfish = goldfish - 1;
+				flowerfish = flowerfish - 3;
+				glowkoi = glowkoi - 7;
+				jellyfish = jellyfish - 4;
 			} /*fish*/
-			fish = (double) glowkoi;
+			fish = glowkoi;
 			if (time > 13000 && time < 23000) {
-				fish = (double) jellyfish;
+				fish = jellyfish;
 			}
 			if (entity instanceof Player _player) {
 				Scoreboard _sc = _player.getScoreboard();
@@ -233,21 +233,21 @@ public class FlowerForestFishProcedure {
 					_level.addFreshEntity(new ExperienceOrb(_level, x, (y - 0.5), z, 8));
 			}
 		} else {
-			jellyfish = (double) 34;/*apply modifiers*/
+			jellyfish = 34;/*apply modifiers*/
 			if (luck > 1) {
-				koi = (double) (koi + 1);
-				goldfish = (double) (goldfish + 2);
-				flowerfish = (double) (flowerfish + 4);
-				jellyfish = (double) (jellyfish + 7);
+				koi = koi + 1;
+				goldfish = goldfish + 2;
+				flowerfish = flowerfish + 4;
+				jellyfish = jellyfish + 7;
 			} else if (luck < 0) {
-				koi = (double) (koi + 2);
-				goldfish = (double) (goldfish - 1);
-				flowerfish = (double) (flowerfish - 3);
-				jellyfish = (double) (jellyfish - 7);
+				koi = koi + 2;
+				goldfish = goldfish - 1;
+				flowerfish = flowerfish - 3;
+				jellyfish = jellyfish - 7;
 			} /*fish*/
-			fish = (double) flowerfish;
+			fish = flowerfish;
 			if (time > 13000 && time < 23000) {
-				fish = (double) jellyfish;
+				fish = jellyfish;
 			}
 			if (entity instanceof Player _player) {
 				Scoreboard _sc = _player.getScoreboard();

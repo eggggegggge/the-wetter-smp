@@ -19,7 +19,7 @@ import java.util.Collections;
 
 public class OsmiumBlockBlock extends Block {
 	public OsmiumBlockBlock() {
-		super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(5f, 6f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.COPPER).strength(5f, 6f).requiresCorrectToolForDrops());
 		setRegistryName("osmium_block");
 	}
 

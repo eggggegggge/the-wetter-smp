@@ -1,0 +1,20 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Blasting",
+    "xpReward": 1.0,
+    "cookingTime": 100,
+    "recipeRetstackSize": 1,
+    "group": "lapisorefish",
+    "recipeShapeless": false,
+    "blastingInputStack": {
+      "value": "CUSTOM:LapisOrefish"
+    },
+    "blastingReturnStack": {
+      "value": "Items.DYE#4"
+    },
+    "name": "blast_lapis_orefish",
+    "namespace": "mod"
+  }
+}

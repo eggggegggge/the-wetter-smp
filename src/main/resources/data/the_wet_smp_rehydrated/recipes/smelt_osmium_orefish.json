@@ -1,0 +1,12 @@
+{
+  "group": "osmiumorefish",
+  "type": "minecraft:smelting",
+  "experience": 1,
+  "cookingtime": 200,
+  "ingredient": {
+    "item": "the_wet_smp_rehydrated:osmium_orefish"
+  },
+  "result": {
+    "item": "the_wet_smp_rehydrated:raw_osmium"
+  }
+}

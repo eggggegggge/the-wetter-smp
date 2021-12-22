@@ -352,33 +352,9 @@ public class TheWetSmpRehydratedModItems {
 	public static final Item TREASURE_POWDER = register(new TreasurePowderItem());
 	public static final Item JUNK_POWDER = register(new JunkPowderItem());
 	public static final Item SCALESLATE = register(TheWetSmpRehydratedModBlocks.SCALESLATE, CreativeModeTab.TAB_BUILDING_BLOCKS);
-	public static final Item COBBLED_SCALESLATE = register(TheWetSmpRehydratedModBlocks.COBBLED_SCALESLATE, CreativeModeTab.TAB_BUILDING_BLOCKS);
-	public static final Item COBBLED_SCALESLATE_SLAB = register(TheWetSmpRehydratedModBlocks.COBBLED_SCALESLATE_SLAB,
-			CreativeModeTab.TAB_BUILDING_BLOCKS);
-	public static final Item COBBLED_SCALESLATE_STAIRS = register(TheWetSmpRehydratedModBlocks.COBBLED_SCALESLATE_STAIRS,
-			CreativeModeTab.TAB_BUILDING_BLOCKS);
-	public static final Item COBBLED_SCALESLATE_WALL = register(TheWetSmpRehydratedModBlocks.COBBLED_SCALESLATE_WALL,
-			CreativeModeTab.TAB_BUILDING_BLOCKS);
 	public static final Item POLISHED_SCALESLATE = register(TheWetSmpRehydratedModBlocks.POLISHED_SCALESLATE, CreativeModeTab.TAB_BUILDING_BLOCKS);
-	public static final Item POLISHED_SCALESLATE_SLAB = register(TheWetSmpRehydratedModBlocks.POLISHED_SCALESLATE_SLAB,
-			CreativeModeTab.TAB_BUILDING_BLOCKS);
-	public static final Item POLISHED_SCALESLATE_STAIRS = register(TheWetSmpRehydratedModBlocks.POLISHED_SCALESLATE_STAIRS,
-			CreativeModeTab.TAB_BUILDING_BLOCKS);
-	public static final Item POLISHED_SCALESLATE_WALL = register(TheWetSmpRehydratedModBlocks.POLISHED_SCALESLATE_WALL,
-			CreativeModeTab.TAB_BUILDING_BLOCKS);
 	public static final Item SCALESLATE_BRICKS = register(TheWetSmpRehydratedModBlocks.SCALESLATE_BRICKS, CreativeModeTab.TAB_BUILDING_BLOCKS);
-	public static final Item SCALESLATE_BRICK_SLAB = register(TheWetSmpRehydratedModBlocks.SCALESLATE_BRICK_SLAB,
-			CreativeModeTab.TAB_BUILDING_BLOCKS);
-	public static final Item SCALESLATE_BRICK_STAIRS = register(TheWetSmpRehydratedModBlocks.SCALESLATE_BRICK_STAIRS,
-			CreativeModeTab.TAB_BUILDING_BLOCKS);
-	public static final Item SCALESLATE_BRICK_WALL = register(TheWetSmpRehydratedModBlocks.SCALESLATE_BRICK_WALL,
-			CreativeModeTab.TAB_BUILDING_BLOCKS);
 	public static final Item SCALESLATE_TILES = register(TheWetSmpRehydratedModBlocks.SCALESLATE_TILES, CreativeModeTab.TAB_BUILDING_BLOCKS);
-	public static final Item SCALESLATE_TILE_SLAB = register(TheWetSmpRehydratedModBlocks.SCALESLATE_TILE_SLAB, CreativeModeTab.TAB_BUILDING_BLOCKS);
-	public static final Item SCALESLATE_TILE_STAIRS = register(TheWetSmpRehydratedModBlocks.SCALESLATE_TILE_STAIRS,
-			CreativeModeTab.TAB_BUILDING_BLOCKS);
-	public static final Item SCALESLATE_TILES_WALL = register(TheWetSmpRehydratedModBlocks.SCALESLATE_TILES_WALL,
-			CreativeModeTab.TAB_BUILDING_BLOCKS);
 	public static final Item CHISELED_SCALESLATE = register(TheWetSmpRehydratedModBlocks.CHISELED_SCALESLATE, CreativeModeTab.TAB_BUILDING_BLOCKS);
 	public static final Item BANANA = register(new BananaItem());
 	public static final Item GOLDEN_BANANA = register(new GoldenBananaItem());

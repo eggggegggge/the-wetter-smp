@@ -1,12 +1,7 @@
 {
-  "parent": "block/cube",
+  "parent": "block/cube_all",
   "textures": {
-    "down": "the_wet_smp_rehydrated:blocks/scaleslate_top",
-    "up": "the_wet_smp_rehydrated:blocks/scaleslate_top",
-    "north": "the_wet_smp_rehydrated:blocks/scaleslate_side",
-    "east": "the_wet_smp_rehydrated:blocks/scaleslate_side",
-    "south": "the_wet_smp_rehydrated:blocks/scaleslate_side",
-    "west": "the_wet_smp_rehydrated:blocks/scaleslate_side",
-    "particle": "the_wet_smp_rehydrated:blocks/scaleslate_top"
+    "all": "the_wet_smp_rehydrated:blocks/scaleslate",
+    "particle": "the_wet_smp_rehydrated:blocks/scaleslate"
   }
 }

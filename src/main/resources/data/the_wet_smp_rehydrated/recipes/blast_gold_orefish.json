@@ -1,0 +1,12 @@
+{
+  "group": "goldorefish",
+  "type": "minecraft:blasting",
+  "experience": 1,
+  "cookingtime": 100,
+  "ingredient": {
+    "item": "the_wet_smp_rehydrated:gold_orefish"
+  },
+  "result": {
+    "item": "minecraft:raw_gold"
+  }
+}

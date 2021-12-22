@@ -25,27 +25,27 @@ public class DeepFrozenOceanFishProcedure {
 		double jellyfish = 0;
 		double luck = 0;
 		/*fishing factors*/
-		luck = (double) LuckCheckProcedure.execute(entity);/*loot factors*/
-		time = (double) (world.dayTime());
-		altitude = (double) (Math.floor(y));/*define base values*/
-		salmon = (double) 10;
-		scallop = (double) 18;
-		seaurchin = (double) 23;
-		jellyfish = (double) 30;/*apply modifiers*/
+		luck = LuckCheckProcedure.execute(entity);/*loot factors*/
+		time = world.dayTime();
+		altitude = Math.floor(y);/*define base values*/
+		salmon = 10;
+		scallop = 18;
+		seaurchin = 23;
+		jellyfish = 30;/*apply modifiers*/
 		if (luck > 1) {
-			salmon = (double) (salmon - 2);
-			scallop = (double) (scallop + 5);
-			seaurchin = (double) (seaurchin + 4);
-			jellyfish = (double) (jellyfish + 2);
+			salmon = salmon - 2;
+			scallop = scallop + 5;
+			seaurchin = seaurchin + 4;
+			jellyfish = jellyfish + 2;
 		} else if (luck < 0) {
-			salmon = (double) (salmon + 2);
-			scallop = (double) (scallop - 2);
-			seaurchin = (double) (seaurchin - 4);
-			jellyfish = (double) (jellyfish - 3);
+			salmon = salmon + 2;
+			scallop = scallop - 2;
+			seaurchin = seaurchin - 4;
+			jellyfish = jellyfish - 3;
 		} /*fish*/
-		fish = (double) seaurchin;
+		fish = seaurchin;
 		if (time > 13000 && time < 23000) {
-			fish = (double) jellyfish;
+			fish = jellyfish;
 		}
 		if (entity instanceof Player _player) {
 			Scoreboard _sc = _player.getScoreboard();

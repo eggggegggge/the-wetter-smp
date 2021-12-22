@@ -55,7 +55,9 @@ public class DeepslateOsmiumOreFeature extends OreFeature {
 
 		public boolean test(BlockState blockAt, Random random) {
 			boolean blockCriteria = false;
-			if (blockAt.getBlock() == Blocks.STONE)
+			if (blockAt.getBlock() == Blocks.DEEPSLATE)
+				blockCriteria = true;
+			if (blockAt.getBlock() == Blocks.TUFF)
 				blockCriteria = true;
 			return blockCriteria;
 		}

@@ -24,24 +24,24 @@ public class FrozenRiverFishProcedure {
 		double luck = 0;
 		double minnow = 0;
 		/*fishing factors*/
-		luck = (double) LuckCheckProcedure.execute(entity);/*loot factors*/
-		time = (double) (world.dayTime());
-		altitude = (double) (Math.floor(y));/*define base values*/
-		salmon = (double) 10;
-		minnow = (double) 18;
-		jellyfish = (double) 23;/*apply modifiers*/
+		luck = LuckCheckProcedure.execute(entity);/*loot factors*/
+		time = world.dayTime();
+		altitude = Math.floor(y);/*define base values*/
+		salmon = 10;
+		minnow = 18;
+		jellyfish = 23;/*apply modifiers*/
 		if (luck > 1) {
-			salmon = (double) (salmon + 3);
-			minnow = (double) (minnow - 2);
-			jellyfish = (double) (jellyfish + 2);
+			salmon = salmon + 3;
+			minnow = minnow - 2;
+			jellyfish = jellyfish + 2;
 		} else if (luck < 0) {
-			salmon = (double) (salmon + 1);
-			minnow = (double) (minnow + 2);
-			jellyfish = (double) (jellyfish + 0);
+			salmon = salmon + 1;
+			minnow = minnow + 2;
+			jellyfish = jellyfish + 0;
 		} /*fish*/
-		fish = (double) minnow;
+		fish = minnow;
 		if (time > 13000 && time < 23000) {
-			fish = (double) jellyfish;
+			fish = jellyfish;
 		}
 		if (entity instanceof Player _player) {
 			Scoreboard _sc = _player.getScoreboard();
